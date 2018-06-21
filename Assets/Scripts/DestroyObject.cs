@@ -10,6 +10,11 @@ public class DestroyObject : MonoBehaviour {
         if (!player || (player && collider.gameObject.tag == "player"))
         {
 
+            PdAPI pd = new PdAPI();
+            double[] pos = new double[] { 0.7, 0.1 };
+            pd.changeValue(pos);
+            pd.playAudio();
+
             AudioSource audio = GetComponent<AudioSource>();
             audio.Play();
             yield return new WaitForSeconds(0.7f);

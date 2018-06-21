@@ -14,6 +14,7 @@ public class PdAPI : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        print("START PdAPI");
         kr = new KernelRegression();
 
         PureData.OpenPatch("abstractlatest");

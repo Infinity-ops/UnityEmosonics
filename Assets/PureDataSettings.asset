@@ -13,8 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxVoices: 100
   masterVolume: 1
-  patchesPath: Patches
-  resourcesPath: 
+  patchesPath: 
+  resourcesPath: Patches/Unity/Internal/uresources.pd
   speedOfSound: 343
   pureData: {fileID: 0}
 --- !u!114 &11481642
@@ -28,7 +28,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0be5b51822352f04a908d2b4de9815f7, type: 3}
   m_Name: Buses
   m_EditorClassIdentifier: 
-  mixerPath: E:\Projects\Repositories\uPD\Unity Project\Assets\StreamingAssets\Patches\Unity\umixer~.pd
+  mixerPath: C:\Users\jnowa\Unity\UnityEmosonics\Assets\StreamingAssets\Patches\Unity\umixer~.pd
   buses:
   - name: default
     volume: 1
@@ -321,7 +321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e99a5111373ace34a8b421667e42b72e, type: 3}
   m_Name: Sequences
   m_EditorClassIdentifier: 
-  containerPath: C:\Users\David\Academics\Fall_2016\libpd64\libpd64\Assets\StreamingAssets\Patches\Unity\Internal\usequencecontainer.pd
+  containerPath: C:\Users\jnowa\Unity\UnityEmosonics\Assets\StreamingAssets\Patches\Unity\Internal\usequencecontainer.pd
   sequences:
   - name: Urlu
     id: 1

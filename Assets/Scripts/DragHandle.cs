@@ -30,10 +30,10 @@ public class DragHandle : MonoBehaviour
    {
     
       var currentScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z);
-       Debug.Log("off" +_offset);
-     Debug.Log("cscreepo" +currentScreenPoint);
+       //Debug.Log("off" +_offset);
+    // Debug.Log("cscreepo" +currentScreenPoint);
         _currentPosition = Camera.main.ScreenToWorldPoint(currentScreenPoint) + _offset;
-       Debug.Log("cpos" +_currentPosition);
+     //  Debug.Log("cpos" +_currentPosition);
 
         transform.position = _currentPosition;
    }
