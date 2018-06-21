@@ -14,7 +14,7 @@ public class KernelRegression : MonoBehaviour {
 
 	// Use this for initialization
     // On start: load csv data containing pattern into array
-	void Start () {
+	void Awake () {
 
         //load the csv 
         pvec = load_data();

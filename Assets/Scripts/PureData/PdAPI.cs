@@ -13,16 +13,16 @@ public class PdAPI : MonoBehaviour {
     amdepth, amfreq, richness;
 
     // Use this for initialization
-    void Start () {
+    void Awake () {
         print("START PdAPI");
-        kr = new KernelRegression();
+        kr = gameObject.AddComponent<KernelRegression>();
 
         PureData.OpenPatch("abstractlatest");
     }
 
     void updateParam(double[] paramVec)
     {
-        pointer = (float) paramVec[0];
+        pointer = 1.0f;//(float) paramVec[0];
         duration = (float) paramVec[1];
         attack = (float) paramVec[2];
         desvol = (float)paramVec[3];
