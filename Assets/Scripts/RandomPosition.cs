@@ -12,7 +12,7 @@ public class RandomPosition : MonoBehaviour {
        
         transform.position = positions[randomNumber];
 
-        Debug.Log("pos" +positions[randomNumber]);
+        
 
     }
 	

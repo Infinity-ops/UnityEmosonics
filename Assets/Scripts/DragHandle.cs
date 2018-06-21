@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-
+                                                                                                                                                                    //original
 public class DragHandle : MonoBehaviour
 {
    private Vector3 _offset;
@@ -12,7 +12,7 @@ public class DragHandle : MonoBehaviour
 
    private void Start()
    {
-      _defaulPos = new Vector3(0,-4.0f ,0);
+      _defaulPos = new Vector3(0,-3 ,0);
       transform.position = _defaulPos;
    }
 
@@ -22,16 +22,20 @@ public class DragHandle : MonoBehaviour
       (
          new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z)
       );
-      Cursor.visible = false;
+       
+      Cursor.visible = true;
    }
 
    private void OnMouseDrag()
    {
+    
       var currentScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z);
-      _currentPosition = Camera.main.ScreenToWorldPoint(currentScreenPoint) + _offset;
-       
+       Debug.Log("off" +_offset);
+     Debug.Log("cscreepo" +currentScreenPoint);
+        _currentPosition = Camera.main.ScreenToWorldPoint(currentScreenPoint) + _offset;
+       Debug.Log("cpos" +_currentPosition);
 
-      transform.position = _currentPosition;
+        transform.position = _currentPosition;
    }
 
    private void OnMouseUp()

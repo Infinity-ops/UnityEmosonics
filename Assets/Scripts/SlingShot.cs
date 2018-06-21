@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-
+                                                                                                                                                //Original
 public class SlingShot : MonoBehaviour
 {
     public LineRenderer HandlesLineRenderer1;
@@ -17,7 +17,7 @@ public class SlingShot : MonoBehaviour
 
     public float GetVelocity()
     {
-        return Vector3.Distance(DragHandle.transform.position, ReleasePointTransform.transform.position) * 2.5f;
+        return Vector3.Distance(DragHandle.transform.position, ReleasePointTransform.transform.position) * 2.5f *4;
     }
 
     public float GetDistance(float Vinit)
@@ -48,7 +48,7 @@ public class SlingShot : MonoBehaviour
     public void MakeShot()
     {
         var _projectile = Instantiate(ProjectilePrefab, ProjectileSpawnTransform.position, Quaternion.identity) as GameObject;
-        _projectile.GetComponent<Rigidbody>().AddForce(GetShotDirection() * StartPower * 2.5f, ForceMode.Impulse);
+        _projectile.GetComponent<Rigidbody>().AddForce(GetShotDirection() * StartPower * 2.5f*4.2f, ForceMode.Impulse);
 
         Destroy(_projectile, 4.0f);
     }
@@ -57,18 +57,18 @@ public class SlingShot : MonoBehaviour
     {
         var angle = Vector3.Angle((ReleasePointTransform.transform.position - DragHandle.transform.position).normalized, Vector3.right);
 
-        if (DragHandle.transform.position.y > AimerTransform.position.y)
+        if (DragHandle.transform.position.y> AimerTransform.position.y)
         {
             angle = angle * -1;
         }
 
-        return angle;
+        return angle ;
     }
 
     private void Start()
     {
         
-        AimerTransform.position = new Vector3(0, 0.211f, 0.442f);
+        AimerTransform.position = new Vector3(0, 1,0);
 
         HandlesLineRenderer1.SetPosition(0, HandlesLineRenderer1.transform.position);
         HandlesLineRenderer2.SetPosition(0, HandlesLineRenderer2.transform.position);

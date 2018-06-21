@@ -24,9 +24,11 @@ public class ProjectileTrajectory : MonoBehaviour
             InitialPointSize / (i + 1) + (InitialPointSize / 2),
             InitialPointSize / (i + 1) + (InitialPointSize / 2)
          );
-         _point.transform.parent = transform;
-            Debug.Log(PointsList);
-         PointsList.Add(_point);
+           
+            _point.transform.parent = transform;
+         
+          Debug.Log(transform.position);
+            PointsList.Add(_point);
       }
    }
 
