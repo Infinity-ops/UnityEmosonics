@@ -14,8 +14,14 @@ public class DestroyObject : MonoBehaviour {
             double[] pos = new double[] { 0.7, 0.1 };
             pd.changeValue(pos);
             pd.playAudio();
+<<<<<<< HEAD
             //AudioSource audio = GetComponent<AudioSource>();
             //audio.Play();
+=======
+
+            AudioSource audio = GetComponent<AudioSource>();
+            audio.Play();
+>>>>>>> e3edf5feb0d8465d86f61d8b7cc6bab596a70f65
             yield return new WaitForSeconds(0.7f);
             Destroy(this.gameObject);
             //Destroy(GameObject.Find("DragHandle"));

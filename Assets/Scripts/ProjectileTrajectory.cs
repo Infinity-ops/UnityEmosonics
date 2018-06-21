@@ -27,7 +27,7 @@ public class ProjectileTrajectory : MonoBehaviour
            
             _point.transform.parent = transform;
          
-          Debug.Log(transform.position);
+          //Debug.Log(transform.position);
             PointsList.Add(_point);
       }
    }
