@@ -2760,8 +2760,7 @@ MonoBehaviour:
     paths: []
     pureData: {fileID: 1168031364}
   editorHelper:
-    selection:
-    - {fileID: 1168031363}
+    selection: []
     repaintDummy: 0
     repaint: 0
     pureDataIcon: {fileID: 0}
