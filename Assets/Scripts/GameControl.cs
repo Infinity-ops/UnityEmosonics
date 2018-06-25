@@ -9,6 +9,11 @@ public class GameControl : MonoBehaviour
 
 	public string visualization = "smiley";
 
+	public Color favorite1_color = new Color(1.0F, 1.0F, 1.0F);
+	public Color favorite2_color = new Color(1.0F, 1.0F, 1.0F);
+	public Color favorite3_color = new Color(1.0F, 1.0F, 1.0F);
+	public Color favorite4_color = new Color(1.0F, 1.0F, 1.0F);
+
     public static GameControl control;
 
     // Use this for initialization
