@@ -10,7 +10,7 @@ public class DestroyObject : MonoBehaviour {
         if (!player || (player && collider.gameObject.tag == "player"))
         {
             PdAPI pd = GameObject.Find("PureData").GetComponent<PdAPI>();
-            double[] pos = new double[] { 0.7, 0.5 };
+            double[] pos = new double[] { 0.1, 0.5 };
             pd.changeValue(pos);
             pd.playAudio();
 

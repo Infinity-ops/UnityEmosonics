@@ -21,7 +21,7 @@ public class PdAPI : MonoBehaviour {
 
     void updateParam(double[] paramVec)
     {
-        /*
+        
         pointer = 1.0f;//(float) paramVec[0];
         duration = (float) paramVec[0];
         attack = (float) paramVec[1];
@@ -33,9 +33,9 @@ public class PdAPI : MonoBehaviour {
         amdepth = (float)paramVec[7];
         amfreq = (float)paramVec[8];
         richness = (float)paramVec[9];
-        */
-
         
+
+        /*
         pointer = 1.0f;//(float) paramVec[0];
         duration = 0.75f;
         attack = 0.2f;
@@ -46,7 +46,7 @@ public class PdAPI : MonoBehaviour {
         lfnfreq = 3.0f;
         amdepth = 0.2f;
         amfreq = 0.5f;
-        richness = 1.0f; 
+        richness = 1.0f; */
     }
 
     //change the value of the parameters in the pd patch
