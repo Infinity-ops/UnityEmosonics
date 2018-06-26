@@ -53,7 +53,6 @@ public class PdAPI : MonoBehaviour {
     public void changeValue(double[] posxy)
     {
         double[] paramVec = kr.Krm(posxy, sigma);
-        debug(paramVec);
         updateParam(paramVec);
         PureData.SendMessage(TOUCHSYMBOL, MESSAGE, pointer, duration, attack, desvol, pitch, chirp, lfndepth, lfnfreq, amdepth, amfreq, richness);
     }
