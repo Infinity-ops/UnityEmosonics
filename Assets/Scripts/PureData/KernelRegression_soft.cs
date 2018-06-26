@@ -1,9 +1,13 @@
-﻿using System.IO;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using UnityEngine;
+using Microsoft.VisualBasic.FileIO;
+using System.Data;
 using System;
 
-public class KernelRegression : MonoBehaviour
+public class KernelRegression_soft : MonoBehaviour
 {
     private static String[] targets = { "happy", "surprised", "angry", "disgusted", "sad", "calm" };
     private double[][] xvecs = new double[targets.Length][];
@@ -169,16 +173,56 @@ public class KernelRegression : MonoBehaviour
     }
 
     //Load the data into the pvecs array
-
     private double[][] load_data()
     {
-        double[][] pvec = new double[][] { new double[] {0.1234981 , 0.13339569, 1.0 , 0.10923002, 1.0, 0.13980813, 0.21005362, 0.19245244, 0.24757245, 0.17806109, 0.74874385},
-        new double[] {0.23180798, 0.08560049, 0.42686461, 0.19924696, 0.98922648, 0.62609091, 0.25368131, 0.33101573, 0.00273821, 0.67219538,0.53785216},
-        new double[] {0.28984743, 1.0        , 1.0        , 0.0        , 0.22386513, 0.53886225, 0.0, 0.98144621, 0.4292678 , 0.53792187, 0.0 },
-        new double[] {0.2218118 , 0.0        , 0.96552386, 0.96221332, 0.0,0.0, 0.0 , 0.0, 0.0 , 0.64299647,0.72607382},
-        new double[] {0.68628317, 0.89728318, 0.13770081, 0.43199606, 0.4374264 ,0.0, 0.0 , 0.04111752, 0.0, 1.0, 0.45807017},
-        new double[] {0.4768726 , 0.30784232, 0.48337014, 0.44237682, 0.49611336,0.0, 0.0, 0.0, 0.0, 0.5254081 ,0.38428611} };
-        return pvec ;
+        /*Load data from resource folder into a list*/
+        string res_dir = "/Resources/data";
+        string path = Application.dataPath + res_dir;
+        DirectoryInfo dir = new DirectoryInfo(path);
+        FileInfo[] Files = dir.GetFiles("*.csv");
+
+        DataTable csvData;
+        DataTable df = new DataTable();
+
+        int count = 0;
+        foreach (FileInfo file in Files)
+        {
+            csvData = GetDataTableFromCSVFile(file.ToString());
+            if (count == 0)
+            {
+                df = csvData;
+            }
+            else
+            {
+                df.Merge(csvData);
+            }
+
+            count++;
+        }
+
+        DataRow[] result = df.Select("submit='1' AND uid='1001' AND snd='abstract' AND run='1'");
+
+        double[][] pvec = new double[result.Count()][];
+
+        for (int i = 0; i < result.Count(); i++)
+        {
+            String tmp = result[i][7].ToString();
+            tmp = tmp.Split('[')[1].Split(']')[0];
+            pvec[i] = Array.ConvertAll(tmp.Split(','), Double.Parse);
+        }
+
+        /*
+        double[][] pvecs = new double[targets.Length][];
+        int counter = 0;
+        foreach(String t in targets)
+        {
+            if(result[])
+            pvecs[counter] = ;
+            counter++;
+        } */
+
+
+        return pvec;
     }
 
     //Kernel function
@@ -210,6 +254,49 @@ public class KernelRegression : MonoBehaviour
         }
 
         return parmap(nom.Select(no => no / den).ToArray());
+    }
+
+    //Function to load scv data
+    private static DataTable GetDataTableFromCSVFile(string csv_file_path)
+    {
+        DataTable csvData = new DataTable();
+
+        try
+        {
+            using (TextFieldParser csvReader = new TextFieldParser(csv_file_path))
+            {
+                csvReader.SetDelimiters(new string[] { "," });
+                csvReader.HasFieldsEnclosedInQuotes = true;
+                string[] colFields = csvReader.ReadFields();
+
+                foreach (string column in colFields)
+                {
+                    DataColumn datecolumn = new DataColumn(column);
+                    datecolumn.AllowDBNull = true;
+                    csvData.Columns.Add(datecolumn);
+                }
+
+                while (!csvReader.EndOfData)
+                {
+                    string[] fieldData = csvReader.ReadFields();
+                    //Making empty value as null
+                    for (int i = 0; i < fieldData.Length; i++)
+                    {
+                        if (fieldData[i] == "")
+                        {
+                            fieldData[i] = null;
+                        }
+                    }
+
+                    csvData.Rows.Add(fieldData);
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+        }
+
+        return csvData;
     }
 
 
