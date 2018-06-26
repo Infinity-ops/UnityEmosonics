@@ -21,14 +21,14 @@ public class touchHandlerFavorite : MonoBehaviour, IPointerDownHandler, IPointer
     public void OnPointerDown(PointerEventData eventData)
     {
         pointerDown = true;
-		Debug.Log("Pointer Down");
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
 		if (pointerDownTimer <= requiredHoldTime)
 		{
-			Debug.Log("Click");
+			onClick.Invoke();
+			// Debug.Log("Click");
 		}
 		Reset();
     }
