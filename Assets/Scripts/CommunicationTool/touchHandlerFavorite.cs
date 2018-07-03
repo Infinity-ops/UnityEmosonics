@@ -28,7 +28,6 @@ public class touchHandlerFavorite : MonoBehaviour, IPointerDownHandler, IPointer
 		if (pointerDownTimer <= requiredHoldTime)
 		{
 			onClick.Invoke();
-			// Debug.Log("Click");
 		}
 		Reset();
     }
@@ -45,7 +44,6 @@ public class touchHandlerFavorite : MonoBehaviour, IPointerDownHandler, IPointer
 				if (onLongClick != null)
 				{
 					onLongClick.Invoke();
-					Debug.Log("Long click");
 					pointerDown = false;
 				}
 			}
