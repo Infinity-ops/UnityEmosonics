@@ -7,8 +7,9 @@ public class KernelRegression : MonoBehaviour
 {
     private static String[] targets = { "happy", "surprised", "angry", "disgusted", "sad", "calm" };
     private double[][] xvecs = new double[targets.Length][];
-    private double[][] pvec = new double[5][];
+    private double[][] pvec = new double[5][]; //magic number because pvec is hardcoded for now (but from a working kernel regression example)
 
+    //struct object that contains all the parspect_abstract values
     struct parspect_abstract
     {
         string[] name;
@@ -78,14 +79,6 @@ public class KernelRegression : MonoBehaviour
         {
             xvecs[i] = new double[] { Math.Cos(2 * Math.PI * i / targets.Length), Math.Sin(2 * Math.PI * i / targets.Length + 0.1) };
         }
-
-        /*
-        double[] test = Krm(new double[] { 0.7, 0.1 }, 0.7);
-        print(test.Length);
-        foreach(double t in test)
-        {
-            print(t);
-        } */
     }
 
     private double[] parmap(double[] paramVec)
@@ -138,7 +131,7 @@ public class KernelRegression : MonoBehaviour
 
             if (func[idx] == "lin")
             {
-                paramVec_unmapped[idx] = (val - min[idx] / max[idx] - min[idx]);
+                paramVec_unmapped[idx] = (val - min[idx]) / (max[idx] - min[idx]);
             }
 
             else if (func[idx] == "exp")
@@ -164,7 +157,7 @@ public class KernelRegression : MonoBehaviour
     }
 
     //Load the data into the pvecs array
-
+    //use a hardcoded example at first
     private double[][] load_data()
     {
         double[][] pvec = new double[][] { new double[] {0.1234981 , 0.13339569, 1.0 , 0.10923002, 1.0, 0.13980813, 0.21005362, 0.19245244, 0.24757245, 0.17806109, 0.74874385},
@@ -191,15 +184,13 @@ public class KernelRegression : MonoBehaviour
     {
         int dim = pvec[0].Length;
         int n = xvecs.Length;
-        double[] nom = new double[dim]; //should be zeros(dim)
+        double[] nom = new double[dim]; 
         Array.Clear(nom, 0, dim); //init array with zeroes
         double den = 0.0;
 
         for (int i = 0; i < n; i++)
         {
             double temp = Kernel(xvecs[i], xvec, sigma);
-            //print(temp);
-            //print(xvecs[i][0]);
             nom = nom.Select((val, idx) => val + pvec[i].Select(p => p * temp).ToArray()[idx]).ToArray();
             den += temp;
         }
