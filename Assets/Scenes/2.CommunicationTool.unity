@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -126,14 +126,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 162581100}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bd50c6a489425d4895a2a980eadf8f7, type: 3}
+  m_Script: {fileID: 11500000, guid: c3a8eb2191732934496713f370b1f4c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visualization: smiley
-  favorite1Color: {r: 1, g: 1, b: 1, a: 1}
-  favorite2Color: {r: 1, g: 1, b: 1, a: 1}
-  favorite3Color: {r: 1, g: 1, b: 1, a: 1}
-  favorite4Color: {r: 1, g: 1, b: 1, a: 1}
+  visualization: 
+  favorite1Color: {r: 0, g: 0, b: 0, a: 0}
+  favorite2Color: {r: 0, g: 0, b: 0, a: 0}
+  favorite3Color: {r: 0, g: 0, b: 0, a: 0}
+  favorite4Color: {r: 0, g: 0, b: 0, a: 0}
   favorite1Pos: {x: 0, y: 0, z: 0}
   favorite2Pos: {x: 0, y: 0, z: 0}
   favorite3Pos: {x: 0, y: 0, z: 0}
@@ -249,7 +249,7 @@ MonoBehaviour:
     pureData: {fileID: 194259100}
   editorHelper:
     selection:
-    - {fileID: 490990448}
+    - {fileID: 374570261}
     repaintDummy: 0
     repaint: 0
     pureDataIcon: {fileID: 0}
@@ -317,42 +317,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 276877206}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62df6531eb6ca97488801afae473aa9f, type: 3}
+  m_Script: {fileID: 11500000, guid: ce97c3beee949214dafde1503d358ef5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredHoldTime: 1
-  onLongClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 276877212}
-        m_MethodName: ButtonRandomColors
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 276877211}
-        m_MethodName: change
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+  crosshair: {fileID: 1772333936}
 --- !u!114 &276877209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -394,10 +362,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 276877206}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18b6c1d3de957b44d972e035fbbc0e2c, type: 3}
+  m_Script: {fileID: 11500000, guid: bc90f728f7a49674faea5874cf5c4ef1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crosshair: {fileID: 1772333936}
 --- !u!114 &276877212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -406,9 +373,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 276877206}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdc2d5b66bc353e4ca8b1c2ce6d618fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 56ec61ab865469849a4711bdd1d6d874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  requiredHoldTime: 1
+  onLongClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 276877211}
+        m_MethodName: ButtonRandomColors
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 276877208}
+        m_MethodName: change
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &289070989
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,7 +652,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 374570261}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db2e5d71b886a6e45a7145ff6f23c2e9, type: 3}
+  m_Script: {fileID: 11500000, guid: 45fc2cd167750db46bd02a1cf1c500e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   crosshair: {fileID: 1772333936}
@@ -786,7 +786,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 490990448}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f101d4a3bb60ba744b645a9225d79b52, type: 3}
+  m_Script: {fileID: 11500000, guid: 785941d3c7151ba44bad64a3f7a44c40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &573803307
@@ -935,42 +935,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 728779045}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62df6531eb6ca97488801afae473aa9f, type: 3}
+  m_Script: {fileID: 11500000, guid: ce97c3beee949214dafde1503d358ef5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredHoldTime: 1
-  onLongClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 728779051}
-        m_MethodName: ButtonRandomColors
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 728779050}
-        m_MethodName: change
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+  crosshair: {fileID: 1772333936}
 --- !u!114 &728779048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1014,10 +982,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 728779045}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18b6c1d3de957b44d972e035fbbc0e2c, type: 3}
+  m_Script: {fileID: 11500000, guid: bc90f728f7a49674faea5874cf5c4ef1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crosshair: {fileID: 1772333936}
 --- !u!114 &728779051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1026,9 +993,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 728779045}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdc2d5b66bc353e4ca8b1c2ce6d618fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 56ec61ab865469849a4711bdd1d6d874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  requiredHoldTime: 1
+  onLongClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 728779050}
+        m_MethodName: ButtonRandomColors
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 728779047}
+        m_MethodName: change
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &742638993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1224,7 +1224,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 774533647}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3760b332a60df53428a240e2f61d01d0, type: 3}
+  m_Script: {fileID: 11500000, guid: f34c2d7534d308c479d14834588c2f8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SlidePanel: {fileID: 1108219847}
@@ -1417,42 +1417,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 945406495}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62df6531eb6ca97488801afae473aa9f, type: 3}
+  m_Script: {fileID: 11500000, guid: ce97c3beee949214dafde1503d358ef5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredHoldTime: 1
-  onLongClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 945406501}
-        m_MethodName: ButtonRandomColors
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 945406500}
-        m_MethodName: change
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+  crosshair: {fileID: 1772333936}
 --- !u!114 &945406498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1494,10 +1462,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 945406495}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18b6c1d3de957b44d972e035fbbc0e2c, type: 3}
+  m_Script: {fileID: 11500000, guid: bc90f728f7a49674faea5874cf5c4ef1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crosshair: {fileID: 1772333936}
 --- !u!114 &945406501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1506,9 +1473,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 945406495}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdc2d5b66bc353e4ca8b1c2ce6d618fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 56ec61ab865469849a4711bdd1d6d874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  requiredHoldTime: 1
+  onLongClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 945406500}
+        m_MethodName: ButtonRandomColors
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 945406497}
+        m_MethodName: change
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &949634116
 GameObject:
   m_ObjectHideFlags: 0
@@ -1639,7 +1639,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 949634116}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d09cbf1daa0fd5446b619e6bab2b73c6, type: 3}
+  m_Script: {fileID: 11500000, guid: ec960a7d03779f24c815e5c1314e2a1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   crosshair: {fileID: 1772333936}
@@ -1688,7 +1688,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1092304115}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3760b332a60df53428a240e2f61d01d0, type: 3}
+  m_Script: {fileID: 11500000, guid: f34c2d7534d308c479d14834588c2f8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SlidePanel: {fileID: 1108219847}
@@ -1943,7 +1943,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1292379827}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a95e203b1f491e840a902074b13739d4, type: 3}
+  m_Script: {fileID: 11500000, guid: a2375654141b44b488ef16a067973d43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   doubleClickTime: 250
@@ -1994,42 +1994,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1598987548}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62df6531eb6ca97488801afae473aa9f, type: 3}
+  m_Script: {fileID: 11500000, guid: ce97c3beee949214dafde1503d358ef5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredHoldTime: 1
-  onLongClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1598987554}
-        m_MethodName: ButtonRandomColors
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1598987553}
-        m_MethodName: change
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+  crosshair: {fileID: 1772333936}
 --- !u!114 &1598987551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2071,10 +2039,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1598987548}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18b6c1d3de957b44d972e035fbbc0e2c, type: 3}
+  m_Script: {fileID: 11500000, guid: bc90f728f7a49674faea5874cf5c4ef1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crosshair: {fileID: 1772333936}
 --- !u!114 &1598987554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2083,9 +2050,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 1598987548}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdc2d5b66bc353e4ca8b1c2ce6d618fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 56ec61ab865469849a4711bdd1d6d874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  requiredHoldTime: 1
+  onLongClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1598987553}
+        m_MethodName: ButtonRandomColors
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1598987550}
+        m_MethodName: change
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1620855681
 GameObject:
   m_ObjectHideFlags: 0
@@ -2221,7 +2221,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 993d0bdc11b75974cbd3016c6bc03dc2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 21f933064326c634ea415a117a1ddf40, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
