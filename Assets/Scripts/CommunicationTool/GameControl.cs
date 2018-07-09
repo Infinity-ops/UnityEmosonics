@@ -57,6 +57,11 @@ public class GameControl : MonoBehaviour
         Save();
     }
 
+    private void OnApplicationPause(bool pauseStatus)
+    {
+        Save();
+    }
+
     public void Save()
     {
         BinaryFormatter bf = new BinaryFormatter();
@@ -65,10 +70,10 @@ public class GameControl : MonoBehaviour
         Vector2SerializationSurrogate vector2SS = new Vector2SerializationSurrogate();
         Vector3SerializationSurrogate vector3SS = new Vector3SerializationSurrogate();
         ColorSerializationSurrogate colorSS = new ColorSerializationSurrogate();
- 
-        surrogateSelector.AddSurrogate(typeof(Vector2),new StreamingContext(StreamingContextStates.All),vector2SS);
-        surrogateSelector.AddSurrogate(typeof(Vector3),new StreamingContext(StreamingContextStates.All),vector3SS);
-        surrogateSelector.AddSurrogate(typeof(Color),new StreamingContext(StreamingContextStates.All),colorSS);
+
+        surrogateSelector.AddSurrogate(typeof(Vector2), new StreamingContext(StreamingContextStates.All), vector2SS);
+        surrogateSelector.AddSurrogate(typeof(Vector3), new StreamingContext(StreamingContextStates.All), vector3SS);
+        surrogateSelector.AddSurrogate(typeof(Color), new StreamingContext(StreamingContextStates.All), colorSS);
 
         bf.SurrogateSelector = surrogateSelector;
 
@@ -99,6 +104,11 @@ public class GameControl : MonoBehaviour
 
     public void Load()
     {
+
+        Debug.Log(Application.persistentDataPath + "/EmoSonicsSettings.dat");
+
+        Debug.Log(File.Exists(Application.persistentDataPath + "/EmoSonicsSettings.dat"));
+
         if (File.Exists(Application.persistentDataPath + "/EmoSonicsSettings.dat"))
         {
             BinaryFormatter bf = new BinaryFormatter();
@@ -107,10 +117,10 @@ public class GameControl : MonoBehaviour
             Vector2SerializationSurrogate vector2SS = new Vector2SerializationSurrogate();
             Vector3SerializationSurrogate vector3SS = new Vector3SerializationSurrogate();
             ColorSerializationSurrogate colorSS = new ColorSerializationSurrogate();
-    
-            surrogateSelector.AddSurrogate(typeof(Vector2),new StreamingContext(StreamingContextStates.All),vector2SS);
-            surrogateSelector.AddSurrogate(typeof(Vector3),new StreamingContext(StreamingContextStates.All),vector3SS);
-            surrogateSelector.AddSurrogate(typeof(Color),new StreamingContext(StreamingContextStates.All),colorSS);
+
+            surrogateSelector.AddSurrogate(typeof(Vector2), new StreamingContext(StreamingContextStates.All), vector2SS);
+            surrogateSelector.AddSurrogate(typeof(Vector3), new StreamingContext(StreamingContextStates.All), vector3SS);
+            surrogateSelector.AddSurrogate(typeof(Color), new StreamingContext(StreamingContextStates.All), colorSS);
 
             bf.SurrogateSelector = surrogateSelector;
 
