@@ -75,9 +75,11 @@ public class KernelRegression : MonoBehaviour
         pvec = load_data();
 
         //create kernel regression input positions
+        double phase_offset = 0.1;
         for (int i = 0; i < targets.Length; i++)
         {
-            xvecs[i] = new double[] { Math.Cos(2 * Math.PI * i / targets.Length), Math.Sin(2 * Math.PI * i / targets.Length + 0.1) };
+            xvecs[i] = new double[] { Math.Cos(2 * Math.PI * i / targets.Length + phase_offset),
+                Math.Sin(2 * Math.PI * i / targets.Length + phase_offset) };
         }
     }
 
@@ -92,7 +94,14 @@ public class KernelRegression : MonoBehaviour
         int idx = 0;
         foreach (double val in paramVec)
         {
-            if (idx == paramVec.Length - 1) { continue; }
+            if (idx == paramVec.Length - 1) {
+                foreach(double p in paramVec)
+                {
+                    print(p);
+                }
+                // print(val); 
+                break;
+            }  //stop iteration because we won't need the last value
 
             if (func[idx] == "lin")
             {
@@ -182,20 +191,24 @@ public class KernelRegression : MonoBehaviour
     //Kernel routine function
     public double[] Krm(double[] xvec, double sigma = 1.0)
     {
-        int dim = pvec[0].Length;
-        int n = xvecs.Length;
-        double[] nom = new double[dim]; 
-        Array.Clear(nom, 0, dim); //init array with zeroes
+        int nr_synth_parameters = pvec[0].Length;
+        int nr_emo_prototypes = xvecs.Length;
+        double[] nom = new double[nr_synth_parameters]; 
+        Array.Clear(nom, 0, nr_synth_parameters); //init array with zeroes
         double den = 0.0;
 
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < nr_emo_prototypes; i++)
         {
             double temp = Kernel(xvecs[i], xvec, sigma);
-            nom = nom.Select((val, idx) => val + pvec[i].Select(p => p * temp).ToArray()[idx]).ToArray();
+            //nom = nom.Select((val, idx) => val + pvec[i].Select(p => p * temp).ToArray()[idx]).ToArray();
+
+            double[] weighted_parameters_for_emotion_i = pvec[i].Select(p => p * temp).ToArray();
+            nom = nom.Select((val, idx) => val + weighted_parameters_for_emotion_i[idx]).ToArray();
             den += temp;
         }
 
-        return parmap(nom.Select(no => no / den).ToArray());
+        double[] krm_parvec = nom.Select(no => no / den).ToArray();
+        return parmap(krm_parvec);
     }
 
 

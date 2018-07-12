@@ -60,11 +60,15 @@ private void Update()
                     pd.changeValue(new double[] {pos[0],pos[1]});
                     pd.playAudio();
                 }
+                /*
                 if (singleClick && Time.time - lastClickTime > doubleClickTime/1000) {
                     crosshairRect.position = new Vector3(click.position.x, click.position.y, 0);
                     GameControl.control.soundPosition = pos;
                     GameControl.control.crosshairPosition = crosshairRect.position;
-                }
+                }*/
+                crosshairRect.position = new Vector3(click.position.x, click.position.y, 0);
+                GameControl.control.soundPosition = pos;
+                GameControl.control.crosshairPosition = crosshairRect.position;
             }
         }
     }
