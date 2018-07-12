@@ -3,6 +3,10 @@ using System.Linq;
 using UnityEngine;
 using System;
 
+/*
+ * TODO Find a way on how to deal with a sigma that would get too small
+ */
+
 public class KernelRegression : MonoBehaviour
 {
     private static String[] targets = { "happy", "surprised", "angry", "disgusted", "sad", "calm" };
@@ -81,6 +85,9 @@ public class KernelRegression : MonoBehaviour
             xvecs[i] = new double[] { Math.Cos(2 * Math.PI * i / targets.Length + phase_offset),
                 Math.Sin(2 * Math.PI * i / targets.Length + phase_offset) };
         }
+
+
+
     }
 
     private double[] parmap(double[] paramVec)
@@ -211,10 +218,16 @@ public class KernelRegression : MonoBehaviour
         return parmap(krm_parvec);
     }
 
-
-    // Update is called once per frame
-    void Update()
+    //returns the emotion positions on the wheel
+    public double[][] get_emo_pos()
     {
-
+        return xvecs;
     }
+
+    //return vector of all emotional targets (for example sad, happy, disgusted, ...)
+    public string[] get_targets()
+    {
+        return targets;
+    }
+
 }
