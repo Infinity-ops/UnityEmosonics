@@ -8,9 +8,11 @@ public class PdAPI : MonoBehaviour {
     private string MESSAGE = "abstract";
     private string TRIGGER = "aTrigger";
     private string BANG = "bang";
-    private double sigma = 0.7;
+    private double sigma = 0.05;
     private float pointer, duration, attack, desvol, pitch, chirp, lfndepth, lfnfreq,
     amdepth, amfreq, richness;
+    private string[] par_names = {"duration", "attack", "desvol", "pitch", "chirp", "lfndepth", "lfnfreq",
+    "amdepth", "amfreq", "richness"};
 
     // Use this for initialization
     void Awake () {
@@ -21,7 +23,7 @@ public class PdAPI : MonoBehaviour {
 
     void updateParam(double[] paramVec)
     {
-        /*
+        
         pointer = 1.0f;//(float) paramVec[0];
         duration = (float) paramVec[0];
         attack = (float) paramVec[1];
@@ -33,9 +35,9 @@ public class PdAPI : MonoBehaviour {
         amdepth = (float)paramVec[7];
         amfreq = (float)paramVec[8];
         richness = (float)paramVec[9];
-        */
-
         
+
+        /*
         pointer = 1.0f;//(float) paramVec[0];
         duration = 0.75f;
         attack = 0.2f;
@@ -46,14 +48,19 @@ public class PdAPI : MonoBehaviour {
         lfnfreq = 3.0f;
         amdepth = 0.2f;
         amfreq = 0.5f;
-        richness = 1.0f; 
+        richness = 1.0f; */
     }
 
     //change the value of the parameters in the pd patch
-    public void changeValue(double[] posxy)
+    public void changeValue(double[] posxy, bool debug=true)
     {
         double[] paramVec = kr.Krm(posxy, sigma);
-        debug(paramVec);
+
+        if (debug)
+        {
+            this.debug(paramVec);
+        }
+
         updateParam(paramVec);
         PureData.SendMessage(TOUCHSYMBOL, MESSAGE, pointer, duration, attack, desvol, pitch, chirp, lfndepth, lfnfreq, amdepth, amfreq, richness);
     }
@@ -66,14 +73,12 @@ public class PdAPI : MonoBehaviour {
 
     private void debug(double[] par)
     {
-        foreach(double p in par)
+        int idx = 0;
+        foreach(string s in par_names)
         {
-            print(p);
+            print(s+": "+par[idx].ToString());
+            idx++;
         }
     }
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

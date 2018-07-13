@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -113,6 +113,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD:Assets/Scripts/Scenes/3.Menu.unity
 --- !u!1 &63093766
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,6 +148,50 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+=======
+--- !u!1001 &32123350
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4356630933167002, guid: 54b18d056c6206546a703899a7aee75c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 242.6307
+      objectReference: {fileID: 0}
+    - target: {fileID: 4356630933167002, guid: 54b18d056c6206546a703899a7aee75c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 704.68994
+      objectReference: {fileID: 0}
+    - target: {fileID: 4356630933167002, guid: 54b18d056c6206546a703899a7aee75c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4356630933167002, guid: 54b18d056c6206546a703899a7aee75c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4356630933167002, guid: 54b18d056c6206546a703899a7aee75c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4356630933167002, guid: 54b18d056c6206546a703899a7aee75c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4356630933167002, guid: 54b18d056c6206546a703899a7aee75c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4356630933167002, guid: 54b18d056c6206546a703899a7aee75c, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 54b18d056c6206546a703899a7aee75c, type: 2}
+  m_IsPrefabParent: 0
+>>>>>>> 60596e6ea1e239616627d639dff7ab479f96c2a4:Assets/Scenes/3.Menu.unity
 --- !u!1 &68032539
 GameObject:
   m_ObjectHideFlags: 0
@@ -1051,7 +1096,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
