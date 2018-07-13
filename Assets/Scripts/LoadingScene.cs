@@ -2,7 +2,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using System.Threading;
 
 public class LoadingScene : MonoBehaviour
 {
@@ -10,9 +9,9 @@ public class LoadingScene : MonoBehaviour
     public string LoadingSceneName;
     public Text loadingText;
     public Slider sliderBar;
-    float progress;
+
     // Use this for initialization
-    void Awake()
+    void Start()
     {
         StartCoroutine(LoadNewScene(LoadingSceneName));
     }
@@ -30,15 +29,13 @@ public class LoadingScene : MonoBehaviour
 
         while (!operation.isDone)
         {
-           progress = Mathf.Clamp01(operation.progress / .9f);
-
-            loadingText.text = progress * 100 + "%";
+            float progress = Mathf.Clamp01(operation.progress / .9f);
+            sliderBar.value = progress;
+            loadingText.text = "Loading...";
+            loadingText.text = progress * 100f + "%";
             yield return null;
-
         }
-        
-
-
     }
+
 
 }

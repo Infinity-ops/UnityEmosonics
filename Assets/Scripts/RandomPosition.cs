@@ -12,7 +12,8 @@ public class RandomPosition : MonoBehaviour {
        
         transform.position = positions[randomNumber];
 
-      
+        
+
     }
 	
 	

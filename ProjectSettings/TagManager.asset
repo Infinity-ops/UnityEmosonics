@@ -6,9 +6,6 @@ TagManager:
   tags:
   - Projectile
   - player
-  - Stone
-  - dart
-  - SpStone
   layers:
   - Default
   - TransparentFX
