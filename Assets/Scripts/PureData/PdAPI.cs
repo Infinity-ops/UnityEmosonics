@@ -11,6 +11,8 @@ public class PdAPI : MonoBehaviour {
     private double sigma = 0.05;
     private float pointer, duration, attack, desvol, pitch, chirp, lfndepth, lfnfreq,
     amdepth, amfreq, richness;
+    private string[] par_names = {"duration", "attack", "desvol", "pitch", "chirp", "lfndepth", "lfnfreq",
+    "amdepth", "amfreq", "richness"};
 
     // Use this for initialization
     void Awake () {
@@ -50,9 +52,15 @@ public class PdAPI : MonoBehaviour {
     }
 
     //change the value of the parameters in the pd patch
-    public void changeValue(double[] posxy)
+    public void changeValue(double[] posxy, bool debug=true)
     {
         double[] paramVec = kr.Krm(posxy, sigma);
+
+        if (debug)
+        {
+            this.debug(paramVec);
+        }
+
         updateParam(paramVec);
         PureData.SendMessage(TOUCHSYMBOL, MESSAGE, pointer, duration, attack, desvol, pitch, chirp, lfndepth, lfnfreq, amdepth, amfreq, richness);
     }
@@ -65,14 +73,12 @@ public class PdAPI : MonoBehaviour {
 
     private void debug(double[] par)
     {
-        foreach(double p in par)
+        int idx = 0;
+        foreach(string s in par_names)
         {
-            print(p);
+            print(s+": "+par[idx].ToString());
+            idx++;
         }
     }
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

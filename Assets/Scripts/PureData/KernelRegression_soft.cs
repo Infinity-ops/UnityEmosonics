@@ -77,10 +77,11 @@ public class KernelRegression_soft : MonoBehaviour
         //load the csv 
         pvec = load_data();
 
+        /*
         foreach (double[] p in pvec)
         {
             print(p);
-        }
+        }*/
 
         //create kernel regression input positions
         for (int i = 0; i < targets.Length; i++)

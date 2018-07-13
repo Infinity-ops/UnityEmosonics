@@ -57,6 +57,7 @@ private void Update()
             if (Vector2.Distance(pos, new Vector2(0,0)) <= 1) {
 
                 if (doubleClick) {
+                    print("Click");
                     pd.changeValue(new double[] {pos[0],pos[1]});
                     pd.playAudio();
                 }

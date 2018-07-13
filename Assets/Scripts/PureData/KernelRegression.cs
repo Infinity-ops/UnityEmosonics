@@ -102,11 +102,6 @@ public class KernelRegression : MonoBehaviour
         foreach (double val in paramVec)
         {
             if (idx == paramVec.Length - 1) {
-                foreach(double p in paramVec)
-                {
-                    print(p);
-                }
-                // print(val); 
                 break;
             }  //stop iteration because we won't need the last value
 
