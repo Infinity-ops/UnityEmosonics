@@ -11,6 +11,7 @@ public class DestroyObject : MonoBehaviour {
         {
             PdAPI pd = GameObject.Find("PureData").GetComponent<PdAPI>();
 <<<<<<< HEAD
+<<<<<<< HEAD
             double[] pos = new double[] { 0.1, 0.5 };
 <<<<<<< HEAD
             Destroy(this.gameObject);
@@ -18,6 +19,9 @@ public class DestroyObject : MonoBehaviour {
             DestroyObject(StonePrefab);
 =======
 >>>>>>> 60596e6ea1e239616627d639dff7ab479f96c2a4
+=======
+            double[] pos = new double[] { 0.7, 0.5 };
+>>>>>>> parent of 8b3bb35... Added score /Attempts
 =======
             double[] pos = new double[] { 0.7, 0.5 };
 >>>>>>> parent of 8b3bb35... Added score /Attempts

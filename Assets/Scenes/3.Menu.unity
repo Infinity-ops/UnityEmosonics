@@ -113,6 +113,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/3.Menu.unity
 <<<<<<< HEAD:Assets/Scripts/Scenes/3.Menu.unity
 <<<<<<< HEAD:Assets/Scripts/Scenes/3.Menu.unity
 --- !u!1 &63093766
@@ -193,6 +194,8 @@ Prefab:
   m_ParentPrefab: {fileID: 100100000, guid: 54b18d056c6206546a703899a7aee75c, type: 2}
   m_IsPrefabParent: 0
 >>>>>>> 60596e6ea1e239616627d639dff7ab479f96c2a4:Assets/Scenes/3.Menu.unity
+=======
+>>>>>>> parent of 8b3bb35... Added score /Attempts:Assets/Scenes/3.Menu.unity
 =======
 >>>>>>> parent of 8b3bb35... Added score /Attempts:Assets/Scenes/3.Menu.unity
 --- !u!1 &68032539
