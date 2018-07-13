@@ -102,6 +102,7 @@ public class SlingShot : MonoBehaviour
 
     private void Update()
     {
+
         UpdateLines();
         UpdateAim();
         GetHeight(GetVelocity(), 3, 1);
