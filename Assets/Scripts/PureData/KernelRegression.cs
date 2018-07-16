@@ -4,7 +4,12 @@ using UnityEngine;
 using System;
 
 /*
- * TODO Find a way on how to deal with a sigma that would get too small
+ * TODO: Find a way on how to deal with a sigma that would get too small
+ * Debug by checking if param vector is exactly the emotion prototype when they are near to each other and small sigma
+ * Take angles from Russels wheel to accuratly compute the prototype positions
+ * Setting to switch between Russel or Unit distributed emotions
+ * Multiplication of richness parameter to increase loudness for (high and low loudness for playing around in the comm. tool)
+ * Store hardcoded pvecs in config file AND/OR load directly from .json?
  */
 
 public class KernelRegression : MonoBehaviour
@@ -138,7 +143,7 @@ public class KernelRegression : MonoBehaviour
         int idx = 0;
         foreach (double val in paramVec)
         {
-            if (idx == paramVec.Length - 1) { continue; }
+            if (idx == paramVec.Length - 1) { break; }
 
             if (func[idx] == "lin")
             {
