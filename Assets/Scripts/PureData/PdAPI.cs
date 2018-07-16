@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PdAPI : MonoBehaviour {
     private KernelRegression kr;
+    private float richness_max = 4;
+    private float richness_min = 0.5;
     private string TOUCHSYMBOL = "#touch";
     private string MESSAGE = "abstract";
     private string TRIGGER = "aTrigger";
@@ -51,8 +53,13 @@ public class PdAPI : MonoBehaviour {
         richness = 1.0f; */
     }
 
-    //change the value of the parameters in the pd patch
-    public void changeValue(double[] posxy, bool debug=true)
+    /* change the value of the parameters in the pd patch
+     * @params:
+     * posxy = the position in the unit circle from which the sound should by synthesized
+     * debug = if true, prints the parameter names and values
+     * richness_scale = scale the richness which results in higher/lower volume
+     */
+    public void changeValue(double[] posxy, bool debug=false, float richness_scale=1.0f)
     {
         double[] paramVec = kr.Krm(posxy, sigma);
 
@@ -61,6 +68,19 @@ public class PdAPI : MonoBehaviour {
             this.debug(paramVec);
         }
 
+        //scale richness
+        richness *= richness_scale;
+
+        if (richness > richness_max)
+        {
+            richness = richness_max;
+        }
+
+        else if (richness < richness_min)
+        {
+            richness = richness_min;
+        }
+        
         updateParam(paramVec);
         PureData.SendMessage(TOUCHSYMBOL, MESSAGE, pointer, duration, attack, desvol, pitch, chirp, lfndepth, lfnfreq, amdepth, amfreq, richness);
     }
