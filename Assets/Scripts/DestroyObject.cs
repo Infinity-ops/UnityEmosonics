@@ -7,7 +7,7 @@ public class DestroyObject : MonoBehaviour
     GameObject player;
     private GameObject StonePrefab;
     private GameObject bc;
-   
+
     IEnumerator OnTriggerEnter(Collider collider)
     {
         if (!player || (player && collider.gameObject.tag == "player"))

@@ -1,13 +1,7 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 03c77434e168ae640993fe1ad8596232
+guid: a2f8c99fa6964e1449814e3eb5167832
 folderAsset: yes
-timeCreated: 1531480600
-=======
-guid: 46ae05d52fdb1a64288649e2ba372126
-folderAsset: yes
-timeCreated: 1528199643
->>>>>>> parent of 8b3bb35... Added score /Attempts
+timeCreated: 1531471244
 licenseType: Free
 DefaultImporter:
   externalObjects: {}
