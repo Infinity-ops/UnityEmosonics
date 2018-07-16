@@ -195,7 +195,7 @@ public class KernelRegression : MonoBehaviour
     }
 
     //Kernel routine function
-    public double[] Krm(double[] xvec, double sigma = 1.0)
+    public double[] Krm(double[] xvec, double sigma = 1.0, bool debug=false)
     {
         int nr_synth_parameters = pvec[0].Length;
         int nr_emo_prototypes = xvecs.Length;
@@ -214,7 +214,44 @@ public class KernelRegression : MonoBehaviour
         }
 
         double[] krm_parvec = nom.Select(no => no / den).ToArray();
-        return parmap(krm_parvec);
+
+        if (debug)
+        {
+            return krm_parvec;
+        }
+        else
+        {
+            return parmap(krm_parvec);
+        }
+        
+    }
+
+    public void debug(double[] paramVec, double[] xy)
+    {
+
+        //compare distances
+        double[] dist_vec = new double[6];
+        int idx = 0;
+        foreach(double[] xv in xvecs)
+        {
+            print(xv);
+            dist_vec[idx] = Math.Sqrt(Math.Pow(xy[0] - xv[0], 2)
+                + Math.Pow(xy[1] - xv[1], 2));
+            idx++;
+        }
+
+        int closest_idx = Array.IndexOf(dist_vec, dist_vec.Min());
+        double[] closes_emotion = xvecs[closest_idx];
+
+        double[] debug_vec = Krm(closes_emotion, 0.05, true);
+
+        //print distances
+        idx = 0;
+        foreach(double val in debug_vec)
+        {
+            print(Math.Abs(val - paramVec[idx]));
+            idx++;
+        }
     }
 
     //returns the emotion positions on the wheel

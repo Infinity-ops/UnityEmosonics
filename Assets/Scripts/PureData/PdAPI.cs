@@ -5,7 +5,7 @@ using UnityEngine;
 public class PdAPI : MonoBehaviour {
     private KernelRegression kr;
     private float richness_max = 4;
-    private float richness_min = 0.5;
+    private float richness_min = 0.5f;
     private string TOUCHSYMBOL = "#touch";
     private string MESSAGE = "abstract";
     private string TRIGGER = "aTrigger";
@@ -59,13 +59,15 @@ public class PdAPI : MonoBehaviour {
      * debug = if true, prints the parameter names and values
      * richness_scale = scale the richness which results in higher/lower volume
      */
-    public void changeValue(double[] posxy, bool debug=false, float richness_scale=1.0f)
+    public void changeValue(double[] posxy, bool debug=true, float richness_scale=1.0f)
     {
         double[] paramVec = kr.Krm(posxy, sigma);
 
         if (debug)
         {
-            this.debug(paramVec);
+            //this.debug(paramVec);
+            double[] pv = kr.Krm(posxy, sigma, true);
+            kr.debug(pv, posxy);
         }
 
         //scale richness
