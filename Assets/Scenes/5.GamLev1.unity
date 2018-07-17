@@ -523,6 +523,7 @@ GameObject:
   - component: {fileID: 259352153}
   - component: {fileID: 259352152}
   - component: {fileID: 259352151}
+  - component: {fileID: 259352154}
   m_Layer: 5
   m_Name: GameButton
   m_TagString: Untagged
@@ -587,7 +588,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 259352152}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 259352154}
+        m_MethodName: set_useGUILayout
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &259352152
@@ -623,6 +635,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 259352149}
+--- !u!114 &259352154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 259352149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac01dbf7210493d4d938aec86065aa0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &270589507
 Prefab:
   m_ObjectHideFlags: 0
@@ -2785,7 +2808,7 @@ MonoBehaviour:
     pureData: {fileID: 1168031364}
   editorHelper:
     selection:
-    - {fileID: 1778456979}
+    - {fileID: 102900000, guid: 39ef1dad12c556146940503f458f277b, type: 3}
     repaintDummy: 0
     repaint: 0
     pureDataIcon: {fileID: 0}
@@ -2915,7 +2938,6 @@ GameObject:
   - component: {fileID: 1207789391}
   - component: {fileID: 1207789390}
   - component: {fileID: 1207789393}
-  - component: {fileID: 1207789394}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -3036,17 +3058,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 785941d3c7151ba44bad64a3f7a44c40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1207789394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1207789388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05fda792a8afd0b4983dd417f6dbd189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1239700285 stripped
@@ -3758,10 +3769,6 @@ Transform:
   m_Father: {fileID: 866942284}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1778456979 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100008, guid: 82fa700a17b6f544bb37976066fccc49, type: 3}
-  m_PrefabInternal: {fileID: 270589507}
 --- !u!1 &1802056839
 GameObject:
   m_ObjectHideFlags: 0
@@ -4591,8 +4598,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.549341, y: 5.365194, z: 1}
-  m_Center: {x: -0.0039225686, y: -0.02437422, z: 0}
+  m_Size: {x: 3.549341, y: 5.365194, z: 0.6973157}
+  m_Center: {x: -0.0039225686, y: -0.02437422, z: 0.15134215}
 --- !u!114 &2131862350
 MonoBehaviour:
   m_ObjectHideFlags: 0

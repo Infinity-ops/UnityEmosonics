@@ -13,10 +13,12 @@ public class DestroyObject : MonoBehaviour
         if (!player || (player && collider.gameObject.tag == "player"))
         {
             PdAPI pd = GameObject.Find("PureData").GetComponent<PdAPI>();
+
             double[] pos = new double[] { 0.1, 0.5 };
             Destroy(this.gameObject);
             StonePrefab = GameObject.FindGameObjectWithTag("Projectile");
             DestroyObject(StonePrefab);
+
             pd.changeValue(pos);
             GameCount.scoreValue += 10;
             pd.playAudio();
