@@ -14,7 +14,10 @@ using System;
 public class KernelRegression : MonoBehaviour
 {
     private static String[] targets = { "happy", "surprised", "angry", "disgusted", "sad", "calm" };
+    private double[] emotion_angles = { 11, 80, 172, 200, 236, 328 };
     private double[][] xvecs = new double[targets.Length][];
+    private double[][] xvecs_unit = new double[targets.Length][];
+    private double[][] xvecs_russell = new double[targets.Length][];
     private double[][] pvec = new double[5][]; //magic number because pvec is hardcoded for now (but from a working kernel regression example)
 
     //struct object that contains all the parspect_abstract values
@@ -82,15 +85,17 @@ public class KernelRegression : MonoBehaviour
         //load the csv 
         pvec = load_data();
 
-        //create kernel regression input positions
+        //create kernel regression input positions for unit distribution and russels angles
         double phase_offset = 0.1;
+        int[] origin = new int[] { 0, 0 };
         for (int i = 0; i < targets.Length; i++)
         {
-            xvecs[i] = new double[] { Math.Cos(2 * Math.PI * i / targets.Length + phase_offset),
+            xvecs_unit[i] = new double[] { Math.Cos(2 * Math.PI * i / targets.Length + phase_offset),
                 Math.Sin(2 * Math.PI * i / targets.Length + phase_offset) };
+
+            xvecs_russell[i] = new double[] {origin[0]+Math.Cos((emotion_angles[i]*Math.PI)/180),
+            origin[1]+Math.Sin((emotion_angles[i]*Math.PI)/180)};
         }
-
-
 
     }
 
@@ -195,8 +200,12 @@ public class KernelRegression : MonoBehaviour
     }
 
     //Kernel routine function
-    public double[] Krm(double[] xvec, double sigma = 1.0, bool debug=false)
+    public double[] Krm(double[] xvec, double sigma = 1.0, string xvecs_type = "unit", bool debug=false)
     {
+        //set the ankerpoints
+        if (xvecs_type == "unit") { xvecs = xvecs_unit; }
+        else if (xvecs_type == "russell") { xvecs = xvecs_russell; }
+
         int nr_synth_parameters = pvec[0].Length;
         int nr_emo_prototypes = xvecs.Length;
         double[] nom = new double[nr_synth_parameters]; 
@@ -243,7 +252,7 @@ public class KernelRegression : MonoBehaviour
         int closest_idx = Array.IndexOf(dist_vec, dist_vec.Min());
         double[] closes_emotion = xvecs[closest_idx];
 
-        double[] debug_vec = Krm(closes_emotion, 0.05, true);
+        double[] debug_vec = Krm(closes_emotion, 0.05, get_xvecs_type(), true);
 
         //print distances
         idx = 0;
@@ -254,10 +263,35 @@ public class KernelRegression : MonoBehaviour
         }
     }
 
-    //returns the emotion positions on the wheel
-    public double[][] get_emo_pos()
+    //get the type of the ankerpoints, either unit distributed or from russell's angles
+    public string get_xvecs_type()
     {
-        return xvecs;
+        if (xvecs == xvecs_unit)
+        {
+            return "unit";
+        }
+        else
+        {
+            return "russell";
+        }
+    }
+
+    //returns the emotion positions on the wheel
+    public double[][] get_emo_pos(string xvecs_type="unit")
+    {
+        if (xvecs_type=="unit")
+        {
+            return xvecs_unit;
+        }
+        else if (xvecs_type == "russell")
+        {
+            return xvecs_russell;
+        }
+        else
+        {
+            throw new System.ArgumentException("xvec type not defined", "xvecs_type");
+        }
+       
     }
 
     //return vector of all emotional targets (for example sad, happy, disgusted, ...)
