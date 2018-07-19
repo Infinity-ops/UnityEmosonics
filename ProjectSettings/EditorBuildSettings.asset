@@ -4,4 +4,49 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: Assets/Scenes/1.LoadingAppScreen.unity
+    guid: e55b95d664c23f34c82011a7f1909c43
+  - enabled: 0
+    path: Assets/Scenes/2.CommunicationTool.unity
+    guid: 8fd586d137c63494eaa5abdf01de437b
+  - enabled: 0
+    path: Assets/Scenes/3.Menu.unity
+    guid: 0948411f13d070e4381f3f19425764bd
+  - enabled: 0
+    path: Assets/Scenes/4.LoadingLevel.unity
+    guid: 5406167cb9965f148b620d50c82e4e42
+  - enabled: 0
+    path: Assets/Scenes/5.GamLev1.unity
+    guid: 89fbcb487f5182e40a46ff43b69f6c21
+  - enabled: 0
+    path: Assets/Scenes/5.GamLev2.unity
+    guid: 924288a49822ffb4a8dd508f412be81c
+  - enabled: 0
+    path: Assets/Scenes/5.GamLev3.unity
+    guid: f831f5de1cae7434f80852ca0e3f0682
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/RESTTestScene.unity
+    guid: 2fe5cd30132b7214f91d1755a63d8f9c
