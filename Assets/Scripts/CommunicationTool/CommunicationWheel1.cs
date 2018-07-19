@@ -21,15 +21,20 @@ public class CommunicationWheel1 : MonoBehaviour, IPointerDownHandler, IPointerU
     private PointerEventData click;
     public void OnPointerDown(PointerEventData data)
     {
-        if (Time.time - lastClickTime > doubleClickTime/1000) {
-            singleClick = true;
-        }
-        else {
+        if (Time.time - lastClickTime < doubleClickTime/1000) {
             doubleClick = true;
         }
         pointerDown = true;
         click = data;
         lastClickTime = Time.time;
+        Vector2 pos = new Vector2((localCursor.x / circle.sizeDelta.x) * 2, (localCursor.y / circle.sizeDelta.y) * 2);
+        float dist = Vector2.Distance(pos, new Vector2(0,0));
+        if (Vector2.Distance(pos, new Vector2(0,0)) <= 1) {
+            if (doubleClick) {
+                pd.changeValue(new double[] {pos[0],pos[1]});
+                pd.playAudio();
+            }
+        }
     }
 
     public void OnPointerUp(PointerEventData data) 
@@ -55,16 +60,9 @@ private void Update()
             Vector2 pos = new Vector2((localCursor.x / circle.sizeDelta.x) * 2, (localCursor.y / circle.sizeDelta.y) * 2);
             float dist = Vector2.Distance(pos, new Vector2(0,0));
             if (Vector2.Distance(pos, new Vector2(0,0)) <= 1) {
-
-                if (doubleClick) {
-                    pd.changeValue(new double[] {pos[0],pos[1]});
-                    pd.playAudio();
-                }
-                if (singleClick && Time.time - lastClickTime > doubleClickTime/1000) {
-                    crosshairRect.position = new Vector3(click.position.x, click.position.y, 0);
-                    GameControl.control.soundPosition = pos;
-                    GameControl.control.crosshairPosition = crosshairRect.position;
-                }
+                crosshairRect.position = new Vector3(click.position.x, click.position.y, 0);
+                GameControl.control.soundPosition = pos;
+                GameControl.control.crosshairPosition = crosshairRect.position;
             }
         }
     }

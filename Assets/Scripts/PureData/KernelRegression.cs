@@ -77,7 +77,7 @@ public class KernelRegression : MonoBehaviour
         //create kernel regression input positions
         for (int i = 0; i < targets.Length; i++)
         {
-            xvecs[i] = new double[] { Math.Cos(2 * Math.PI * i / targets.Length), Math.Sin(2 * Math.PI * i / targets.Length + 0.1) };
+            xvecs[i] = new double[] { Math.Cos(2 * Math.PI * i / targets.Length + 0.1), Math.Sin(2 * Math.PI * i / targets.Length + 0.1) };
         }
     }
 

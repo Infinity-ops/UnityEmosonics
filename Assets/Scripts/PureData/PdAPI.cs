@@ -52,7 +52,11 @@ public class PdAPI : MonoBehaviour {
     //change the value of the parameters in the pd patch
     public void changeValue(double[] posxy)
     {
+        string datetime = System.DateTime.UtcNow.ToString();
+        string id = SystemInfo.deviceUniqueIdentifier;
+        restAPI.SendData(datetime, id, posxy[0], posxy[1]);
         double[] paramVec = kr.Krm(posxy, sigma);
+        debug(paramVec);
         updateParam(paramVec);
         PureData.SendMessage(TOUCHSYMBOL, MESSAGE, pointer, duration, attack, desvol, pitch, chirp, lfndepth, lfnfreq, amdepth, amfreq, richness);
     }
