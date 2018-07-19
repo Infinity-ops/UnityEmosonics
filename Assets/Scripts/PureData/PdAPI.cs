@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PdAPI : MonoBehaviour {
     private KernelRegression kr;
+    private float richness_max = 4;
+    private float richness_min = 0.5f;
+    private string xvecs_type = "unit";
     private string TOUCHSYMBOL = "#touch";
     private string MESSAGE = "abstract";
     private string TRIGGER = "aTrigger";
@@ -51,16 +54,26 @@ public class PdAPI : MonoBehaviour {
         richness = 1.0f; */
     }
 
-    //change the value of the parameters in the pd patch
-    public void changeValue(double[] posxy, bool debug=true)
+    /* change the value of the parameters in the pd patch
+     * @params:
+     * posxy = the position in the unit circle from which the sound should by synthesized
+     * debug = if true, prints the parameter names and values
+     * richness_scale = scale the richness which results in higher/lower volume
+     */
+    public void changeValue(double[] posxy, bool debug=true, float richness_scale=1.0f)
     {
-        double[] paramVec = kr.Krm(posxy, sigma);
+        double[] paramVec = kr.Krm(posxy, sigma, xvecs_type);
 
         if (debug)
         {
-            this.debug(paramVec);
+            //this.debug(paramVec);
+            double[] pv = kr.Krm(posxy, sigma, xvecs_type, true);
+            kr.debug(pv, posxy);
         }
 
+        //scale richness
+        richness = scale_richness(richness, richness_scale);
+        
         updateParam(paramVec);
         PureData.SendMessage(TOUCHSYMBOL, MESSAGE, pointer, duration, attack, desvol, pitch, chirp, lfndepth, lfnfreq, amdepth, amfreq, richness);
     }
@@ -71,6 +84,56 @@ public class PdAPI : MonoBehaviour {
         PureData.SendMessage(TOUCHSYMBOL, TRIGGER, BANG);
     }
 
+    //changes the xvec type
+    public void change_xvecs_type(string type)
+    {
+        if (type != "unit" || type != "russell")
+        {
+            throw new System.ArgumentException("type not known, use either unit or russell");
+        }
+        else
+        {
+            xvecs_type = type;
+        }
+    }
+
+    //returns the current xvec setting of the kernelregression class
+    public string get_xvecs_type()
+    {
+        return kr.get_xvecs_type();
+    }
+
+    //get the x,y coordinates of the specified xvecs type
+    public double[][] get_emo_pos(string type = "unit")
+    {
+        return kr.get_emo_pos(type);
+    }
+
+    //returns targets in the same order as the xvecs
+    public string[] get_targets()
+    {
+        return kr.get_targets();
+    }
+
+    //scales the richness and checks if thresholds are exceeded
+    private float scale_richness(float richness, float richness_scale)
+    {
+        richness *= richness_scale;
+
+        if (richness > richness_max)
+        {
+            richness = richness_max;
+        }
+
+        else if (richness < richness_min)
+        {
+            richness = richness_min;
+        }
+
+        return richness;
+    }
+
+    //prints par names if debug is set
     private void debug(double[] par)
     {
         int idx = 0;
