@@ -590,8 +590,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 259352154}
-        m_MethodName: set_useGUILayout
-        m_Mode: 6
+        m_MethodName: play
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2808,7 +2808,7 @@ MonoBehaviour:
     pureData: {fileID: 1168031364}
   editorHelper:
     selection:
-    - {fileID: 102900000, guid: 39ef1dad12c556146940503f458f277b, type: 3}
+    - {fileID: 259352149}
     repaintDummy: 0
     repaint: 0
     pureDataIcon: {fileID: 0}
