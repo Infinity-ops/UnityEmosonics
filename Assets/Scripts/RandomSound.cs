@@ -2,21 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RandomSound : MonoBehaviour {
-   // private PdAPI pd;
+public class randomSound : MonoBehaviour
+{
+
     // Use this for initialization
-    void Start () {
-       
+    private PdAPI pd;
+
+    void Start()
+    {
+        pd = GameObject.Find("PureData").GetComponent<PdAPI>();
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    public void play()
+    {
         
-    }
-   public void play() {
-        PdAPI pd = GameObject.Find("PureData").GetComponent<PdAPI>();
-        double[] pos = new double[] { Random.Range(-1, 1), Random.Range(-1, 1) };
+        double[] pos = new double[] { Random.Range(-1f, 1f), Random.Range(-1f, 1f) };
         pd.changeValue(pos);
+        print("x" + pos[0].ToString());
+        print("y" + pos[1].ToString());
         pd.playAudio();
     }
 }

@@ -16,13 +16,13 @@ public class CommunicationWheel1_Game : MonoBehaviour
         localCursor.x = Input.mousePosition.x;
         localCursor.y = Input.mousePosition.y;
          pointerDown = true;
-        Debug.Log("Down");
+        //Debug.Log("Down");
     }
 
     private void  OnMouseUp() 
     {
          pointerDown = false;
-        Debug.Log("Up");        
+        //Debug.Log("Up");        
     }
     // Use this for initialization
     void Start () {

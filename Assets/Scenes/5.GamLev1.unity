@@ -662,7 +662,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 259352154}
+      - m_Target: {fileID: 1318562402}
         m_MethodName: play
         m_Mode: 1
         m_Arguments:
@@ -670,8 +670,8 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
+          m_StringArgument: play()
+          m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
@@ -716,7 +716,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 259352149}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cd7d62cfc82a6b41a4811c57408a712, type: 3}
+  m_Script: {fileID: 11500000, guid: 580349bff36a3ee4fbc895ce202afd35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &270589508
@@ -730,8 +730,8 @@ GameObject:
   - component: {fileID: 270589513}
   - component: {fileID: 270589511}
   - component: {fileID: 270589512}
-  - component: {fileID: 270589514}
   - component: {fileID: 270589510}
+  - component: {fileID: 270589514}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -831,7 +831,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 270589508}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 842cb4e28c4d71a46bae122441b0f5ab, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d04acfc6434eb840bca56689c1b6409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   crosshair: {fileID: 897399620}
@@ -1105,6 +1105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 435497621}
   - component: {fileID: 435497622}
+  - component: {fileID: 435497623}
   m_Layer: 0
   m_Name: ScoreCountScript
   m_TagString: Untagged
@@ -1134,6 +1135,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d99af93c75460a4db9b28c41e02461f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &435497623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 435497620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57e3391be26852d4fa00547a57d50673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   score: {fileID: 1892810726}
@@ -1598,7 +1610,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51a8ecaafe80769439a94cafef26cf64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cc: {fileID: 270589512}
 --- !u!4 &546134182
 Transform:
   m_ObjectHideFlags: 0
@@ -1621,6 +1632,7 @@ GameObject:
   m_Component:
   - component: {fileID: 553119828}
   - component: {fileID: 553119827}
+  - component: {fileID: 553119829}
   m_Layer: 0
   m_Name: livesCountScript
   m_TagString: Untagged
@@ -1639,8 +1651,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da20d98f23d53f468f0b72e7c76e81f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lives: {fileID: 1205823396}
-  gameStatus: {fileID: 1472443140}
 --- !u!4 &553119828
 Transform:
   m_ObjectHideFlags: 0
@@ -1654,6 +1664,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &553119829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 553119826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b46c2c5009c93384ea2718f273dab1f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lives: {fileID: 1205823396}
+  gameStatus: {fileID: 1472443140}
 --- !u!1 &623566945
 GameObject:
   m_ObjectHideFlags: 0
@@ -2171,7 +2194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec960a7d03779f24c815e5c1314e2a1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crosshair: {fileID: 897399620}
+  crosshair: {fileID: 0}
 --- !u!114 &767040221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2650,12 +2673,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a345234ac47f75747a5c5d83eb55f0ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObject:
-  - {fileID: 1621448444}
-  - {fileID: 298933772}
-  - {fileID: 1971001345}
-  - {fileID: 97148729}
-  - {fileID: 750499797}
 --- !u!4 &1031480998
 Transform:
   m_ObjectHideFlags: 0
@@ -2942,8 +2959,7 @@ MonoBehaviour:
     paths: []
     pureData: {fileID: 1168031364}
   editorHelper:
-    selection:
-    - {fileID: 270589508}
+    selection: []
     repaintDummy: 0
     repaint: 0
     pureDataIcon: {fileID: 0}
@@ -3351,6 +3367,46 @@ Transform:
   - {fileID: 866942284}
   m_Father: {fileID: 0}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1318562401
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1318562403}
+  - component: {fileID: 1318562402}
+  m_Layer: 0
+  m_Name: randomSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1318562402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1318562401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 580349bff36a3ee4fbc895ce202afd35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1318562403
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1318562401}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 58, y: 57, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1360552870
 GameObject:
@@ -3843,6 +3899,65 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1588599113}
   m_Mesh: {fileID: 4300008, guid: 82fa700a17b6f544bb37976066fccc49, type: 3}
+--- !u!1 &1600221727
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1402829216959802, guid: 6a2d3e31a77357a45b261458a646d8eb,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1600221729}
+  - component: {fileID: 1600221728}
+  m_Layer: 0
+  m_Name: GameControl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1600221728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1600221727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3a8eb2191732934496713f370b1f4c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visualization: 
+  favorite1Color: {r: 0, g: 0, b: 0, a: 0}
+  favorite2Color: {r: 0, g: 0, b: 0, a: 0}
+  favorite3Color: {r: 0, g: 0, b: 0, a: 0}
+  favorite4Color: {r: 0, g: 0, b: 0, a: 0}
+  favorite1Pos: {x: 0, y: 0, z: 0}
+  favorite2Pos: {x: 0, y: 0, z: 0}
+  favorite3Pos: {x: 0, y: 0, z: 0}
+  favorite4Pos: {x: 0, y: 0, z: 0}
+  favorite1Sound: {x: 0, y: 0}
+  favorite2Sound: {x: 0, y: 0}
+  favorite3Sound: {x: 0, y: 0}
+  favorite4Sound: {x: 0, y: 0}
+  crosshairPosition: {x: 0, y: 0, z: 0}
+  soundPosition: {x: 0, y: 0}
+  lastCrosshairPos: {x: 0, y: 0, z: 0}
+  lastSoundPosition: {x: 0, y: 0}
+--- !u!4 &1600221729
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4356630933167002, guid: 6a2d3e31a77357a45b261458a646d8eb,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1600221727}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 242.6307, y: 704.68994, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1605515625
 GameObject:
   m_ObjectHideFlags: 0
@@ -5194,6 +5309,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2131862346}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72dec0e9b91f13d48ab2386b1dbe8137, type: 3}
+  m_Script: {fileID: 11500000, guid: bb7de616b3c6cfd4fa135f8833ac1f6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

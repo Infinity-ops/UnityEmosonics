@@ -141,7 +141,7 @@ public class PdAPI : MonoBehaviour
         int idx = 0;
         foreach (string s in par_names)
         {
-            print(s + ": " + par[idx].ToString());
+          //  print(s + ": " + par[idx].ToString());
             idx++;
         }
     }
