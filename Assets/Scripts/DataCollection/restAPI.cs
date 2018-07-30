@@ -3,7 +3,7 @@ using Proyecto26;
 using System.Collections.Generic;
 
 [System.Serializable]
-public class DataPoint {
+public class UsageDataPoint {
   public string datetime;
   public string id;
   public double x;
@@ -12,12 +12,12 @@ public class DataPoint {
 
 public class restAPI : MonoBehaviour {
 
-	private static readonly string basePath = "https://localhost/api.php/usage_data";
+	private static readonly string basePath = "https://localhost/api.php/";
 
-	public static void SendData(string datetime, string id, double x, double y){
+	public static void SendUsage(string datetime, string id, double x, double y, string database){
 
 		if (Application.internetReachability != NetworkReachability.NotReachable) {
-			RestClient.Post<DataPoint>(basePath, new DataPoint {
+			RestClient.Post<UsageDataPoint>(basePath + database, new UsageDataPoint {
 				datetime = datetime,
 				id = id,
 				x = x,

@@ -97,10 +97,10 @@ private void Update()
                 {
                     Color = getColorByNormalizedPosition(pos.x,pos.y);
                 }
-                if (doubleClick) {
-                    pd.changeValue(new double[] {pos[0],pos[1]});
-                    pd.playAudio();
-                }
+                // if (doubleClick) {
+                //     pd.changeValue(new double[] {pos[0],pos[1]});
+                //     pd.playAudio();
+                // }
                 /*
                 if (singleClick && Time.time - lastClickTime > doubleClickTime/1000) {
                     crosshairRect.position = new Vector3(click.position.x, click.position.y, 0);
