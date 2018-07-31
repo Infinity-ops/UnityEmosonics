@@ -89,7 +89,7 @@ public class PdAPI : MonoBehaviour
     //changes the xvec type
     public void change_xvecs_type(string type)
     {
-        if (type != "unit" || type != "russell")
+        if (type != "unit" && type != "russell")
         {
             throw new System.ArgumentException("type not known, use either unit or russell");
         }
