@@ -61,7 +61,6 @@ public class CommunicationWheel1 : MonoBehaviour, IPointerDownHandler, IPointerU
         crosshairRect = crosshair.GetComponent<RectTransform>();
         ImageRenderer = circle.GetComponent<Image>();
         Data = ImageRenderer.sprite.texture.GetPixels();
-        Debug.Log("Data size: " + Data.Length);
 	}
 	
     public Color getColorByNormalizedPosition(float X, float Y)

@@ -76,6 +76,8 @@ public class PdAPI : MonoBehaviour
         //scale richness
         richness = scale_richness(richness, richness_scale);
 
+        restAPI.SendUsage(posxy[0],posxy[1]);
+
         updateParam(paramVec);
         PureData.SendMessage(TOUCHSYMBOL, MESSAGE, pointer, duration, attack, desvol, pitch, chirp, lfndepth, lfnfreq, amdepth, amfreq, richness);
     }

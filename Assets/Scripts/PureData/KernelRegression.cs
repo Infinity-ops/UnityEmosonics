@@ -244,7 +244,7 @@ public class KernelRegression : MonoBehaviour
         int idx = 0;
         foreach (double[] xv in xvecs)
         {
-            print(xv);
+            // print(xv);
             dist_vec[idx] = Math.Sqrt(Math.Pow(xy[0] - xv[0], 2)
                 + Math.Pow(xy[1] - xv[1], 2));
             idx++;
@@ -259,7 +259,7 @@ public class KernelRegression : MonoBehaviour
         idx = 0;
         foreach (double val in debug_vec)
         {
-            print(Math.Abs(val - paramVec[idx]));
+            // print(Math.Abs(val - paramVec[idx]));
             idx++;
         }
     }

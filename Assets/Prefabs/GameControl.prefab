@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4356630933167002}
-  - component: {fileID: 114958519687514914}
+  - component: {fileID: 114368013752265406}
   m_Layer: 0
   m_Name: GameControl
   m_TagString: Untagged
@@ -40,7 +40,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114958519687514914
+--- !u!114 &114368013752265406
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -48,11 +48,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1402829216959802}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06f54df5273ea394a82ab266de5af3b7, type: 3}
+  m_Script: {fileID: 11500000, guid: c3a8eb2191732934496713f370b1f4c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visualization: smiley
-  favorite1: {r: 0, g: 0, b: 0, a: 0}
-  favorite2: {r: 0, g: 0, b: 0, a: 0}
-  favorite3: {r: 0, g: 0, b: 0, a: 0}
-  favorite4: {r: 0, g: 0, b: 0, a: 0}
+  visualization: 
+  favorite1Color: {r: 0, g: 0, b: 0, a: 0}
+  favorite2Color: {r: 0, g: 0, b: 0, a: 0}
+  favorite3Color: {r: 0, g: 0, b: 0, a: 0}
+  favorite4Color: {r: 0, g: 0, b: 0, a: 0}
+  favorite1Pos: {x: 0, y: 0, z: 0}
+  favorite2Pos: {x: 0, y: 0, z: 0}
+  favorite3Pos: {x: 0, y: 0, z: 0}
+  favorite4Pos: {x: 0, y: 0, z: 0}
+  favorite1Sound: {x: 0, y: 0}
+  favorite2Sound: {x: 0, y: 0}
+  favorite3Sound: {x: 0, y: 0}
+  favorite4Sound: {x: 0, y: 0}
+  crosshairPosition: {x: 0, y: 0, z: 0}
+  soundPosition: {x: 0, y: 0}
+  lastCrosshairPos: {x: 0, y: 0, z: 0}
+  lastSoundPosition: {x: 0, y: 0}
