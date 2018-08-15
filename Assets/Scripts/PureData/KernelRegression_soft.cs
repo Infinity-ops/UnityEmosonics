@@ -1,24 +1,18 @@
-﻿using System.IO;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using UnityEngine;
+using Microsoft.VisualBasic.FileIO;
+using System.Data;
 using System;
 
-/*
- * TODO: Find a way on how to deal with a sigma that would get too small
- * Debug by checking if param vector is exactly the emotion prototype when they are near to each other and small sigma
- * Store hardcoded pvecs in config file AND/OR load directly from .json?
- */
-
-public class KernelRegression : MonoBehaviour
+public class KernelRegression_soft : MonoBehaviour
 {
     private static String[] targets = { "happy", "surprised", "angry", "disgusted", "sad", "calm" };
-    private double[] emotion_angles = { 11, 80, 172, 200, 236, 328 };
     private double[][] xvecs = new double[targets.Length][];
-    private double[][] xvecs_unit = new double[targets.Length][];
-    private double[][] xvecs_russell = new double[targets.Length][];
-    private double[][] pvec = new double[5][]; //magic number because pvec is hardcoded for now (but from a working kernel regression example)
+    private double[][] pvec = new double[5][];
 
-    //struct object that contains all the parspect_abstract values
     struct parspect_abstract
     {
         string[] name;
@@ -67,16 +61,10 @@ public class KernelRegression : MonoBehaviour
                                                             new object[] {"voweldiff", -2.5, 2.5, "lin", 0, "delta" },
                                                             new object[] {"bright", 0.2, 1, "lin", 0.5, "arb.u." } }; */
 
-
     // Use this for initialization
     // On start: load csv data containing pattern into array
     void Awake()
     {
-        JsonLoader jl = new JsonLoader();
-        string[] test = jl.LoadData();
-        print("FILE LOADED");
-        ValueList tj = JsonLoader.CreateFromJson(test[0]);
-        print(tj.values[0].snd);
 
         //initialize struct
         string[] name = new string[] { "dur", "att", "decslope", "pitch", "chirp", "lfnint", "lfnfrq", "amint", "amfreq", "richness" };
@@ -89,18 +77,25 @@ public class KernelRegression : MonoBehaviour
         //load the csv 
         pvec = load_data();
 
-        //create kernel regression input positions for unit distribution and russels angles
-        double phase_offset = 0.1;
-        int[] origin = new int[] { 0, 0 };
+        /*
+        foreach (double[] p in pvec)
+        {
+            print(p);
+        }*/
+
+        //create kernel regression input positions
         for (int i = 0; i < targets.Length; i++)
         {
-            xvecs_unit[i] = new double[] { Math.Cos(2 * Math.PI * i / targets.Length + phase_offset),
-                Math.Sin(2 * Math.PI * i / targets.Length + phase_offset) };
-
-            xvecs_russell[i] = new double[] {origin[0]+Math.Cos((emotion_angles[i]*Math.PI)/180),
-            origin[1]+Math.Sin((emotion_angles[i]*Math.PI)/180)};
+            xvecs[i] = new double[] { Math.Cos(2 * Math.PI * i / targets.Length), Math.Sin(2 * Math.PI * i / targets.Length + 0.1) };
         }
 
+        /*
+        double[] test = Krm(new double[] { 0.7, 0.1 }, 0.7);
+        print(test.Length);
+        foreach(double t in test)
+        {
+            print(t);
+        } */
     }
 
     private double[] parmap(double[] paramVec)
@@ -114,10 +109,7 @@ public class KernelRegression : MonoBehaviour
         int idx = 0;
         foreach (double val in paramVec)
         {
-            if (idx == paramVec.Length - 1)
-            {
-                break;
-            }  //stop iteration because we won't need the last value
+            if (idx == paramVec.Length - 1) { continue; }
 
             if (func[idx] == "lin")
             {
@@ -152,11 +144,11 @@ public class KernelRegression : MonoBehaviour
         int idx = 0;
         foreach (double val in paramVec)
         {
-            if (idx == paramVec.Length - 1) { break; }
+            if (idx == paramVec.Length - 1) { continue; }
 
             if (func[idx] == "lin")
             {
-                paramVec_unmapped[idx] = (val - min[idx]) / (max[idx] - min[idx]);
+                paramVec_unmapped[idx] = (val - min[idx] / max[idx] - min[idx]);
             }
 
             else if (func[idx] == "exp")
@@ -182,15 +174,55 @@ public class KernelRegression : MonoBehaviour
     }
 
     //Load the data into the pvecs array
-    //use a hardcoded example at first
     private double[][] load_data()
     {
-        double[][] pvec = new double[][] { new double[] {0.1234981 , 0.13339569, 1.0 , 0.10923002, 1.0, 0.13980813, 0.21005362, 0.19245244, 0.24757245, 0.17806109, 0.74874385},
-        new double[] {0.23180798, 0.08560049, 0.42686461, 0.19924696, 0.98922648, 0.62609091, 0.25368131, 0.33101573, 0.00273821, 0.67219538,0.53785216},
-        new double[] {0.28984743, 1.0        , 1.0        , 0.0        , 0.22386513, 0.53886225, 0.0, 0.98144621, 0.4292678 , 0.53792187, 0.0 },
-        new double[] {0.2218118 , 0.0        , 0.96552386, 0.96221332, 0.0,0.0, 0.0 , 0.0, 0.0 , 0.64299647,0.72607382},
-        new double[] {0.68628317, 0.89728318, 0.13770081, 0.43199606, 0.4374264 ,0.0, 0.0 , 0.04111752, 0.0, 1.0, 0.45807017},
-        new double[] {0.4768726 , 0.30784232, 0.48337014, 0.44237682, 0.49611336,0.0, 0.0, 0.0, 0.0, 0.5254081 ,0.38428611} };
+        /*Load data from resource folder into a list*/
+        string res_dir = "/Resources/data";
+        string path = Application.dataPath + res_dir;
+        DirectoryInfo dir = new DirectoryInfo(path);
+        FileInfo[] Files = dir.GetFiles("*.csv");
+
+        DataTable csvData;
+        DataTable df = new DataTable();
+
+        int count = 0;
+        foreach (FileInfo file in Files)
+        {
+            csvData = GetDataTableFromCSVFile(file.ToString());
+            if (count == 0)
+            {
+                df = csvData;
+            }
+            else
+            {
+                df.Merge(csvData);
+            }
+
+            count++;
+        }
+
+        DataRow[] result = df.Select("submit='1' AND uid='1001' AND snd='abstract' AND run='1'");
+
+        double[][] pvec = new double[result.Count()][];
+
+        for (int i = 0; i < result.Count(); i++)
+        {
+            String tmp = result[i][7].ToString();
+            tmp = tmp.Split('[')[1].Split(']')[0];
+            pvec[i] = Array.ConvertAll(tmp.Split(','), Double.Parse);
+        }
+
+        /*
+        double[][] pvecs = new double[targets.Length][];
+        int counter = 0;
+        foreach(String t in targets)
+        {
+            if(result[])
+            pvecs[counter] = ;
+            counter++;
+        } */
+
+
         return pvec;
     }
 
@@ -201,112 +233,77 @@ public class KernelRegression : MonoBehaviour
         diff = diff.Select(val => val * val).ToArray(); //basically square element wise
         double sum = diff[0] + diff[1];
 
-        sum *= 1000;
         return Math.Exp(-0.5 * sum / Math.Pow(sigma, 2.0));
     }
 
     //Kernel routine function
-    public double[] Krm(double[] xvec, double sigma = 1.0, string xvecs_type = "unit", bool debug = false)
+    public double[] Krm(double[] xvec, double sigma = 1.0)
     {
-        //set the ankerpoints
-        if (xvecs_type == "unit") { xvecs = xvecs_unit; }
-        else if (xvecs_type == "russell") { xvecs = xvecs_russell; }
-
-        int nr_synth_parameters = pvec[0].Length;
-        int nr_emo_prototypes = xvecs.Length;
-        double[] nom = new double[nr_synth_parameters];
-        Array.Clear(nom, 0, nr_synth_parameters); //init array with zeroes
+        int dim = pvec[0].Length;
+        int n = xvecs.Length;
+        double[] nom = new double[dim]; //should be zeros(dim)
+        Array.Clear(nom, 0, dim); //init array with zeroes
         double den = 0.0;
 
-        for (int i = 0; i < nr_emo_prototypes; i++)
+        for (int i = 0; i < n; i++)
         {
             double temp = Kernel(xvecs[i], xvec, sigma);
-            //nom = nom.Select((val, idx) => val + pvec[i].Select(p => p * temp).ToArray()[idx]).ToArray();
-
-            double[] weighted_parameters_for_emotion_i = pvec[i].Select(p => p * temp).ToArray();
-            nom = nom.Select((val, idx) => val + weighted_parameters_for_emotion_i[idx]).ToArray();
+            //print(temp);
+            //print(xvecs[i][0]);
+            nom = nom.Select((val, idx) => val + pvec[i].Select(p => p * temp).ToArray()[idx]).ToArray();
             den += temp;
         }
 
-        double[] krm_parvec = nom.Select(no => no / den).ToArray();
-
-        if (debug)
-        {
-            return krm_parvec;
-        }
-        else
-        {
-            return parmap(krm_parvec);
-        }
-
+        return parmap(nom.Select(no => no / den).ToArray());
     }
 
-    public void debug(double[] paramVec, double[] xy)
+    //Function to load scv data
+    private static DataTable GetDataTableFromCSVFile(string csv_file_path)
     {
-        double sigma = 0.03;
-        //compare distances
-        double[] dist_vec = new double[6];
-        int idx = 0;
-        foreach (double[] xv in xvecs)
+        DataTable csvData = new DataTable();
+
+        try
         {
-            //print(xv);
-            dist_vec[idx] = Math.Sqrt(Math.Pow(xy[0] - xv[0], 2)
-                + Math.Pow(xy[1] - xv[1], 2));
-            idx++;
+            using (TextFieldParser csvReader = new TextFieldParser(csv_file_path))
+            {
+                csvReader.SetDelimiters(new string[] { "," });
+                csvReader.HasFieldsEnclosedInQuotes = true;
+                string[] colFields = csvReader.ReadFields();
+
+                foreach (string column in colFields)
+                {
+                    DataColumn datecolumn = new DataColumn(column);
+                    datecolumn.AllowDBNull = true;
+                    csvData.Columns.Add(datecolumn);
+                }
+
+                while (!csvReader.EndOfData)
+                {
+                    string[] fieldData = csvReader.ReadFields();
+                    //Making empty value as null
+                    for (int i = 0; i < fieldData.Length; i++)
+                    {
+                        if (fieldData[i] == "")
+                        {
+                            fieldData[i] = null;
+                        }
+                    }
+
+                    csvData.Rows.Add(fieldData);
+                }
+            }
+        }
+        catch (Exception ex)
+        {
         }
 
-
-
-        int closest_idx = Array.IndexOf(dist_vec, dist_vec.Min());
-        double[] closes_emotion = xvecs[closest_idx];
-
-        double[] debug_vec = Krm(closes_emotion, sigma, get_xvecs_type(), true);
-
-        //print distances
-        idx = 0;
-        foreach (double val in debug_vec)
-        {
-            print(Math.Abs(val - paramVec[idx]));
-            idx++;
-        }
-        print("----");
+        return csvData;
     }
 
-    //get the type of the ankerpoints, either unit distributed or from russell's angles
-    public string get_xvecs_type()
+
+    // Update is called once per frame
+    void Update()
     {
-        if (xvecs == xvecs_unit)
-        {
-            return "unit";
-        }
-        else
-        {
-            return "russell";
-        }
-    }
-
-    //returns the emotion positions on the wheel
-    public double[][] get_emo_pos(string xvecs_type = "unit")
-    {
-        if (xvecs_type == "unit")
-        {
-            return xvecs_unit;
-        }
-        else if (xvecs_type == "russell")
-        {
-            return xvecs_russell;
-        }
-        else
-        {
-            throw new System.ArgumentException("xvec type not defined", "xvecs_type");
-        }
 
     }
-
-    //return vector of all emotional targets (for example sad, happy, disgusted, ...)
-    public string[] get_targets()
-    {
-        return targets;
-    }
-
 }
