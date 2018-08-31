@@ -4,6 +4,7 @@ using System.IO;
 using UnityEngine;
 
 public class JsonLoader
+{
     private string res_dir, path;
     private DirectoryInfo dir;
     private FileInfo[] Files;
