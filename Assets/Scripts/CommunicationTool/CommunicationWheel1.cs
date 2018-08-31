@@ -9,7 +9,7 @@ public class CommunicationWheel1 : MonoBehaviour, IPointerDownHandler, IPointerU
     public float doubleClickTime;
     public GameObject crosshair;
     public Color Color;
-
+   // public color colorForGame;
     Color[] Data;
     Image ImageRenderer;
 
@@ -30,6 +30,7 @@ public class CommunicationWheel1 : MonoBehaviour, IPointerDownHandler, IPointerU
     private Vector2 localCursor;
     private PdAPI pd;
     private PointerEventData click;
+    //colorForGame =  public Color getColorByNormalizedPosition(float X, float Y);
     public void OnPointerDown(PointerEventData data)
     {
         if (Time.time - lastClickTime < doubleClickTime/1000) {
@@ -44,6 +45,7 @@ public class CommunicationWheel1 : MonoBehaviour, IPointerDownHandler, IPointerU
             if (doubleClick) {
                 pd.changeValue(new double[] {pos[0],pos[1]});
                 pd.playAudio();
+                
             }
         }
     }
@@ -64,7 +66,8 @@ public class CommunicationWheel1 : MonoBehaviour, IPointerDownHandler, IPointerU
         Debug.Log("Data size: " + Data.Length);
 	}
 	
-    public Color getColorByNormalizedPosition(float X, float Y)
+
+    public  Color getColorByNormalizedPosition( float X,  float Y)
     {
         int xRect = (int)circle.sizeDelta.x;
         int yRect = (int)circle.sizeDelta.y;

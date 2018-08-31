@@ -12,7 +12,7 @@ public class PdAPI : MonoBehaviour
     private string MESSAGE = "abstract";
     private string TRIGGER = "aTrigger";
     private string BANG = "bang";
-    private double sigma = 0.05;
+    private double sigma = 0.03;
     private float pointer, duration, attack, desvol, pitch, chirp, lfndepth, lfnfreq,
     amdepth, amfreq, richness;
     private string[] par_names = {"duration", "attack", "desvol", "pitch", "chirp", "lfndepth", "lfnfreq",
@@ -89,7 +89,7 @@ public class PdAPI : MonoBehaviour
     //changes the xvec type
     public void change_xvecs_type(string type)
     {
-        if (type != "unit" || type != "russell")
+        if (type != "unit" && type != "russell")
         {
             throw new System.ArgumentException("type not known, use either unit or russell");
         }
@@ -141,7 +141,7 @@ public class PdAPI : MonoBehaviour
         int idx = 0;
         foreach (string s in par_names)
         {
-          //  print(s + ": " + par[idx].ToString());
+            print(s + ": " + par[idx].ToString());
             idx++;
         }
     }

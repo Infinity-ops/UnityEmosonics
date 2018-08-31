@@ -5,6 +5,7 @@ public class ProjectileTrajectory : MonoBehaviour
 {
    public SlingShot Slingshot;
    public GameObject PointPrefab;
+    //private string TestDestroy;
    public int PointNumber;
    public float InitialPointSize = 0.5f;
    public List<Transform> PointsList;
@@ -15,10 +16,7 @@ public class ProjectileTrajectory : MonoBehaviour
 
    public void CreatePoints()
    {
-       
-        
-           // Debug.Log("Nari4");
-            PointsList = new List<Transform>();
+           PointsList = new List<Transform>();
 
             for (var i = 0; i < PointNumber / 1.75f; i++)
             {
@@ -42,7 +40,7 @@ public class ProjectileTrajectory : MonoBehaviour
     {
         if (sphereCollider1.isTrigger)
         {
-            Debug.Log("Nari5");
+           //TestDestroy = other.gameObject.name;
             if (Input.GetMouseButton(0) && Slingshot.GetAngle() > 0 && Slingshot.GetAngle() <= 179.9f)
             {
                 for (var i = 0; i < PointsList.Count; i++)
@@ -61,7 +59,10 @@ public class ProjectileTrajectory : MonoBehaviour
                 {
                     PointsList[i].gameObject.SetActive(false);
                 }
+
             }
+            
+
         }
     }
 

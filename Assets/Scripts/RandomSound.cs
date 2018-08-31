@@ -16,8 +16,8 @@ public class randomSound : MonoBehaviour
     // Update is called once per frame
     public void play()
     {
-        
-        double[] pos = new double[] { Random.Range(-1f, 1f), Random.Range(-1f, 1f) };
+        double[] pos = { Duplicator.xrand, Duplicator.yrand };
+       // double[] pos = new double[] { Random.Range(-1f, 1f), Random.Range(-1f, 1f) };
         pd.changeValue(pos);
         print("x" + pos[0].ToString());
         print("y" + pos[1].ToString());

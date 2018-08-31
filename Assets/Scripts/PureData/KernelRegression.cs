@@ -197,6 +197,7 @@ public class KernelRegression : MonoBehaviour
         diff = diff.Select(val => val * val).ToArray(); //basically square element wise
         double sum = diff[0] + diff[1];
 
+        sum *= 1000;
         return Math.Exp(-0.5 * sum / Math.Pow(sigma, 2.0));
     }
 
@@ -238,7 +239,7 @@ public class KernelRegression : MonoBehaviour
 
     public void debug(double[] paramVec, double[] xy)
     {
-
+        double sigma = 0.03;
         //compare distances
         double[] dist_vec = new double[6];
         int idx = 0;
@@ -253,7 +254,7 @@ public class KernelRegression : MonoBehaviour
         int closest_idx = Array.IndexOf(dist_vec, dist_vec.Min());
         double[] closes_emotion = xvecs[closest_idx];
 
-        double[] debug_vec = Krm(closes_emotion, 0.05, get_xvecs_type(), true);
+        double[] debug_vec = Krm(closes_emotion, sigma, get_xvecs_type(), true);
 
         //print distances
         idx = 0;

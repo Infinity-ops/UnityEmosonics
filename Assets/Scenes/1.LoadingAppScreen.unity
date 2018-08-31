@@ -346,12 +346,12 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 800, y: 1280}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -786,7 +786,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aadd847c8333db9409d0d527b4651f0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoadingSceneName: 2.CommunicationTool
+  LoadingSceneName: 3.Menu
   loadingText: {fileID: 1132151292}
   sliderBar: {fileID: 598561399}
 --- !u!4 &748141219
