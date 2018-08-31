@@ -12,7 +12,7 @@ public class PdAPI : MonoBehaviour
     private string MESSAGE = "abstract";
     private string TRIGGER = "aTrigger";
     private string BANG = "bang";
-    private double sigma = 0.6;
+    private double sigma = 0.7;
     private float pointer, duration, attack, desvol, pitch, chirp, lfndepth, lfnfreq,
     amdepth, amfreq, richness;
     private string[] par_names = {"duration", "attack", "desvol", "pitch", "chirp", "lfndepth", "lfnfreq",
@@ -62,7 +62,7 @@ public class PdAPI : MonoBehaviour
      * debug = if true, prints the parameter names and values
      * richness_scale = scale the richness which results in higher/lower volume
      */
-    public void changeValue(double[] posxy, bool debug = true, float richness_scale = 1.0f)
+    public void changeValue(double[] posxy, bool debug = false, float richness_scale = 1.0f)
     {
         double[] paramVec = kr.Krm(posxy, sigma, xvecs_type);
 

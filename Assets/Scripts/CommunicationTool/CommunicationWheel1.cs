@@ -51,6 +51,7 @@ public class CommunicationWheel1 : MonoBehaviour, IPointerDownHandler, IPointerU
         if (Vector2.Distance(pos, new Vector2(0,0)) <= 1) {
             if (doubleClick) {
                 pd.changeValue(new double[] {pos[0],pos[1]});
+                print("com tool pos: " + pos[0].ToString() + " " + pos[1].ToString());
                 pd.playAudio();
             }
         }
@@ -114,10 +115,6 @@ private void Update()
                 if (x > 0 && x < Width && y > 0 && y < Height)
                 {
                     Color = getColorByNormalizedPosition(pos.x,pos.y);
-                }
-                if (doubleClick) {
-                    pd.changeValue(new double[] {pos[0],pos[1]});
-                    pd.playAudio();
                 }
                 /*
                 if (singleClick && Time.time - lastClickTime > doubleClickTime/1000) {

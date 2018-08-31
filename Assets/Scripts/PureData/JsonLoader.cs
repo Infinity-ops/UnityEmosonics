@@ -11,6 +11,7 @@ public class JsonLoader
 
     public void Load_pvec()
     {
+        //maybe concatenate already json String?
         string[] jsonString = this.LoadData();
 
 
