@@ -216,11 +216,7 @@ MonoBehaviour:
     pureData: {fileID: 194259100}
   editorHelper:
     selection:
-<<<<<<< HEAD
-    - {fileID: 1108219847}
-=======
     - {fileID: 1719890294771500, guid: 242b5c62f21abf74992e51ead1203687, type: 2}
->>>>>>> master
     repaintDummy: 0
     repaint: 0
     pureDataIcon: {fileID: 0}
@@ -1134,11 +1130,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 774533647}
   m_Enabled: 1
   m_EditorHideFlags: 0
-<<<<<<< HEAD
-  m_Script: {fileID: 11500000, guid: d58873e38a3d6794d860ed73f1b56960, type: 3}
-=======
   m_Script: {fileID: 11500000, guid: 5b3055d838f123e4cabee8541fc6db6d, type: 3}
->>>>>>> master
   m_Name: 
   m_EditorClassIdentifier: 
   SlidePanel: {fileID: 1108219847}

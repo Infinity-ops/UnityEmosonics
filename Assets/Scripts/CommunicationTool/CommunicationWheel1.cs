@@ -69,8 +69,6 @@ public class CommunicationWheel1 : MonoBehaviour, IPointerDownHandler, IPointerU
         crosshairRect = crosshair.GetComponent<RectTransform>();
         ImageRenderer = circle.GetComponent<Image>();
         Data = ImageRenderer.sprite.texture.GetPixels();
-<<<<<<< HEAD
-=======
         pd.change_xvecs_type(pointsSetting.EnumToString());
         var positions = pd.get_emo_pos(pointsSetting.EnumToString());
         var emotions = pd.get_targets();
@@ -82,7 +80,6 @@ public class CommunicationWheel1 : MonoBehaviour, IPointerDownHandler, IPointerU
           //  anchorPoint.GetComponent<Image>().color = getColorByNormalizedPosition((float)(positions[i][0]), (float)(positions[i][1]));
         }
         crosshair.transform.SetAsLastSibling();
->>>>>>> master
 	}
 	
     public Color getColorByNormalizedPosition(float X, float Y)
