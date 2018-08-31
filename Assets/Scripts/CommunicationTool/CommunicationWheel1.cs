@@ -1,14 +1,22 @@
-﻿using System.Collections;
+﻿using Assets.Scripts;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+
+
+public enum typeSetting { russell, unit }
+
 
 public class CommunicationWheel1 : MonoBehaviour, IPointerDownHandler, IPointerUpHandler // required interface when using the OnPointerDown method.
 {
     public float doubleClickTime;
     public GameObject crosshair;
     public Color Color;
+    public GameObject anchor;
+
+    public typeSetting pointsSetting;
 
     Color[] Data;
     Image ImageRenderer;
@@ -55,12 +63,26 @@ public class CommunicationWheel1 : MonoBehaviour, IPointerDownHandler, IPointerU
         doubleClick = false;
     }
     // Use this for initialization
-    void Start () {
-		circle = GetComponent<RectTransform>();
+    void Start() {
+        circle = GetComponent<RectTransform>();
         pd = GameObject.Find("PureData").GetComponent<PdAPI>();
         crosshairRect = crosshair.GetComponent<RectTransform>();
         ImageRenderer = circle.GetComponent<Image>();
         Data = ImageRenderer.sprite.texture.GetPixels();
+<<<<<<< HEAD
+=======
+        pd.change_xvecs_type(pointsSetting.EnumToString());
+        var positions = pd.get_emo_pos(pointsSetting.EnumToString());
+        var emotions = pd.get_targets();
+        for (int i = 0; i < positions.Length; i++)
+        {
+           GameObject anchorPoint = Instantiate(anchor,circle);
+            anchorPoint.transform.localPosition = new Vector2((float) ((positions[i][0] )* (circle.sizeDelta.x/2)), (float)((positions[i][1])*(circle.sizeDelta.y/2)));
+            anchorPoint.name = emotions[i];
+          //  anchorPoint.GetComponent<Image>().color = getColorByNormalizedPosition((float)(positions[i][0]), (float)(positions[i][1]));
+        }
+        crosshair.transform.SetAsLastSibling();
+>>>>>>> master
 	}
 	
     public Color getColorByNormalizedPosition(float X, float Y)
@@ -112,5 +134,7 @@ private void Update()
                 GameControl.control.crosshairPosition = crosshairRect.position;
             }
         }
+
+    
     }
 }
