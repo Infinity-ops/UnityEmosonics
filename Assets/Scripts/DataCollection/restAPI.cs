@@ -46,7 +46,7 @@ public class restAPI : MonoBehaviour {
 	// api.php database set to "emosonics"
 
 	private static readonly string id = SystemInfo.deviceUniqueIdentifier; 
-	private static readonly string serverPath = "https://localhost/api.php/";
+	private static readonly string serverPath = "ec2-18-195-226-50.eu-central-1.compute.amazonaws.com/api.php/";
 
 	public static void SendUsage(double x, double y, bool doubleClick){
 

@@ -1,3 +1,4 @@
+<?php include "../inc/dbinfo.inc"; ?>
 <?php
 //var_dump($_SERVER['REQUEST_METHOD'],$_SERVER['PATH_INFO']); die();
 interface DatabaseInterface {
@@ -2537,10 +2538,10 @@ class PHP_CRUD_API {
 // uncomment the lines below when running in stand-alone mode:
 $api = new PHP_CRUD_API(array(
 	'dbengine'=>'MySQL',
-	'hostname'=>'localhost',
-	'username'=>'root',
-	'password'=>'',
-	'database'=>'emosonics',
+	'hostname'=> DB_SERVER,
+	'username'=> DB_USERNAME,
+	'password'=> DB_PASSWORD,
+	'database'=> DB_DATABASE,
 	'charset'=>'utf8mb4'
 ));
 $api->executeCommand();
