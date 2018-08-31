@@ -10,7 +10,7 @@ public class GameControl : MonoBehaviour
 {
     private bool startup = true;
 
-    public string visualization;
+    public int visualization;
 
     public Color favorite1Color;
     public Color favorite2Color;
@@ -144,7 +144,7 @@ public class GameControl : MonoBehaviour
         }
         else
         {
-            visualization = "smiley";
+            visualization = 0;
             favorite1Color = new Color(1.0F, 1.0F, 1.0F);
             favorite2Color = new Color(1.0F, 1.0F, 1.0F);
             favorite3Color = new Color(1.0F, 1.0F, 1.0F);
@@ -155,7 +155,7 @@ public class GameControl : MonoBehaviour
     [Serializable]
     public class PlayerSettings
     {
-        public string visualization;
+        public int visualization;
         private Color favorite1Color;
         public Color Favorite1Color
         {

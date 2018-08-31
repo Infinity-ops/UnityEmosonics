@@ -23,4 +23,19 @@ public class randomSound : MonoBehaviour
         print("y" + pos[1].ToString());
         pd.playAudio();
     }
+
+   public double[] get_random_pos()
+    {
+        //create random radian and angle
+        float r = radius_range * Convert.ToSingle(Math.Sqrt(UnityEngine.Random.Range(0.0f, 1.0f)));
+        float theta = UnityEngine.Random.Range(0.0f, 1.0f) * 2.0f * Convert.ToSingle(Math.PI);
+
+        //calculate random x,y coordinate
+        double x = Math.Cos(theta) * r;
+        double y = Math.Sin(theta) * r;
+        pos = new double[] { x, y };
+
+        return pos;
+
+    }
 }
