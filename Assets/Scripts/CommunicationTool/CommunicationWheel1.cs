@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 
-public enum typeSetting { russell, unit }
+public enum typeSetting { russell = 0, unit = 1 }
 
 
 public class CommunicationWheel1 : MonoBehaviour, IPointerDownHandler, IPointerUpHandler // required interface when using the OnPointerDown method.
@@ -16,7 +16,7 @@ public class CommunicationWheel1 : MonoBehaviour, IPointerDownHandler, IPointerU
     public Color Color;
     public GameObject anchor;
 
-    public typeSetting pointsSetting;
+    private typeSetting pointsSetting;
 
     Color[] Data;
     Image ImageRenderer;
@@ -33,11 +33,14 @@ public class CommunicationWheel1 : MonoBehaviour, IPointerDownHandler, IPointerU
     private bool doubleClick;
     private bool singleClick;
 
+    private List<GameObject> anchorPoints = new List<GameObject>();
+
     private RectTransform circle;
     private RectTransform crosshairRect;
     private Vector2 localCursor;
     private PdAPI pd;
     private PointerEventData click;
+    //colorForGame =  public Color getColorByNormalizedPosition(float X, float Y);
     public void OnPointerDown(PointerEventData data)
     {
         if (Time.time - lastClickTime < doubleClickTime/1000) {
@@ -52,6 +55,7 @@ public class CommunicationWheel1 : MonoBehaviour, IPointerDownHandler, IPointerU
             if (doubleClick) {
                 pd.changeValue(new double[] {pos[0],pos[1]});
                 pd.playAudio();
+                
             }
         }
     }
@@ -69,6 +73,7 @@ public class CommunicationWheel1 : MonoBehaviour, IPointerDownHandler, IPointerU
         crosshairRect = crosshair.GetComponent<RectTransform>();
         ImageRenderer = circle.GetComponent<Image>();
         Data = ImageRenderer.sprite.texture.GetPixels();
+        pointsSetting = (typeSetting) GameControl.control.visualization;
         pd.change_xvecs_type(pointsSetting.EnumToString());
         var positions = pd.get_emo_pos(pointsSetting.EnumToString());
         var emotions = pd.get_targets();
@@ -77,12 +82,30 @@ public class CommunicationWheel1 : MonoBehaviour, IPointerDownHandler, IPointerU
            GameObject anchorPoint = Instantiate(anchor,circle);
             anchorPoint.transform.localPosition = new Vector2((float) ((positions[i][0] )* (circle.sizeDelta.x/2)), (float)((positions[i][1])*(circle.sizeDelta.y/2)));
             anchorPoint.name = emotions[i];
+            anchorPoints.Add(anchorPoint.gameObject);
           //  anchorPoint.GetComponent<Image>().color = getColorByNormalizedPosition((float)(positions[i][0]), (float)(positions[i][1]));
         }
         crosshair.transform.SetAsLastSibling();
 	}
+
+    public void checkSettingsChanges()
+    {
+        if ((typeSetting)GameControl.control.visualization != pointsSetting)
+        {
+            pd.change_xvecs_type(pointsSetting.EnumToString());
+            pointsSetting = (typeSetting)GameControl.control.visualization;
+            var positions = pd.get_emo_pos(pointsSetting.EnumToString());
+            var emotions = pd.get_targets();
+            for (int i = 0; i < positions.Length; i++ )
+            {
+                anchorPoints[i].transform.localPosition = new Vector2((float)((positions[i][0]) * (circle.sizeDelta.x / 2)), (float)((positions[i][1]) * (circle.sizeDelta.y / 2)));
+                anchorPoints[i].name = emotions[i];
+            }
+        }
+    }
 	
-    public Color getColorByNormalizedPosition(float X, float Y)
+
+    public  Color getColorByNormalizedPosition( float X,  float Y)
     {
         int xRect = (int)circle.sizeDelta.x;
         int yRect = (int)circle.sizeDelta.y;
@@ -99,6 +122,7 @@ public class CommunicationWheel1 : MonoBehaviour, IPointerDownHandler, IPointerU
 	// Update is called once per frame
 private void Update()
     {
+        checkSettingsChanges();
         if (pointerDown) {
             if (!RectTransformUtility.ScreenPointToLocalPointInRectangle(circle, click.position, click.pressEventCamera, out localCursor))
                 return;

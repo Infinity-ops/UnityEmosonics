@@ -9,6 +9,9 @@ TagManager:
   - Stone
   - dart
   - SpStone
+  - button1
+  - Button
+  - Spheree
   layers:
   - Default
   - TransparentFX

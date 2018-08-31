@@ -9,7 +9,7 @@ public class ColorPicking : MonoBehaviour {
     Image SpriteRenderer;
     private Vector2 localCursor;
 
-    GameObject ColorPicker;
+   public GameObject ColorPicker;
     GameObject Selector;
     CircleCollider2D Collider;
 
@@ -25,7 +25,7 @@ public class ColorPicking : MonoBehaviour {
 
         ColorPicker = transform.Find("Image").gameObject;
         SpriteRenderer = ColorPicker.GetComponent<Image>();
-       // Selector = transform.Find("Crosshair").gameObject;
+      Selector = transform.Find("Crosshair").gameObject;
         Collider = ColorPicker.GetComponent<CircleCollider2D>();
 
         Data = SpriteRenderer.sprite.texture.GetPixels();
@@ -33,7 +33,7 @@ public class ColorPicking : MonoBehaviour {
         Color = Color.white;
     }
 
-
+   
     void Update()
     {
 
@@ -46,7 +46,7 @@ public class ColorPicking : MonoBehaviour {
 
             //check if we clicked this picker control
             RaycastHit2D[] ray = Physics2D.RaycastAll(screenPos, Vector2.zero, 0.01f);
-            Debug.Log("Ray length: " + ray.Length);
+            //Debug.Log("Ray length: " + ray.Lenrectgth);
             for (int i = 0; i < ray.Length; i++)
             {
                 
@@ -54,7 +54,7 @@ public class ColorPicking : MonoBehaviour {
                 {
                     Debug.Log("Ray hit!");
                     //move selector
-                   // Selector.transform.position = screenPos;
+                   Selector.transform.position = screenPos;
 
                     //get color data
                     screenPos -= ColorPicker.transform.position;
@@ -73,7 +73,7 @@ public class ColorPicking : MonoBehaviour {
                     if (x > 0 && x < Width && y > 0 && y < Height)
                     {
                         Color = Data[y * Width + x];
-                       // Debug.Log("Color: " + Color);
+                       Debug.Log("Color: " + Color);
                     }
                     break;
                 }

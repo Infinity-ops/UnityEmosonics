@@ -6,8 +6,6 @@ using System;
 /*
  * TODO: Find a way on how to deal with a sigma that would get too small
  * Debug by checking if param vector is exactly the emotion prototype when they are near to each other and small sigma
- * Take angles from Russels wheel to accuratly compute the prototype positions
- * Setting to switch between Russel or Unit distributed emotions
  * Store hardcoded pvecs in config file AND/OR load directly from .json?
  */
 
@@ -69,10 +67,18 @@ public class KernelRegression : MonoBehaviour
                                                             new object[] {"voweldiff", -2.5, 2.5, "lin", 0, "delta" },
                                                             new object[] {"bright", 0.2, 1, "lin", 0.5, "arb.u." } }; */
 
+
     // Use this for initialization
     // On start: load csv data containing pattern into array
     void Awake()
     {
+        /*
+        JsonLoader jl = new JsonLoader();
+        string[] test = jl.LoadData();
+        print("FILE LOADED");
+        ValueList tj = JsonLoader.CreateFromJson(test[0]);
+        print(tj.values[0].snd);
+        */
 
         //initialize struct
         string[] name = new string[] { "dur", "att", "decslope", "pitch", "chirp", "lfnint", "lfnfrq", "amint", "amfreq", "richness" };
@@ -179,25 +185,41 @@ public class KernelRegression : MonoBehaviour
 
     //Load the data into the pvecs array
     //use a hardcoded example at first
+    //this order: "happy", "surprised", "angry", "disgusted", "sad", "calm"
     private double[][] load_data()
     {
+     
         double[][] pvec = new double[][] { new double[] {0.1234981 , 0.13339569, 1.0 , 0.10923002, 1.0, 0.13980813, 0.21005362, 0.19245244, 0.24757245, 0.17806109, 0.74874385},
         new double[] {0.23180798, 0.08560049, 0.42686461, 0.19924696, 0.98922648, 0.62609091, 0.25368131, 0.33101573, 0.00273821, 0.67219538,0.53785216},
         new double[] {0.28984743, 1.0        , 1.0        , 0.0        , 0.22386513, 0.53886225, 0.0, 0.98144621, 0.4292678 , 0.53792187, 0.0 },
         new double[] {0.2218118 , 0.0        , 0.96552386, 0.96221332, 0.0,0.0, 0.0 , 0.0, 0.0 , 0.64299647,0.72607382},
         new double[] {0.68628317, 0.89728318, 0.13770081, 0.43199606, 0.4374264 ,0.0, 0.0 , 0.04111752, 0.0, 1.0, 0.45807017},
         new double[] {0.4768726 , 0.30784232, 0.48337014, 0.44237682, 0.49611336,0.0, 0.0, 0.0, 0.0, 0.5254081 ,0.38428611} };
+        /*
+        double[][] pvec = new double[][] { new double[] {0.3142107054688759, 0.9972524716586859, 0.1447865695017771, 0.2817567069071276, 1.0, 0.7290626543532572, 0.8849599208126919, 0.7063145595322309, 0.8251369002936291, 0.0},
+        new double[] {0.0, 0.6880295628306545, 0.6714753548561211, 0.49118351484592326, 1.0, 0.4311902709456575, 0.8447215975251929, 0.6136919352118451, 0.7334224386276923, 0.08414672002236959},
+        new double[] {0.35879197809451524, 0.5545366483878481, 0.9564953946370289, 0.5247428555000556, 0.3419773898619578, 0.3387273024669967, 0.0, 0.07666472517061476, 0.2774559574483457, 0.7315150432546706},
+        new double[] {1.0, 0.8250973419878893, 0.4444957364782214, 0.6824873714756801, 0.0, 0.36476511958415403, 0.7579932592767031, 0.11306319369219678, 0.35668728613899225, 0.0},
+        new double[] {0.6558921818532458, 0.9361527551390026, 0.0, 0.9109757922703378, 0.16930383779314395, 0.06740760264974206, 0.1878754667825457, 0.03006393892953673, 0.3735653152468994, 0.12285541458296113},
+        new double[] { 0.40997116993473726, 0.7745261753026569, 0.5051231483546325, 0.27058027972647886, 0.38013525839677365, 0.0, 0.45039442613548336, 0.0, 0.0, 0.009538783881069685 } };
+        */
         return pvec;
     }
 
     //Kernel function
+    //x = pvec. y = coordinate on circle
     private double Kernel(double[] x, double[] y, double sigma = 1.0)
     {
+        print(x[0].ToString() + " - " + x[1].ToString() + " this is the xvec");
+        print(y[0].ToString() + " - " + y[1].ToString() + " this is the coordinate");
         double[] diff = x.Select((val, idx) => val - y[idx]).ToArray();
-        diff = diff.Select(val => val * val).ToArray(); //basically square element wise
+        //print(diff[0].ToString() + " - " + diff[1].ToString() + " this is the diff");
+        diff = diff.Select(val => val * val).ToArray(); //basically square element 
         double sum = diff[0] + diff[1];
 
-        sum *= 1000;
+        //sum *= 1000;
+
+        //print(Math.Exp(-0.5 * sum / Math.Pow(sigma, 2.0)).ToString()+" - " + sum.ToString());
         return Math.Exp(-0.5 * sum / Math.Pow(sigma, 2.0));
     }
 
@@ -212,18 +234,21 @@ public class KernelRegression : MonoBehaviour
         int nr_emo_prototypes = xvecs.Length;
         double[] nom = new double[nr_synth_parameters];
         Array.Clear(nom, 0, nr_synth_parameters); //init array with zeroes
+        print("sigma" + sigma.ToString());
         double den = 0.0;
-
+        print("---");
         for (int i = 0; i < nr_emo_prototypes; i++)
         {
+            print(i);
             double temp = Kernel(xvecs[i], xvec, sigma);
+            //print("temp: " + temp.ToString());
             //nom = nom.Select((val, idx) => val + pvec[i].Select(p => p * temp).ToArray()[idx]).ToArray();
 
             double[] weighted_parameters_for_emotion_i = pvec[i].Select(p => p * temp).ToArray();
             nom = nom.Select((val, idx) => val + weighted_parameters_for_emotion_i[idx]).ToArray();
             den += temp;
         }
-
+        print("nom end:" + nom[0].ToString());
         double[] krm_parvec = nom.Select(no => no / den).ToArray();
 
         if (debug)
@@ -245,11 +270,13 @@ public class KernelRegression : MonoBehaviour
         int idx = 0;
         foreach (double[] xv in xvecs)
         {
-            // print(xv);
+            //print(xv);
             dist_vec[idx] = Math.Sqrt(Math.Pow(xy[0] - xv[0], 2)
                 + Math.Pow(xy[1] - xv[1], 2));
             idx++;
         }
+
+
 
         int closest_idx = Array.IndexOf(dist_vec, dist_vec.Min());
         double[] closes_emotion = xvecs[closest_idx];
@@ -260,9 +287,10 @@ public class KernelRegression : MonoBehaviour
         idx = 0;
         foreach (double val in debug_vec)
         {
-            // print(Math.Abs(val - paramVec[idx]));
+            //print(Math.Abs(val - paramVec[idx]));
             idx++;
         }
+        //print("----");
     }
 
     //get the type of the ankerpoints, either unit distributed or from russell's angles
