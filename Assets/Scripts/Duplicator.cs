@@ -49,7 +49,7 @@ public class Duplicator : MonoBehaviour {
         SphereCollider sc;
         int  i;
         float b, c, radius,distance;
-        a = GameController.box;
+        a = GameController.box + 1;
         radius = GameController.size;
         distance = GameController.distance;
         for (i = 0; i < a; i++)
