@@ -104,7 +104,6 @@ public class GameControl : MonoBehaviour
 
     public void Load()
     {
-
         if (File.Exists(Application.persistentDataPath + "/EmoSonicsSettings.dat"))
         {
             BinaryFormatter bf = new BinaryFormatter();

@@ -17,25 +17,10 @@ public class randomSound : MonoBehaviour
     public void play()
     {
         double[] pos = { Duplicator.xrand, Duplicator.yrand };
-       // double[] pos = new double[] { Random.Range(-1f, 1f), Random.Range(-1f, 1f) };
+        // double[] pos = new double[] { Random.Range(-1f, 1f), Random.Range(-1f, 1f) };
         pd.changeValue(pos);
         print("x" + pos[0].ToString());
         print("y" + pos[1].ToString());
         pd.playAudio();
-    }
-
-   public double[] get_random_pos()
-    {
-        //create random radian and angle
-        float r = radius_range * Convert.ToSingle(Math.Sqrt(UnityEngine.Random.Range(0.0f, 1.0f)));
-        float theta = UnityEngine.Random.Range(0.0f, 1.0f) * 2.0f * Convert.ToSingle(Math.PI);
-
-        //calculate random x,y coordinate
-        double x = Math.Cos(theta) * r;
-        double y = Math.Sin(theta) * r;
-        pos = new double[] { x, y };
-
-        return pos;
-
     }
 }
