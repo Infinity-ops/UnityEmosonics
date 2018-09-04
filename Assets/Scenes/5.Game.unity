@@ -491,10 +491,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 195907181}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d04acfc6434eb840bca56689c1b6409, type: 3}
+  m_Script: {fileID: 11500000, guid: 438c85b748b43384498b9fe4c6e12d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crosshair: {fileID: 1994375839}
+  ColorPicker: {fileID: 195907181}
+  Color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &195907185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2688,8 +2689,7 @@ MonoBehaviour:
     paths: []
     pureData: {fileID: 1168031364}
   editorHelper:
-    selection:
-    - {fileID: 102900000, guid: c8a407571a8ec3047aea763426d7dda8, type: 3}
+    selection: []
     repaintDummy: 0
     repaint: 0
     pureDataIcon: {fileID: 0}
