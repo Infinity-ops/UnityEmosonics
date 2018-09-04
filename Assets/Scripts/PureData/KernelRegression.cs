@@ -78,6 +78,7 @@ public class KernelRegression : MonoBehaviour
         ValueList tj = JsonLoader.CreateFromJson(test[0]);
         print(tj.values[0].snd);
 
+
         //initialize struct
         string[] name = new string[] { "dur", "att", "decslope", "pitch", "chirp", "lfnint", "lfnfrq", "amint", "amfreq", "richness" };
         double[] min = new double[] { 0.3, 0.01, -40, 36, -36, 0.0, 0.1, 0.0, 0.1, 0.0 };
@@ -200,7 +201,7 @@ public class KernelRegression : MonoBehaviour
         new double[] {1.0, 0.8250973419878893, 0.4444957364782214, 0.6824873714756801, 0.0, 0.36476511958415403, 0.7579932592767031, 0.11306319369219678, 0.35668728613899225, 0.0},
         new double[] {0.6558921818532458, 0.9361527551390026, 0.0, 0.9109757922703378, 0.16930383779314395, 0.06740760264974206, 0.1878754667825457, 0.03006393892953673, 0.3735653152468994, 0.12285541458296113},
         new double[] { 0.40997116993473726, 0.7745261753026569, 0.5051231483546325, 0.27058027972647886, 0.38013525839677365, 0.0, 0.45039442613548336, 0.0, 0.0, 0.009538783881069685 } };
-        
+
         return pvec;
     }
 

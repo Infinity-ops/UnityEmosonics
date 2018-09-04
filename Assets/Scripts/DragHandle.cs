@@ -16,9 +16,10 @@ public class DragHandle : MonoBehaviour
    private void Start()
    {
        sphereCollider.radius = 5.0f;
-        _defaulPos = new Vector3(0,-3 ,0);
+      _defaulPos = new Vector3(0,-3 ,0);
       transform.position = _defaulPos;
-   }
+       
+    }
 
     private void Update()
     {
@@ -42,14 +43,13 @@ public class DragHandle : MonoBehaviour
           //pt = gameObject.AddComponent<ProjectileTrajectory>();
 
           sphereCollider.radius = 5.0f;
+          var currentScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z);
+          //Debug.Log("off" +_offset);
+          // Debug.Log("cscreepo" +currentScreenPoint);
+          _currentPosition = Camera.main.ScreenToWorldPoint(currentScreenPoint) + _offset;
+          //  Debug.Log("cpos" +_currentPosition);
 
-            var currentScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z);
-            //Debug.Log("off" +_offset);
-            // Debug.Log("cscreepo" +currentScreenPoint);
-            _currentPosition = Camera.main.ScreenToWorldPoint(currentScreenPoint) + _offset;
-            //  Debug.Log("cpos" +_currentPosition);
-
-            transform.position = _currentPosition;
+          transform.position = _currentPosition;
 
     }
 
@@ -66,7 +66,9 @@ public class DragHandle : MonoBehaviour
 
             transform.position = _defaulPos;
             sphereCollider.radius = 0.5f;
-        }
-   
+        
+
+    }
+     
    
 }

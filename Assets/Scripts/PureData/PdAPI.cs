@@ -13,6 +13,7 @@ public class PdAPI : MonoBehaviour
     private string TRIGGER = "aTrigger";
     private string BANG = "bang";
     private double sigma = 0.5;
+
     private float pointer, duration, attack, desvol, pitch, chirp, lfndepth, lfnfreq,
     amdepth, amfreq, richness;
     private string[] par_names = {"duration", "attack", "desvol", "pitch", "chirp", "lfndepth", "lfnfreq",

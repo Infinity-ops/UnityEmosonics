@@ -15,7 +15,7 @@ public class AttemptBall : MonoBehaviour {
     void Update()
     {
        
-        if (DestroyPrefab.destroy > 0)
+        if (DestroyPrefab.destroy > 0 )
         { 
             i = DestroyPrefab.destroy;
             Debug.Log(i);

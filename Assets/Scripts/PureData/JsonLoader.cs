@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -13,9 +13,6 @@ public class JsonLoader
     {
         //maybe concatenate already json String?
         string[] jsonString = this.LoadData();
-
-
-        
     }
 
     public JsonLoader()
@@ -62,3 +59,4 @@ public class AudioParameter {
     //Define audio Parameters
     public string uid, snd, run, time, target, generation, logsigma, submit, parvec;
 }
+
