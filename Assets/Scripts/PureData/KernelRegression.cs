@@ -72,11 +72,12 @@ public class KernelRegression : MonoBehaviour
     // On start: load csv data containing pattern into array
     void Awake()
     {
+        /*
         JsonLoader jl = new JsonLoader();
         string[] test = jl.LoadData();
         print("FILE LOADED");
         ValueList tj = JsonLoader.CreateFromJson(test[0]);
-        print(tj.values[0].snd);
+        print(tj.values[0].snd);*/
 
 
         //initialize struct
