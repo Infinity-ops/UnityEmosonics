@@ -31,7 +31,7 @@ public class LivesCount : MonoBehaviour
         {
             lives.text = "ATTEMPTS: " + livesValue.ToString();
         }
-        if (Duplicator.a  == Triggertest.cloneDesCount-1)
+        if (GameController.box == Triggertest.cloneDesCount-1)
         {
             gameStatus.enabled = true;
             gameStatus.text = "Success!";

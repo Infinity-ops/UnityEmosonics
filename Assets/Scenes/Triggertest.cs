@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Triggertest : MonoBehaviour {
     public static int cloneDesCount;
-	// Use this for initialization
-	void Start () {
-        
+    [SerializeField]
+    private RandomSound rs;
+    // Use this for initialization
+    void Start () {
+        rs = GameObject.Find("RandomSound").GetComponent<RandomSound>();
         GameCount.scoreValue = 0;
         cloneDesCount = 0;
 
@@ -27,6 +29,13 @@ public class Triggertest : MonoBehaviour {
         {
             Debug.Log("I was hit");
             Destroy(this.gameObject);
+            print("kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk");
+
+            if(this.gameObject.transform.position.x == Duplicator.xrand && this.gameObject.transform.position.y == Duplicator.yrand)
+            {
+                rs.play();
+            }
+            
             Destroy(other);
             cloneDesCount++;
             GameCount.scoreValue += 5;

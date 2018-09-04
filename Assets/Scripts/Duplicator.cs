@@ -74,7 +74,9 @@ public class Duplicator : MonoBehaviour {
                 sc.radius = radius;
                 sc.isTrigger = true;
                 sphere.transform.position = new Vector3(x1, y1, z1);
+                print("**************************************");
                 Debug.Log(x1 + " **" + y1);
+                print("**************************************");
                 xrand = x1; yrand = y1;
                 sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                 Debug.Log(getColorByNormalizedPosition(x1, y1));
@@ -96,8 +98,8 @@ public class Duplicator : MonoBehaviour {
                 var deg = Math.Asin((Mathf.Sqrt((Mathf.Pow((x1), 2)) + (Mathf.Pow((y1), 2)))) / x1);
                 g = Mathf.Sqrt((Mathf.Pow((xi - x0), 2)) + (Mathf.Pow((yi - y0), 2)));
                 gr = Mathf.Sqrt((Mathf.Pow((xi - x1), 2)) + (Mathf.Pow((yi - y1), 2)));
-                Debug.Log("G " + g);
-                Debug.Log("Gr " + gr);
+                //Debug.Log("G " + g);
+               // Debug.Log("Gr " + gr);
                 //y = (float)(Math.Round((double)(UnityEngine.Random.Range(-radius, radius)), 2));
                 if (g < 2.7000f)
                 {
@@ -108,8 +110,10 @@ public class Duplicator : MonoBehaviour {
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(xi, yi, zi), Quaternion.identity);
                     sc = sphere.AddComponent<SphereCollider>();
                     sc.radius = radius;
-                    sc.isTrigger = true; 
-                    Debug.Log(x1 + " " + y1);
+                    sc.isTrigger = true;
+                    print("**************************************");
+                    Debug.Log(xi + " " + yi);
+                    print("**************************************");
                     //x1rand = x1; y1rand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(xi, yi);
                 }
@@ -121,8 +125,10 @@ public class Duplicator : MonoBehaviour {
                     sc = sphere.AddComponent<SphereCollider>();
                     sc.radius = radius;
                     sc.isTrigger = true;
+                    print("*****************\\\\*********************");
                     Debug.Log(xi + " " + yi);
-                   // x1rand = x1; yrand = y1;
+                    print("******************\\\\********************");
+                    // x1rand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(xi, yi);
                 }
             }
