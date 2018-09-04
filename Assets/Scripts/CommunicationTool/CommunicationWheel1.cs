@@ -54,7 +54,9 @@ public class CommunicationWheel1 : MonoBehaviour, IPointerDownHandler, IPointerU
         if (Vector2.Distance(pos, new Vector2(0,0)) <= 1) {
             if (doubleClick) {
                 pd.changeValue(new double[] {pos[0],pos[1]});
+
                 restAPI.SendUsage(pos[0], pos[1], true);
+
                 pd.playAudio();
             }
         }
@@ -139,10 +141,12 @@ private void Update()
                 {
                     Color = getColorByNormalizedPosition(pos.x,pos.y);
                 }
+
                 // if (doubleClick) {
                 //     pd.changeValue(new double[] {pos[0],pos[1]});
                 //     pd.playAudio();
                 // }
+
                 /*
                 if (singleClick && Time.time - lastClickTime > doubleClickTime/1000) {
                     crosshairRect.position = new Vector3(click.position.x, click.position.y, 0);

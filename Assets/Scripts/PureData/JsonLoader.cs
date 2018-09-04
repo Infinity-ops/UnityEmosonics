@@ -13,9 +13,6 @@ public class JsonLoader
     {
         //maybe concatenate already json String?
         string[] jsonString = this.LoadData();
-
-
-
     }
 
     public JsonLoader()
@@ -57,9 +54,9 @@ public class ValueList
 }
 
 [System.Serializable]
-public class AudioParameter
-{
+public class AudioParameter {
 
     //Define audio Parameters
     public string uid, snd, run, time, target, generation, logsigma, submit, parvec;
 }
+
