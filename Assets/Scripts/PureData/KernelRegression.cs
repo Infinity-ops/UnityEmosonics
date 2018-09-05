@@ -72,12 +72,12 @@ public class KernelRegression : MonoBehaviour
     // On start: load csv data containing pattern into array
     void Awake()
     {
-        /*
+        
         JsonLoader jl = new JsonLoader();
-        string[] test = jl.LoadData();
-        print("FILE LOADED");
-        ValueList tj = JsonLoader.CreateFromJson(test[0]);
-        print(tj.values[0].snd);*/
+        jl.Load_pvec();
+        //string test = jl.LoadData();
+        //ValueList tj = JsonLoader.CreateFromJson(test);
+        //print("tj value: " + tj.values[0].);
 
 
         //initialize struct
@@ -210,8 +210,8 @@ public class KernelRegression : MonoBehaviour
     //x = pvec. y = coordinate on circle
     private double Kernel(double[] x, double[] y, double sigma = 1.0)
     {
-        print(x[0].ToString() + " - " + x[1].ToString() + " this is the xvec");
-        print(y[0].ToString() + " - " + y[1].ToString() + " this is the coordinate");
+        //print(x[0].ToString() + " - " + x[1].ToString() + " this is the xvec");
+        //print(y[0].ToString() + " - " + y[1].ToString() + " this is the coordinate");
         double[] diff = x.Select((val, idx) => val - y[idx]).ToArray();
         //print(diff[0].ToString() + " - " + diff[1].ToString() + " this is the diff");
         diff = diff.Select(val => val * val).ToArray(); //basically square element 
@@ -234,12 +234,12 @@ public class KernelRegression : MonoBehaviour
         int nr_emo_prototypes = xvecs.Length;
         double[] nom = new double[nr_synth_parameters];
         Array.Clear(nom, 0, nr_synth_parameters); //init array with zeroes
-        print("sigma" + sigma.ToString());
+        //print("sigma" + sigma.ToString());
         double den = 0.0;
-        print("---");
+        //print("---");
         for (int i = 0; i < nr_emo_prototypes; i++)
         {
-            print(i);
+            //print(i);
             double temp = Kernel(xvecs[i], xvec, sigma);
             //print("temp: " + temp.ToString());
             //nom = nom.Select((val, idx) => val + pvec[i].Select(p => p * temp).ToArray()[idx]).ToArray();
@@ -248,7 +248,7 @@ public class KernelRegression : MonoBehaviour
             nom = nom.Select((val, idx) => val + weighted_parameters_for_emotion_i[idx]).ToArray();
             den += temp;
         }
-        print("nom end:" + nom[0].ToString());
+        //print("nom end:" + nom[0].ToString());
         double[] krm_parvec = nom.Select(no => no / den).ToArray();
 
         if (debug)
