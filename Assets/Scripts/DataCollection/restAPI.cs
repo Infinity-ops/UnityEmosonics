@@ -52,7 +52,7 @@ public class restAPI : MonoBehaviour {
 
 		string database = "commTool";
 
-		string datetime = System.DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+		string datetime = System.DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss");
 
 		if (Application.internetReachability != NetworkReachability.NotReachable) {
 			RestClient.Post<CommTool>(serverPath + database, new CommTool {

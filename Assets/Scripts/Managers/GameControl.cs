@@ -144,10 +144,10 @@ public class GameControl : MonoBehaviour
         else
         {
             visualization = 0;
-            favorite1Color = new Color(1.0F, 1.0F, 1.0F);
-            favorite2Color = new Color(1.0F, 1.0F, 1.0F);
-            favorite3Color = new Color(1.0F, 1.0F, 1.0F);
-            favorite4Color = new Color(1.0F, 1.0F, 1.0F);
+            favorite1Color = new Color(1.0F, 1.0F, 1.0F, 1.0F);
+            favorite2Color = new Color(1.0F, 1.0F, 1.0F, 1.0F);
+            favorite3Color = new Color(1.0F, 1.0F, 1.0F, 1.0F);
+            favorite4Color = new Color(1.0F, 1.0F, 1.0F, 1.0F);
         }
     }
 
