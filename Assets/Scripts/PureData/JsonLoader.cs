@@ -49,7 +49,6 @@ public class JsonLoader
         {
             String tmp = parvec[i];
             tmp = tmp.Split('[')[1].Split(']')[0];
-            Debug.Log(tmp);
             pvec[i] = Array.ConvertAll(tmp.Split(','), Double.Parse);
 
         }
