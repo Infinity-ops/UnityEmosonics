@@ -9,20 +9,42 @@ public class JsonLoader
     private string res_dir, path;
     private DirectoryInfo dir;
     private FileInfo[] Files;
+    private string[] filenames;
 
     public JsonLoader()
     {
         //define the data path and data files
-        res_dir = "/Resources/data";
-        path = Application.dataPath + res_dir;
-        dir = new DirectoryInfo(path);
-        Files = dir.GetFiles("*.json");
+        //ATTENTION: the file names for android (JsonFiles) must be hardcoded in filenams variable
+        if (Application.platform == RuntimePlatform.WindowsEditor)
+        {
+            res_dir = "/Resources/data";
+            path = Application.dataPath + res_dir;
+            dir = new DirectoryInfo(path);
+            Files = dir.GetFiles("*.json");
+        }
+
+        else if (Application.platform == RuntimePlatform.Android)
+        {
+            res_dir = "/Resources/data/";
+            path = Application.streamingAssetsPath + res_dir;
+            filenames = new string[] {path+"data1.json", path+"data2.json"}; //must be hardcoded
+        }
+
     }
 
     public double[][] Load_pvec()
     {
         //load json data into a value list
-        string jsonString = this.LoadData();
+        string jsonString = string.Empty;
+        if (Application.platform == RuntimePlatform.WindowsEditor)
+        {
+            jsonString = this.LoadDataEditor();
+        }
+        else if (Application.platform == RuntimePlatform.Android)
+        {
+            jsonString = this.LoadDataAndroid();
+        }
+
         ValueList vl = JsonLoader.CreateFromJson(jsonString);
         List<string> parvec = new List<string>();
 
@@ -62,7 +84,7 @@ public class JsonLoader
     }
 
     //load the json Data
-    public string LoadData()
+    public string LoadDataEditor()
     {
         string jsonString = string.Empty;
 
@@ -83,6 +105,34 @@ public class JsonLoader
             
             i++;
         }
+        return jsonString;
+    }
+
+    //load the json Data on Android device
+    public string LoadDataAndroid()
+    {
+        
+        string jsonString = string.Empty;
+
+        int i = 0;
+        foreach(string file in filenames)
+        {
+            WWW www = new WWW(file);
+            if (i == 0)
+            {
+                jsonString = www.text;
+            }
+
+            else
+            {
+                //remove last char that is a "]" and ad an "," so that the strings can be concatenated
+                string tmpstring = string.Concat(jsonString.Remove(jsonString.Length - 1), ",");
+                jsonString = string.Concat(tmpstring, www.text.Remove(0, 1));
+            }
+
+            i++;
+        }
+
         return jsonString;
     }
 
