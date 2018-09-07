@@ -16,6 +16,8 @@ public class settingsChange : MonoBehaviour {
         GameControl.control.visualization = dropDown.value;
     }
 
+
+
 	// Update is called once per frame
 	void Update () {
 		

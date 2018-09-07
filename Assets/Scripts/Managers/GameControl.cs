@@ -11,6 +11,7 @@ public class GameControl : MonoBehaviour
     private bool startup = true;
 
     public int visualization;
+    public int representation;
 
     public Color favorite1Color;
     public Color favorite2Color;
@@ -82,6 +83,7 @@ public class GameControl : MonoBehaviour
         PlayerSettings settings = new PlayerSettings();
 
         settings.visualization = visualization;
+        settings.representation = representation;
 
         settings.Favorite1Color = favorite1Color;
         settings.Favorite2Color = favorite2Color;
@@ -154,6 +156,7 @@ public class GameControl : MonoBehaviour
     [Serializable]
     public class PlayerSettings
     {
+        public int representation;
         public int visualization;
         private Color favorite1Color;
         public Color Favorite1Color

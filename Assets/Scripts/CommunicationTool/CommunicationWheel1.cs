@@ -14,7 +14,10 @@ public class CommunicationWheel1 : MonoBehaviour, IPointerDownHandler, IPointerU
     public float doubleClickTime;
     public GameObject crosshair;
     public Color Color;
-    public GameObject anchor;
+
+    private GameObject anchor;
+    private GameObject text;
+    private GameObject anchorRepresentation;
 
     private typeSetting pointsSetting;
 
@@ -70,8 +73,14 @@ public class CommunicationWheel1 : MonoBehaviour, IPointerDownHandler, IPointerU
     }
     // Use this for initialization
     void Start() {
-        circle = GetComponent<RectTransform>();
         pd = GameObject.Find("PureData").GetComponent<PdAPI>();
+
+        anchor = (GameObject)Instantiate(Resources.Load("Prefabs/anchor"));
+        text  = (GameObject)Instantiate(Resources.Load("Prefabs/Text"));
+        if (GameControl.control.representation == 0) anchorRepresentation = anchor;
+        else anchorRepresentation = text;
+
+        circle = GetComponent<RectTransform>();
         crosshairRect = crosshair.GetComponent<RectTransform>();
         ImageRenderer = circle.GetComponent<Image>();
         Data = ImageRenderer.sprite.texture.GetPixels();
@@ -81,7 +90,7 @@ public class CommunicationWheel1 : MonoBehaviour, IPointerDownHandler, IPointerU
         var emotions = pd.get_targets();
         for (int i = 0; i < positions.Length; i++)
         {
-           GameObject anchorPoint = Instantiate(anchor,circle);
+           GameObject anchorPoint = Instantiate(anchorRepresentation,circle);
             anchorPoint.transform.localPosition = new Vector2((float) ((positions[i][0] )* (circle.sizeDelta.x/2)), (float)((positions[i][1])*(circle.sizeDelta.y/2)));
             anchorPoint.name = emotions[i];
             anchorPoints.Add(anchorPoint.gameObject);
@@ -103,6 +112,40 @@ public class CommunicationWheel1 : MonoBehaviour, IPointerDownHandler, IPointerU
                 anchorPoints[i].transform.localPosition = new Vector2((float)((positions[i][0]) * (circle.sizeDelta.x / 2)), (float)((positions[i][1]) * (circle.sizeDelta.y / 2)));
                 anchorPoints[i].name = emotions[i];
             }
+        }
+        if((GameControl.control.representation == 0 && anchorRepresentation != anchor))
+        {
+            foreach (var anchor in anchorPoints) Destroy(anchor);
+            anchorRepresentation = anchor;
+            anchorPoints = new List<GameObject>();
+            var positions = pd.get_emo_pos(pointsSetting.EnumToString());
+            var emotions = pd.get_targets();
+            for (int i = 0; i < positions.Length; i++)
+            {
+                GameObject anchorPoint = Instantiate(anchorRepresentation, circle);
+                anchorPoint.transform.localPosition = new Vector2((float)((positions[i][0]) * (circle.sizeDelta.x / 2)), (float)((positions[i][1]) * (circle.sizeDelta.y / 2)));
+                anchorPoint.name = emotions[i];
+                anchorPoints.Add(anchorPoint.gameObject);
+                //  anchorPoint.GetComponent<Image>().color = getColorByNormalizedPosition((float)(positions[i][0]), (float)(positions[i][1]));
+            }
+            crosshair.transform.SetAsLastSibling();
+        }
+            else if (GameControl.control.representation == 1 && anchorRepresentation != text)
+        {
+            foreach (var anchor in anchorPoints) Destroy(anchor);
+            anchorRepresentation = text;
+            var emotions = pd.get_targets();
+            anchorPoints = new List<GameObject>();
+            var positions = pd.get_emo_pos(pointsSetting.EnumToString());
+            for (int i = 0; i < positions.Length; i++)
+            {
+                GameObject anchorPoint = Instantiate(anchorRepresentation, circle);
+                anchorPoint.transform.localPosition = new Vector2((float)((positions[i][0]) * (circle.sizeDelta.x / 2)), (float)((positions[i][1]) * (circle.sizeDelta.y / 2)));
+                anchorPoint.name = emotions[i];
+                anchorPoints.Add(anchorPoint.gameObject);
+                //  anchorPoint.GetComponent<Image>().color = getColorByNormalizedPosition((float)(positions[i][0]), (float)(positions[i][1]));
+            }
+            crosshair.transform.SetAsLastSibling();
         }
     }
 	
