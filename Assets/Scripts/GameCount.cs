@@ -19,11 +19,11 @@ public class GameCount : MonoBehaviour {
         
         if (GameObject.Find("Sphere(Clone)") == null)
         {
-            Debug.Log("Sphere Clonned");
+            //Debug.Log("Sphere Clonned");
         }
         else
         {
-            Debug.Log("Not clonned");
+            //Debug.Log("Not clonned");
         }
     }
 

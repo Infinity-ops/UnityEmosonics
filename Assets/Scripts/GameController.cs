@@ -5,8 +5,6 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-
-
 public class GameController : MonoBehaviour {
     public static int box;
     Button button;
@@ -16,7 +14,10 @@ public class GameController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        
+        //Parameter Initialization for Game
+        GameCount.scoreValue = 0;
+        LivesCount.livesValue = 3;
+        Triggertest.cloneDesCount = 0;
     }
 	public void Find()
     {

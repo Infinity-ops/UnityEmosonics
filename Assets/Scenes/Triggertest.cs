@@ -6,12 +6,14 @@ public class Triggertest : MonoBehaviour {
     public static int cloneDesCount;
     [SerializeField]
     private RandomSound rs;
+    public static bool testPass2;
+    public bool test;
+     //To Destroy attempt Ball
     // Use this for initialization
     void Start () {
         rs = GameObject.Find("RandomSound").GetComponent<RandomSound>();
-        GameCount.scoreValue = 0;
-        cloneDesCount = 0;
-
+        test = false;
+        testPass2 = false;
     }
   
 	
@@ -19,27 +21,38 @@ public class Triggertest : MonoBehaviour {
 	void Update () {
 		
 	}
-    public void reset(int cloneDesCount)
-    {
-        
-    }
+   
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Projectile")
         {
             Debug.Log("I was hit");
             Destroy(this.gameObject);
-            print("kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk");
-
-            if(this.gameObject.transform.position.x == Duplicator.xrand && this.gameObject.transform.position.y == Duplicator.yrand)
+            
+            if((this.gameObject.transform.position.x == Duplicator.xrand) && (this.gameObject.transform.position.y == Duplicator.yrand))
             {
                 rs.play();
+                test = true;
+                GameCount.scoreValue = 0;
+                cloneDesCount = 0;
+                
             }
-            
+            if ((this.gameObject.transform.position.x != Duplicator.xrand) || (this.gameObject.transform.position.y != Duplicator.yrand))
+            {
+                testPass2 =true;
+            }
+           
             Destroy(other);
-            cloneDesCount++;
-            GameCount.scoreValue += 5;
+            if (test)
+            {
+                cloneDesCount++;
+                GameCount.scoreValue += 5;
+                test = false;
+            }
             Debug.Log("cloneDestroy" + cloneDesCount);
+            test = false;
+           
         }
+              
     }
 }
