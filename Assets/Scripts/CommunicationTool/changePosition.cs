@@ -18,6 +18,7 @@ public class changePosition : MonoBehaviour {
 				crosshair.GetComponent<RectTransform>().position = GameControl.control.favorite1Pos;
 				GameControl.control.crosshairPosition = GameControl.control.favorite1Pos;
 				GameControl.control.soundPosition = GameControl.control.favorite1Sound;
+				restAPI.SendFavorite(GameControl.control.soundPosition[0], GameControl.control.soundPosition[1], 1);
 			}
         }
 		if(this.name.EndsWith("2")) {
@@ -26,6 +27,7 @@ public class changePosition : MonoBehaviour {
                 crosshair.GetComponent<RectTransform>().position = GameControl.control.favorite2Pos;
 				GameControl.control.crosshairPosition = GameControl.control.favorite2Pos;
 				GameControl.control.soundPosition = GameControl.control.favorite2Sound;
+				restAPI.SendFavorite(GameControl.control.soundPosition[0], GameControl.control.soundPosition[1], 2);
 			}
         }
 		if(this.name.EndsWith("3")) {
@@ -34,6 +36,7 @@ public class changePosition : MonoBehaviour {
                 crosshair.GetComponent<RectTransform>().position = GameControl.control.favorite3Pos;
 				GameControl.control.crosshairPosition = GameControl.control.favorite3Pos;
 				GameControl.control.soundPosition = GameControl.control.favorite3Sound;
+				restAPI.SendFavorite(GameControl.control.soundPosition[0], GameControl.control.soundPosition[1], 3);
 			}
         }
 		if(this.name.EndsWith("4")) {
@@ -42,6 +45,7 @@ public class changePosition : MonoBehaviour {
                 crosshair.GetComponent<RectTransform>().position = GameControl.control.favorite4Pos;
 				GameControl.control.crosshairPosition = GameControl.control.favorite4Pos;
 				GameControl.control.soundPosition = GameControl.control.favorite4Sound;
+				restAPI.SendFavorite(GameControl.control.soundPosition[0], GameControl.control.soundPosition[1], 4);
 			}
         }
         

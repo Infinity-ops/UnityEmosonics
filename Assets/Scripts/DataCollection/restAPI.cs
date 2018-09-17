@@ -24,7 +24,8 @@ public class Favorite {
 public class Setting {
   public string datetime;
   public string id;
-  public string representation;
+  public int visualization;
+  public int representation;
 }
 
 [System.Serializable]
@@ -84,7 +85,7 @@ public class restAPI : MonoBehaviour {
 
 	}
 
-	public static void SendSetting(string representation) {
+	public static void SendSetting(int visualization, int representation) {
 
 		string database = "settings";
 
@@ -94,6 +95,7 @@ public class restAPI : MonoBehaviour {
 			RestClient.Post<Setting>(serverPath + database, new Setting {
 				datetime = datetime,
 				id = id,
+				visualization = visualization,
 				representation = representation
 			});
 		}

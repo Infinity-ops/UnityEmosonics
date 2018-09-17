@@ -22,6 +22,7 @@ public class playSound : MonoBehaviour
         Vector2 pos = GameControl.control.soundPosition;
         pd.changeValue(new double[] { pos[0], pos[1] });
         restAPI.SendUsage(pos[0], pos[1], false);
+        restAPI.SendSetting(GameControl.control.visualization, GameControl.control.representation);
         //Debug.Log("Playsound" + pos);
         pd.playAudio();
         GameControl.control.lastCrosshairPos = crosshair.GetComponent<RectTransform>().position;
