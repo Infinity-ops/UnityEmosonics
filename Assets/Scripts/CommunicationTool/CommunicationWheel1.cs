@@ -59,6 +59,7 @@ public class CommunicationWheel1 : MonoBehaviour, IPointerDownHandler, IPointerU
                 pd.changeValue(new double[] {pos[0],pos[1]});
 
                 restAPI.SendUsage(pos[0], pos[1], true);
+                restAPI.SendSetting(GameControl.control.visualization, GameControl.control.representation);
 
                 pd.playAudio();
             }
