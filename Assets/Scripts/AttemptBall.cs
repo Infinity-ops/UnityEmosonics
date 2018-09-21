@@ -5,12 +5,15 @@ using UnityEngine;
 public class AttemptBall : MonoBehaviour {
    
     public  GameObject[] gameObject;
-    private int i=0;
-    public static GameObject lastGb;
+    public GameObject[] gameObject1; // For Duplicator j
+    /// </summary>
+    private int i=0, j=0;
+    public static GameObject lastGb, lastGb1;
     // Use this for initialization
     void Start()
     {
         lastGb = gameObject[i];
+        lastGb1 = gameObject1[j];
     }
     // Update is called once per frame
     void Update()
@@ -20,14 +23,22 @@ public class AttemptBall : MonoBehaviour {
             i = gameObject.Length;
             LockController.realAttemptBall = false;
         }
+        if (Duplicator.realAttemptBall1 == true)
+        {
+            j = gameObject1.Length;
+            Duplicator.realAttemptBall1 = false;
+        }
 
-        if(  TestColliding.testPass ==1 || Duplicator.testPass3 ==1 )
+        if (  TestColliding.testPass ==1 || Duplicator.testPass3 ==1 )
         {
             TestColliding.testPass = 0;
             LivesCount.livesValue -= 1;
             DestroyObject(lastGb);
+            DestroyObject(lastGb1);
             i--;
+            j--;
             lastGb = gameObject[i];
+            lastGb1 = gameObject1[j];
             print(i);
             //bg.isTrigger == false;
         }
@@ -37,8 +48,11 @@ public class AttemptBall : MonoBehaviour {
             TestColliding.testPass = 0;
             LivesCount.livesValue -= 1;
             DestroyObject(lastGb);
+            DestroyObject(lastGb1);
             i--;
+            j--;
             lastGb = gameObject[i];
+            lastGb1 = gameObject1[j];
             Triggertest.testPass2 = false;
             //bg.isTrigger == false;
         }

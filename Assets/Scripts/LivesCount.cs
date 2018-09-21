@@ -5,22 +5,24 @@ using UnityEngine.UI;
 
 public class LivesCount : MonoBehaviour
 {
-  
+    public GameObject panel;
     public static int livesValue = 3;
     public static int levelIncre =1;
     public Text lives;
     public Text gameStatus;
+    public GameObject goToNextLevel1;
+    public GameObject gameButton;
     public GameObject playGainButton;
-    public GameObject backButton;
     public static bool neverDone;
-
+    public Image errorImage1;
     // Use this for initialization
     void Start()
     {
         gameStatus.enabled = false;
+        goToNextLevel1.SetActive(false);
         playGainButton.SetActive(false);
-        backButton.SetActive(false);
         neverDone = true;
+        
         // livesValue = livesValue + 1;
     }
     public void CrossSceneInformation()
@@ -41,8 +43,13 @@ public class LivesCount : MonoBehaviour
             {
                 gameStatus.enabled = true;
                 gameStatus.text = "Success!";
-                playGainButton.SetActive(true);
-                backButton.SetActive(true);
+                errorImage1.enabled = false;
+                panel.SetActive(true);
+                gameButton.SetActive(false);
+                playGainButton.SetActive(false);
+                goToNextLevel1.SetActive(true);
+                //Duplicator.goToNextLevel.SetActive(true);
+
                 levelIncre = levelIncre + 1;
                 neverDone = false;
             }
@@ -66,7 +73,7 @@ public class LivesCount : MonoBehaviour
                 gameStatus.enabled = true;
                 gameStatus.text = "GameOver!";
                 playGainButton.SetActive(true);
-                backButton.SetActive(true);
+                //backButton.SetActive(true);
             }
         }
     }

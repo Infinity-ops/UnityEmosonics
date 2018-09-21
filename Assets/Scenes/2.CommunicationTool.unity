@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
@@ -283,7 +283,8 @@ MonoBehaviour:
     paths: []
     pureData: {fileID: 194259100}
   editorHelper:
-    selection: []
+    selection:
+    - {fileID: 102900000, guid: f438c06df25403b498c4814445c9670c, type: 3}
     repaintDummy: 0
     repaint: 0
     pureDataIcon: {fileID: 0}

@@ -1,12 +1,15 @@
-﻿using UnityEngine;
-                                                                                                                                                                    //original
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+//original
 public class DragHandle : MonoBehaviour
 {
     public static int testPass1;
     public static int testPass2; //To Destroy attempt Ball
     private Vector3 _offset;
-
-   private Vector3 _defaulPos;
+   
+    private Vector3 _defaulPos;
 
    private Vector3 _currentPosition;
 
@@ -41,6 +44,7 @@ public class DragHandle : MonoBehaviour
 
     private void OnMouseDrag()
     {
+        
         testPass2 = 1;
           sphereCollider.isTrigger = true;
           //pt = gameObject.AddComponent<ProjectileTrajectory>();
@@ -52,6 +56,7 @@ public class DragHandle : MonoBehaviour
           //  Debug.Log("cpos" +_currentPosition);
 
           transform.position = _currentPosition;
+          //errorImage.enabled = false;
 
     }
 

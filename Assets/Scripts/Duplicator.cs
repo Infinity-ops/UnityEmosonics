@@ -5,8 +5,10 @@ using System;
 using UnityEngine.UI;
 
 public class Duplicator : MonoBehaviour {
+    public Text gameStatus1;
     public GameObject myPrefab;
     public GameObject playButton;
+    public GameObject goToNextLevel;
     public GameObject playGainButton;
     public GameObject backButton;
     public static int testPass3; //AttemptBall Delete
@@ -21,16 +23,32 @@ public class Duplicator : MonoBehaviour {
     public int Width { get { return ImageSprite.texture.width; } }
     public int Height { get { return ImageSprite.texture.height; } }
     // Use this for initialization
+    public GameObject hitter; // sphere on catapult
+    public GameObject panel;
+    //public Button btn;
+    public static bool realAttemptBall1;
     void Start () {
+        // btn.GetComponent<Button>();
+        playGainButton.SetActive(false);
+        goToNextLevel.SetActive(false);
         playButton.SetActive(true);
         Vector2 center;
+        
         center = cc.GetComponent<Renderer>().bounds.center; 
         Debug.Log(center);
         g= 0.0f;
         circle = cc.GetComponent<RectTransform>();
         Data = ImageSprite.texture.GetPixels();
     }
+     public void TaskOnClick1() {
+        gameStatus1.enabled = false;
+        realAttemptBall1 = true;
+        GameController.box = GameController.box +1;
+        GameCount.scoreValue = 0;
+        LivesCount.livesValue = 3;
+        Triggertest.cloneDesCount = 0;
 
+    }
     public Color getColorByNormalizedPosition(float X, float Y){
         int x = (int)(X * (Width / 5)) + (Width / 2);
         int y = (int)(Y * (Height / 5)) + (Height / 10);
@@ -42,6 +60,7 @@ public class Duplicator : MonoBehaviour {
         }
         return Color.black;
     }
+
     void OnTriggerEnter(Collider other)
     {
         Debug.Log("Triggered*********");
@@ -49,6 +68,8 @@ public class Duplicator : MonoBehaviour {
     }
     public void Game1()
     {
+        panel.SetActive(false);
+        hitter.SetActive(true);
         playButton.SetActive(false);
         playGainButton.SetActive(false);
         backButton.SetActive(false);
@@ -141,8 +162,10 @@ public class Duplicator : MonoBehaviour {
 
     public void Game()
     {
-        playButton.SetActive(false);
-       
+        
+      panel.SetActive(false);
+        hitter.SetActive(true);
+        
         SphereCollider sc;
         int  i;
         float b, c, radius,distance;
@@ -233,6 +256,6 @@ public class Duplicator : MonoBehaviour {
     }
     // Update is called once per frame
     void Update () {
-		
-	}
+      //  btn.onClick.AddListener(TaskOnClick);
+    }
 }
