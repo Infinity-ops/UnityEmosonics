@@ -1,0 +1,25 @@
+var class_game_control =
+[
+    [ "PlayerSettings", "class_game_control_1_1_player_settings.html", "class_game_control_1_1_player_settings" ],
+    [ "Load", "class_game_control.html#a55e34d17f552f17668690daa71823b38", null ],
+    [ "Save", "class_game_control.html#aa598a3c5a79258d8aad5fab4835cbf49", null ],
+    [ "control", "class_game_control.html#a0d6072fc2d4869607f4133f442247f40", null ],
+    [ "crosshairPosition", "class_game_control.html#abf13b02ff2f3f5888cd6795ad03a682e", null ],
+    [ "favorite1Color", "class_game_control.html#aa52a1d2cc040d3c703e7a6594aa790a7", null ],
+    [ "favorite1Pos", "class_game_control.html#a6ca50d9c26d0772c2d080de03535d3a4", null ],
+    [ "favorite1Sound", "class_game_control.html#a599821de979643e5f8bb6977453b06c0", null ],
+    [ "favorite2Color", "class_game_control.html#a66cf29161f7223abaebfb4d04b18879d", null ],
+    [ "favorite2Pos", "class_game_control.html#a160502c69f77568bf4caf2a70dbdbd6f", null ],
+    [ "favorite2Sound", "class_game_control.html#a6c4a62813b32fa9514593c0d007dc78c", null ],
+    [ "favorite3Color", "class_game_control.html#afbb2cf695789e33732abec8c68b63c60", null ],
+    [ "favorite3Pos", "class_game_control.html#ad8fda8326c11c3c5e6613b7a8d409603", null ],
+    [ "favorite3Sound", "class_game_control.html#af4529983ba68818ae5e88cefa331c56d", null ],
+    [ "favorite4Color", "class_game_control.html#a5f314d04d6f13259c4b9cb35bc9f21de", null ],
+    [ "favorite4Pos", "class_game_control.html#a9836e932272b4d2c33428058693e230a", null ],
+    [ "favorite4Sound", "class_game_control.html#a7f866082752ec0b09db214d03d1a925d", null ],
+    [ "lastCrosshairPos", "class_game_control.html#aa3c3a4e6a283cbf9a8ef7e497a7b7771", null ],
+    [ "lastSoundPosition", "class_game_control.html#a3210a91a6bf5c16a202595e34995cf46", null ],
+    [ "representation", "class_game_control.html#a092179992003560ebc6b611c60a6f063", null ],
+    [ "soundPosition", "class_game_control.html#a749281db92b001b3e910af7da458f4fb", null ],
+    [ "visualization", "class_game_control.html#af92c5747b0fe6f68dbf1dd6889230308", null ]
+];

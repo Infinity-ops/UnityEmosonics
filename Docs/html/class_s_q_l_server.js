@@ -1,0 +1,28 @@
+var class_s_q_l_server =
+[
+    [ "__construct", "class_s_q_l_server.html#a61de9dfbdd6c7a29356a5ecc1bc8a581", null ],
+    [ "addLimitToSql", "class_s_q_l_server.html#aa0e82da62d91b2e8cb35a1eeaf2254e8", null ],
+    [ "affectedRows", "class_s_q_l_server.html#a2af3ba6a7dc23c559c63c936ed47dbc8", null ],
+    [ "beginTransaction", "class_s_q_l_server.html#a0f4abd9b2c5ce856b626cf0ba1e6fc47", null ],
+    [ "close", "class_s_q_l_server.html#a857aaa2a260516798fab71d126328a46", null ],
+    [ "commitTransaction", "class_s_q_l_server.html#aa3e99ee43d9867b7de08ee306d4a29bc", null ],
+    [ "connect", "class_s_q_l_server.html#a47582d72dcba5c8f75c58c4dee5194ac", null ],
+    [ "convertFilter", "class_s_q_l_server.html#aa3868ffbdf608c59fe4829ba9b754154", null ],
+    [ "fetchAssoc", "class_s_q_l_server.html#ad6a6a56e53fa689fe7905690368e949c", null ],
+    [ "fetchFields", "class_s_q_l_server.html#a0cdf6c3d58d9a57462787f4a7bba0b85", null ],
+    [ "fetchRow", "class_s_q_l_server.html#a2bcc5e7c309ed5e3f75c6b55e2f5c32f", null ],
+    [ "getDefaultCharset", "class_s_q_l_server.html#a521da1fe77a5370900e300dc9a028947", null ],
+    [ "getSql", "class_s_q_l_server.html#a120477d1ffe709cd81bd38837e0502d6", null ],
+    [ "insertId", "class_s_q_l_server.html#a9da5cea3f8e92fc5f1b93ffc24ae79fe", null ],
+    [ "isBinaryType", "class_s_q_l_server.html#a96df83b4857f78efee1910ba275bebef", null ],
+    [ "isGeometryType", "class_s_q_l_server.html#a362e5bc89d56e5a6bfb60b8581d4f035", null ],
+    [ "isJsonType", "class_s_q_l_server.html#ab4820b44d76bf72534ba1adbffaee010", null ],
+    [ "isNumericType", "class_s_q_l_server.html#a6244beb74a9874f17dca63a299dbee1f", null ],
+    [ "jsonDecode", "class_s_q_l_server.html#acc81b1351f1c374f2bfe2f1fad0e0c20", null ],
+    [ "jsonEncode", "class_s_q_l_server.html#ac294b2107b8aec4846f147b07e240feb", null ],
+    [ "likeEscape", "class_s_q_l_server.html#aad8082c7436e01fab22a1a86d5166da8", null ],
+    [ "query", "class_s_q_l_server.html#a425134106a4912c7ab7e89e3f4e93e02", null ],
+    [ "rollbackTransaction", "class_s_q_l_server.html#aff88f9da05111370089d299a6faca062", null ],
+    [ "$db", "class_s_q_l_server.html#a41285fb42d8131ec666f81aedb6910a1", null ],
+    [ "$queries", "class_s_q_l_server.html#a357224eedbbc871e34f677ac03549a05", null ]
+];

@@ -1,0 +1,27 @@
+var class_magicolo_1_1_audio_tools_1_1_pure_data_sequence_manager =
+[
+    [ "Activate", "class_magicolo_1_1_audio_tools_1_1_pure_data_sequence_manager.html#adb5e0f923761c5038ba3112e1b25f8d2", null ],
+    [ "BuildSequenceDict", "class_magicolo_1_1_audio_tools_1_1_pure_data_sequence_manager.html#aceac7263a45a19135e194ac63853a500", null ],
+    [ "Create", "class_magicolo_1_1_audio_tools_1_1_pure_data_sequence_manager.html#aa788115c87cd50bdfb41300c403329da", null ],
+    [ "CreateSequenceText", "class_magicolo_1_1_audio_tools_1_1_pure_data_sequence_manager.html#a7c89775f70731a301bcf55bdd25f29ed", null ],
+    [ "CreateTrackText", "class_magicolo_1_1_audio_tools_1_1_pure_data_sequence_manager.html#a30eb0158075ae322cc203acc7e88a7a3", null ],
+    [ "Deactivate", "class_magicolo_1_1_audio_tools_1_1_pure_data_sequence_manager.html#a296971340ad21e496827b3641f3718ca", null ],
+    [ "GetSequence", "class_magicolo_1_1_audio_tools_1_1_pure_data_sequence_manager.html#a63c6f16bbc5c9165fd36f75c0633698b", null ],
+    [ "GetSequence", "class_magicolo_1_1_audio_tools_1_1_pure_data_sequence_manager.html#ac7ff843d8aa03bfe3a9571b1550dfa54", null ],
+    [ "Initialize", "class_magicolo_1_1_audio_tools_1_1_pure_data_sequence_manager.html#a10d6accb06ba50397304f0a1eb608210", null ],
+    [ "PlaySequenceReceiver", "class_magicolo_1_1_audio_tools_1_1_pure_data_sequence_manager.html#a1bbd0c23685e4f7f5625db2dfee90b57", null ],
+    [ "ResetIds", "class_magicolo_1_1_audio_tools_1_1_pure_data_sequence_manager.html#aea52d3c6d59e7490ecf6a6def55c3c18", null ],
+    [ "SetContainerPath", "class_magicolo_1_1_audio_tools_1_1_pure_data_sequence_manager.html#a879c3c86061fbdd1593f8d0d2c93ec2a", null ],
+    [ "Start", "class_magicolo_1_1_audio_tools_1_1_pure_data_sequence_manager.html#a3e44ebf38da4c3df1f877115884bc5ae", null ],
+    [ "StepSequenceReceiver", "class_magicolo_1_1_audio_tools_1_1_pure_data_sequence_manager.html#a0db071a79fe7fcf45595c27e3f8fcd07", null ],
+    [ "StopAll", "class_magicolo_1_1_audio_tools_1_1_pure_data_sequence_manager.html#a69eb9da0e631c8914741999901cc7833", null ],
+    [ "StopAllImmediate", "class_magicolo_1_1_audio_tools_1_1_pure_data_sequence_manager.html#a7a079df81a9c6dbf85ca23655bc883b7", null ],
+    [ "StopSequenceReceiver", "class_magicolo_1_1_audio_tools_1_1_pure_data_sequence_manager.html#a8fa460dd4d679e84d53f15260affce43", null ],
+    [ "Switch", "class_magicolo_1_1_audio_tools_1_1_pure_data_sequence_manager.html#afe5e08ff0c9805bd0f70fb0437cda732", null ],
+    [ "Update", "class_magicolo_1_1_audio_tools_1_1_pure_data_sequence_manager.html#aac8c1e576da7e8ae795c5e4c9a76282e", null ],
+    [ "UpdateSequenceContainer", "class_magicolo_1_1_audio_tools_1_1_pure_data_sequence_manager.html#a0f3068d652220b61b60baf4f7e2ce258", null ],
+    [ "WriteToSequenceContainer", "class_magicolo_1_1_audio_tools_1_1_pure_data_sequence_manager.html#ab2b8f143b731083f4b53222b25e487cf", null ],
+    [ "containerPath", "class_magicolo_1_1_audio_tools_1_1_pure_data_sequence_manager.html#a62daee7e91294578a3530b550102253b", null ],
+    [ "pureData", "class_magicolo_1_1_audio_tools_1_1_pure_data_sequence_manager.html#a712aed97fd0a09f24c847a5e32f7726b", null ],
+    [ "sequences", "class_magicolo_1_1_audio_tools_1_1_pure_data_sequence_manager.html#a336ed16040f2b9fbbd7aec72c8e54fc0", null ]
+];

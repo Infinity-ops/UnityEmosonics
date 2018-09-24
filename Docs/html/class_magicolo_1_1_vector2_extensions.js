@@ -1,0 +1,27 @@
+var class_magicolo_1_1_vector2_extensions =
+[
+    [ "Average", "class_magicolo_1_1_vector2_extensions.html#a176a570cc99c9c37f65f0f8587ac7f70", null ],
+    [ "Average", "class_magicolo_1_1_vector2_extensions.html#ade5ca07fb8f24dcabe8724597bd90a19", null ],
+    [ "Div", "class_magicolo_1_1_vector2_extensions.html#a09db36e9ce3b7be83c8924bed9d892cb", null ],
+    [ "Div", "class_magicolo_1_1_vector2_extensions.html#abe5c53b8d4636b4dbaae9807c2ce0801", null ],
+    [ "Div", "class_magicolo_1_1_vector2_extensions.html#ab3e97f3d9614dcb6069bc80c4bb7457a", null ],
+    [ "Div", "class_magicolo_1_1_vector2_extensions.html#af29c924c4c37b5751c64fa260284079c", null ],
+    [ "Div", "class_magicolo_1_1_vector2_extensions.html#a65d2f0394c936cd0ff667884629d11bd", null ],
+    [ "Div", "class_magicolo_1_1_vector2_extensions.html#a2728f5e32a5301e8a0f9897d45410243", null ],
+    [ "Intersects", "class_magicolo_1_1_vector2_extensions.html#a4d67cd28cf675ccc2012a2c6c461d566", null ],
+    [ "Lerp", "class_magicolo_1_1_vector2_extensions.html#ae3eb4c2668fb629129abc8b2ff2eb7d4", null ],
+    [ "Mult", "class_magicolo_1_1_vector2_extensions.html#a799aba463e29b09ca29a9a1e9d7a485a", null ],
+    [ "Mult", "class_magicolo_1_1_vector2_extensions.html#a542b6cfad6be8acaf68ebc13c3e0ce3d", null ],
+    [ "Mult", "class_magicolo_1_1_vector2_extensions.html#a1edd8d86f1d8d245138ab7ca2a6d9273", null ],
+    [ "Mult", "class_magicolo_1_1_vector2_extensions.html#a7ee12f41094ef111b60d8bae4181aada", null ],
+    [ "Mult", "class_magicolo_1_1_vector2_extensions.html#aeee1b22daee4a53c8cce8e0dc6dddc68", null ],
+    [ "Mult", "class_magicolo_1_1_vector2_extensions.html#a2b73dd6e62db3fe9b32561b4822739a7", null ],
+    [ "Pow", "class_magicolo_1_1_vector2_extensions.html#a988da47160d039ab89a30f2786c4dac2", null ],
+    [ "Pow", "class_magicolo_1_1_vector2_extensions.html#a84572f923991f8f445fbae297003c18e", null ],
+    [ "RectClamp", "class_magicolo_1_1_vector2_extensions.html#ab7aa1d20b37484bda4ac0b2454394e1f", null ],
+    [ "Rotate", "class_magicolo_1_1_vector2_extensions.html#a31402a5ec201766b6eeaf64a41f17203", null ],
+    [ "Round", "class_magicolo_1_1_vector2_extensions.html#a846816fdc95c05fcc1560e782f20efdb", null ],
+    [ "Round", "class_magicolo_1_1_vector2_extensions.html#a1456d8d99a6433686c53cff8408c98eb", null ],
+    [ "Round", "class_magicolo_1_1_vector2_extensions.html#a5143f5ebf3ea7b861b84e5b0599f5456", null ],
+    [ "SquareClamp", "class_magicolo_1_1_vector2_extensions.html#a8a0cce9ebdae4daa641dff26dc1302ae", null ]
+];
