@@ -1,14 +1,5 @@
 var NAVTREEINDEX5 =
 {
-"class_magicolo_1_1_audio_tools_1_1_pure_data_spatializer_manager.html":[1,0,2,0,48],
-"class_magicolo_1_1_audio_tools_1_1_pure_data_spatializer_manager.html#a21bf62c8487d3d00b3a09149b1a1fab2":[1,0,2,0,48,9],
-"class_magicolo_1_1_audio_tools_1_1_pure_data_spatializer_manager.html#a341d736f2655f9505c5c640efb9c2506":[1,0,2,0,48,7],
-"class_magicolo_1_1_audio_tools_1_1_pure_data_spatializer_manager.html#a3dbdd677434753fe5ddec438176d59c2":[1,0,2,0,48,5],
-"class_magicolo_1_1_audio_tools_1_1_pure_data_spatializer_manager.html#a49a043dbbebaa6defa4698c0c838fe0b":[1,0,2,0,48,1],
-"class_magicolo_1_1_audio_tools_1_1_pure_data_spatializer_manager.html#a5ca2de69906e6f3e41118c196edd8a86":[1,0,2,0,48,4],
-"class_magicolo_1_1_audio_tools_1_1_pure_data_spatializer_manager.html#a9a5583329558ec540bb572ce0f9ea988":[1,0,2,0,48,0],
-"class_magicolo_1_1_audio_tools_1_1_pure_data_spatializer_manager.html#accba4fb99d61b6c3a095348d1ce2f413":[1,0,2,0,48,3],
-"class_magicolo_1_1_audio_tools_1_1_pure_data_spatializer_manager.html#ae2e243a379838f7915da5f24f5aa424d":[1,0,2,0,48,2],
 "class_magicolo_1_1_audio_tools_1_1_pure_data_spatializer_manager.html#af38dd6824cb42ec2a28cdb8b9ce1d8a7":[1,0,2,0,48,6],
 "class_magicolo_1_1_audio_tools_1_1_pure_data_spatializer_manager.html#af487035e919124e993c85da884b4b0cd":[1,0,2,0,48,8],
 "class_magicolo_1_1_audio_tools_1_1_pure_data_sub_container.html":[1,0,2,0,49],
@@ -249,5 +240,14 @@ var NAVTREEINDEX5 =
 "class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#a8c92d7e0b68ead5871a43abcbe63cbd5":[1,0,2,1,4,12],
 "class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#a8db294e6aa76a8ea5aad822051b8f2f8":[1,0,2,1,4,126],
 "class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#a8dcc2f622c9a4683884f48b0891427c9":[1,0,2,1,4,52],
-"class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#a8eb40751ee063cd37b9a84338388c167":[1,0,2,1,4,24]
+"class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#a8eb40751ee063cd37b9a84338388c167":[1,0,2,1,4,24],
+"class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#a90dad7389190d6fe3817f46aa120c486":[1,0,2,1,4,17],
+"class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#a9195c68e2ecb3cc7058af60330573710":[1,0,2,1,4,94],
+"class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#a938de2bfd8f34d9d775a691d8f6f81c9":[1,0,2,1,4,3],
+"class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#a93b1362147d5469b8b0cb5185e8591db":[1,0,2,1,4,18],
+"class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#a96887a937187894a8cf69be8b1bdecde":[1,0,2,1,4,111],
+"class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#a9709d0e29722ba21c26ceeef9d72c433":[1,0,2,1,4,13],
+"class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#a9797a1abdc56778129870f8c3ef0c038":[1,0,2,1,4,60],
+"class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#a9a54f28693ec14c8ecb27b5d86929ece":[1,0,2,1,4,88],
+"class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#a9b4f6903554efec673dfcae0d7ad8afb":[1,0,2,1,4,99]
 };

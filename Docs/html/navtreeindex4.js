@@ -1,14 +1,5 @@
 var NAVTREEINDEX4 =
 {
-"class_magicolo_1_1_audio_tools_1_1_pure_data_sequence.html#a9414595ce1f6128f9d5bb87af497cd48":[1,0,2,0,32,9],
-"class_magicolo_1_1_audio_tools_1_1_pure_data_sequence.html#a99877d1d6a766e75c50a9d0277c23bbf":[1,0,2,0,32,3],
-"class_magicolo_1_1_audio_tools_1_1_pure_data_sequence.html#aaf9603359e817c7d4fcdecf69e1cb8a5":[1,0,2,0,32,2],
-"class_magicolo_1_1_audio_tools_1_1_pure_data_sequence.html#ab2f05f45f7ff5539dbb766f4de255006":[1,0,2,0,32,40],
-"class_magicolo_1_1_audio_tools_1_1_pure_data_sequence.html#ab373f5e516f4142b129b968483a11929":[1,0,2,0,32,28],
-"class_magicolo_1_1_audio_tools_1_1_pure_data_sequence.html#ab474e6a8019fbb69b10f1d035fd03d7f":[1,0,2,0,32,19],
-"class_magicolo_1_1_audio_tools_1_1_pure_data_sequence.html#ab75d7318b59803e7bceefd780fa3b1f8":[1,0,2,0,32,6],
-"class_magicolo_1_1_audio_tools_1_1_pure_data_sequence.html#abe66a5c3151c6f24b4ba6890156bd413":[1,0,2,0,32,4],
-"class_magicolo_1_1_audio_tools_1_1_pure_data_sequence.html#abf940d13455767a651a024f253c59ad2":[1,0,2,0,32,21],
 "class_magicolo_1_1_audio_tools_1_1_pure_data_sequence.html#ac9f880a4004160614ed13c51e4c1d15c":[1,0,2,0,32,38],
 "class_magicolo_1_1_audio_tools_1_1_pure_data_sequence.html#acc9a2ca22a1cbae50a72ac7f164003d9":[1,0,2,0,32,36],
 "class_magicolo_1_1_audio_tools_1_1_pure_data_sequence.html#acd32ade604bd467a164428017cf90e66":[1,0,2,0,32,11],
@@ -249,5 +240,14 @@ var NAVTREEINDEX4 =
 "class_magicolo_1_1_audio_tools_1_1_pure_data_spatializer_doppler.html#ac186c53a615180f526b9ed1bdf745d0f":[1,0,2,0,47,6],
 "class_magicolo_1_1_audio_tools_1_1_pure_data_spatializer_doppler.html#ac53257df63510e955b4f94b721ddeec8":[1,0,2,0,47,5],
 "class_magicolo_1_1_audio_tools_1_1_pure_data_spatializer_doppler.html#ac91cba99c39c31d9ee1dd9b02c91b58e":[1,0,2,0,47,10],
-"class_magicolo_1_1_audio_tools_1_1_pure_data_spatializer_doppler.html#ad4a5ed2779eb02c8b5637c70d771073d":[1,0,2,0,47,2]
+"class_magicolo_1_1_audio_tools_1_1_pure_data_spatializer_doppler.html#ad4a5ed2779eb02c8b5637c70d771073d":[1,0,2,0,47,2],
+"class_magicolo_1_1_audio_tools_1_1_pure_data_spatializer_manager.html":[1,0,2,0,48],
+"class_magicolo_1_1_audio_tools_1_1_pure_data_spatializer_manager.html#a21bf62c8487d3d00b3a09149b1a1fab2":[1,0,2,0,48,9],
+"class_magicolo_1_1_audio_tools_1_1_pure_data_spatializer_manager.html#a341d736f2655f9505c5c640efb9c2506":[1,0,2,0,48,7],
+"class_magicolo_1_1_audio_tools_1_1_pure_data_spatializer_manager.html#a3dbdd677434753fe5ddec438176d59c2":[1,0,2,0,48,5],
+"class_magicolo_1_1_audio_tools_1_1_pure_data_spatializer_manager.html#a49a043dbbebaa6defa4698c0c838fe0b":[1,0,2,0,48,1],
+"class_magicolo_1_1_audio_tools_1_1_pure_data_spatializer_manager.html#a5ca2de69906e6f3e41118c196edd8a86":[1,0,2,0,48,4],
+"class_magicolo_1_1_audio_tools_1_1_pure_data_spatializer_manager.html#a9a5583329558ec540bb572ce0f9ea988":[1,0,2,0,48,0],
+"class_magicolo_1_1_audio_tools_1_1_pure_data_spatializer_manager.html#accba4fb99d61b6c3a095348d1ce2f413":[1,0,2,0,48,3],
+"class_magicolo_1_1_audio_tools_1_1_pure_data_spatializer_manager.html#ae2e243a379838f7915da5f24f5aa424d":[1,0,2,0,48,2]
 };

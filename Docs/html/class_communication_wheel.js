@@ -1,10 +1,14 @@
 var class_communication_wheel =
 [
-    [ "OnPopulateMesh", "class_communication_wheel.html#aaadafc074f64feb0c4fecdd44e45e052", null ],
-    [ "Start", "class_communication_wheel.html#a31fd045b5015820acc29ac5c21459f13", null ],
-    [ "fill", "class_communication_wheel.html#aa39ee19098d617b26556d47d4b2d12ca", null ],
-    [ "thickness", "class_communication_wheel.html#ac27495dced176578630b65f8206a16db", null ],
-    [ "FillAmount", "class_communication_wheel.html#ab5ae17701899e232578d2ac64b7b2af9", null ],
-    [ "mainTexture", "class_communication_wheel.html#adea5890d9d5433d9c91c68a9243f0c6b", null ],
-    [ "texture", "class_communication_wheel.html#a07ab4741250b4ac5c46061717f9e3785", null ]
+    [ "checkSettingsChanges", "class_communication_wheel.html#a20897ad4378508764a28af0e9f1630ad", null ],
+    [ "getColorByNormalizedPosition", "class_communication_wheel.html#a1f1fecd442b5fe68734facffd8ea3947", null ],
+    [ "OnPointerDown", "class_communication_wheel.html#a404547a9d4eb5976b8a73feb26c76f39", null ],
+    [ "OnPointerUp", "class_communication_wheel.html#a4e0a0426a7cbcec69d71ab3768d78272", null ],
+    [ "Color", "class_communication_wheel.html#a2ed73eaedffd00bbf15d179e2671529b", null ],
+    [ "crosshair", "class_communication_wheel.html#ace430dda3a873931bee50ba5e90b4724", null ],
+    [ "doubleClickTime", "class_communication_wheel.html#acc41eb41ec0bda4bcd885fb42350ece3", null ],
+    [ "Height", "class_communication_wheel.html#ab313fff782672804dd4e41e28a98905f", null ],
+    [ "ScreenHeight", "class_communication_wheel.html#a74041a44d33e9b6062f7bdc68351b2b8", null ],
+    [ "ScreenWidth", "class_communication_wheel.html#a69204cc3ebce22435017ed40490d7b0c", null ],
+    [ "Width", "class_communication_wheel.html#aa7520e83b3bfe4241b45716e2cf3057d", null ]
 ];

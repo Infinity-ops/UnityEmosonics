@@ -31,7 +31,7 @@ var searchData=
   ['reorderarray',['ReorderArray',['../class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#a30087af7a7e0d5084c1d387945f18d7d',1,'Magicolo::EditorTools::CustomEditorBase']]],
   ['reordercallback',['ReorderCallback',['../class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#a0b666a5037fcf47263b6d4d52622631c',1,'Magicolo::EditorTools::CustomEditorBase']]],
   ['repaintinspector',['RepaintInspector',['../class_magicolo_1_1_audio_tools_1_1_pure_data_editor_helper.html#ac129e1b8c8d370ce41917edef37c3a51',1,'Magicolo::AudioTools::PureDataEditorHelper']]],
-  ['reset',['reset',['../class_triggertest.html#a38d6e4883603753c49d41ea762df05ab',1,'Triggertest.reset()'],['../class_magicolo_1_1_transform_extensions.html#a2ca59ca067acf913a54e4a3c23f37b01',1,'Magicolo.TransformExtensions.Reset()']]],
+  ['reset',['Reset',['../class_magicolo_1_1_transform_extensions.html#a2ca59ca067acf913a54e4a3c23f37b01',1,'Magicolo.TransformExtensions.Reset()'],['../class_triggertest.html#a38d6e4883603753c49d41ea762df05ab',1,'Triggertest.reset()']]],
   ['resetids',['ResetIds',['../class_magicolo_1_1_audio_tools_1_1_pure_data_sequence_manager.html#aea52d3c6d59e7490ecf6a6def55c3c18',1,'Magicolo::AudioTools::PureDataSequenceManager']]],
   ['resetpatterns',['ResetPatterns',['../class_magicolo_1_1_audio_tools_1_1_pure_data_sequence_pattern.html#ad620cefb7a56290c986303632b01d5c2',1,'Magicolo::AudioTools::PureDataSequencePattern']]],
   ['resetposition',['resetPosition',['../classreset_sound.html#a66acde76b888ac6c15d19626cd534127',1,'resetSound']]],

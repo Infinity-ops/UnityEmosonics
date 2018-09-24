@@ -8,7 +8,6 @@ var searchData=
   ['magnitude',['Magnitude',['../class_magicolo_1_1_quaternion_extensions.html#ad749ccb278a7ae0c5b950582a97c1fb1',1,'Magicolo::QuaternionExtensions']]],
   ['mainmenu_5fscript',['MainMenu_Script',['../class_main_menu___script.html',1,'']]],
   ['mainmenu_5fscript_2ecs',['MainMenu_script.cs',['../_main_menu__script_8cs.html',1,'']]],
-  ['maintexture',['mainTexture',['../class_communication_wheel.html#adea5890d9d5433d9c91c68a9243f0c6b',1,'CommunicationWheel']]],
   ['mainthread',['MainThread',['../class_magicolo_1_1_audio_tools_1_1_pure_data_general_settings.html#a761fca2f7b2d0d5b5ed28f3ecd17532f',1,'Magicolo::AudioTools::PureDataGeneralSettings']]],
   ['makenewdoxyfile',['MakeNewDoxyFile',['../class_doxygen_window.html#abf3c2a3c3a53e6691e58b865da8404de',1,'DoxygenWindow']]],
   ['makeshot',['MakeShot',['../class_sling_shot.html#a65b60ab446b480abbb6984ba3b900ecf',1,'SlingShot']]],

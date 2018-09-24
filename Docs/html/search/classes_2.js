@@ -15,7 +15,6 @@ var searchData=
   ['colorserializationsurrogate',['ColorSerializationSurrogate',['../class_color_serialization_surrogate.html',1,'']]],
   ['commtool',['CommTool',['../class_comm_tool.html',1,'']]],
   ['communicationwheel',['CommunicationWheel',['../class_communication_wheel.html',1,'']]],
-  ['communicationwheel1',['CommunicationWheel1',['../class_communication_wheel1.html',1,'']]],
   ['communicationwheel1_5fgame',['CommunicationWheel1_Game',['../class_communication_wheel1___game.html',1,'']]],
   ['componentextensions',['ComponentExtensions',['../class_magicolo_1_1_component_extensions.html',1,'Magicolo']]],
   ['contextmenucleardata',['ContextMenuClearData',['../class_magicolo_1_1_editor_tools_1_1_custom_editor_base_1_1_context_menu_clear_data.html',1,'Magicolo::EditorTools::CustomEditorBase']]],

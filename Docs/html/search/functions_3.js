@@ -7,7 +7,7 @@ var searchData=
   ['changevalue',['changeValue',['../class_pd_a_p_i.html#a98104a83e96227bf4a2b01be23eeeb55',1,'PdAPI']]],
   ['checkforchanges',['CheckForChanges',['../class_magicolo_1_1_audio_tools_1_1_pure_data_hierarchy_manager.html#a26ce8b32521e5185d1fc5c7d15ae86da',1,'Magicolo::AudioTools::PureDataHierarchyManager']]],
   ['checkplugins',['CheckPlugins',['../class_magicolo_1_1_audio_tools_1_1_pure_data_plugin_manager.html#a765c90369fa8dad14d5d56f81a1c81f2',1,'Magicolo::AudioTools::PureDataPluginManager']]],
-  ['checksettingschanges',['checkSettingsChanges',['../class_communication_wheel1.html#a02d82eb87eacbd5a8f45431eb9f4b559',1,'CommunicationWheel1']]],
+  ['checksettingschanges',['checkSettingsChanges',['../class_communication_wheel.html#a20897ad4378508764a28af0e9f1630ad',1,'CommunicationWheel']]],
   ['clamp',['Clamp',['../class_magicolo_1_1_animation_curve_extensions.html#abfae821fef556f585bfc9c286d4d069c',1,'Magicolo::AnimationCurveExtensions']]],
   ['clampattribute',['ClampAttribute',['../class_clamp_attribute.html#aa9c0644e8273d95b214c037f2f387c2e',1,'ClampAttribute.ClampAttribute()'],['../class_clamp_attribute.html#ae439805bb2e77ac8016c553587642746',1,'ClampAttribute.ClampAttribute(float min, float max)']]],
   ['cleanup',['CleanUp',['../class_magicolo_1_1_audio_tools_1_1_pure_data_hierarchy_manager.html#a584e1405cf1aaca07114313a2e575db9',1,'Magicolo::AudioTools::PureDataHierarchyManager']]],

@@ -60,17 +60,17 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_animation_curve_extensions_8cs.html",
-"_vertex_jitter_8cs.html",
-"class_lib_p_d_binding_1_1_lib_p_d.html#a3cd73affe172099b1afc50f48041bbf4",
-"class_magicolo_1_1_audio_tools_1_1_pure_data_editor.html#a0ecea49eb0edea2b7d98ca55956f1df1",
-"class_magicolo_1_1_audio_tools_1_1_pure_data_sequence.html#a9414595ce1f6128f9d5bb87af497cd48",
-"class_magicolo_1_1_audio_tools_1_1_pure_data_spatializer_manager.html",
-"class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#a90dad7389190d6fe3817f46aa120c486",
-"class_magicolo_1_1_object_extensions.html#a4b8e44b008ecde93953a7d50894c142b",
-"class_magicolo_1_1_vector3_extensions.html#a23af0bbf82551669d1899f8ee84e095b",
-"class_pure_data.html#a6255082ac9958e34a29c36513128829f",
-"class_s_q_l_server.html#a9da5cea3f8e92fc5f1b93ffc24ae79fe",
-"class_touch_handler_favorite.html"
+"_vertex_shake_a_8cs.html",
+"class_lib_p_d_binding_1_1_lib_p_d.html#a879dfe4e2f0d19e5de1a659ff72a902e",
+"class_magicolo_1_1_audio_tools_1_1_pure_data_editor_helper.html#ab1d9d036a06b3ffbf985f17640f7be1d",
+"class_magicolo_1_1_audio_tools_1_1_pure_data_sequence.html#ac9f880a4004160614ed13c51e4c1d15c",
+"class_magicolo_1_1_audio_tools_1_1_pure_data_spatializer_manager.html#af38dd6824cb42ec2a28cdb8b9ce1d8a7",
+"class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#a9bc655c5347afb6b922a31baaab79e04",
+"class_magicolo_1_1_object_extensions.html#a9e431530ca1ecb00ba67baaf4620a95b",
+"class_magicolo_1_1_vector3_extensions.html#a95859985fbd2a39d2423342cfabdec3b",
+"class_pure_data.html#a7b8184f237ba5e0674707a33ffcb8edd",
+"class_s_q_l_server.html#aff88f9da05111370089d299a6faca062",
+"class_vector2_serialization_surrogate.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

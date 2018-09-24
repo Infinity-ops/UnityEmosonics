@@ -24,5 +24,5 @@ var searchData=
   ['sqlserver',['SQLServer',['../class_s_q_l_server.html',1,'']]],
   ['staticclass',['StaticClass',['../class_lock_controller_1_1_static_class.html',1,'LockController']]],
   ['stringextensions',['StringExtensions',['../class_magicolo_1_1_string_extensions.html',1,'Magicolo']]],
-  ['switchscene',['switchScene',['../classswitch_scene.html',1,'switchScene'],['../class_switch_scene.html',1,'SwitchScene']]]
+  ['switchscene',['SwitchScene',['../class_switch_scene.html',1,'SwitchScene'],['../classswitch_scene.html',1,'switchScene']]]
 ];

@@ -12,10 +12,7 @@ var dir_22c86f58b1c4e6c461b836b74632a92e =
     [ "ColorSerializationSurrogate.cs", "_color_serialization_surrogate_8cs.html", [
       [ "ColorSerializationSurrogate", "class_color_serialization_surrogate.html", "class_color_serialization_surrogate" ]
     ] ],
-    [ "CommunicationWheel.cs", "_communication_wheel_8cs.html", [
-      [ "CommunicationWheel", "class_communication_wheel.html", "class_communication_wheel" ]
-    ] ],
-    [ "CommunicationWheel1.cs", "_communication_wheel1_8cs.html", "_communication_wheel1_8cs" ],
+    [ "CommunicationWheel.cs", "_communication_wheel_8cs.html", "_communication_wheel_8cs" ],
     [ "FavoriteColor.cs", "_favorite_color_8cs.html", [
       [ "FavoriteColor", "class_favorite_color.html", "class_favorite_color" ]
     ] ],

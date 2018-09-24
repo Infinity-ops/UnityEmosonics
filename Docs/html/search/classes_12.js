@@ -19,7 +19,7 @@ var searchData=
   ['tmp_5ftextselector_5fb',['TMP_TextSelector_B',['../class_t_m_pro_1_1_examples_1_1_t_m_p___text_selector___b.html',1,'TMPro::Examples']]],
   ['tmp_5fuiframeratecounter',['TMP_UiFrameRateCounter',['../class_t_m_pro_1_1_examples_1_1_t_m_p___ui_frame_rate_counter.html',1,'TMPro::Examples']]],
   ['tmpro_5finstructionoverlay',['TMPro_InstructionOverlay',['../class_t_m_pro_1_1_examples_1_1_t_m_pro___instruction_overlay.html',1,'TMPro::Examples']]],
-  ['touchhandlerfavorite',['TouchHandlerFavorite',['../class_touch_handler_favorite.html',1,'TouchHandlerFavorite'],['../classtouch_handler_favorite.html',1,'touchHandlerFavorite']]],
+  ['touchhandlerfavorite',['touchHandlerFavorite',['../classtouch_handler_favorite.html',1,'touchHandlerFavorite'],['../class_touch_handler_favorite.html',1,'TouchHandlerFavorite']]],
   ['transformextensions',['TransformExtensions',['../class_magicolo_1_1_transform_extensions.html',1,'Magicolo']]],
   ['triggertest',['Triggertest',['../class_triggertest.html',1,'']]],
   ['typeextensions',['TypeExtensions',['../class_magicolo_1_1_type_extensions.html',1,'Magicolo']]]

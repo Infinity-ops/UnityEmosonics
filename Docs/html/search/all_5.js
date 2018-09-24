@@ -44,7 +44,7 @@ var searchData=
   ['dopplersendname',['DopplerSendName',['../class_magicolo_1_1_audio_tools_1_1_pure_data_source_spatializer.html#ae6c85629311cae602b8fa031e15e1282',1,'Magicolo.AudioTools.PureDataSourceSpatializer.DopplerSendName()'],['../class_magicolo_1_1_audio_tools_1_1_pure_data_spatializer_doppler.html#ac91cba99c39c31d9ee1dd9b02c91b58e',1,'Magicolo.AudioTools.PureDataSpatializerDoppler.DopplerSendName()']]],
   ['dopplerskipped',['dopplerSkipped',['../class_magicolo_1_1_audio_tools_1_1_pure_data_spatializer_doppler.html#a972c274f7446e36f1847456f2d9aa00a',1,'Magicolo::AudioTools::PureDataSpatializerDoppler']]],
   ['doubleclick',['doubleClick',['../class_comm_tool.html#aaf5c8ea6f49b89bdfd125d2b6984b545',1,'CommTool']]],
-  ['doubleclicktime',['doubleClickTime',['../class_communication_wheel1.html#ad59153b2448d5c7880186938dd8b7c85',1,'CommunicationWheel1.doubleClickTime()'],['../classsprite_wheel.html#a89f5d0740d47e4b5ed9c0c1a50267310',1,'spriteWheel.doubleClickTime()']]],
+  ['doubleclicktime',['doubleClickTime',['../class_communication_wheel.html#acc41eb41ec0bda4bcd885fb42350ece3',1,'CommunicationWheel.doubleClickTime()'],['../classsprite_wheel.html#a89f5d0740d47e4b5ed9c0c1a50267310',1,'spriteWheel.doubleClickTime()']]],
   ['doubleextensions',['DoubleExtensions',['../class_magicolo_1_1_double_extensions.html',1,'Magicolo']]],
   ['doubleextensions_2ecs',['DoubleExtensions.cs',['../_double_extensions_8cs.html',1,'']]],
   ['doxygenconfig',['DoxygenConfig',['../class_doxygen_config.html',1,'']]],

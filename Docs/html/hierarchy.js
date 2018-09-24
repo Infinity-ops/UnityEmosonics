@@ -75,7 +75,7 @@ var hierarchy =
       [ "TMPro.Examples.TMP_TextSelector_B", "class_t_m_pro_1_1_examples_1_1_t_m_p___text_selector___b.html", null ]
     ] ],
     [ "IPointerDownHandler", null, [
-      [ "CommunicationWheel1", "class_communication_wheel1.html", null ],
+      [ "CommunicationWheel", "class_communication_wheel.html", null ],
       [ "spriteWheel", "classsprite_wheel.html", null ],
       [ "touchHandlerFavorite", "classtouch_handler_favorite.html", null ],
       [ "TouchHandlerFavorite", "class_touch_handler_favorite.html", null ]
@@ -91,7 +91,7 @@ var hierarchy =
       [ "TMPro.TMP_TextEventHandler", "class_t_m_pro_1_1_t_m_p___text_event_handler.html", null ]
     ] ],
     [ "IPointerUpHandler", null, [
-      [ "CommunicationWheel1", "class_communication_wheel1.html", null ],
+      [ "CommunicationWheel", "class_communication_wheel.html", null ],
       [ "spriteWheel", "classsprite_wheel.html", null ],
       [ "TMPro.Examples.TMP_TextSelector_B", "class_t_m_pro_1_1_examples_1_1_t_m_p___text_selector___b.html", null ],
       [ "touchHandlerFavorite", "classtouch_handler_favorite.html", null ],
@@ -112,9 +112,6 @@ var hierarchy =
     [ "LibPDBinding.LibPD", "class_lib_p_d_binding_1_1_lib_p_d.html", null ],
     [ "Magicolo.ListExtensions", "class_magicolo_1_1_list_extensions.html", null ],
     [ "Logger", "class_logger.html", null ],
-    [ "MaskableGraphic", null, [
-      [ "CommunicationWheel", "class_communication_wheel.html", null ]
-    ] ],
     [ "Magicolo.MaterialExtensions", "class_magicolo_1_1_material_extensions.html", null ],
     [ "MonoBehaviour", null, [
       [ "AttemptBall", "class_attempt_ball.html", null ],
@@ -124,7 +121,7 @@ var hierarchy =
       [ "ColorChanging", "class_color_changing.html", null ],
       [ "ColorGetting", "class_color_getting.html", null ],
       [ "ColorPicking", "class_color_picking.html", null ],
-      [ "CommunicationWheel1", "class_communication_wheel1.html", null ],
+      [ "CommunicationWheel", "class_communication_wheel.html", null ],
       [ "CommunicationWheel1_Game", "class_communication_wheel1___game.html", null ],
       [ "DestroyPrefab", "class_destroy_prefab.html", null ],
       [ "DragHandle", "class_drag_handle.html", null ],

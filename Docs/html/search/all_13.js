@@ -14,7 +14,7 @@ var searchData=
   ['randomrange',['RandomRange',['../class_magicolo_1_1_helper_functions.html#af06283b08a53822fe4e011f8e631611f',1,'Magicolo.HelperFunctions.RandomRange(int min, int max)'],['../class_magicolo_1_1_helper_functions.html#a7e903eccda5671360448675d688bf0e7',1,'Magicolo.HelperFunctions.RandomRange(float min, float max)']]],
   ['randomsound',['randomSound',['../classrandom_sound.html',1,'']]],
   ['randomsound_2ecs',['RandomSound.cs',['../_random_sound_8cs.html',1,'']]],
-  ['randomvolume',['RandomVolume',['../class_pure_data_source_item.html#ac49d512f19adcaec03e14337135eee9c',1,'PureDataSourceItem.RandomVolume()'],['../class_pure_data_option.html#ac3014402d8429d657c11fe8618a1c6bd',1,'PureDataOption.RandomVolume(float randomVolume, float delay)'],['../class_pure_data_option.html#afa55807e82c7c8b323b9cc6a16af82df',1,'PureDataOption.RandomVolume(float randomVolume)'],['../class_pure_data_option.html#af81540ac0d899f6bdfb53fbd702fb613a77d7ba38df0a6343c6680b1ac69cc995',1,'PureDataOption.RandomVolume()'],['../class_magicolo_1_1_audio_tools_1_1_pure_data_info.html#ab445d6a6813bea7a4ebfdb1fae4e1ecb',1,'Magicolo.AudioTools.PureDataInfo.randomVolume()']]],
+  ['randomvolume',['randomVolume',['../class_magicolo_1_1_audio_tools_1_1_pure_data_info.html#ab445d6a6813bea7a4ebfdb1fae4e1ecb',1,'Magicolo.AudioTools.PureDataInfo.randomVolume()'],['../class_pure_data_source_item.html#ac49d512f19adcaec03e14337135eee9c',1,'PureDataSourceItem.RandomVolume()'],['../class_pure_data_option.html#ac3014402d8429d657c11fe8618a1c6bd',1,'PureDataOption.RandomVolume(float randomVolume, float delay)'],['../class_pure_data_option.html#afa55807e82c7c8b323b9cc6a16af82df',1,'PureDataOption.RandomVolume(float randomVolume)'],['../class_pure_data_option.html#af81540ac0d899f6bdfb53fbd702fb613a77d7ba38df0a6343c6680b1ac69cc995',1,'PureDataOption.RandomVolume()']]],
   ['readarray',['ReadArray',['../class_pure_data.html#a8d606a7d42fdb95b02fe7b51eba09ac3',1,'PureData.ReadArray()'],['../class_magicolo_1_1_audio_tools_1_1_pure_data_communicator.html#a405d707793569cd7e9c7cabb60990e97',1,'Magicolo.AudioTools.PureDataCommunicator.ReadArray()']]],
   ['readbaseconfig',['readBaseConfig',['../class_doxygen_window.html#a5ba38d9b1d93fa627bc3b53cdd1dda17',1,'DoxygenWindow']]],
   ['readcommand',['readCommand',['../class_p_h_p___c_r_u_d___a_p_i.html#a4c80bf7af4388ed58bd5f3dc37e9fc0c',1,'PHP_CRUD_API']]],
@@ -54,7 +54,7 @@ var searchData=
   ['representationdropdown',['RepresentationDropDown',['../class_representation_drop_down.html',1,'']]],
   ['representationdropdown_2ecs',['RepresentationDropDown.cs',['../_representation_drop_down_8cs.html',1,'']]],
   ['requiredholdtime',['requiredHoldTime',['../classtouch_handler_favorite.html#a63dfb0e9d5b77fdf28b004d30a31647b',1,'touchHandlerFavorite.requiredHoldTime()'],['../class_touch_handler_favorite.html#a5af97ce5422232072e8591098e589304',1,'TouchHandlerFavorite.requiredHoldTime()']]],
-  ['reset',['reset',['../class_triggertest.html#a38d6e4883603753c49d41ea762df05ab',1,'Triggertest.reset()'],['../class_magicolo_1_1_transform_extensions.html#a2ca59ca067acf913a54e4a3c23f37b01',1,'Magicolo.TransformExtensions.Reset()']]],
+  ['reset',['Reset',['../class_magicolo_1_1_transform_extensions.html#a2ca59ca067acf913a54e4a3c23f37b01',1,'Magicolo.TransformExtensions.Reset()'],['../class_triggertest.html#a38d6e4883603753c49d41ea762df05ab',1,'Triggertest.reset()']]],
   ['resetbutton',['ResetButton',['../class_game_manager.html#afe899286ec80c57a3862338179d8fae6',1,'GameManager']]],
   ['resetids',['ResetIds',['../class_magicolo_1_1_audio_tools_1_1_pure_data_sequence_manager.html#aea52d3c6d59e7490ecf6a6def55c3c18',1,'Magicolo::AudioTools::PureDataSequenceManager']]],
   ['resetpatterns',['ResetPatterns',['../class_magicolo_1_1_audio_tools_1_1_pure_data_sequence_pattern.html#ad620cefb7a56290c986303632b01d5c2',1,'Magicolo::AudioTools::PureDataSequencePattern']]],
@@ -99,5 +99,5 @@ var searchData=
   ['run',['Run',['../class_doxy_runner.html#a7458975df0c43d397051f225d6def184',1,'DoxyRunner']]],
   ['rundoxygen',['RunDoxygen',['../class_doxygen_window.html#a63924417d5b5b7a71570ec9a9ef1ca5e',1,'DoxygenWindow']]],
   ['runthreadeddoxy',['RunThreadedDoxy',['../class_doxy_runner.html#a0a838402bf7b6661d4a1959c1b57aeb6',1,'DoxyRunner']]],
-  ['russell',['russell',['../_communication_wheel1_8cs.html#a646abe2684242affd443b67220a81bc2a1e9c32b7ba6fefa76773d5c79bcdaad0',1,'CommunicationWheel1.cs']]]
+  ['russell',['russell',['../_communication_wheel_8cs.html#a646abe2684242affd443b67220a81bc2a1e9c32b7ba6fefa76773d5c79bcdaad0',1,'CommunicationWheel.cs']]]
 ];

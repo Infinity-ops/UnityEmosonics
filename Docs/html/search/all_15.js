@@ -28,10 +28,8 @@ var searchData=
   ['textmeshspawner',['TextMeshSpawner',['../class_t_m_pro_1_1_examples_1_1_text_mesh_spawner.html',1,'TMPro::Examples']]],
   ['textmeshspawner_2ecs',['TextMeshSpawner.cs',['../_text_mesh_spawner_8cs.html',1,'']]],
   ['textpopup_5fprefab_5f01',['TextPopup_Prefab_01',['../class_t_m_pro_1_1_examples_1_1_t_m_p___text_selector___b.html#afab51f8e6ae2f2c170a2fbee569f29d7',1,'TMPro::Examples::TMP_TextSelector_B']]],
-  ['texture',['texture',['../class_communication_wheel.html#a07ab4741250b4ac5c46061717f9e3785',1,'CommunicationWheel']]],
   ['thefont',['TheFont',['../class_t_m_pro_1_1_examples_1_1_benchmark03.html#ad5ac07c246de5f50a0272846a75d64ad',1,'TMPro.Examples.Benchmark03.TheFont()'],['../class_t_m_pro_1_1_examples_1_1_text_mesh_pro_floating_text.html#a9bb498ea133aa1535bc4a6bdc76fa533',1,'TMPro.Examples.TextMeshProFloatingText.TheFont()'],['../class_t_m_pro_1_1_examples_1_1_text_mesh_spawner.html#a5095e4cdcd5de19421b45082723ea30e',1,'TMPro.Examples.TextMeshSpawner.TheFont()']]],
   ['themes',['Themes',['../class_doxygen_window.html#a2dfb0ba26737a0e996797c2848cc2fc0',1,'DoxygenWindow']]],
-  ['thickness',['thickness',['../class_communication_wheel.html#ac27495dced176578630b65f8206a16db',1,'CommunicationWheel']]],
   ['threshold',['threshold',['../class_magicolo_1_1_audio_tools_1_1_pure_data_source.html#ae4636fb9f461c9d76f670997584a7ac3',1,'Magicolo::AudioTools::PureDataSource']]],
   ['thresholdepsilon',['thresholdEpsilon',['../class_magicolo_1_1_audio_tools_1_1_pure_data_source.html#a4df462e99a9a22628165c103d57f24d0',1,'Magicolo::AudioTools::PureDataSource']]],
   ['tickevent',['TickEvent',['../interface_magicolo_1_1_general_tools_1_1_i_syncable.html#a416106ad05a2684ae9e5de916356ecc7',1,'Magicolo::GeneralTools::ISyncable']]],
@@ -75,7 +73,7 @@ var searchData=
   ['torgb',['ToRGB',['../class_magicolo_1_1_color_extensions.html#a924c6555d8581047703d69ac0c6d179e',1,'Magicolo::ColorExtensions']]],
   ['tostring',['ToString',['../class_pure_data_container_item.html#ab7223b5101f9a9f41bb6bbad7e541882',1,'PureDataContainerItem.ToString()'],['../class_pure_data_option.html#ab92bbf53c37dca20de5172f81e192bc0',1,'PureDataOption.ToString()'],['../class_pure_data_sequence_item.html#ad7702189dd5186d714ed343aea008287',1,'PureDataSequenceItem.ToString()'],['../class_pure_data_source_item.html#a556ef68de4d9624c42090ee4302a9915',1,'PureDataSourceItem.ToString()'],['../class_magicolo_1_1_audio_tools_1_1_pure_data_sub_container.html#a3e134f34fb28539614f5ad71dd217efc',1,'Magicolo.AudioTools.PureDataSubContainer.ToString()']]],
   ['tostringarray_3c_20t_20_3e',['ToStringArray&lt; T &gt;',['../class_magicolo_1_1_array_extensions.html#a96eeb53f67b15128ebddbc33dd53195a',1,'Magicolo::ArrayExtensions']]],
-  ['touchhandlerfavorite',['TouchHandlerFavorite',['../class_touch_handler_favorite.html',1,'TouchHandlerFavorite'],['../classtouch_handler_favorite.html',1,'touchHandlerFavorite']]],
+  ['touchhandlerfavorite',['touchHandlerFavorite',['../classtouch_handler_favorite.html',1,'touchHandlerFavorite'],['../class_touch_handler_favorite.html',1,'TouchHandlerFavorite']]],
   ['touchhandlerfavorite_2ecs',['touchHandlerFavorite.cs',['../_communication_tool_2touch_handler_favorite_8cs.html',1,'(Global Namespace)'],['../touch_handler_favorite_8cs.html',1,'(Global Namespace)']]],
   ['track',['Track',['../class_magicolo_1_1_audio_tools_1_1_sequence_selection_data.html#a91e94e6cd445c134198eac420c146145',1,'Magicolo::AudioTools::SequenceSelectionData']]],
   ['trackindex',['trackIndex',['../class_magicolo_1_1_audio_tools_1_1_sequence_selection_data.html#af1d2d3fa750c5ae7c1038d887b5346a0',1,'Magicolo::AudioTools::SequenceSelectionData']]],
@@ -99,5 +97,5 @@ var searchData=
   ['typeextensions',['TypeExtensions',['../class_magicolo_1_1_type_extensions.html',1,'Magicolo']]],
   ['typeextensions_2ecs',['TypeExtensions.cs',['../_type_extensions_8cs.html',1,'']]],
   ['types',['Types',['../class_magicolo_1_1_audio_tools_1_1_pure_data_container.html#a16b11c17bce338c24145a044f6a4ad10',1,'Magicolo.AudioTools.PureDataContainer.Types()'],['../class_magicolo_1_1_audio_tools_1_1_pure_data_sub_container.html#ae22c49ef5d14b56d8665090aefd990a8',1,'Magicolo.AudioTools.PureDataSubContainer.Types()']]],
-  ['typesetting',['typeSetting',['../_communication_wheel1_8cs.html#a646abe2684242affd443b67220a81bc2',1,'CommunicationWheel1.cs']]]
+  ['typesetting',['typeSetting',['../_communication_wheel_8cs.html#a646abe2684242affd443b67220a81bc2',1,'CommunicationWheel.cs']]]
 ];

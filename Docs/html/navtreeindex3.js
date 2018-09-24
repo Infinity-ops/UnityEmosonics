@@ -1,14 +1,5 @@
 var NAVTREEINDEX3 =
 {
-"class_magicolo_1_1_audio_tools_1_1_pure_data_editor.html#a0ecea49eb0edea2b7d98ca55956f1df1":[1,0,2,0,12,0],
-"class_magicolo_1_1_audio_tools_1_1_pure_data_editor.html#af7fc4a0cf96d5158ac8244c111e22467":[1,0,2,0,12,1],
-"class_magicolo_1_1_audio_tools_1_1_pure_data_editor_helper.html":[1,0,2,0,13],
-"class_magicolo_1_1_audio_tools_1_1_pure_data_editor_helper.html#a06d3c31f71de11cbe65ec44249721eb5":[1,0,2,0,13,11],
-"class_magicolo_1_1_audio_tools_1_1_pure_data_editor_helper.html#a177a2987660aba8670b1774d24aaf3aa":[1,0,2,0,13,13],
-"class_magicolo_1_1_audio_tools_1_1_pure_data_editor_helper.html#a5c752b32f554cbcce9b8bf7cc8c08822":[1,0,2,0,13,12],
-"class_magicolo_1_1_audio_tools_1_1_pure_data_editor_helper.html#a67901c5a3b49b72387867ae1b12d5b64":[1,0,2,0,13,10],
-"class_magicolo_1_1_audio_tools_1_1_pure_data_editor_helper.html#a6fe8bf4dafbc22be0ac802155437b662":[1,0,2,0,13,14],
-"class_magicolo_1_1_audio_tools_1_1_pure_data_editor_helper.html#a8c354febd1b115a1467074392c17e481":[1,0,2,0,13,9],
 "class_magicolo_1_1_audio_tools_1_1_pure_data_editor_helper.html#ab1d9d036a06b3ffbf985f17640f7be1d":[1,0,2,0,13,5],
 "class_magicolo_1_1_audio_tools_1_1_pure_data_editor_helper.html#abff8f2b4f5bed3b736233fbf6d818bff":[1,0,2,0,13,6],
 "class_magicolo_1_1_audio_tools_1_1_pure_data_editor_helper.html#ac129e1b8c8d370ce41917edef37c3a51":[1,0,2,0,13,7],
@@ -249,5 +240,14 @@ var NAVTREEINDEX3 =
 "class_magicolo_1_1_audio_tools_1_1_pure_data_sequence.html#a7ca1da3554bab5923c6279ac07d1bc7f":[1,0,2,0,32,20],
 "class_magicolo_1_1_audio_tools_1_1_pure_data_sequence.html#a8efa71cbc6461165e9c84385ab33aa0c":[1,0,2,0,32,10],
 "class_magicolo_1_1_audio_tools_1_1_pure_data_sequence.html#a93687f7afc7241905ca2e8a969ff0b6a":[1,0,2,0,32,42],
-"class_magicolo_1_1_audio_tools_1_1_pure_data_sequence.html#a939fb30fd7e376f3bd15397cf40ac563":[1,0,2,0,32,33]
+"class_magicolo_1_1_audio_tools_1_1_pure_data_sequence.html#a939fb30fd7e376f3bd15397cf40ac563":[1,0,2,0,32,33],
+"class_magicolo_1_1_audio_tools_1_1_pure_data_sequence.html#a9414595ce1f6128f9d5bb87af497cd48":[1,0,2,0,32,9],
+"class_magicolo_1_1_audio_tools_1_1_pure_data_sequence.html#a99877d1d6a766e75c50a9d0277c23bbf":[1,0,2,0,32,3],
+"class_magicolo_1_1_audio_tools_1_1_pure_data_sequence.html#aaf9603359e817c7d4fcdecf69e1cb8a5":[1,0,2,0,32,2],
+"class_magicolo_1_1_audio_tools_1_1_pure_data_sequence.html#ab2f05f45f7ff5539dbb766f4de255006":[1,0,2,0,32,40],
+"class_magicolo_1_1_audio_tools_1_1_pure_data_sequence.html#ab373f5e516f4142b129b968483a11929":[1,0,2,0,32,28],
+"class_magicolo_1_1_audio_tools_1_1_pure_data_sequence.html#ab474e6a8019fbb69b10f1d035fd03d7f":[1,0,2,0,32,19],
+"class_magicolo_1_1_audio_tools_1_1_pure_data_sequence.html#ab75d7318b59803e7bceefd780fa3b1f8":[1,0,2,0,32,6],
+"class_magicolo_1_1_audio_tools_1_1_pure_data_sequence.html#abe66a5c3151c6f24b4ba6890156bd413":[1,0,2,0,32,4],
+"class_magicolo_1_1_audio_tools_1_1_pure_data_sequence.html#abf940d13455767a651a024f253c59ad2":[1,0,2,0,32,21]
 };
