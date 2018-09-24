@@ -51,7 +51,7 @@ public class changeColor : MonoBehaviour {
 
     public void ButtonChangeColor() {
 
-        Color color = GameObject.Find("Wheel").GetComponent<CommunicationWheel1>().Color;
+        Color color = GameObject.Find("Wheel").GetComponent<CommunicationWheel>().Color;
         GetComponent<Image>().color = color;
         if (this.name.EndsWith("1"))
         {
