@@ -7,13 +7,13 @@ public class changePosition : MonoBehaviour {
 
 	public GameObject crosshair;
     
-	// Use this for initialization
+	/**
+	 * changes position of crosshair based on saved favorite position
+	 */
  	public void change() {
         
 		if(this.name.EndsWith("1")) {
 			if (GameControl.control.favorite1Pos != new Vector3()) {
-                Debug.Log("Color: " + GameControl.control.favorite1Color);
-
                 GameObject.Find("Wheel").GetComponent<CommunicationWheel>().Color = GameControl.control.favorite1Color;
 				crosshair.GetComponent<RectTransform>().position = GameControl.control.favorite1Pos;
 				GameControl.control.crosshairPosition = GameControl.control.favorite1Pos;

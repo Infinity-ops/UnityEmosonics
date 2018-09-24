@@ -3,10 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Runtime.Serialization;
 
+/**
+ * makes Vector3 object serializable
+ */
 public class Vector3SerializationSurrogate : ISerializationSurrogate
 {
 
-    // Method called to serialize a Vector3 object
+    /**
+     * called to serialize a Vector3 object
+     */
     public void GetObjectData(System.Object obj, SerializationInfo info, StreamingContext context)
     {
 
@@ -16,8 +21,9 @@ public class Vector3SerializationSurrogate : ISerializationSurrogate
         info.AddValue("z", v3.z);
     }
 
-    // Method called to deserialize a Vector3 object
-    public System.Object SetObjectData(System.Object obj, SerializationInfo info,
+    /**
+     * called to deserialize a Vector3 object
+     */    public System.Object SetObjectData(System.Object obj, SerializationInfo info,
                                        StreamingContext context, ISurrogateSelector selector)
     {
 

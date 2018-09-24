@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * plays sound based position of crosshair
+ */
 public class playSound : MonoBehaviour
 {
 
@@ -10,12 +13,11 @@ public class playSound : MonoBehaviour
 
     public GameObject crosshair;
 
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
+    /**
+     * plays sound based on relative position of crosshair
+     * within communication wheel in terms of x,y coordinates
+     * in a range between -1 and 1
+     */
     public void play()
     {
         pd = GameObject.Find("PureData").GetComponent<PdAPI>();
@@ -23,7 +25,6 @@ public class playSound : MonoBehaviour
         pd.changeValue(new double[] { pos[0], pos[1] });
         restAPI.SendUsage(pos[0], pos[1], false);
         restAPI.SendSetting(GameControl.control.visualization, GameControl.control.representation);
-        //Debug.Log("Playsound" + pos);
         pd.playAudio();
         GameControl.control.lastCrosshairPos = crosshair.GetComponent<RectTransform>().position;
         GameControl.control.lastSoundPosition = pos;

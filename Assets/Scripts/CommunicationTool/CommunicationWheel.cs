@@ -6,14 +6,17 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 
-public enum typeSetting { russell = 0, unit = 1 }
+public enum typeSetting { russell = 0, unit = 1 } /**< different representation options */
 
-
+/**
+ * colored wheel which allows exploration of an emotional
+ * sound space and production of sounds
+ */
 public class CommunicationWheel : MonoBehaviour, IPointerDownHandler, IPointerUpHandler // required interface when using the OnPointerDown method.
 {
-    public float doubleClickTime;
-    public GameObject crosshair;
-    public Color Color;
+    public float doubleClickTime; /**< time difference between two clicks to consider as a double click */
+    public GameObject crosshair; /**< crosshair laid on top of communication wheel */
+    public Color Color; /**< color of communcation wheel at position of crosshair*/
 
     private GameObject anchor;
     private GameObject text;
@@ -24,11 +27,11 @@ public class CommunicationWheel : MonoBehaviour, IPointerDownHandler, IPointerUp
     Color[] Data;
     Image ImageRenderer;
 
-    public int Width { get { return ImageRenderer.sprite.texture.width; } }
-    public int Height { get { return ImageRenderer.sprite.texture.height; } }
+    public int Width { get { return ImageRenderer.sprite.texture.width; } } /**< width of communication wheel in world space*/
+    public int Height { get { return ImageRenderer.sprite.texture.height; } } /**< height of communication wheel in world space */
 
-    public int ScreenHeight { get { return Camera.main.pixelHeight; } }
-    public int ScreenWidth { get { return Camera.main.pixelWidth; } }
+    public int ScreenHeight { get { return Camera.main.pixelHeight; } } /**< height of screen */
+    public int ScreenWidth { get { return Camera.main.pixelWidth; } } /**< width of screen*/
 
     private bool pointerDown;
 	private float lastClickTime;
@@ -43,6 +46,11 @@ public class CommunicationWheel : MonoBehaviour, IPointerDownHandler, IPointerUp
     private PdAPI pd;
     private PointerEventData click;
     //colorForGame =  public Color getColorByNormalizedPosition(float X, float Y);
+
+    /**
+     * handles click interaction with communication wheel - moves crosshair
+     * and produces sound if an interaction is a double click
+     */
     public void OnPointerDown(PointerEventData data)
     {
         if (Time.time - lastClickTime < doubleClickTime/1000) {
@@ -64,6 +72,9 @@ public class CommunicationWheel : MonoBehaviour, IPointerDownHandler, IPointerUp
         }
     }
 
+    /**
+     * resets data on picking pointer/finger up
+     */
     public void OnPointerUp(PointerEventData data) 
     {
         pointerDown = false;
@@ -97,6 +108,11 @@ public class CommunicationWheel : MonoBehaviour, IPointerDownHandler, IPointerUp
         crosshair.transform.SetAsLastSibling();
 	}
 
+    /**
+     * checks if visualization or representation settings have been
+     * changed in options and changes visualization/representation if
+     * necessary
+     */
     public void checkSettingsChanges()
     {
         if ((typeSetting)GameControl.control.visualization != pointsSetting)
@@ -147,7 +163,11 @@ public class CommunicationWheel : MonoBehaviour, IPointerDownHandler, IPointerUp
         }
     }
 	
-
+    /**
+     * gets color from color map based on normalized x and y coordinates
+     * @param X x coordinate ranged between -1 and 1
+     * @param Y y coordinate ranged between -1 and 1
+     */
     public  Color getColorByNormalizedPosition( float X,  float Y)
     {
         int x = (int)(X * (Width / 2)) + (Width / 2);
@@ -160,8 +180,7 @@ public class CommunicationWheel : MonoBehaviour, IPointerDownHandler, IPointerUp
         return Color.black;
     }
 
-	// Update is called once per frame
-private void Update()
+    private void Update()
     {
         checkSettingsChanges();
         if (pointerDown) {
@@ -185,7 +204,5 @@ private void Update()
                 GameControl.control.crosshairPosition = crosshairRect.position;
             }
         }
-
-    
     }
 }

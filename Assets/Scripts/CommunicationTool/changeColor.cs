@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/**
+ * updates color of favorite buttons
+ */
 public class changeColor : MonoBehaviour {
 
     private Image image;
  
-    // Use this for initialization
     void Start () {
         image = GetComponent<Image>();
         if(this.name.EndsWith("1")) {
@@ -24,6 +26,9 @@ public class changeColor : MonoBehaviour {
         }
     }
 
+    /**
+     * updates colors to random colors - legacy function for debug purposes
+     */
     public void ButtonRandomColors() {
         Color color = new Color(Random.Range(0F, 1F), Random.Range(0F, 1F), Random.Range(0F, 1F));
 		GetComponent<Image>().color = color;
@@ -49,6 +54,9 @@ public class changeColor : MonoBehaviour {
         }
     }
 
+    /**
+     * changes color based on position of crosshair on communication wheel
+     */
     public void ButtonChangeColor() {
 
         Color color = GameObject.Find("Wheel").GetComponent<CommunicationWheel>().Color;

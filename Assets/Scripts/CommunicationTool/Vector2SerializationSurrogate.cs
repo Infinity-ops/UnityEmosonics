@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Runtime.Serialization;
 
+/**
+ * makes Vector2 object serializable
+ */
 public class Vector2SerializationSurrogate : ISerializationSurrogate
 {
 
-    // Method called to serialize a Vector2 object
-    public void GetObjectData(System.Object obj, SerializationInfo info, StreamingContext context)
+    /**
+     * called to serialize a Vector2 object
+     */    public void GetObjectData(System.Object obj, SerializationInfo info, StreamingContext context)
     {
 
         Vector2 v2 = (Vector2)obj;
@@ -15,8 +19,9 @@ public class Vector2SerializationSurrogate : ISerializationSurrogate
         info.AddValue("y", v2.y);
     }
 
-    // Method called to deserialize a Vector2 object
-    public System.Object SetObjectData(System.Object obj, SerializationInfo info,
+    /**
+     * called to deserialize a Vector2 object
+     */    public System.Object SetObjectData(System.Object obj, SerializationInfo info,
                                        StreamingContext context, ISurrogateSelector selector)
     {
 
