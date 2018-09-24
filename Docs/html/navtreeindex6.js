@@ -1,15 +1,5 @@
 var NAVTREEINDEX6 =
 {
-"class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#a9bc655c5347afb6b922a31baaab79e04":[1,0,2,1,4,106],
-"class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#aa09fda2b86bc6122b3fd52c33520d9df":[1,0,2,1,4,121],
-"class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#aa2c47553a99fda1cc283b5de35e25e94":[1,0,2,1,4,59],
-"class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#aaad45939d24b6d0837ea1267db98e0b9":[1,0,2,1,4,109],
-"class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#aadbad264d89d3d18258b68ab6ed37c39":[1,0,2,1,4,85],
-"class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#ab007547bf9f3f3ea386aa50d1d0e9a6b":[1,0,2,1,4,73],
-"class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#ab191fb7d3021d45252224667552b95df":[1,0,2,1,4,114],
-"class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#ab57801e739fe01a0407badc83a147dd4":[1,0,2,1,4,14],
-"class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#ab5c1d276749c6100db45e3a58f8944b4":[1,0,2,1,4,91],
-"class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#ab7ecf7c77930a839b09f66875d904737":[1,0,2,1,4,123],
 "class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#ab8b01a5e95e6d31b190014a1f21edc6b":[1,0,2,1,4,54],
 "class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#ab913f04b250ff0a4a98cee382ea817b7":[1,0,2,1,4,7],
 "class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#ab97be37db6935d14eaa76e7902f14181":[1,0,2,1,4,116],
@@ -249,5 +239,15 @@ var NAVTREEINDEX6 =
 "class_magicolo_1_1_object_extensions.html#a753a803aee4819efe4c056c58668ba56":[1,0,2,24,20],
 "class_magicolo_1_1_object_extensions.html#a7eebcc1c908f64206070a8a90e37b0fb":[1,0,2,24,16],
 "class_magicolo_1_1_object_extensions.html#a830ae7d459727785b8c793d760c38192":[1,0,2,24,25],
-"class_magicolo_1_1_object_extensions.html#a9d54629b2804fc0be9c21c6be6a81345":[1,0,2,24,8]
+"class_magicolo_1_1_object_extensions.html#a9d54629b2804fc0be9c21c6be6a81345":[1,0,2,24,8],
+"class_magicolo_1_1_object_extensions.html#a9e431530ca1ecb00ba67baaf4620a95b":[1,0,2,24,0],
+"class_magicolo_1_1_object_extensions.html#aa80b7bdfb2d08ca4a1d27a739ce06c07":[1,0,2,24,13],
+"class_magicolo_1_1_object_extensions.html#aac348f396dfe6891b59c62a5289dfc6e":[1,0,2,24,29],
+"class_magicolo_1_1_object_extensions.html#ab50a76d7dcb81e2ebc357e32cdf3edeb":[1,0,2,24,7],
+"class_magicolo_1_1_object_extensions.html#aba67fd4d224217e24f998d86503bd05c":[1,0,2,24,1],
+"class_magicolo_1_1_object_extensions.html#abc1f364d23a6c8c5927e55000dcdd205":[1,0,2,24,27],
+"class_magicolo_1_1_object_extensions.html#abcb848c3a3bdf4bb861023eec23b5c63":[1,0,2,24,2],
+"class_magicolo_1_1_object_extensions.html#abe2d8d38f2ce738a1cb969262bd90450":[1,0,2,24,26],
+"class_magicolo_1_1_object_extensions.html#ac1ff357d7ba9066f5e7de9a7011c15d5":[1,0,2,24,23],
+"class_magicolo_1_1_object_extensions.html#ad24d8ffa9f94ac7a4c787980cdfa73ec":[1,0,2,24,15]
 };

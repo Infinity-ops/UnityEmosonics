@@ -22,7 +22,7 @@ var searchData=
   ['pointslist',['PointsList',['../class_projectile_trajectory.html#aa7c140d7bd9578ab56124a378666e80c',1,'ProjectileTrajectory']]],
   ['position',['position',['../class_magicolo_1_1_audio_tools_1_1_pure_data_listener.html#a027a842f988d59353991aeb2d71b7ea0',1,'Magicolo::AudioTools::PureDataListener']]],
   ['positions',['positions',['../class_random_position.html#acaf74d6be2c8ead193eaf4253f3e8d10',1,'RandomPosition']]],
-  ['prefixlabel',['PrefixLabel',['../class_magicolo_1_1_editor_tools_1_1_custom_attribute_base.html#a0d1f573ba10218050b07fc4bbb834e1f',1,'Magicolo.EditorTools.CustomAttributeBase.PrefixLabel()'],['../class_magicolo_1_1_editor_tools_1_1_custom_attribute_property_drawer_base.html#a186bdec0ebcc692b7d8bda955c620e19',1,'Magicolo.EditorTools.CustomAttributePropertyDrawerBase.prefixLabel()']]],
+  ['prefixlabel',['prefixLabel',['../class_magicolo_1_1_editor_tools_1_1_custom_attribute_property_drawer_base.html#a186bdec0ebcc692b7d8bda955c620e19',1,'Magicolo.EditorTools.CustomAttributePropertyDrawerBase.prefixLabel()'],['../class_magicolo_1_1_editor_tools_1_1_custom_attribute_base.html#a0d1f573ba10218050b07fc4bbb834e1f',1,'Magicolo.EditorTools.CustomAttributeBase.PrefixLabel()']]],
   ['previewaudiosource',['previewAudioSource',['../class_magicolo_1_1_audio_tools_1_1_pure_data_editor_helper.html#a67901c5a3b49b72387867ae1b12d5b64',1,'Magicolo::AudioTools::PureDataEditorHelper']]],
   ['previewstoptime',['previewStopTime',['../class_magicolo_1_1_audio_tools_1_1_pure_data_editor_helper.html#a06d3c31f71de11cbe65ec44249721eb5',1,'Magicolo::AudioTools::PureDataEditorHelper']]],
   ['project',['Project',['../class_doxygen_config.html#ae69318495ba1db9f3a4d88e01764f9b4',1,'DoxygenConfig']]],

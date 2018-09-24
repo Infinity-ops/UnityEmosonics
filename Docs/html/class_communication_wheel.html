@@ -94,6 +94,9 @@ $(document).ready(function(){initNavTree('class_communication_wheel.html','');})
 <div class="title">CommunicationWheel Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>colored wheel which allows exploration of an emotional sound space and production of sounds  
+ <a href="class_communication_wheel.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for CommunicationWheel:</div>
 <div class="dyncontent">
@@ -106,35 +109,48 @@ Inheritance diagram for CommunicationWheel:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a404547a9d4eb5976b8a73feb26c76f39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_communication_wheel.html#a404547a9d4eb5976b8a73feb26c76f39">OnPointerDown</a> (PointerEventData data)</td></tr>
+<tr class="memdesc:a404547a9d4eb5976b8a73feb26c76f39"><td class="mdescLeft">&#160;</td><td class="mdescRight">handles click interaction with communication wheel - moves crosshair and produces sound if an interaction is a double click  <a href="#a404547a9d4eb5976b8a73feb26c76f39">More...</a><br /></td></tr>
 <tr class="separator:a404547a9d4eb5976b8a73feb26c76f39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e0a0426a7cbcec69d71ab3768d78272"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_communication_wheel.html#a4e0a0426a7cbcec69d71ab3768d78272">OnPointerUp</a> (PointerEventData data)</td></tr>
+<tr class="memdesc:a4e0a0426a7cbcec69d71ab3768d78272"><td class="mdescLeft">&#160;</td><td class="mdescRight">resets data on picking pointer/finger up  <a href="#a4e0a0426a7cbcec69d71ab3768d78272">More...</a><br /></td></tr>
 <tr class="separator:a4e0a0426a7cbcec69d71ab3768d78272"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20897ad4378508764a28af0e9f1630ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_communication_wheel.html#a20897ad4378508764a28af0e9f1630ad">checkSettingsChanges</a> ()</td></tr>
+<tr class="memdesc:a20897ad4378508764a28af0e9f1630ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">checks if visualization or representation settings have been changed in options and changes visualization/representation if necessary  <a href="#a20897ad4378508764a28af0e9f1630ad">More...</a><br /></td></tr>
 <tr class="separator:a20897ad4378508764a28af0e9f1630ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f1fecd442b5fe68734facffd8ea3947"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_communication_wheel.html#a2ed73eaedffd00bbf15d179e2671529b">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_communication_wheel.html#a1f1fecd442b5fe68734facffd8ea3947">getColorByNormalizedPosition</a> (float X, float Y)</td></tr>
+<tr class="memdesc:a1f1fecd442b5fe68734facffd8ea3947"><td class="mdescLeft">&#160;</td><td class="mdescRight">gets color from color map based on normalized x and y coordinates  <a href="#a1f1fecd442b5fe68734facffd8ea3947">More...</a><br /></td></tr>
 <tr class="separator:a1f1fecd442b5fe68734facffd8ea3947"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:acc41eb41ec0bda4bcd885fb42350ece3"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_communication_wheel.html#acc41eb41ec0bda4bcd885fb42350ece3">doubleClickTime</a></td></tr>
+<tr class="memdesc:acc41eb41ec0bda4bcd885fb42350ece3"><td class="mdescLeft">&#160;</td><td class="mdescRight">time difference between two clicks to consider as a double click  <a href="#acc41eb41ec0bda4bcd885fb42350ece3">More...</a><br /></td></tr>
 <tr class="separator:acc41eb41ec0bda4bcd885fb42350ece3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace430dda3a873931bee50ba5e90b4724"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_communication_wheel.html#ace430dda3a873931bee50ba5e90b4724">crosshair</a></td></tr>
+<tr class="memdesc:ace430dda3a873931bee50ba5e90b4724"><td class="mdescLeft">&#160;</td><td class="mdescRight">crosshair laid on top of communication wheel  <a href="#ace430dda3a873931bee50ba5e90b4724">More...</a><br /></td></tr>
 <tr class="separator:ace430dda3a873931bee50ba5e90b4724"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ed73eaedffd00bbf15d179e2671529b"><td class="memItemLeft" align="right" valign="top">Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_communication_wheel.html#a2ed73eaedffd00bbf15d179e2671529b">Color</a></td></tr>
+<tr class="memdesc:a2ed73eaedffd00bbf15d179e2671529b"><td class="mdescLeft">&#160;</td><td class="mdescRight">color of communcation wheel at position of crosshair  <a href="#a2ed73eaedffd00bbf15d179e2671529b">More...</a><br /></td></tr>
 <tr class="separator:a2ed73eaedffd00bbf15d179e2671529b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:aa7520e83b3bfe4241b45716e2cf3057d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_communication_wheel.html#aa7520e83b3bfe4241b45716e2cf3057d">Width</a><code> [get]</code></td></tr>
+<tr class="memdesc:aa7520e83b3bfe4241b45716e2cf3057d"><td class="mdescLeft">&#160;</td><td class="mdescRight">width of communication wheel in world space  <a href="#aa7520e83b3bfe4241b45716e2cf3057d">More...</a><br /></td></tr>
 <tr class="separator:aa7520e83b3bfe4241b45716e2cf3057d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab313fff782672804dd4e41e28a98905f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_communication_wheel.html#ab313fff782672804dd4e41e28a98905f">Height</a><code> [get]</code></td></tr>
+<tr class="memdesc:ab313fff782672804dd4e41e28a98905f"><td class="mdescLeft">&#160;</td><td class="mdescRight">height of communication wheel in world space  <a href="#ab313fff782672804dd4e41e28a98905f">More...</a><br /></td></tr>
 <tr class="separator:ab313fff782672804dd4e41e28a98905f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74041a44d33e9b6062f7bdc68351b2b8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_communication_wheel.html#a74041a44d33e9b6062f7bdc68351b2b8">ScreenHeight</a><code> [get]</code></td></tr>
+<tr class="memdesc:a74041a44d33e9b6062f7bdc68351b2b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">height of screen  <a href="#a74041a44d33e9b6062f7bdc68351b2b8">More...</a><br /></td></tr>
 <tr class="separator:a74041a44d33e9b6062f7bdc68351b2b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69204cc3ebce22435017ed40490d7b0c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_communication_wheel.html#a69204cc3ebce22435017ed40490d7b0c">ScreenWidth</a><code> [get]</code></td></tr>
+<tr class="memdesc:a69204cc3ebce22435017ed40490d7b0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">width of screen  <a href="#a69204cc3ebce22435017ed40490d7b0c">More...</a><br /></td></tr>
 <tr class="separator:a69204cc3ebce22435017ed40490d7b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>colored wheel which allows exploration of an emotional sound space and production of sounds </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a20897ad4378508764a28af0e9f1630ad"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a20897ad4378508764a28af0e9f1630ad">&#9670;&nbsp;</a></span>checkSettingsChanges()</h2>
 
@@ -149,6 +165,8 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>checks if visualization or representation settings have been changed in options and changes visualization/representation if necessary </p>
 
 </div>
 </div>
@@ -178,6 +196,15 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>gets color from color map based on normalized x and y coordinates </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">X</td><td>x coordinate ranged between -1 and 1 </td></tr>
+    <tr><td class="paramname">Y</td><td>y coordinate ranged between -1 and 1 </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a404547a9d4eb5976b8a73feb26c76f39"></a>
@@ -195,6 +222,8 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>handles click interaction with communication wheel - moves crosshair and produces sound if an interaction is a double click </p>
 
 </div>
 </div>
@@ -214,6 +243,8 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>resets data on picking pointer/finger up </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -229,6 +260,8 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>color of communcation wheel at position of crosshair </p>
+
 </div>
 </div>
 <a id="ace430dda3a873931bee50ba5e90b4724"></a>
@@ -243,6 +276,8 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>crosshair laid on top of communication wheel </p>
+
 </div>
 </div>
 <a id="acc41eb41ec0bda4bcd885fb42350ece3"></a>
@@ -256,6 +291,8 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>time difference between two clicks to consider as a double click </p>
 
 </div>
 </div>
@@ -280,6 +317,8 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>height of communication wheel in world space </p>
+
 </div>
 </div>
 <a id="a74041a44d33e9b6062f7bdc68351b2b8"></a>
@@ -301,6 +340,8 @@ Properties</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>height of screen </p>
 
 </div>
 </div>
@@ -324,6 +365,8 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>width of screen </p>
+
 </div>
 </div>
 <a id="aa7520e83b3bfe4241b45716e2cf3057d"></a>
@@ -346,6 +389,8 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>width of communication wheel in world space </p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
@@ -357,7 +402,7 @@ Properties</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_communication_wheel.html">CommunicationWheel</a></li>
-    <li class="footer">Generated on Mon Sep 24 2018 13:57:42 for Emosonics by
+    <li class="footer">Generated on Mon Sep 24 2018 15:16:27 for Emosonics by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
   </ul>

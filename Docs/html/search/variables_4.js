@@ -13,7 +13,7 @@ var searchData=
   ['dopplerlevel',['dopplerLevel',['../class_magicolo_1_1_audio_tools_1_1_pure_data_info.html#a98bd06fc974d1d6ac07f475ce2966f63',1,'Magicolo::AudioTools::PureDataInfo']]],
   ['dopplerskipped',['dopplerSkipped',['../class_magicolo_1_1_audio_tools_1_1_pure_data_spatializer_doppler.html#a972c274f7446e36f1847456f2d9aa00a',1,'Magicolo::AudioTools::PureDataSpatializerDoppler']]],
   ['doubleclick',['doubleClick',['../class_comm_tool.html#aaf5c8ea6f49b89bdfd125d2b6984b545',1,'CommTool']]],
-  ['doubleclicktime',['doubleClickTime',['../class_communication_wheel.html#acc41eb41ec0bda4bcd885fb42350ece3',1,'CommunicationWheel.doubleClickTime()'],['../classsprite_wheel.html#a89f5d0740d47e4b5ed9c0c1a50267310',1,'spriteWheel.doubleClickTime()']]],
+  ['doubleclicktime',['doubleClickTime',['../class_communication_wheel.html#acc41eb41ec0bda4bcd885fb42350ece3',1,'CommunicationWheel']]],
   ['doxygenoutputstring',['DoxygenOutputString',['../class_doxygen_window.html#a20e7d1bdb1f32c97f600bf0f0bdb2358',1,'DoxygenWindow']]],
   ['draghandle',['DragHandle',['../class_projectile_trajectory.html#a454964ffc6d8e8e103c8cc07b34f6f1b',1,'ProjectileTrajectory.DragHandle()'],['../class_sling_shot.html#a6130876e44736dc793e7a4d064834e6e',1,'SlingShot.DragHandle()']]],
   ['drawprefixlabel',['drawPrefixLabel',['../class_magicolo_1_1_editor_tools_1_1_custom_attribute_property_drawer_base.html#aa38a81e488468b2ef37de70c9d47500f',1,'Magicolo::EditorTools::CustomAttributePropertyDrawerBase']]]

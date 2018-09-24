@@ -1,15 +1,5 @@
 var NAVTREEINDEX7 =
 {
-"class_magicolo_1_1_object_extensions.html#a9e431530ca1ecb00ba67baaf4620a95b":[1,0,2,24,0],
-"class_magicolo_1_1_object_extensions.html#aa80b7bdfb2d08ca4a1d27a739ce06c07":[1,0,2,24,13],
-"class_magicolo_1_1_object_extensions.html#aac348f396dfe6891b59c62a5289dfc6e":[1,0,2,24,29],
-"class_magicolo_1_1_object_extensions.html#ab50a76d7dcb81e2ebc357e32cdf3edeb":[1,0,2,24,7],
-"class_magicolo_1_1_object_extensions.html#aba67fd4d224217e24f998d86503bd05c":[1,0,2,24,1],
-"class_magicolo_1_1_object_extensions.html#abc1f364d23a6c8c5927e55000dcdd205":[1,0,2,24,27],
-"class_magicolo_1_1_object_extensions.html#abcb848c3a3bdf4bb861023eec23b5c63":[1,0,2,24,2],
-"class_magicolo_1_1_object_extensions.html#abe2d8d38f2ce738a1cb969262bd90450":[1,0,2,24,26],
-"class_magicolo_1_1_object_extensions.html#ac1ff357d7ba9066f5e7de9a7011c15d5":[1,0,2,24,23],
-"class_magicolo_1_1_object_extensions.html#ad24d8ffa9f94ac7a4c787980cdfa73ec":[1,0,2,24,15],
 "class_magicolo_1_1_object_extensions.html#ae8df745503e78965affb6044c4a28e3f":[1,0,2,24,9],
 "class_magicolo_1_1_object_extensions.html#aec272b94e74e3f0d971d7554b6822cb1":[1,0,2,24,24],
 "class_magicolo_1_1_object_extensions.html#aed84649035d8479c360a13e5479b0d80":[1,0,2,24,22],
@@ -249,5 +239,15 @@ var NAVTREEINDEX7 =
 "class_magicolo_1_1_vector3_extensions.html#a6702f9a8689c2c71c6d615d455f28a86":[1,0,2,36,26],
 "class_magicolo_1_1_vector3_extensions.html#a6d04f92bbe38c2e1f073d55fd2f08e64":[1,0,2,36,16],
 "class_magicolo_1_1_vector3_extensions.html#a6fbc34968f571cd26364af6111a46344":[1,0,2,36,24],
-"class_magicolo_1_1_vector3_extensions.html#a8160ea2802467413bbd3410420f11b6e":[1,0,2,36,2]
+"class_magicolo_1_1_vector3_extensions.html#a8160ea2802467413bbd3410420f11b6e":[1,0,2,36,2],
+"class_magicolo_1_1_vector3_extensions.html#a95859985fbd2a39d2423342cfabdec3b":[1,0,2,36,9],
+"class_magicolo_1_1_vector3_extensions.html#a9b2009adafd5cd78f2125de321806506":[1,0,2,36,28],
+"class_magicolo_1_1_vector3_extensions.html#ab570b61c0128cebe1febeef3db97c3a4":[1,0,2,36,5],
+"class_magicolo_1_1_vector3_extensions.html#ab6b3151b9b9d40ad651a804e33dd32eb":[1,0,2,36,3],
+"class_magicolo_1_1_vector3_extensions.html#abdff08f488ccfafe9ce4373cb949fa74":[1,0,2,36,7],
+"class_magicolo_1_1_vector3_extensions.html#ac7f21fbdaf2b7bae16020d2b1c37cd3c":[1,0,2,36,1],
+"class_magicolo_1_1_vector3_extensions.html#accbf751c76a5776f1cb1e0a96dbe2527":[1,0,2,36,27],
+"class_magicolo_1_1_vector3_extensions.html#acfc9c402f756121fa51a3fe95f5845fd":[1,0,2,36,4],
+"class_magicolo_1_1_vector3_extensions.html#ad8e5bc142b3d76bc04d8cbad1914c10a":[1,0,2,36,15],
+"class_magicolo_1_1_vector3_extensions.html#ae62424a693022f328ea0bf42d4a47956":[1,0,2,36,20]
 };

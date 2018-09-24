@@ -19,7 +19,6 @@ var searchData=
   ['slidemenuscript',['slideMenuScript',['../classslide_menu_script.html',1,'']]],
   ['slingshot',['SlingShot',['../class_sling_shot.html',1,'']]],
   ['spriterendererextensions',['SpriteRendererExtensions',['../class_magicolo_1_1_sprite_renderer_extensions.html',1,'Magicolo']]],
-  ['spritewheel',['spriteWheel',['../classsprite_wheel.html',1,'']]],
   ['sqlite',['SQLite',['../class_s_q_lite.html',1,'']]],
   ['sqlserver',['SQLServer',['../class_s_q_l_server.html',1,'']]],
   ['staticclass',['StaticClass',['../class_lock_controller_1_1_static_class.html',1,'LockController']]],

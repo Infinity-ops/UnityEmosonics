@@ -60,17 +60,17 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_animation_curve_extensions_8cs.html",
-"_vertex_shake_a_8cs.html",
-"class_lib_p_d_binding_1_1_lib_p_d.html#a879dfe4e2f0d19e5de1a659ff72a902e",
-"class_magicolo_1_1_audio_tools_1_1_pure_data_editor_helper.html#ab1d9d036a06b3ffbf985f17640f7be1d",
-"class_magicolo_1_1_audio_tools_1_1_pure_data_sequence.html#ac9f880a4004160614ed13c51e4c1d15c",
-"class_magicolo_1_1_audio_tools_1_1_pure_data_spatializer_manager.html#af38dd6824cb42ec2a28cdb8b9ce1d8a7",
-"class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#a9bc655c5347afb6b922a31baaab79e04",
-"class_magicolo_1_1_object_extensions.html#a9e431530ca1ecb00ba67baaf4620a95b",
-"class_magicolo_1_1_vector3_extensions.html#a95859985fbd2a39d2423342cfabdec3b",
-"class_pure_data.html#a7b8184f237ba5e0674707a33ffcb8edd",
-"class_s_q_l_server.html#aff88f9da05111370089d299a6faca062",
-"class_vector2_serialization_surrogate.html"
+"_vertex_zoom_8cs.html",
+"class_lib_p_d_binding_1_1_lib_p_d.html#ac62e05d547e0e9d738a0fb401e992c3f",
+"class_magicolo_1_1_audio_tools_1_1_pure_data_filter_read.html#a40954afaa7a13ccc06e83eb9216defdb",
+"class_magicolo_1_1_audio_tools_1_1_pure_data_sequence.html#aeab571b079f1144a8a140a2a178169a2",
+"class_magicolo_1_1_audio_tools_1_1_pure_data_sub_container.html#a5a8bd2f47d0767351684477b8c1aa025",
+"class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#ab8b01a5e95e6d31b190014a1f21edc6b",
+"class_magicolo_1_1_object_extensions.html#ae8df745503e78965affb6044c4a28e3f",
+"class_magicolo_1_1_vector3_extensions.html#aec8ecc538a21858a4318f869c7d7f86d",
+"class_pure_data.html#a90bd9365d4fadbbc19972f47fdecb533",
+"class_s_q_lite.html#a67fd0101bfc7d14ce6cd5ce312807ba5",
+"classchange_position.html#a6a1ebfd87083babbec16331ec699567c"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

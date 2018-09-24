@@ -1,15 +1,5 @@
 var NAVTREEINDEX5 =
 {
-"class_magicolo_1_1_audio_tools_1_1_pure_data_spatializer_manager.html#af38dd6824cb42ec2a28cdb8b9ce1d8a7":[1,0,2,0,48,6],
-"class_magicolo_1_1_audio_tools_1_1_pure_data_spatializer_manager.html#af487035e919124e993c85da884b4b0cd":[1,0,2,0,48,8],
-"class_magicolo_1_1_audio_tools_1_1_pure_data_sub_container.html":[1,0,2,0,49],
-"class_magicolo_1_1_audio_tools_1_1_pure_data_sub_container.html#a0db522962ef4788a28c909809af793c1":[1,0,2,0,49,1],
-"class_magicolo_1_1_audio_tools_1_1_pure_data_sub_container.html#a1b56b1ac1508de60ef29cb643ff5a5d3":[1,0,2,0,49,2],
-"class_magicolo_1_1_audio_tools_1_1_pure_data_sub_container.html#a3504c532292ccd6a73445274a894a633":[1,0,2,0,49,8],
-"class_magicolo_1_1_audio_tools_1_1_pure_data_sub_container.html#a37dcda0ec131d2cebca405e5e67d9873":[1,0,2,0,49,7],
-"class_magicolo_1_1_audio_tools_1_1_pure_data_sub_container.html#a3e134f34fb28539614f5ad71dd217efc":[1,0,2,0,49,6],
-"class_magicolo_1_1_audio_tools_1_1_pure_data_sub_container.html#a4d2fd55f473e6181c0cd532703031894":[1,0,2,0,49,10],
-"class_magicolo_1_1_audio_tools_1_1_pure_data_sub_container.html#a4e488f3b2cb9b4c601c8fd9b4a2a12da":[1,0,2,0,49,5],
 "class_magicolo_1_1_audio_tools_1_1_pure_data_sub_container.html#a5a8bd2f47d0767351684477b8c1aa025":[1,0,2,0,49,11],
 "class_magicolo_1_1_audio_tools_1_1_pure_data_sub_container.html#a5bc1c1e74945dbfeb924055769a6328d":[1,0,2,0,49,14],
 "class_magicolo_1_1_audio_tools_1_1_pure_data_sub_container.html#a66bf44b51a2d6ac5962d6cfb24d4b32c":[1,0,2,0,49,17],
@@ -249,5 +239,15 @@ var NAVTREEINDEX5 =
 "class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#a9709d0e29722ba21c26ceeef9d72c433":[1,0,2,1,4,13],
 "class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#a9797a1abdc56778129870f8c3ef0c038":[1,0,2,1,4,60],
 "class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#a9a54f28693ec14c8ecb27b5d86929ece":[1,0,2,1,4,88],
-"class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#a9b4f6903554efec673dfcae0d7ad8afb":[1,0,2,1,4,99]
+"class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#a9b4f6903554efec673dfcae0d7ad8afb":[1,0,2,1,4,99],
+"class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#a9bc655c5347afb6b922a31baaab79e04":[1,0,2,1,4,106],
+"class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#aa09fda2b86bc6122b3fd52c33520d9df":[1,0,2,1,4,121],
+"class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#aa2c47553a99fda1cc283b5de35e25e94":[1,0,2,1,4,59],
+"class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#aaad45939d24b6d0837ea1267db98e0b9":[1,0,2,1,4,109],
+"class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#aadbad264d89d3d18258b68ab6ed37c39":[1,0,2,1,4,85],
+"class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#ab007547bf9f3f3ea386aa50d1d0e9a6b":[1,0,2,1,4,73],
+"class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#ab191fb7d3021d45252224667552b95df":[1,0,2,1,4,114],
+"class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#ab57801e739fe01a0407badc83a147dd4":[1,0,2,1,4,14],
+"class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#ab5c1d276749c6100db45e3a58f8944b4":[1,0,2,1,4,91],
+"class_magicolo_1_1_editor_tools_1_1_custom_editor_base.html#ab7ecf7c77930a839b09f66875d904737":[1,0,2,1,4,123]
 };

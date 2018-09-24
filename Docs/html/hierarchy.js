@@ -76,7 +76,6 @@ var hierarchy =
     ] ],
     [ "IPointerDownHandler", null, [
       [ "CommunicationWheel", "class_communication_wheel.html", null ],
-      [ "spriteWheel", "classsprite_wheel.html", null ],
       [ "touchHandlerFavorite", "classtouch_handler_favorite.html", null ],
       [ "TouchHandlerFavorite", "class_touch_handler_favorite.html", null ]
     ] ],
@@ -92,7 +91,6 @@ var hierarchy =
     ] ],
     [ "IPointerUpHandler", null, [
       [ "CommunicationWheel", "class_communication_wheel.html", null ],
-      [ "spriteWheel", "classsprite_wheel.html", null ],
       [ "TMPro.Examples.TMP_TextSelector_B", "class_t_m_pro_1_1_examples_1_1_t_m_p___text_selector___b.html", null ],
       [ "touchHandlerFavorite", "classtouch_handler_favorite.html", null ],
       [ "TouchHandlerFavorite", "class_touch_handler_favorite.html", null ]
@@ -118,7 +116,6 @@ var hierarchy =
       [ "changeColor", "classchange_color.html", null ],
       [ "changePosition", "classchange_position.html", null ],
       [ "ChatController", "class_chat_controller.html", null ],
-      [ "ColorChanging", "class_color_changing.html", null ],
       [ "ColorGetting", "class_color_getting.html", null ],
       [ "ColorPicking", "class_color_picking.html", null ],
       [ "CommunicationWheel", "class_communication_wheel.html", null ],
@@ -127,7 +124,6 @@ var hierarchy =
       [ "DragHandle", "class_drag_handle.html", null ],
       [ "Duplicator", "class_duplicator.html", null ],
       [ "EnvMapAnimator", "class_env_map_animator.html", null ],
-      [ "FavoriteColor", "class_favorite_color.html", null ],
       [ "GameControl", "class_game_control.html", null ],
       [ "GameController", "class_game_controller.html", null ],
       [ "GameCount", "class_game_count.html", null ],
@@ -160,7 +156,6 @@ var hierarchy =
       [ "SlideMenu", "class_slide_menu.html", null ],
       [ "slideMenuScript", "classslide_menu_script.html", null ],
       [ "SlingShot", "class_sling_shot.html", null ],
-      [ "spriteWheel", "classsprite_wheel.html", null ],
       [ "switchScene", "classswitch_scene.html", null ],
       [ "SwitchScene", "class_switch_scene.html", null ],
       [ "Target", "class_target.html", null ],

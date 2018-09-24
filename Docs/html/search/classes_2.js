@@ -8,7 +8,6 @@ var searchData=
   ['chatcontroller',['ChatController',['../class_chat_controller.html',1,'']]],
   ['clampattribute',['ClampAttribute',['../class_clamp_attribute.html',1,'']]],
   ['clampdrawer',['ClampDrawer',['../class_magicolo_1_1_editor_tools_1_1_clamp_drawer.html',1,'Magicolo::EditorTools']]],
-  ['colorchanging',['ColorChanging',['../class_color_changing.html',1,'']]],
   ['colorextensions',['ColorExtensions',['../class_magicolo_1_1_color_extensions.html',1,'Magicolo']]],
   ['colorgetting',['ColorGetting',['../class_color_getting.html',1,'']]],
   ['colorpicking',['ColorPicking',['../class_color_picking.html',1,'']]],

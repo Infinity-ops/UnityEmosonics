@@ -18,7 +18,6 @@ var searchData=
   ['slidemenuscript_2ecs',['slideMenuScript.cs',['../slide_menu_script_8cs.html',1,'']]],
   ['slingshot_2ecs',['SlingShot.cs',['../_sling_shot_8cs.html',1,'']]],
   ['spriterendererextensions_2ecs',['SpriteRendererExtensions.cs',['../_sprite_renderer_extensions_8cs.html',1,'']]],
-  ['spritewheel_2ecs',['spriteWheel.cs',['../sprite_wheel_8cs.html',1,'']]],
   ['stringextensions_2ecs',['StringExtensions.cs',['../_string_extensions_8cs.html',1,'']]],
   ['switchscene_2ecs',['switchScene.cs',['../_communication_tool_2switch_scene_8cs.html',1,'(Global Namespace)'],['../switch_scene_8cs.html',1,'(Global Namespace)']]]
 ];

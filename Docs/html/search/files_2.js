@@ -7,7 +7,6 @@ var searchData=
   ['chatcontroller_2ecs',['ChatController.cs',['../_chat_controller_8cs.html',1,'']]],
   ['clampattribute_2ecs',['ClampAttribute.cs',['../_clamp_attribute_8cs.html',1,'']]],
   ['clampdrawer_2ecs',['ClampDrawer.cs',['../_clamp_drawer_8cs.html',1,'']]],
-  ['colorchanging_2ecs',['ColorChanging.cs',['../_color_changing_8cs.html',1,'']]],
   ['colorextensions_2ecs',['ColorExtensions.cs',['../_color_extensions_8cs.html',1,'']]],
   ['colorgetting_2ecs',['ColorGetting.cs',['../_color_getting_8cs.html',1,'']]],
   ['colorpicking_2ecs',['ColorPicking.cs',['../_color_picking_8cs.html',1,'']]],
