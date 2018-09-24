@@ -37,8 +37,8 @@ public class DoxygenWindow : EditorWindow
 {
 	public static DoxygenWindow Instance;
 	public enum WindowModes{Generate,Configuration,About}
-	public string UnityProjectID = PlayerSettings.productName+":";
-	public string AssestsFolder = Application.dataPath;
+	public string UnityProjectID = "";
+	public string AssestsFolder = "";
 	public string[] Themes = new string[3] {"Default", "Dark and Colorful", "Light and Clean"};
 	public int SelectedTheme = 1;
 	WindowModes DisplayMode = WindowModes.Generate;
@@ -306,6 +306,8 @@ public class DoxygenWindow : EditorWindow
 
 	public void readBaseConfig()
 	{
+		UnityProjectID = PlayerSettings.productName+":";
+		AssestsFolder = Application.dataPath;
 		basefile = (TextAsset)Resources.Load("BaseDoxyfile", typeof(TextAsset));
 		reader = new StringReader(basefile.text);
 		if ( reader == null )
