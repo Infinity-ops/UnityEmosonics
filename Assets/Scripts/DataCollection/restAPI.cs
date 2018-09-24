@@ -2,46 +2,52 @@
 using Proyecto26;
 using System.Collections.Generic;
 
+/**
+ * Communication Tool usage data point, 
+*/
 [System.Serializable]
 public class CommTool {
-  public string datetime;
-  public string id;
-  public double x;
-  public double y;
-  public bool doubleClick;
+  public string datetime; /**< datetime of sound played */
+  public string id; /**< unique device id */
+  public double x; /**< x coordinate in communication wheel */
+  public double y; /**< y coordinate in communcation wheel */
+  public bool doubleClick; /**< toggle if double click or play button was used */
 }
 
 [System.Serializable]
 public class Favorite {
-  public string datetime;
-  public string id;
-  public double x;
-  public double y;
-  public int favorite_id;
+  public string datetime; /**< datetime of sound played */
+  public string id; /**< unique device id */
+  public double x; /**< x coordinate in communication wheel */
+  public double y; /**< y coordinate in communcation wheel */
+  public int favorite_id; /**< id of favorite */
 }
 
 [System.Serializable]
 public class Setting {
-  public string datetime;
-  public string id;
-  public int visualization;
-  public int representation;
+  public string datetime; /**< datetime of sound played */
+  public string id; /**< unique device id */
+  public int visualization; /**< toggle variable for point label visualization*/
+  public int representation; /**< toggle variable for russel or uniform representation */
 }
 
 [System.Serializable]
 public class Game {
-  public string datetime;
-  public string id;
-  public double target_x; 
-  public double target_y; 
-  public int level; 
-  public int num_other_targets; 
-  public double shot_x; 
-  public double shot_y; 
-  public bool success; 
-  public int tries_left;
+  public string datetime; /**< datetime of sound played */
+  public string id; /**< unique device id */
+  public double target_x;  /**< x coordinate of target on board */
+  public double target_y; /**< y coordinate of target on board */
+  public int level; /**< level currently being played */
+  public int num_other_targets; /**< number of other targets on board */
+  public double shot_x; /**< x coordinate of shot hitting board */
+  public double shot_y; /**< y coordinate of shot hitting board */
+  public bool success; /**< True if shot it correct target, False otherwise */
+  public int tries_left; /**< number of tries still left */
 }
 
+/**
+ * sends data to server using HTTP requests - server uses api.php 
+ */
 public class restAPI : MonoBehaviour {
 
 	// api.php database set to "emosonics"

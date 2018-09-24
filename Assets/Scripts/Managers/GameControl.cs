@@ -6,34 +6,41 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization;
 
+/**
+ * saves game and communication tool settings and data -
+ * makes all data accessible and persistent across all
+ * classes and functions
+ */
 public class GameControl : MonoBehaviour
 {
-    private bool startup = true;
+    private bool startup = true; /**< toggle variable if app is just started up */
 
-    public int visualization;
-    public int representation;
+    public int visualization; /**< toggle variable for point label visualization*/
+    public int representation; /**< toggle variable for russel or uniform representation */
 
-    public Color favorite1Color;
-    public Color favorite2Color;
-    public Color favorite3Color;
-    public Color favorite4Color;
+    public Color favorite1Color; /**< color of favorite button 1*/ 
+    public Color favorite2Color; /**< color of favorite button 2*/
+    public Color favorite3Color; /**< color of favorite button 3*/
+    public Color favorite4Color; /**< color of favorite button 4*/
 
-    public Vector3 favorite1Pos;
-    public Vector3 favorite2Pos;
-    public Vector3 favorite3Pos;
-    public Vector3 favorite4Pos;
-    public Vector2 favorite1Sound;
-    public Vector2 favorite2Sound;
-    public Vector2 favorite3Sound;
-    public Vector2 favorite4Sound;
-    public Vector3 crosshairPosition;
-    public Vector2 soundPosition;
-    public Vector3 lastCrosshairPos;
-    public Vector2 lastSoundPosition;
+    public Vector3 favorite1Pos; /**< position of favorite 1 in app space*/
+    public Vector3 favorite2Pos; /**< position of favorite 2 in app space*/
+    public Vector3 favorite3Pos; /**< position of favorite 3 in app space*/
+    public Vector3 favorite4Pos; /**< position of favorite 4 in app space*/
+
+    public Vector2 favorite1Sound; /**< position of favorite 1 in board space*/
+    public Vector2 favorite2Sound; /**< position of favorite 2 in board space*/
+    public Vector2 favorite3Sound; /**< position of favorite 3 in board space*/
+    public Vector2 favorite4Sound; /**< position of favorite 4 in board space*/
+
+    public Vector3 crosshairPosition; /**< position of crosshair in app space */
+    public Vector2 soundPosition; /**< position of crosshair in board space */
+
+    public Vector3 lastCrosshairPos; /**< position of crosshair in app space from last played sound  */
+    public Vector2 lastSoundPosition; /**< position of crosshair in board space from last played sound */
 
     public static GameControl control;
 
-    // Use this for initialization
     void Awake()
     {
         if (startup)
@@ -63,6 +70,9 @@ public class GameControl : MonoBehaviour
         Save();
     }
 
+    /**
+     * saves settings to binary file
+     */
     public void Save()
     {
         BinaryFormatter bf = new BinaryFormatter();
@@ -104,6 +114,9 @@ public class GameControl : MonoBehaviour
         file.Close();
     }
 
+    /**
+     * loads data from binary file
+     */
     public void Load()
     {
         if (File.Exists(Application.persistentDataPath + "/EmoSonicsSettings.dat"))
@@ -153,78 +166,117 @@ public class GameControl : MonoBehaviour
         }
     }
 
+    /**
+     * settings saved for a player
+     */
     [Serializable]
     public class PlayerSettings
     {
-        public int representation;
-        public int visualization;
+        public int representation; /**< toggle variable for russel or uniform representation */
+        public int visualization; /**< toggle variable for point label visualization*/
         private Color favorite1Color;
+        /**
+         * gets and sets favorite 1 color as color is not serializable
+         */
         public Color Favorite1Color
         {
             get { return favorite1Color; }
             set { favorite1Color = value; }
         }
         private Color favorite2Color;
+        /**
+         * gets and sets favorite 2 color as color is not serializable
+         */
         public Color Favorite2Color
         {
             get { return favorite2Color; }
             set { favorite2Color = value; }
         }
         private Color favorite3Color;
+        /**
+         * gets and sets favorite 3 color as color is not serializable
+         */
         public Color Favorite3Color
         {
             get { return favorite3Color; }
             set { favorite3Color = value; }
         }
         private Color favorite4Color;
+        /**
+         * gets and sets favorite 4 color as Color is not serializable
+         */
         public Color Favorite4Color
         {
             get { return favorite4Color; }
             set { favorite4Color = value; }
         }
         private Vector3 favorite1Pos;
+        /** 
+         * gets and sets favorite 1 position as Vector is not serializable
+         */
         public Vector3 Favorite1Pos
         {
             get { return favorite1Pos; }
             set { favorite1Pos = value; }
         }
         private Vector3 favorite2Pos;
+        /** 
+         * gets and sets favorite 2 position as Vector is not serializable
+         */
         public Vector3 Favorite2Pos
         {
             get { return favorite2Pos; }
             set { favorite2Pos = value; }
         }
         private Vector3 favorite3Pos;
+        /** 
+         * gets and sets favorite 3 position as Vector is not serializable
+         */
         public Vector3 Favorite3Pos
         {
             get { return favorite3Pos; }
             set { favorite3Pos = value; }
         }
         private Vector3 favorite4Pos;
+        /** 
+         * gets and sets favorite 4 position as Vector is not serializable
+         */
         public Vector3 Favorite4Pos
         {
             get { return favorite4Pos; }
             set { favorite4Pos = value; }
         }
         private Vector2 favorite1Sound;
+        /**
+         * gets and sets favorite 1 sound position as Vector is not serializable
+         */
         public Vector2 Favorite1Sound
         {
             get { return favorite1Sound; }
             set { favorite1Sound = value; }
         }
         private Vector2 favorite2Sound;
+        /**
+         * gets and sets favorite 2 sound position as Vector is not serializable
+         */
         public Vector2 Favorite2Sound
         {
             get { return favorite2Sound; }
             set { favorite2Sound = value; }
         }
         private Vector2 favorite3Sound;
+        /**
+         * gets and sets favorite 3 sound position as Vector is not serializable
+         */
         public Vector2 Favorite3Sound
         {
             get { return favorite3Sound; }
             set { favorite3Sound = value; }
         }
         private Vector2 favorite4Sound;
+        /**
+         * gets and sets favorite 4 sound position as Vector is not serializable
+         */
         public Vector2 Favorite4Sound
         {
             get { return favorite4Sound; }
