@@ -11,7 +11,6 @@ public class Duplicator : MonoBehaviour {
     public GameObject goToNextLevel;
     public GameObject playGainButton;
     public GameObject backButton;
-    public static int testPass3; //AttemptBall Delete
     public static float xrand, yrand; //For RandomSound
     public static int a;
     public GameObject cc;
@@ -61,11 +60,7 @@ public class Duplicator : MonoBehaviour {
         return Color.black;
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("Triggered*********");
-        testPass3 = 1;
-    }
+ 
     public void Game1()
     {
         panel.SetActive(false);

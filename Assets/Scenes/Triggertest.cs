@@ -7,34 +7,33 @@ public class Triggertest : MonoBehaviour {
     public static int cloneDesCount;
     [SerializeField] private RandomSound rs;
     [SerializeField] private Image errorImage;
+    [SerializeField] private Image errorImage1;  //Removetest//
     public static bool testPass2;
     private RectTransform crosshairRect;
+    private RectTransform crosshairRect1; //Removetest//
     private bool test;
     private AudioSource wrongHit;
     //To Destroy attempt Ball
     // Use this for initialization
     void Start () {
-        wrongHit = GetComponent<AudioSource>();
-        AudioClip myAudioClip;
-        myAudioClip = (AudioClip)Resources.Load("wrongSound");
-        wrongHit.clip = myAudioClip;
+        
+       // AudioClip myAudioClip;
+        //myAudioClip = (AudioClip)Resources.Load("wrongSound");
+       // wrongHit.clip = myAudioClip;
         rs = GameObject.Find("RandomSound").GetComponent<RandomSound>();
-        errorImage.enabled = false;
+        errorImage.enabled = true;
+        errorImage1.enabled = true;//Removetest//
         crosshairRect = errorImage.GetComponent<RectTransform>();
         crosshairRect.sizeDelta = new Vector2(50, 50);
+        crosshairRect1 = errorImage1.GetComponent<RectTransform>();//Removetest//
+        crosshairRect1.sizeDelta = new Vector2(50, 50);//Removetest//
+       // crosshairRect.position = new Vector3(115.5f,206.5f, 0);//Removetest//
+        //crosshairRect1.position = new Vector3(0, 0, 0);//Removetest//
         test = false;
         testPass2 = false;
     }
 
 
-    // Update is called once per frame
-    IEnumerator PlayClickAudio() {
-        wrongHit.Play();
-        while (wrongHit.isPlaying)
-        {
-            yield return new WaitForSeconds(5);  //Don't freeze
-        }
-    }
    
     void OnTriggerEnter(Collider other)
     {
@@ -53,12 +52,12 @@ public class Triggertest : MonoBehaviour {
             }
             if ((this.gameObject.transform.position.x != Duplicator.xrand) || (this.gameObject.transform.position.y != Duplicator.yrand))
             {
-                StartCoroutine(PlayClickAudio());
-
+                
                 Vector3 ff;
                 ff = this.gameObject.transform.localPosition;
                 Debug.Log("MMMMAN" +ff);
-                crosshairRect.position = new Vector3(251+(ff.x * 50), 203 + (ff.y * 50), 0);
+                crosshairRect.position = new Vector3(115.5f+ (40*ff.x),206.5f+(40*ff.y), 0);
+                wrongHit = GetComponent<AudioSource>();
                 wrongHit.volume = 1;
                 wrongHit.Play();
                 errorImage.enabled = true;
@@ -75,7 +74,7 @@ public class Triggertest : MonoBehaviour {
             Debug.Log("cloneDestroy" + cloneDesCount);
             test = false;
             Debug.Log("I was hit");
-            Destroy(this.gameObject);
+           Destroy(this.gameObject, 0.3f);
             Destroy(other);
 
         }

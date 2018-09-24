@@ -29,23 +29,10 @@ public class AttemptBall : MonoBehaviour {
             Duplicator.realAttemptBall1 = false;
         }
 
-        if (  TestColliding.testPass ==1 || Duplicator.testPass3 ==1 )
-        {
-            TestColliding.testPass = 0;
-            LivesCount.livesValue -= 1;
-            DestroyObject(lastGb);
-            DestroyObject(lastGb1);
-            i--;
-            j--;
-            lastGb = gameObject[i];
-            lastGb1 = gameObject1[j];
-            print(i);
-            //bg.isTrigger == false;
-        }
-        if (Triggertest.testPass2 == true)
+        if (Triggertest.testPass2 == true || TestColliding.testPass1 == true)
         {
             Triggertest.testPass2 = false;
-            TestColliding.testPass = 0;
+            TestColliding.testPass1 = false;
             LivesCount.livesValue -= 1;
             DestroyObject(lastGb);
             DestroyObject(lastGb1);
