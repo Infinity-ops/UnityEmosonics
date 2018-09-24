@@ -6,7 +6,8 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 
-public enum typeSetting { russell = 0, unit = 1 } /**< different representation options */
+/** different representation options */
+public enum typeSetting { russell = 0, unit = 1 }
 
 /**
  * colored wheel which allows exploration of an emotional
