@@ -3,10 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Runtime.Serialization;
 
+/**
+ * makes Color object serializable
+ */
 public class ColorSerializationSurrogate : ISerializationSurrogate
 {
 
-    // Method called to serialize a Color object
+    /**
+     * called to serialize a Color object
+     */
     public void GetObjectData(System.Object obj, SerializationInfo info, StreamingContext context)
     {
 
@@ -17,7 +22,9 @@ public class ColorSerializationSurrogate : ISerializationSurrogate
         info.AddValue("a", color.a);
     }
 
-    // Method called to deserialize a Color object
+    /**
+     * called to deserialize a Color object
+     */
     public System.Object SetObjectData(System.Object obj, SerializationInfo info,
                                        StreamingContext context, ISurrogateSelector selector)
     {
