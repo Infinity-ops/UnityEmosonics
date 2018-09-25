@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class LivesCount : MonoBehaviour
 {
     public GameObject panel;
+    public static int nextLevel; //for shifting automatically to next level
     public static int livesValue = 3;
     public static int levelIncre =1;
     public Text lives;
@@ -18,6 +19,7 @@ public class LivesCount : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        nextLevel = 1;
         gameStatus.enabled = false;
         goToNextLevel1.SetActive(false);
         playGainButton.SetActive(false);
@@ -52,6 +54,11 @@ public class LivesCount : MonoBehaviour
 
                 levelIncre = levelIncre + 1;
                 neverDone = false;
+                if(gameStatus.text == "Success!")
+                {
+                    nextLevel=nextLevel + 1;
+                }
+
             }
             /*
             if (livesValue  <= 3 && GameCount.scoreValue == 30)
@@ -70,7 +77,9 @@ public class LivesCount : MonoBehaviour
              */
             if (livesValue < 0)
             {
+                panel.SetActive(true);
                 gameStatus.enabled = true;
+                gameButton.SetActive(false);
                 gameStatus.text = "GameOver!";
                 playGainButton.SetActive(true);
                 //backButton.SetActive(true);

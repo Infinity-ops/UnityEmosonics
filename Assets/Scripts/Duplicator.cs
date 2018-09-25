@@ -40,9 +40,10 @@ public class Duplicator : MonoBehaviour {
         Data = ImageSprite.texture.GetPixels();
     }
      public void TaskOnClick1() {
-        gameStatus1.enabled = false;
+       // gameStatus1.enabled = false;
         realAttemptBall1 = true;
         GameController.box = GameController.box +1;
+        Debug.Log("222222222222222222222222222222222");
         GameCount.scoreValue = 0;
         LivesCount.livesValue = 3;
         Triggertest.cloneDesCount = 0;
@@ -71,7 +72,7 @@ public class Duplicator : MonoBehaviour {
         SphereCollider sc;
         int i;
         float b, c, radius, distance;
-        a = GameController.box + 1;
+        a = LivesCount.nextLevel;
         radius = GameController.size;
         distance = GameController.distance;
         for (i = 0; i < a; i++)
