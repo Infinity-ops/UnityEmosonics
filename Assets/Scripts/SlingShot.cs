@@ -68,7 +68,7 @@ public class SlingShot : MonoBehaviour
     private void Start()
     {
         
-        AimerTransform.position = new Vector3(0, 1,0);
+        AimerTransform.position = new Vector3(0,1,0);
 
         HandlesLineRenderer1.SetPosition(0, HandlesLineRenderer1.transform.position);
         HandlesLineRenderer2.SetPosition(0, HandlesLineRenderer2.transform.position);

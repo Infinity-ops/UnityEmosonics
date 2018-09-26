@@ -1,36 +1,92 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Triggertest : MonoBehaviour {
     public static int cloneDesCount;
-	// Use this for initialization
-	void Start () {
+    [SerializeField] private RandomSound rs;
+    [SerializeField] private Image errorImage;
+  // [SerializeField] private Image errorImage1;  //Removetest//
+    public static bool testPass2;
+    private RectTransform crosshairRect;
+  // private RectTransform crosshairRect1; //Removetest//
+    private bool test;
+    private AudioSource wrongHit;
+    //To Destroy attempt Ball
+    // Use this for initialization
+    void Start () {
         
-        GameCount.scoreValue = 0;
-        cloneDesCount = 0;
+       // AudioClip myAudioClip;
+        //myAudioClip = (AudioClip)Resources.Load("wrongSound");
+       // wrongHit.clip = myAudioClip;
+        rs = GameObject.Find("RandomSound").GetComponent<RandomSound>();
+        errorImage.enabled = false;
+        //errorImage1.enabled = true;//Removetest//
+        crosshairRect = errorImage.GetComponent<RectTransform>();
+        crosshairRect.sizeDelta = new Vector2(50, 50);
+       // crosshairRect1 = errorImage1.GetComponent<RectTransform>();//Removetest//
+       // crosshairRect1.sizeDelta = new Vector2(50, 50);//Removetest//
+      //  crosshairRect.position = new Vector3(188,208.5f, 0);//Removetest//
+     //   crosshairRect1.position = new Vector3(0, 0, 0);//Removetest//
+        test = false;
+        testPass2 = false;
+    }
 
-    }
-  
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-    public void reset(int cloneDesCount)
-    {
-        
-    }
+
+   
     void OnTriggerEnter(Collider other)
     {
+       
         if (other.gameObject.tag == "Projectile")
         {
-            Debug.Log("I was hit");
-            Destroy(this.gameObject);
-            Destroy(other);
-            cloneDesCount++;
-            GameCount.scoreValue += 5;
-            Debug.Log("cloneDestroy" + cloneDesCount);
+           
+            
+            if((this.gameObject.transform.position.x == Duplicator.xrand) && (this.gameObject.transform.position.y == Duplicator.yrand)) //correct hit
+            {
+                rs.play();
+                test = true;
+                GameCount.scoreValue = 0;
+                cloneDesCount = 0;
+                Debug.Log("correcthit--cloneDestroy" + cloneDesCount);
+
+            }
+            if ((this.gameObject.transform.position.x != Duplicator.xrand) || (this.gameObject.transform.position.y != Duplicator.yrand))
+            {
+                
+                Vector3 ff;
+                ff = this.gameObject.transform.localPosition;
+                Debug.Log("MMMMAN" +ff);
+                crosshairRect.position = new Vector3(188+(40*ff.x), 208.5f+(40*ff.y), 3.2f);
+                wrongHit = GetComponent<AudioSource>();
+                wrongHit.volume = 1;
+                wrongHit.Play();
+                errorImage.enabled = true;
+                testPass2 =true;
+            }
+
+            
+            if (test)
+            {
+                cloneDesCount++;
+                GameCount.scoreValue += 5;
+                test = false;
+            }
+       
+        Destroy(this.gameObject, 0.3f);
+        Debug.Log("cloneDestroy" + cloneDesCount);
+        test = false;
+        Debug.Log("I was hit");
+        Destroy(other);
+
         }
+              
+    }
+    void OnTriggerExit(Collider other)
+    {
+        Debug.Log("clsdddddddddddddddddddd");
+ 
+          //  errorImage.enabled = false;
+       
     }
 }

@@ -1,11 +1,15 @@
-﻿using UnityEngine;
-                                                                                                                                                                    //original
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+//original
 public class DragHandle : MonoBehaviour
 {
-  
+    public static int testPass1;
+    public static int testPass2; //To Destroy attempt Ball
     private Vector3 _offset;
-
-   private Vector3 _defaulPos;
+   
+    private Vector3 _defaulPos;
 
    private Vector3 _currentPosition;
 
@@ -27,7 +31,8 @@ public class DragHandle : MonoBehaviour
     }
     private void OnMouseDown()
     {
-            sphereCollider.radius = 5.0f;
+        Debug.Log("???///////////////>>>>>>>>>>>>>><<<<<<<<<<<<<?????????");
+        sphereCollider.radius = 5.0f;
             _offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint
           (
              new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z)
@@ -39,9 +44,10 @@ public class DragHandle : MonoBehaviour
 
     private void OnMouseDrag()
     {
+        
+        testPass2 = 1;
           sphereCollider.isTrigger = true;
           //pt = gameObject.AddComponent<ProjectileTrajectory>();
-
           sphereCollider.radius = 5.0f;
           var currentScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z);
           //Debug.Log("off" +_offset);
@@ -50,20 +56,21 @@ public class DragHandle : MonoBehaviour
           //  Debug.Log("cpos" +_currentPosition);
 
           transform.position = _currentPosition;
+          //errorImage.enabled = false;
 
     }
 
     private void OnMouseUp()
     {
-        
-            Cursor.visible = true;
+        testPass1 = 1;
+        Cursor.visible = true;
 
             if (OnDragHandleReleaseEvent != null)
             {
                 OnDragHandleReleaseEvent.Invoke();
                 sphereCollider.radius = 0.5f;
             }
-
+            Debug.Log("???????????????????????????");
             transform.position = _defaulPos;
             sphereCollider.radius = 0.5f;
         

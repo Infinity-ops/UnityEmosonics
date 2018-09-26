@@ -3,26 +3,57 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AttemptBall : MonoBehaviour {
+   
     public  GameObject[] gameObject;
-    private static int i;
-    public static GameObject lastGb;
+    public GameObject[] gameObject1; // For Duplicator j
+    /// </summary>
+    private int i=0, j=0;
+    public static GameObject lastGb, lastGb1;
     // Use this for initialization
     void Start()
     {
-        lastGb = gameObject[0];
+        lastGb = gameObject[i];
+        lastGb1 = gameObject1[j];
     }
     // Update is called once per frame
     void Update()
     {
-       
-        if (DestroyPrefab.destroy > 0 )
-        { 
-            i = DestroyPrefab.destroy;
-            Debug.Log(i);
-            DestroyObject(gameObject[i]);
-            Debug.Log(gameObject[i]);
-            //GameObject[DestroyPrefab.destroy];
+        if(LockController.realAttemptBall == true)
+        {
+            i = gameObject.Length;
+            LockController.realAttemptBall = false;
         }
+        if (Duplicator.realAttemptBall1 == true)
+        {
+            j = gameObject1.Length;
+            Duplicator.realAttemptBall1 = false;
+        }
+
+        if (Triggertest.testPass2 == true || TestColliding.testPass1 == true)
+        {
+            Triggertest.testPass2 = false;
+            TestColliding.testPass1 = false;
+            LivesCount.livesValue -= 1;
+            DestroyObject(lastGb);
+            DestroyObject(lastGb1);
+            i--;
+            j--;
+            lastGb = gameObject[i];
+            lastGb1 = gameObject1[j];
+            Triggertest.testPass2 = false;
+            //bg.isTrigger == false;
+        }
+
+        /*
+              if (DestroyPrefab.destroy > 0 )
+              { 
+                  i = DestroyPrefab.destroy;
+                  Debug.Log(i);
+                  DestroyObject(gameObject[i]);
+                  Debug.Log(gameObject[i]);
+                  //GameObject[DestroyPrefab.destroy];
+              }
+            */
 
     }
   
