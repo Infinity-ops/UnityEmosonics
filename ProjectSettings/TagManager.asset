@@ -12,6 +12,9 @@ TagManager:
   - button1
   - Button
   - Spheree
+  - ball1
+  - ball2
+  - ball3
   layers:
   - Default
   - TransparentFX

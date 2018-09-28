@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Duplicator : MonoBehaviour {
     public Text gameStatus1;
-    public GameObject myPrefab;
+    public GameObject myPrefab; //sphere
+    public GameObject myPrefab1; //AttemptBall
     public GameObject playButton;
     public GameObject goToNextLevel;
     public GameObject playGainButton;
@@ -15,6 +17,7 @@ public class Duplicator : MonoBehaviour {
     public static int a;
     public GameObject cc;
     public static GameObject sphere;
+    public GameObject attemptBall1, attemptBall2, attemptBall3;
     private RectTransform circle;
     float radius, x1, y1, z1, x0 = 0, y0 = 2.0f, g, gr,xi, yi, zi;
     Color[] Data;
@@ -25,29 +28,113 @@ public class Duplicator : MonoBehaviour {
     public GameObject hitter; // sphere on catapult
     public GameObject panel;
     //public Button btn;
-    public static bool realAttemptBall1;
+    public static bool realAttemptBall;
+    public static bool testPass3; //AttemptBall Delete
+    public int trailNextLevel;
     void Start () {
+        trailNextLevel = 2;
+        realAttemptBall = true;
         // btn.GetComponent<Button>();
         playGainButton.SetActive(false);
         goToNextLevel.SetActive(false);
         playButton.SetActive(true);
         Vector2 center;
-        
+        GameObject.Find("Collider").GetComponent<TestColliding>().enabled = false;
         center = cc.GetComponent<Renderer>().bounds.center; 
         Debug.Log(center);
         g= 0.0f;
         circle = cc.GetComponent<RectTransform>();
         Data = ImageSprite.texture.GetPixels();
     }
-     public void TaskOnClick1() {
-       // gameStatus1.enabled = false;
-        realAttemptBall1 = true;
-        GameController.box = GameController.box +1;
-        Debug.Log("222222222222222222222222222222222");
+    // TaskOnClick1() function for goToNextLevel button click
+    public void TaskOnClick0()
+    {
+
+        AttemptBall.destroy = false;
+        realAttemptBall = true;
+        LivesCount.neverDone = true;
+        //Parameter Initialization for Game
         GameCount.scoreValue = 0;
         LivesCount.livesValue = 3;
         Triggertest.cloneDesCount = 0;
+        // gameStatus1.enabled = false;
+        panel.SetActive(false);
+        hitter.SetActive(true);
+        playButton.SetActive(false);
+        playGainButton.SetActive(false);
+        backButton.SetActive(false);
+        
+        Debug.Log("0000000000000000000000000000");
+     
+              attemptBall1 = (GameObject)Instantiate(myPrefab1, new Vector3(-2.4f, -2.9f, 0), Quaternion.identity);
+              attemptBall1.tag= "ball1";
+           
+                attemptBall2 = (GameObject)Instantiate(myPrefab1, new Vector3(-2.7f, -2.9f, 0), Quaternion.identity);
+                attemptBall2.tag = "ball2";
+          
+                attemptBall3 = (GameObject)Instantiate(myPrefab1, new Vector3(-3.1f, -2.9f, 0), Quaternion.identity);
+                attemptBall3.tag = "ball3";
+     
+    }
+    // TaskOnClick1() function for goToNextLevel button click
+    public void TaskOnClick1() {
+        //Parameter Initialization for Game
+     
+        realAttemptBall = true;
+        LivesCount.neverDone = true;
+        //Parameter Initialization for Game
+        GameCount.scoreValue = 0;
+        LivesCount.livesValue = 3;
+        Triggertest.cloneDesCount = 0;
+        // gameStatus1.enabled = false;
+        panel.SetActive(false);
+        hitter.SetActive(true);
+        playButton.SetActive(false);
+        playGainButton.SetActive(false);
+        backButton.SetActive(false);
 
+        Debug.Log("0000000000000000000000000000");
+
+        attemptBall1 = (GameObject)Instantiate(myPrefab1, new Vector3(-2.4f, -2.9f, 0), Quaternion.identity);
+        attemptBall1.tag = "ball1";
+
+        attemptBall2 = (GameObject)Instantiate(myPrefab1, new Vector3(-2.7f, -2.9f, 0), Quaternion.identity);
+        attemptBall2.tag = "ball2";
+
+        attemptBall3 = (GameObject)Instantiate(myPrefab1, new Vector3(-3.1f, -2.9f, 0), Quaternion.identity);
+        attemptBall3.tag = "ball3";
+    }
+    // TaskOnClick1() function for PlayAgain button click
+    public void TaskOnClick2()
+    {
+        //Parameter Initialization for Game
+        GameCount.scoreValue = 0;
+        LivesCount.livesValue = 3;
+        Triggertest.cloneDesCount = 0;
+        // gameStatus1.enabled = false;
+        panel.SetActive(false);
+        hitter.SetActive(true);
+        playButton.SetActive(false);
+        playGainButton.SetActive(false);
+        backButton.SetActive(false);
+        //GameController.box = GameController.box + 1;
+        Debug.Log("222222222222222222222222222222222");
+    }
+    public void loadByIndex(int sceneIndex)
+    {
+        realAttemptBall = true;
+        StaticClass.CrossSceneInformation = sceneIndex.ToString();
+        SceneManager.LoadScene(sceneIndex);
+    }
+    public static class StaticClass
+    {
+        public static string CrossSceneInformation { get; set; }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Triggered*********");
+        
     }
     public Color getColorByNormalizedPosition(float X, float Y){
         int x = (int)(X * (Width / 5)) + (Width / 2);
@@ -64,15 +151,11 @@ public class Duplicator : MonoBehaviour {
  
     public void Game1()
     {
-        panel.SetActive(false);
-        hitter.SetActive(true);
-        playButton.SetActive(false);
-        playGainButton.SetActive(false);
-        backButton.SetActive(false);
+    
         SphereCollider sc;
         int i;
         float b, c, radius, distance;
-        a = LivesCount.nextLevel;
+        a = LivesCount.nextLevel+1;
         radius = GameController.size;
         distance = GameController.distance;
         for (i = 0; i < a; i++)
@@ -158,14 +241,11 @@ public class Duplicator : MonoBehaviour {
 
     public void Game()
     {
-        
-      panel.SetActive(false);
-        hitter.SetActive(true);
-        
         SphereCollider sc;
         int  i;
         float b, c, radius,distance;
-        a = GameController.box + 1;
+
+        a = trailNextLevel+1;
         radius = GameController.size;
         distance = GameController.distance;
         for (i = 0; i < a; i++)
@@ -197,9 +277,8 @@ public class Duplicator : MonoBehaviour {
                 sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                 Debug.Log(getColorByNormalizedPosition(x1, y1));
             }
-            if (i>0)
+            if (i > 0)
             {
-              
                 b = UnityEngine.Random.Range(-2.5000f, 2.50000f);
                 c = UnityEngine.Random.Range(-0.50000f, 4.50000f);
                 if (b < -2.5000f || b < 2.50000f)
@@ -219,7 +298,6 @@ public class Duplicator : MonoBehaviour {
                 //y = (float)(Math.Round((double)(UnityEngine.Random.Range(-radius, radius)), 2));
                 if (g < 2.7000f)
                 {
-                   
                     //sphere
                     Debug.Log("I N S I D E");
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
@@ -246,9 +324,11 @@ public class Duplicator : MonoBehaviour {
                     print("******************\\\\********************");
                     // x1rand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(xi, yi);
-                }
+                
+            }
             }
         }
+        trailNextLevel++;
     }
     // Update is called once per frame
     void Update () {

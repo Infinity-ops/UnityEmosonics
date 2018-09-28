@@ -16,9 +16,11 @@ public class LivesCount : MonoBehaviour
     public GameObject playGainButton;
     public static bool neverDone;
     public Image errorImage1;
+    public static bool nextLevelBool;
     // Use this for initialization
     void Start()
     {
+        nextLevelBool = true;
         nextLevel = 1;
         gameStatus.enabled = false;
         goToNextLevel1.SetActive(false);
@@ -83,6 +85,12 @@ public class LivesCount : MonoBehaviour
                 gameStatus.text = "GameOver!";
                 playGainButton.SetActive(true);
                 //backButton.SetActive(true);
+                
+                if (gameStatus.text == "GameOver!")
+                {
+                    Debug.Log("GameOverGameOverGameOverGameOverGameOverGameOverGameOverGameOverGameOverGameOverGameOverGameOverGameOverGameOver");
+                    nextLevel = nextLevel-1;
+                }
             }
         }
     }

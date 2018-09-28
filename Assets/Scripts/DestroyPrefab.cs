@@ -19,7 +19,8 @@ public class DestroyPrefab : MonoBehaviour
             destroy = LivesCount.livesValue;
             if(destroy == 0)
             {
-                DestroyObject(AttemptBall.lastGb);
+                // DestroyObject(AttemptBall.lastGb);
+                Debug.Log("SSSSCCRRIPTTTT Mmmmmmmmmisssingggggggggggg");
             }
             StonePrefab = GameObject.FindGameObjectWithTag("Projectile");
             DestroyObject(StonePrefab);
