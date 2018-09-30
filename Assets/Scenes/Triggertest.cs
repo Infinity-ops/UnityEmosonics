@@ -7,11 +7,13 @@ public class Triggertest : MonoBehaviour {
     public static int cloneDesCount;
     [SerializeField] private RandomSound rs;
     [SerializeField] private Image errorImage;
-  // [SerializeField] private Image errorImage1;  //Removetest//
+   [SerializeField] private Image errorImage1;  //Removetest//
     public static bool testPass2;
     private RectTransform crosshairRect;
-  // private RectTransform crosshairRect1; //Removetest//
+   private RectTransform crosshairRect1; //Removetest//
     private bool test;
+   
+    private float height;
     private AudioSource wrongHit;
     //To Destroy attempt Ball
     // Use this for initialization
@@ -21,14 +23,14 @@ public class Triggertest : MonoBehaviour {
         //myAudioClip = (AudioClip)Resources.Load("wrongSound");
        // wrongHit.clip = myAudioClip;
         rs = GameObject.Find("RandomSound").GetComponent<RandomSound>();
-        errorImage.enabled = false;
-        //errorImage1.enabled = true;//Removetest//
+        errorImage.enabled = true;
+     errorImage1.enabled = true;//Removetest//
         crosshairRect = errorImage.GetComponent<RectTransform>();
-        crosshairRect.sizeDelta = new Vector2(50, 50);
-       // crosshairRect1 = errorImage1.GetComponent<RectTransform>();//Removetest//
-       // crosshairRect1.sizeDelta = new Vector2(50, 50);//Removetest//
-      //  crosshairRect.position = new Vector3(188,208.5f, 0);//Removetest//
-     //   crosshairRect1.position = new Vector3(0, 0, 0);//Removetest//
+       // crosshairRect.sizeDelta = new Vector2(50, 50);
+      crosshairRect1 = errorImage1.GetComponent<RectTransform>();//Removetest//
+     crosshairRect1.sizeDelta = new Vector2(50, 50);//Removetest//
+       crosshairRect.position = new Vector3(200,200, 0);//Removetest//
+       crosshairRect1.position = new Vector3(0, 0, 0);//Removetest//
         test = false;
         testPass2 = false;
     }
@@ -53,11 +55,15 @@ public class Triggertest : MonoBehaviour {
             }
             if ((this.gameObject.transform.position.x != Duplicator.xrand) || (this.gameObject.transform.position.y != Duplicator.yrand))
             {
-                
+               
+                height = Screen.height /10;
+               
                 Vector3 ff;
                 ff = this.gameObject.transform.localPosition;
                 Debug.Log("MMMMAN" +ff);
-                crosshairRect.position = new Vector3(188+(40*ff.x), 208.5f+(40*ff.y), 3.2f);
+                Debug.Log("Screen Width : " + Screen.width);
+                Debug.Log("Screen Height : " + Screen.height);
+               crosshairRect.position = new Vector3((Screen.width/2) +(height* ff.x), (Screen.height /2)+ (height*ff.y), 3.2f);
                 wrongHit = GetComponent<AudioSource>();
                 wrongHit.volume = 1;
                 wrongHit.Play();

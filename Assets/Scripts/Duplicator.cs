@@ -5,6 +5,7 @@ using System;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+
 public class Duplicator : MonoBehaviour {
     public Text gameStatus1;
     public GameObject myPrefab; //sphere
@@ -24,6 +25,8 @@ public class Duplicator : MonoBehaviour {
     public Sprite ImageSprite;
     public int Width { get { return ImageSprite.texture.width; } }
     public int Height { get { return ImageSprite.texture.height; } }
+    public int ScreenHeight { get { return Camera.main.pixelHeight; } } /**< height of screen */
+    public int ScreenWidth { get { return Camera.main.pixelWidth; } } /**< width of screen*/
     // Use this for initialization
     public GameObject hitter; // sphere on catapult
     public GameObject panel;
@@ -31,6 +34,14 @@ public class Duplicator : MonoBehaviour {
     public static bool realAttemptBall;
     public static bool testPass3; //AttemptBall Delete
     public int trailNextLevel;
+
+    //test
+    public int systemHeight;
+    public int systemWidth;
+    public int renderingHeight;
+    public int renderingWidth;
+  //  public int systemHeight;
+
     void Start () {
         trailNextLevel = 2;
         realAttemptBall = true;
@@ -49,7 +60,8 @@ public class Duplicator : MonoBehaviour {
     // TaskOnClick1() function for goToNextLevel button click
     public void TaskOnClick0()
     {
-
+        
+        print(Screen.dpi);
         AttemptBall.destroy = false;
         realAttemptBall = true;
         LivesCount.neverDone = true;
@@ -62,17 +74,17 @@ public class Duplicator : MonoBehaviour {
         hitter.SetActive(true);
         playButton.SetActive(false);
         playGainButton.SetActive(false);
-        backButton.SetActive(false);
+        //backButton.SetActive(false);
         
         Debug.Log("0000000000000000000000000000");
      
-              attemptBall1 = (GameObject)Instantiate(myPrefab1, new Vector3(-2.4f, -2.9f, 0), Quaternion.identity);
+              attemptBall1 = (GameObject)Instantiate(myPrefab1, new Vector3(-2.0f, -2.9f, 0), Quaternion.identity);
               attemptBall1.tag= "ball1";
            
-                attemptBall2 = (GameObject)Instantiate(myPrefab1, new Vector3(-2.7f, -2.9f, 0), Quaternion.identity);
+                attemptBall2 = (GameObject)Instantiate(myPrefab1, new Vector3(-2.3f, -2.9f, 0), Quaternion.identity);
                 attemptBall2.tag = "ball2";
           
-                attemptBall3 = (GameObject)Instantiate(myPrefab1, new Vector3(-3.1f, -2.9f, 0), Quaternion.identity);
+                attemptBall3 = (GameObject)Instantiate(myPrefab1, new Vector3(-2.6f, -2.9f, 0), Quaternion.identity);
                 attemptBall3.tag = "ball3";
      
     }
@@ -91,17 +103,17 @@ public class Duplicator : MonoBehaviour {
         hitter.SetActive(true);
         playButton.SetActive(false);
         playGainButton.SetActive(false);
-        backButton.SetActive(false);
+        //backButton.SetActive(false);
 
         Debug.Log("0000000000000000000000000000");
 
-        attemptBall1 = (GameObject)Instantiate(myPrefab1, new Vector3(-2.4f, -2.9f, 0), Quaternion.identity);
+        attemptBall1 = (GameObject)Instantiate(myPrefab1, new Vector3(-2.0f, -2.9f, 0), Quaternion.identity);
         attemptBall1.tag = "ball1";
 
-        attemptBall2 = (GameObject)Instantiate(myPrefab1, new Vector3(-2.7f, -2.9f, 0), Quaternion.identity);
+        attemptBall2 = (GameObject)Instantiate(myPrefab1, new Vector3(-2.3f, -2.9f, 0), Quaternion.identity);
         attemptBall2.tag = "ball2";
 
-        attemptBall3 = (GameObject)Instantiate(myPrefab1, new Vector3(-3.1f, -2.9f, 0), Quaternion.identity);
+        attemptBall3 = (GameObject)Instantiate(myPrefab1, new Vector3(-2.6f, -2.9f, 0), Quaternion.identity);
         attemptBall3.tag = "ball3";
     }
     // TaskOnClick1() function for PlayAgain button click
@@ -116,7 +128,7 @@ public class Duplicator : MonoBehaviour {
         hitter.SetActive(true);
         playButton.SetActive(false);
         playGainButton.SetActive(false);
-        backButton.SetActive(false);
+       // backButton.SetActive(false);
         //GameController.box = GameController.box + 1;
         Debug.Log("222222222222222222222222222222222");
     }
