@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 92095376}
   - component: {fileID: 92095375}
   m_Layer: 0
-  m_Name: Slingshot
+  m_Name: SlingShot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -442,15 +442,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 151738317}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -50.02}
-  m_LocalScale: {x: 2.35, y: 2, z: 2.35}
+  m_LocalPosition: {x: 0, y: 0, z: -50.01877}
+  m_LocalScale: {x: 2.3500056, y: 2, z: 2.3500068}
   m_Children: []
   m_Father: {fileID: 270589509}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 309.8975, y: 53.649}
+  m_AnchoredPosition: {x: 309.896, y: 53.651}
   m_SizeDelta: {x: 2, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &151738319
@@ -599,8 +599,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 195907181}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -49.999966}
-  m_LocalScale: {x: 2.2, y: 10, z: 2.2000031}
+  m_LocalPosition: {x: 0, y: 0, z: -50.01}
+  m_LocalScale: {x: 2, y: 10, z: 2}
   m_Children:
   - {fileID: 1838590386}
   m_Father: {fileID: 270589509}
@@ -847,7 +847,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2077492544}
-        m_MethodName: TaskOnClick0
+        m_MethodName: TaskOnClick1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1253,7 +1253,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1371,7 +1371,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2077492544}
-        m_MethodName: Game1
+        m_MethodName: GameAgain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2197,7 +2197,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4335824722747074, guid: d6ae00742b188a74b9b712da64d52491, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 5.960022
+      value: 5.4
       objectReference: {fileID: 0}
     - target: {fileID: 4335824722747074, guid: d6ae00742b188a74b9b712da64d52491, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2274,6 +2274,10 @@ Prefab:
     - target: {fileID: 4335824722747074, guid: d6ae00742b188a74b9b712da64d52491, type: 2}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1086132943013560, guid: d6ae00742b188a74b9b712da64d52491, type: 2}
+      propertyPath: m_TagString
+      value: Sphere
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6ae00742b188a74b9b712da64d52491, type: 2}
@@ -3259,7 +3263,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1359525339}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 250.1, y: 400, z: 3.4400024}
+  m_LocalPosition: {x: -2.39, y: 2.2, z: 4.24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4014,6 +4018,7 @@ RectTransform:
   - {fileID: 1075677020}
   - {fileID: 887804762}
   - {fileID: 406167284}
+  - {fileID: 2143239655}
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4519,14 +4524,86 @@ MonoBehaviour:
   playGainButton: {fileID: 427590887}
   backButton: {fileID: 406167283}
   cc: {fileID: 270589508}
-  attemptBall1: {fileID: 0}
-  attemptBall2: {fileID: 0}
-  attemptBall3: {fileID: 0}
+  sphere: {fileID: 1555986198}
   ImageSprite: {fileID: 21300000, guid: c506b144886d4c74ca5cbb69d84336a6, type: 3}
-  hitter: {fileID: 1553091413}
   panel: {fileID: 222405788}
   trailNextLevel: 0
+  levelText: {fileID: 2143239656}
   systemHeight: 0
   systemWidth: 0
   renderingHeight: 0
   renderingWidth: 0
+--- !u!1 &2143239654
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2143239655}
+  - component: {fileID: 2143239657}
+  - component: {fileID: 2143239656}
+  m_Layer: 5
+  m_Name: LevelText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2143239655
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2143239654}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1802056843}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 263, y: -634.1168}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2143239656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2143239654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 40
+    m_FontStyle: 1
+    m_BestFit: 1
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: 'LEVEL: 1'
+--- !u!222 &2143239657
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2143239654}

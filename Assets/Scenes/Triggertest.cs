@@ -12,7 +12,9 @@ public class Triggertest : MonoBehaviour {
     private RectTransform crosshairRect;
    private RectTransform crosshairRect1; //Removetest//
     private bool test;
-   
+    private GameObject[] clones1;
+    private GameObject[] clones2;
+    private GameObject[] clones3;
     private float height;
     private AudioSource wrongHit;
     //To Destroy attempt Ball
@@ -23,14 +25,14 @@ public class Triggertest : MonoBehaviour {
         //myAudioClip = (AudioClip)Resources.Load("wrongSound");
        // wrongHit.clip = myAudioClip;
         rs = GameObject.Find("RandomSound").GetComponent<RandomSound>();
-        errorImage.enabled = true;
-     errorImage1.enabled = true;//Removetest//
+        errorImage.enabled = false;
+     //errorImage1.enabled = true;//Removetest//
         crosshairRect = errorImage.GetComponent<RectTransform>();
        // crosshairRect.sizeDelta = new Vector2(50, 50);
-      crosshairRect1 = errorImage1.GetComponent<RectTransform>();//Removetest//
-     crosshairRect1.sizeDelta = new Vector2(50, 50);//Removetest//
-       crosshairRect.position = new Vector3(200,200, 0);//Removetest//
-       crosshairRect1.position = new Vector3(0, 0, 0);//Removetest//
+      //crosshairRect1 = errorImage1.GetComponent<RectTransform>();//Removetest//
+    // crosshairRect1.sizeDelta = new Vector2(50, 50);//Removetest//
+       //crosshairRect.position = new Vector3(200,200, 0);//Removetest//
+       //crosshairRect1.position = new Vector3(0, 0, 0);//Removetest//
         test = false;
         testPass2 = false;
     }
@@ -50,6 +52,46 @@ public class Triggertest : MonoBehaviour {
                 test = true;
                 GameCount.scoreValue = 0;
                 cloneDesCount = 0;
+                var clones = GameObject.FindGameObjectsWithTag("Spheree");
+               
+                foreach ( var clone in clones)
+                {
+                   
+                        Debug.Log("Gam");
+
+                        Destroy(clone);
+                    
+                }
+                clones1 = GameObject.FindGameObjectsWithTag("ball1");
+                if (AttemptBall.ballCheck1 == true)
+                {
+                    for (var i = 0; i < clones1.Length; i++)
+                    {
+
+                        Destroy(clones1[i]);
+                        AttemptBall.ballCheck1 = false;
+                    }
+                }
+                clones2 = GameObject.FindGameObjectsWithTag("ball2");
+                if (AttemptBall.ballCheck2 == true)
+                {
+                    for (var i = 0; i < clones2.Length; i++)
+                    {
+                        Destroy(clones2[i]);
+                        AttemptBall.ballCheck2 = false;
+                    }
+                }
+                clones3 = GameObject.FindGameObjectsWithTag("ball3");
+                if (AttemptBall.ballCheck3 == true)
+                {
+                    for (var i = 0; i < clones3.Length; i++)
+                    {
+                        Destroy(clones3[i]);
+                        AttemptBall.ballCheck3 = false;
+                    }
+                }
+
+
                 Debug.Log("correcthit--cloneDestroy" + cloneDesCount);
 
             }

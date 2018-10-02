@@ -7,12 +7,15 @@ public class AttemptBall : MonoBehaviour {
     private int i = 0;
     public static bool destroy;
    public static GameObject ball1,ball2,ball3;
-  
+    public static bool ballCheck2, ballCheck1, ballCheck3;
+
     // Use this for initialization
     void Start()
     {
-       
-       
+
+        ballCheck1 = false;
+        ballCheck2 = false;
+        ballCheck3 = false;
         destroy = false;
     }
     
@@ -41,45 +44,55 @@ public class AttemptBall : MonoBehaviour {
                 if (ball1!=null)
                 {
                     Destroy(GameObject.FindWithTag("ball1"));
+                    ballCheck1 = true;
                     destroy = false;
                 }
                 if (ball2 && destroy == true)
                 {
                     Destroy(GameObject.FindWithTag("ball2"));
+                    ballCheck2 = true;
                     destroy = false;
                 }
                 if (ball3 && destroy == true)
                 {
                     Destroy(GameObject.FindWithTag("ball3"));
+                    ballCheck3 = true;
                     destroy = false;
                 }
 
                     //Destroy(Duplicator.attemptBall1);
                 }
-
+            destroy = false;
         }
         if (Triggertest.testPass2 == true)
         {
             Triggertest.testPass2 = false;
             LivesCount.livesValue -= 1;
             destroy = true;
-            if (ball1 != null)
+            if (destroy)
             {
-                Destroy(GameObject.FindWithTag("ball1"));
-                destroy = false;
-            }
-            if (ball2 && destroy == true)
-            {
-                Destroy(GameObject.FindWithTag("ball2"));
-                destroy = false;
-            }
-            if (ball3 && destroy == true)
-            {
-                Destroy(GameObject.FindWithTag("ball3"));
-                destroy = false;
+                if (ball1 != null)
+                {
+                    Destroy(GameObject.FindWithTag("ball1"));
+                    ballCheck1 = true;
+                    destroy = false;
+                }
+                if (ball2 && destroy == true)
+                {
+                    Destroy(GameObject.FindWithTag("ball2"));
+                    ballCheck2 = true;
+                    destroy = false;
+                }
+                if (ball3 && destroy == true)
+                {
+                    Destroy(GameObject.FindWithTag("ball3"));
+                    ballCheck3 = true;
+                    destroy = false;
+                }
             }
 
             //Destroy(Duplicator.attemptBall1);
+            destroy = false;
         }
 
         //bg.isTrigger == false;
