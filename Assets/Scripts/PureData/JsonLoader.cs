@@ -4,13 +4,21 @@ using System.IO;
 using System;
 using UnityEngine;
 
+/**
+ * loads json files based on platform; used for loading
+ * emotion anchor points
+ */
 public class JsonLoader
 {
     private string res_dir, path;
     private DirectoryInfo dir;
     private FileInfo[] Files;
     private string[] filenames;
-
+    /**
+     * loads json file names dependent on platform
+     * Windows: all json files contained in "Resources/data"
+     * Android: data1.json and data2.json from android internal data path
+     */
     public JsonLoader()
     {
         //define the data path and data files
@@ -32,6 +40,10 @@ public class JsonLoader
 
     }
 
+    /**
+     * loads parameter vectors of emotional anchor points
+     * @returns array of parameter vectors
+     */
     public double[][] Load_pvec()
     {
         //load json data into a value list
@@ -78,12 +90,19 @@ public class JsonLoader
         return pvec;
     }
 
+    /**
+     * parses json and grabs entries contained in "values"
+     * @returns list of AudioParameters equal to pvecs
+     */
     public static ValueList CreateFromJson(string jsonString)
     {
         return JsonUtility.FromJson<ValueList>("{\"values\":" + jsonString + "}");
     }
 
     //load the json Data
+    /**
+     * data loading function for pc running game from unity editor
+     */
     public string LoadDataEditor()
     {
         string jsonString = string.Empty;
@@ -108,6 +127,9 @@ public class JsonLoader
         return jsonString;
     }
 
+    /**
+     * data loading function for android
+     */
     //load the json Data on Android device
     public string LoadDataAndroid()
     {
@@ -138,16 +160,31 @@ public class JsonLoader
 
 }
 
+/**
+ * list of AudioParameters
+ */
 [System.Serializable]
 public class ValueList
 {
-    public AudioParameter[] values;
+    public AudioParameter[] values; /**< list of audio parameter values */
 }
 
+/**
+ * audio parameters used in sound model to create
+ * emotional sounds
+ */
 [System.Serializable]
 public class AudioParameter {
 
     //Define audio Parameters
-    public string uid, snd, run, time, target, generation, logsigma, submit, parvec;
+    public string uid; /**< uid parameter for pd model */
+    public string snd; /**< snd parameter for pd model */
+    public string run; /**< run parameter for pd model */
+    public string time; /**< time parameter for pd model */
+    public string target; /**< target parameter for pd model */
+    public string generation; /**< generation parameter for pd model */
+    public string logsigma; /**< logsigma parameter for pd model */
+    public string submit; /**< submit parameter for pd model */
+    public string parvec; /**< parvec parameter for pd model */
 }
 
