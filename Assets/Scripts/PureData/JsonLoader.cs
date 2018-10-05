@@ -9,7 +9,50 @@ public class JsonLoader
     private string res_dir, path;
     private DirectoryInfo dir;
     private FileInfo[] Files;
+    private string filename;
     private string[] filenames;
+    
+    public JsonLoader(string file)
+    {
+        //define the data path and data files
+        //ATTENTION: the file names for android (JsonFiles) must be hardcoded in filenams variable
+        if (Application.platform == RuntimePlatform.WindowsEditor)
+        {
+            res_dir = "/Resources/data/sample";
+            path = Application.streamingAssetsPath + res_dir;
+            dir = new DirectoryInfo(path);
+            Files = dir.GetFiles("*.json");
+        }
+
+        else if (Application.platform == RuntimePlatform.Android)
+        {
+            res_dir = "/Resources/data/sample/";
+            path = Application.streamingAssetsPath + res_dir;
+            filename = path + file;
+            filenames = new string[] { filename };
+            Debug.Log("##########FILENAME: " + filename);
+        }
+
+    }
+
+
+    public SampleList Load_samples_info()
+    {
+        string jsonString = string.Empty;
+        if (Application.platform == RuntimePlatform.WindowsEditor)
+        {
+            jsonString = this.LoadDataEditor();
+        }
+        else if (Application.platform == RuntimePlatform.Android)
+        {
+            jsonString = this.LoadDataAndroid();
+        }
+
+        SampleList sl = JsonLoader.CreateFromJson_sample(jsonString);
+        
+        return sl;
+
+    }
 
     public JsonLoader()
     {
@@ -76,6 +119,11 @@ public class JsonLoader
         }
 
         return pvec;
+    }
+
+    public static SampleList CreateFromJson_sample(string jsonString)
+    {
+        return JsonUtility.FromJson<SampleList>("{\"values\":" + jsonString + "}");
     }
 
     public static ValueList CreateFromJson(string jsonString)
@@ -151,3 +199,14 @@ public class AudioParameter {
     public string uid, snd, run, time, target, generation, logsigma, submit, parvec;
 }
 
+[System.Serializable]
+public class SampleList
+{
+    public SampleParameter[] values;
+}
+
+[System.Serializable]
+public class SampleParameter
+{
+    public string emo, type, id, file;
+}

@@ -1,12 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
+using System.Linq;
 using UnityEngine;
 
 public class PdAPI : MonoBehaviour
 {
     private KernelRegression kr;
+    private JsonLoader JL;
+    private AudioSource audioSource;
+    private SampleList sl = null;
     private float richness_max = 4;
     private float richness_min = 0.5f;
+    private string file = "sample_data.json";
+    private string filename = string.Empty;
+    private string engine_type = "sample"; //synth or sample
     private string xvecs_type = "unit";
     private string TOUCHSYMBOL = "#touch";
     private string MESSAGE = "abstract";
@@ -19,12 +27,43 @@ public class PdAPI : MonoBehaviour
     private string[] par_names = {"duration", "attack", "desvol", "pitch", "chirp", "lfndepth", "lfnfreq",
     "amdepth", "amfreq", "richness"};
 
+    //test the start mechanic
+    private void Start()
+    {
+        Debug.Log("##########STAAAARTTTT############");
+        audioSource = GetComponent<AudioSource>();
+        audioSource.volume = 1f;
+
+        Debug.Log("#########AWAKE#########");
+
+        kr = gameObject.AddComponent<KernelRegression>();
+
+
+        //choose which JsonLoader to use
+        if (engine_type == "sample")
+        {
+            Debug.Log("#################LOAD THE JSON LOADER");
+
+            JL = new JsonLoader(file);
+        }
+        else if (engine_type == "synth")
+        {
+            JL = new JsonLoader();
+        }
+
+
+        PureData.OpenPatch("abstractlatest");
+    }
+
+    private void Update()
+    {
+        audioSource.volume = 1.0f;
+    }
+
     // Use this for initialization
     void Awake()
     {
-        kr = gameObject.AddComponent<KernelRegression>();
 
-        PureData.OpenPatch("abstractlatest");
     }
 
     void updateParam(double[] paramVec)
@@ -65,26 +104,60 @@ public class PdAPI : MonoBehaviour
      */
     public void changeValue(double[] posxy, bool debug = false, float richness_scale = 1.0f)
     {
-        double[] paramVec = kr.Krm(posxy, sigma, xvecs_type);
-
-        if (debug)
+        //check first whether type of sound to use
+        if (engine_type == "sample")
         {
-            //this.debug(paramVec);
-            double[] pv = kr.Krm(posxy, sigma, xvecs_type, true);
-            kr.debug(pv, posxy);
+            //call sample function
+            string emotion = get_nearest_emotion(posxy);
+            string sound_type = "voc";
+            
+            //load data if not done before
+            if(sl == null)
+            { 
+                sl = JL.Load_samples_info();
+            }
+
+            string f = query(emotion, sound_type);
+
+            this.filename = f;
         }
 
-        //scale richness
-        richness = scale_richness(richness, richness_scale);
+        else
+        {
+            //use engine to produce sound
+            double[] paramVec = kr.Krm(posxy, sigma, xvecs_type);
 
-        updateParam(paramVec);
-        PureData.SendMessage(TOUCHSYMBOL, MESSAGE, pointer, duration, attack, desvol, pitch, chirp, lfndepth, lfnfreq, amdepth, amfreq, richness);
+            if (debug)
+            {
+                //this.debug(paramVec);
+                double[] pv = kr.Krm(posxy, sigma, xvecs_type, true);
+                kr.debug(pv, posxy);
+            }
+
+            //scale richness
+            richness = scale_richness(richness, richness_scale);
+
+            updateParam(paramVec);
+            PureData.SendMessage(TOUCHSYMBOL, MESSAGE, pointer, duration, attack, desvol, pitch, chirp, lfndepth, lfnfreq, amdepth, amfreq, richness);
+        }
     }
 
     //sends a trigger message to play the audio
     public void playAudio()
     {
-        PureData.SendMessage(TOUCHSYMBOL, TRIGGER, BANG);
+        if (engine_type.Equals("synth"))
+        {
+            PureData.SendMessage(TOUCHSYMBOL, TRIGGER, BANG);
+        }
+        else if (engine_type.Equals("sample"))
+        {
+            AudioClip clip = (AudioClip)Resources.Load("samples/"+filename.Remove(filename.Length-4));
+            audioSource.Stop();
+            audioSource.PlayOneShot(clip);
+            print("PLAYING AUDIO: "+ filename.Remove(filename.Length - 4));
+        }
+
+       
     }
 
     //changes the xvec type
@@ -134,6 +207,57 @@ public class PdAPI : MonoBehaviour
         }
 
         return richness;
+    }
+
+    /// <summary>
+    /// Get the nearest emotion from the position on the wheel
+    /// </summary>
+    /// <param name="posxy">The x,y position</param>
+    /// <returns>Name of nearest emotion</returns>
+    private string get_nearest_emotion(double[] posxy)
+    {
+
+        double[][] emo_pos = kr.get_emo_pos(xvecs_type);
+        string[] emotions = kr.get_targets();
+
+        int i = 0;
+        double[] distvec = new double[emo_pos.Length];
+        foreach(double[] pos in emo_pos)
+        {
+            distvec[i] = Math.Sqrt(Math.Pow(pos[0] - posxy[0], 2)
+                + Math.Pow(pos[1] - posxy[1], 2));
+            i++;
+
+        }
+
+        int min_idx = Array.IndexOf(distvec, distvec.Min());
+        string nearest_emotion = emotions[min_idx];
+
+        return nearest_emotion;
+    }
+
+    private string query(string emotion, string sound_type)
+    {
+        string file = string.Empty;
+        List<string> query_result = new List<string>();
+
+        //get elements matching the request
+        for (int i = 0; i < sl.values.Length; i++)
+        {
+            string emo = sl.values[i].emo;
+            string type = sl.values[i].type;
+
+            if (emo.Equals(emotion) && type.Equals(sound_type))
+            {
+                query_result.Add(sl.values[i].file);
+            }
+        }
+
+        System.Random random = new System.Random();
+        int rnd_idx = random.Next(0, query_result.Count);
+        file = query_result[rnd_idx];
+
+        return file;
     }
 
     //prints par names if debug is set
