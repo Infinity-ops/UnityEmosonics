@@ -155,18 +155,17 @@ public class PdAPI : MonoBehaviour
         }
         else if (engine_type.Equals("sample"))
         {
-            /*
+            
             AudioClip clip = (AudioClip)Resources.Load("samples/"+filename.Remove(filename.Length-4));
             audioSource.Stop();
             audioSource.PlayOneShot(clip);
-            print("PLAYING AUDIO: "+ filename.Remove(filename.Length - 4)); */
-            filename = filename.Remove(filename.Length - 4) + ".wav";
-            Debug.Log(Application.dataPath+ "/Resources/" + "wrongSound.wav");
-
+            print("PLAYING AUDIO: "+ filename.Remove(filename.Length - 4)); 
+            
+            /*
             PureData.SendMessage("#touch2", "m", 0); //stop any playing sound
-            PureData.SendMessage("#touch2", "s", Application.dataPath + "/Resources/" + "wrongSound.wav");
+            PureData.SendMessage("#touch2", "s", Application.dataPath + "/Resources/" + "wrongSound.wav"); //set filename in pd
 
-            PureData.SendMessage("#touch2", "m", 1);
+            PureData.SendMessage("#touch2", "m", 1); //play sound file */
 
         }
 
