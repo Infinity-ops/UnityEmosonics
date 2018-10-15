@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PdAPI : MonoBehaviour
 {
@@ -30,6 +31,9 @@ public class PdAPI : MonoBehaviour
     //test the start mechanic
     private void Start()
     {
+
+        SceneManager.LoadScene(0);
+
         Debug.Log("##########STAAAARTTTT############");
         audioSource = GetComponent<AudioSource>();
         audioSource.volume = 1f;
@@ -53,9 +57,6 @@ public class PdAPI : MonoBehaviour
             JL = new JsonLoader();
             PureData.OpenPatch("abstractlatest");
         }
-
-
-        
 
     }
 
@@ -157,6 +158,7 @@ public class PdAPI : MonoBehaviour
         {
             
             AudioClip clip = (AudioClip)Resources.Load("samples/"+filename.Remove(filename.Length-4));
+            audioSource = GetComponent<AudioSource>();
             audioSource.Stop();
             audioSource.PlayOneShot(clip);
             print("PLAYING AUDIO: "+ filename.Remove(filename.Length - 4)); 

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -302,7 +302,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -385,10 +385,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settingsPath: Assets/PureDataSettings.asset
   listener:
-    transform: {fileID: 0}
-    position: {x: 0, y: 0, z: 0}
-    right: {x: 0, y: 0, z: 0}
-    pureData: {fileID: 0}
+    transform: {fileID: 1620855685}
+    position: {x: 0, y: 1, z: -10}
+    right: {x: 1, y: 0, z: 0}
+    pureData: {fileID: 194259100}
   filterRead: {fileID: 0}
   references:
     references: []
@@ -397,20 +397,20 @@ MonoBehaviour:
     pureData: {fileID: 194259100}
   generalSettings: {fileID: 11400000, guid: 3b1b19fa565880443aa882960dd5c503, type: 2}
   bridge:
-    sampleRate: 0
-    bufferSize: 0
-    bufferAmount: 0
-    initialized: 0
-    ticks: 0
-    pureData: {fileID: 0}
+    sampleRate: 48000
+    bufferSize: 1024
+    bufferAmount: 4
+    initialized: 1
+    ticks: 16
+    pureData: {fileID: 194259100}
   communicator:
-    pureData: {fileID: 0}
+    pureData: {fileID: 194259100}
   commandParser:
-    pureData: {fileID: 0}
+    pureData: {fileID: 194259100}
   patchManager:
-    pureData: {fileID: 0}
+    pureData: {fileID: 194259100}
   itemManager:
-    pureData: {fileID: 0}
+    pureData: {fileID: 194259100}
   infoManager:
     infos: []
     pureData: {fileID: 194259100}
@@ -434,7 +434,8 @@ MonoBehaviour:
     paths: []
     pureData: {fileID: 194259100}
   editorHelper:
-    selection: []
+    selection:
+    - {fileID: 1969833167}
     repaintDummy: 0
     repaint: 0
     pureDataIcon: {fileID: 0}
