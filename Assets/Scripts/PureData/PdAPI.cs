@@ -158,7 +158,6 @@ public class PdAPI : MonoBehaviour
         {
             
             AudioClip clip = (AudioClip)Resources.Load("samples/"+filename.Remove(filename.Length-4));
-            audioSource = GetComponent<AudioSource>();
             audioSource.Stop();
             audioSource.PlayOneShot(clip);
             print("PLAYING AUDIO: "+ filename.Remove(filename.Length - 4)); 
