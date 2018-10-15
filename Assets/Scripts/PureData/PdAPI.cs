@@ -45,14 +45,18 @@ public class PdAPI : MonoBehaviour
             Debug.Log("#################LOAD THE JSON LOADER");
 
             JL = new JsonLoader(file);
+
+            PureData.OpenPatch("fileplayer");
         }
         else if (engine_type == "synth")
         {
             JL = new JsonLoader();
+            PureData.OpenPatch("abstractlatest");
         }
 
 
-        PureData.OpenPatch("abstractlatest");
+        
+
     }
 
     private void Update()
@@ -151,10 +155,19 @@ public class PdAPI : MonoBehaviour
         }
         else if (engine_type.Equals("sample"))
         {
+            /*
             AudioClip clip = (AudioClip)Resources.Load("samples/"+filename.Remove(filename.Length-4));
             audioSource.Stop();
             audioSource.PlayOneShot(clip);
-            print("PLAYING AUDIO: "+ filename.Remove(filename.Length - 4));
+            print("PLAYING AUDIO: "+ filename.Remove(filename.Length - 4)); */
+            filename = filename.Remove(filename.Length - 4) + ".wav";
+            Debug.Log(Application.dataPath+ "/Resources/" + "wrongSound.wav");
+
+            PureData.SendMessage("#touch2", "m", 0); //stop any playing sound
+            PureData.SendMessage("#touch2", "s", Application.dataPath + "/Resources/" + "wrongSound.wav");
+
+            PureData.SendMessage("#touch2", "m", 1);
+
         }
 
        
