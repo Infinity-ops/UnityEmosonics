@@ -190,6 +190,17 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2077492544}
+        m_MethodName: TaskOnClick0
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2077492544}
         m_MethodName: Game
         m_Mode: 1
         m_Arguments:
@@ -202,17 +213,6 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 281096922}
         m_MethodName: play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2077492544}
-        m_MethodName: TaskOnClick0
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -443,14 +443,14 @@ RectTransform:
   m_GameObject: {fileID: 151738317}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: -50.01877}
-  m_LocalScale: {x: 2.3500056, y: 2, z: 2.3500068}
+  m_LocalScale: {x: 2.438131, y: 2.8549676, z: 2.3500068}
   m_Children: []
   m_Father: {fileID: 270589509}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 309.896, y: 53.651}
+  m_AnchoredPosition: {x: 309.86, y: 53.65}
   m_SizeDelta: {x: 2, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &151738319
@@ -1205,7 +1205,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.76900005, y: 0.055469073}
   m_AnchorMax: {x: 0.88527584, y: 0.08376547}
-  m_AnchoredPosition: {x: -0.2999878, y: -1.5619507}
+  m_AnchoredPosition: {x: -0.30004883, y: -1.5619507}
   m_SizeDelta: {x: 69, y: -7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &406167285
@@ -1253,7 +1253,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1371,7 +1371,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2077492544}
-        m_MethodName: GameAgain
+        m_MethodName: TaskOnClick2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1393,7 +1393,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2077492544}
-        m_MethodName: TaskOnClick0
+        m_MethodName: GameAgain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1668,6 +1668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b46c2c5009c93384ea2718f273dab1f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ball: {fileID: 0}
   panel: {fileID: 222405788}
   lives: {fileID: 1205823396}
   gameStatus: {fileID: 1472443140}
@@ -1675,6 +1676,7 @@ MonoBehaviour:
   gameButton: {fileID: 259352149}
   playGainButton: {fileID: 427590887}
   errorImage1: {fileID: 994766116}
+  trajectile: {fileID: 1452502559}
 --- !u!1 &623566945
 GameObject:
   m_ObjectHideFlags: 0
@@ -2631,6 +2633,11 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114120479821866308, guid: ff5d7016cbc89cb43beebd143e571c6c,
+        type: 2}
+      propertyPath: ball
+      value: 
+      objectReference: {fileID: 1553091413}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff5d7016cbc89cb43beebd143e571c6c, type: 2}
   m_IsPrefabParent: 0
@@ -2663,14 +2670,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.99264705, g: 0.9963235, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 4a7662832c5220a4c886da5d1543fa68, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8ec07458875a3014d98042e113b9cca0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2692,7 +2699,7 @@ RectTransform:
   m_GameObject: {fileID: 994766115}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 0.5}
   m_Children: []
   m_Father: {fileID: 1802056843}
   m_RootOrder: 4
@@ -2749,7 +2756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.4636678, g: 0.63959205, b: 0.9411765, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2940,7 +2947,7 @@ MonoBehaviour:
     pureData: {fileID: 1168031364}
   editorHelper:
     selection:
-    - {fileID: 102900000, guid: c8a407571a8ec3047aea763426d7dda8, type: 3}
+    - {fileID: 994766115}
     repaintDummy: 0
     repaint: 0
     pureDataIcon: {fileID: 0}
@@ -3100,6 +3107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trajectile: {fileID: 0}
+  ball: {fileID: 0}
   sphereCollider: {fileID: 0}
 --- !u!64 &1239700288
 MeshCollider:
@@ -3263,7 +3271,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1359525339}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.39, y: 2.2, z: 4.24}
+  m_LocalPosition: {x: 0, y: -0.21, z: 4.24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3311,6 +3319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Slingshot: {fileID: 92095375}
   PointPrefab: {fileID: 100000, guid: f986873935adb0349923de643cdd80b6, type: 2}
+  PointPrefab1: {fileID: 100000, guid: 6a6ac1b597b0cc5479b8872b1b0063cf, type: 2}
   PointNumber: 100
   InitialPointSize: 0.2
   PointsList: []
@@ -3491,6 +3500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trajectile: {fileID: 1452502559}
+  ball: {fileID: 1553091413}
   sphereCollider: {fileID: 1553091415}
 --- !u!135 &1553091415
 SphereCollider:
@@ -4516,6 +4526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a22a9f4514e9de342bee3b32bf600137, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  protection: 0
   gameStatus1: {fileID: 1472443140}
   myPrefab: {fileID: 1555986198}
   myPrefab1: {fileID: 1212799032783890, guid: ff5d7016cbc89cb43beebd143e571c6c, type: 2}
@@ -4523,6 +4534,7 @@ MonoBehaviour:
   goToNextLevel: {fileID: 53879760}
   playGainButton: {fileID: 427590887}
   backButton: {fileID: 406167283}
+  ball: {fileID: 1553091413}
   cc: {fileID: 270589508}
   sphere: {fileID: 1555986198}
   ImageSprite: {fileID: 21300000, guid: c506b144886d4c74ca5cbb69d84336a6, type: 3}
@@ -4533,6 +4545,7 @@ MonoBehaviour:
   systemWidth: 0
   renderingHeight: 0
   renderingWidth: 0
+  trajectile: {fileID: 1452502559}
 --- !u!1 &2143239654
 GameObject:
   m_ObjectHideFlags: 0
@@ -4563,10 +4576,10 @@ RectTransform:
   m_Father: {fileID: 1802056843}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 263, y: -634.1168}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.7097242, y: 0.009312501}
+  m_AnchorMax: {x: 0.9435001, y: 0.039}
+  m_AnchoredPosition: {x: 2.5, y: 8.5}
+  m_SizeDelta: {x: -27, y: -9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2143239656
 MonoBehaviour:

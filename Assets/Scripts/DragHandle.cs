@@ -10,19 +10,18 @@ public class DragHandle : MonoBehaviour
     private Vector3 _offset;
     public GameObject trajectile; //To set active TrajectileScript
     private Vector3 _defaulPos;
-
+    public GameObject ball;
    private Vector3 _currentPosition;
-
+    private Color tryColor;
    public event OnDragHandleReleaseDelegate OnDragHandleReleaseEvent;
 
     public SphereCollider sphereCollider;
   
    private void Start()
    {
-       sphereCollider.radius = 5.0f;
+      sphereCollider.radius = 5.0f;
       _defaulPos = new Vector3(0,-3 ,0);
-      transform.position = _defaulPos;
-       
+      transform.position = _defaulPos;   
     }
 
     private void Update()
@@ -63,7 +62,7 @@ public class DragHandle : MonoBehaviour
 
     private void OnMouseUp()
     {
-        
+        ball.SetActive(false);
         testPass1 = 1;
         Cursor.visible = true;
 

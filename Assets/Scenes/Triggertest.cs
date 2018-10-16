@@ -50,18 +50,9 @@ public class Triggertest : MonoBehaviour {
             {
                 rs.play();
                 test = true;
-                GameCount.scoreValue = 0;
+                //GameCount.scoreValue = 0;
                 cloneDesCount = 0;
-                var clones = GameObject.FindGameObjectsWithTag("Spheree");
-               
-                foreach ( var clone in clones)
-                {
-                   
-                        Debug.Log("Gam");
-
-                        Destroy(clone);
-                    
-                }
+                
                 clones1 = GameObject.FindGameObjectsWithTag("ball1");
                 if (AttemptBall.ballCheck1 == true)
                 {

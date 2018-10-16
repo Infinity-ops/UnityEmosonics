@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AttemptBall : MonoBehaviour {
-    
+    public GameObject ball;
     private int i = 0;
     public static bool destroy;
    public static GameObject ball1,ball2,ball3;
@@ -12,7 +12,6 @@ public class AttemptBall : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-
         ballCheck1 = false;
         ballCheck2 = false;
         ballCheck3 = false;
@@ -62,6 +61,7 @@ public class AttemptBall : MonoBehaviour {
 
                     //Destroy(Duplicator.attemptBall1);
                 }
+            ball.SetActive(true);
             destroy = false;
         }
         if (Triggertest.testPass2 == true)
@@ -92,6 +92,7 @@ public class AttemptBall : MonoBehaviour {
             }
 
             //Destroy(Duplicator.attemptBall1);
+            ball.SetActive(true);
             destroy = false;
         }
 
