@@ -1,0 +1,28 @@
+var class_my_s_q_l =
+[
+    [ "__construct", "class_my_s_q_l.html#a0fc0de8fcae17604dea97d9dfc12cfba", null ],
+    [ "addLimitToSql", "class_my_s_q_l.html#ae65f7a84edcefb02a8d05e99940fcb9e", null ],
+    [ "affectedRows", "class_my_s_q_l.html#add61f1770e16988584aa3df844f371c1", null ],
+    [ "beginTransaction", "class_my_s_q_l.html#a448d38e89344db487104c6cb0f561631", null ],
+    [ "close", "class_my_s_q_l.html#a0415dba14d9ec3a01f0637f7848a4beb", null ],
+    [ "commitTransaction", "class_my_s_q_l.html#a04225182642c87eee664c340fbd0f8f4", null ],
+    [ "connect", "class_my_s_q_l.html#a3203f9fa8b470399fc6e2a1c7e397d4e", null ],
+    [ "convertFilter", "class_my_s_q_l.html#a19e21eb9d268afebf86d799e940ebb6a", null ],
+    [ "fetchAssoc", "class_my_s_q_l.html#a4211fde7bffc1f2d39f3dd30bb1eeaa3", null ],
+    [ "fetchFields", "class_my_s_q_l.html#a35c08070d9daaca3f6f0d9b6df8f4c09", null ],
+    [ "fetchRow", "class_my_s_q_l.html#aac61fe09525ee6892d5100263815d4e3", null ],
+    [ "getDefaultCharset", "class_my_s_q_l.html#a2cc999cdf661fb7f4fe94591bd9eea95", null ],
+    [ "getSql", "class_my_s_q_l.html#a148de6566fd74f731d3a2df5d58ed266", null ],
+    [ "insertId", "class_my_s_q_l.html#ad71b918e09aefc28d7f49c82cdeaf023", null ],
+    [ "isBinaryType", "class_my_s_q_l.html#a06998d95ce0a803b1c8220363345c00d", null ],
+    [ "isGeometryType", "class_my_s_q_l.html#adc58fcf511c0ee8a725f114ebe476988", null ],
+    [ "isJsonType", "class_my_s_q_l.html#ab0ee4af26af7339e720271bce47296b7", null ],
+    [ "isNumericType", "class_my_s_q_l.html#a14c081318799c5025783df30145a953b", null ],
+    [ "jsonDecode", "class_my_s_q_l.html#a731cc0cd9fde6fb938e61d575c9f8df2", null ],
+    [ "jsonEncode", "class_my_s_q_l.html#af4c3dd34d5781bf40f638e045ca4e184", null ],
+    [ "likeEscape", "class_my_s_q_l.html#ac77c9665c474b195120c90a8b228d504", null ],
+    [ "query", "class_my_s_q_l.html#a0dbb06b7ed464bd9c9b21365bb2a7282", null ],
+    [ "rollbackTransaction", "class_my_s_q_l.html#a84dff658205324ab2f21aaf85fdae3ef", null ],
+    [ "$db", "class_my_s_q_l.html#ac7160e2613775fcced9940c71bc5de06", null ],
+    [ "$queries", "class_my_s_q_l.html#a99e1402da1e4bbc594e6664a89bf836e", null ]
+];

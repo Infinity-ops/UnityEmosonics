@@ -14,18 +14,18 @@ public class DestroyPrefab : MonoBehaviour
     {
         if (!player || (player && collider.gameObject.tag == "player"))
         {
+          
             LivesCount.livesValue -= 1;
             destroy = LivesCount.livesValue;
-            if(destroy ==0)
+            if(destroy == 0)
             {
-                DestroyObject(AttemptBall.lastGb);
+                // DestroyObject(AttemptBall.lastGb);
+                Debug.Log("SSSSCCRRIPTTTT Mmmmmmmmmisssingggggggggggg");
             }
             StonePrefab = GameObject.FindGameObjectWithTag("Projectile");
             DestroyObject(StonePrefab);
             //  Stone = GameObject.FindGameObjectWithTag("Stone");
             //  DestroyObject(Stone);
-          
-
         }
     }
 

@@ -1,6 +1,20 @@
 <?php include "../inc/dbinfo.inc"; ?>
 <?php
 //var_dump($_SERVER['REQUEST_METHOD'],$_SERVER['PATH_INFO']); die();
+/*!
+* Slightly modified version from https://github.com/mevdschee/php-crud-api
+* 
+* Create dbinfo.inc file on server at path "../inc/dbinfo.inc" of form:
+*
+* 	<?php
+*
+*		define('DB_SERVER', __server__);
+*		define('DB_USERNAME', __username__);
+*		define('DB_PASSWORD', __password__);
+*		define('DB_DATABASE', __database__);
+*
+*	?>
+*/
 interface DatabaseInterface {
 	public function getSql($name);
 	public function connect($hostname,$username,$password,$database,$port,$socket,$charset);
@@ -24,6 +38,20 @@ interface DatabaseInterface {
 	public function jsonEncode($object);
 	public function jsonDecode($string);
 }
+/*!
+* Slightly modified version from https://github.com/mevdschee/php-crud-api
+* 
+* Create dbinfo.inc file on server at path "../inc/dbinfo.inc" of form:
+*
+* 	<?php
+*
+*		define('DB_SERVER', __server__);
+*		define('DB_USERNAME', __username__);
+*		define('DB_PASSWORD', __password__);
+*		define('DB_DATABASE', __database__);
+*
+*	?>
+*/
 class MySQL implements DatabaseInterface {
 	protected $db;
 	protected $queries;
@@ -448,6 +476,20 @@ class PostgreSQL implements DatabaseInterface {
 		return json_decode($string);
 	}
 }
+/*!
+* Slightly modified version from https://github.com/mevdschee/php-crud-api
+* 
+* Create dbinfo.inc file on server at path "../inc/dbinfo.inc" of form:
+*
+* 	<?php
+*
+*		define('DB_SERVER', __server__);
+*		define('DB_USERNAME', __username__);
+*		define('DB_PASSWORD', __password__);
+*		define('DB_DATABASE', __database__);
+*
+*	?>
+*/
 class SQLServer implements DatabaseInterface {
 	protected $db;
 	protected $queries;
@@ -785,6 +827,20 @@ class SQLServer implements DatabaseInterface {
 		return $c;
 	}
 }
+/*!
+* Slightly modified version from https://github.com/mevdschee/php-crud-api
+* 
+* Create dbinfo.inc file on server at path "../inc/dbinfo.inc" of form:
+*
+* 	<?php
+*
+*		define('DB_SERVER', __server__);
+*		define('DB_USERNAME', __username__);
+*		define('DB_PASSWORD', __password__);
+*		define('DB_DATABASE', __database__);
+*
+*	?>
+*/
 class SQLite implements DatabaseInterface {
 	protected $db;
 	protected $queries;
@@ -989,6 +1045,20 @@ class SQLite implements DatabaseInterface {
 		return json_decode($string);
 	}
 }
+/*!
+* Slightly modified version from https://github.com/mevdschee/php-crud-api
+* 
+* Create dbinfo.inc file on server at path "../inc/dbinfo.inc" of form:
+*
+* 	<?php
+*
+*		define('DB_SERVER', __server__);
+*		define('DB_USERNAME', __username__);
+*		define('DB_PASSWORD', __password__);
+*		define('DB_DATABASE', __database__);
+*
+*	?>
+*/
 class PHP_CRUD_API {
 	protected $db;
 	protected $settings;

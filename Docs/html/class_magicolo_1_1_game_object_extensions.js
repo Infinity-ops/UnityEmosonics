@@ -1,0 +1,26 @@
+var class_magicolo_1_1_game_object_extensions =
+[
+    [ "AddChild", "class_magicolo_1_1_game_object_extensions.html#afb3b81d2bca3ae5cfad296cdecf13ba8", null ],
+    [ "AddChild", "class_magicolo_1_1_game_object_extensions.html#a983f1b1bbc7edc7454f87216b0ca2fae", null ],
+    [ "AddCopiedComponent< T >", "class_magicolo_1_1_game_object_extensions.html#ac1e627b07cab2e33c4cf1ee93d3f6928", null ],
+    [ "AddCopiedComponents", "class_magicolo_1_1_game_object_extensions.html#a3036f33f7971567e2bc1f12bd2c48eb4", null ],
+    [ "AddCopiedComponents", "class_magicolo_1_1_game_object_extensions.html#a557a9a4b1edb3f889255cb95a2f8c22d", null ],
+    [ "CopyComponent", "class_magicolo_1_1_game_object_extensions.html#a783591a9c82a0a2a4b42eb2195ab113f", null ],
+    [ "CopyComponents", "class_magicolo_1_1_game_object_extensions.html#a2f50e63f041eb8f2c0fb8faf82f262cb", null ],
+    [ "CopyComponents", "class_magicolo_1_1_game_object_extensions.html#a22a7015e29975f132a21416cde429c29", null ],
+    [ "FindChild", "class_magicolo_1_1_game_object_extensions.html#a665906e04924c26020cfaff0f9c88b89", null ],
+    [ "FindChildRecursive", "class_magicolo_1_1_game_object_extensions.html#a00e536a7fdf07a6c3cf98440a4052f59", null ],
+    [ "FindOrAddChild", "class_magicolo_1_1_game_object_extensions.html#a0077a4427ec8e7b79aa9f6bf64df8eb8", null ],
+    [ "FindOrAddChild", "class_magicolo_1_1_game_object_extensions.html#ae0ff2a2deffb3ea9582aac0ca3ca5f45", null ],
+    [ "GetChild", "class_magicolo_1_1_game_object_extensions.html#acc715296e08b656dfa8945c02bb96d7b", null ],
+    [ "GetChildCount", "class_magicolo_1_1_game_object_extensions.html#afdb3e97c563a0c57e6c9805a06d0964e", null ],
+    [ "GetChildren", "class_magicolo_1_1_game_object_extensions.html#a2f6314626a922147fa9ac934d5c50a3e", null ],
+    [ "GetChildrenRecursive", "class_magicolo_1_1_game_object_extensions.html#a91c9cbea5bdf75b91e5fcfe4d29efaec", null ],
+    [ "GetClosest< T >", "class_magicolo_1_1_game_object_extensions.html#a9325edd2a295589cec938fa52e6769b9", null ],
+    [ "GetComponents< T >", "class_magicolo_1_1_game_object_extensions.html#ae98675777f620deef21724c3eb6cb6bc", null ],
+    [ "GetHierarchyDepth", "class_magicolo_1_1_game_object_extensions.html#aac92fe0d2e6b7a79acbed87bf6e57a80", null ],
+    [ "GetOrAddComponent< T >", "class_magicolo_1_1_game_object_extensions.html#ac169b3bfcf08c6fda14b0778768202b8", null ],
+    [ "RemoveComponent< T >", "class_magicolo_1_1_game_object_extensions.html#a9409614d13cc5fbde7c450e985885ce1", null ],
+    [ "SortChildren", "class_magicolo_1_1_game_object_extensions.html#a9066dc33d3ded21e61a468a00c6784c5", null ],
+    [ "SortChildrenRecursive", "class_magicolo_1_1_game_object_extensions.html#a70300f9e7a6e4b48791c0a126d867077", null ]
+];

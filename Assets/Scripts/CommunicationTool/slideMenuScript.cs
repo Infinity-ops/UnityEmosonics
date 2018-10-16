@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/**
+ * slides settings menu in and out
+ */
 public class slideMenuScript : MonoBehaviour
 {
 
     //refrence for the pause menu panel in the hierarchy
-    public GameObject SlidePanel;
+    public GameObject SlidePanel; /**< panel containing menu which slides up and down */
     //animator reference
     private Animator anim;
     //variable for checking if the game is paused 
@@ -20,13 +23,9 @@ public class slideMenuScript : MonoBehaviour
         anim.enabled = false;
     }
 
-    // Update is called once per frame
-    public void Update()
-    {
-
-    }
-
-    //function to pause the game
+    /**
+     * opens menu/slides menu upwards
+     */
     public void openMenu()
     {
         //enable the animator component
@@ -36,7 +35,10 @@ public class slideMenuScript : MonoBehaviour
         //freeze the timescale
         Time.timeScale = 0;
     }
-    //function to unpause the game
+
+    /**
+     * closes menu/slides menu downwards
+     */
     public void closeMenu()
     {
         //play the SlideOut animation
