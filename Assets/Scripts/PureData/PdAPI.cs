@@ -15,6 +15,7 @@ public class PdAPI : MonoBehaviour
     private string file = "sample_data.json";
     private string filename = string.Empty;
     private string engine_type = "sample"; //synth or sample
+    private string sound_type = "voc"; //voc or inf
     private string xvecs_type = "unit";
     private string TOUCHSYMBOL = "#touch";
     private string MESSAGE = "abstract";
@@ -30,32 +31,24 @@ public class PdAPI : MonoBehaviour
     //test the start mechanic
     private void Start()
     {
-        Debug.Log("##########STAAAARTTTT############");
         audioSource = GetComponent<AudioSource>();
         audioSource.volume = 1f;
 
-        Debug.Log("#########AWAKE#########");
-
         kr = gameObject.AddComponent<KernelRegression>();
-
+        PureData.OpenPatch("abstractlatest");
 
         //choose which JsonLoader to use
         if (engine_type == "sample")
         {
-            Debug.Log("#################LOAD THE JSON LOADER");
 
             JL = new JsonLoader(file);
 
-            PureData.OpenPatch("fileplayer");
+            //PureData.OpenPatch("fileplayer");
         }
         else if (engine_type == "synth")
         {
             JL = new JsonLoader();
-            PureData.OpenPatch("abstractlatest");
         }
-
-
-        
 
     }
 
@@ -113,7 +106,6 @@ public class PdAPI : MonoBehaviour
         {
             //call sample function
             string emotion = get_nearest_emotion(posxy);
-            string sound_type = "voc";
             
             //load data if not done before
             if(sl == null)
@@ -159,14 +151,6 @@ public class PdAPI : MonoBehaviour
             AudioClip clip = (AudioClip)Resources.Load("samples/"+filename.Remove(filename.Length-4));
             audioSource.Stop();
             audioSource.PlayOneShot(clip);
-            print("PLAYING AUDIO: "+ filename.Remove(filename.Length - 4)); 
-            
-            /*
-            PureData.SendMessage("#touch2", "m", 0); //stop any playing sound
-            PureData.SendMessage("#touch2", "s", Application.dataPath + "/Resources/" + "wrongSound.wav"); //set filename in pd
-
-            PureData.SendMessage("#touch2", "m", 1); //play sound file */
-
         }
 
        
@@ -190,6 +174,37 @@ public class PdAPI : MonoBehaviour
     {
         return kr.get_xvecs_type();
     }
+
+    public string get_sound_type()
+    {
+        return sound_type;
+    }
+
+    public string get_engine_type()
+    {
+        return engine_type;
+    }
+
+    public void switch_engines(string type)
+    {
+        if (type.Equals("synthetic"))
+        {
+            engine_type = "synth";
+        }
+        else
+        {
+            engine_type = "sample";
+            if (type.Equals("vocal"))
+            {
+                sound_type = "voc";
+            }
+            else if (type.Equals("inference"))
+            {
+                sound_type = "inf";
+            }
+        }
+    }
+      
 
     //get the x,y coordinates of the specified xvecs type
     public double[][] get_emo_pos(string type = "unit")
