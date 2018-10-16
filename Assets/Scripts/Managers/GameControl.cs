@@ -10,6 +10,8 @@ public class GameControl : MonoBehaviour
 {
     private bool startup = true;
 
+    public bool onBoardingFinished = false;
+
     public int visualization;
     public int representation;
 
@@ -62,6 +64,11 @@ public class GameControl : MonoBehaviour
     {
         Save();
     }
+    public void restartTutorial()
+    {
+        Debug.Log("HELLO");
+        this.onBoardingFinished = false;
+    }
 
     public void Save()
     {
@@ -82,6 +89,7 @@ public class GameControl : MonoBehaviour
 
         PlayerSettings settings = new PlayerSettings();
 
+        settings.onBoardingFinished = onBoardingFinished;
         settings.visualization = visualization;
         settings.representation = representation;
 
@@ -128,6 +136,8 @@ public class GameControl : MonoBehaviour
             file.Close();
 
             visualization = settings.visualization;
+            representation = settings.representation;
+            onBoardingFinished = settings.onBoardingFinished;
 
             favorite1Color = settings.Favorite1Color;
             favorite2Color = settings.Favorite2Color;
@@ -146,16 +156,17 @@ public class GameControl : MonoBehaviour
         else
         {
             visualization = 0;
-            favorite1Color = new Color(1.0F, 1.0F, 1.0F, 1.0F);
-            favorite2Color = new Color(1.0F, 1.0F, 1.0F, 1.0F);
-            favorite3Color = new Color(1.0F, 1.0F, 1.0F, 1.0F);
-            favorite4Color = new Color(1.0F, 1.0F, 1.0F, 1.0F);
+            favorite1Color = new Color(1.0F,1.0F,1.0F);
+            favorite2Color = new Color(1.0F, 1.0F, 1.0F);
+            favorite3Color = new Color(1.0F, 1.0F, 1.0F);
+            favorite4Color = new Color(1.0F, 1.0F, 1.0F);
         }
     }
 
     [Serializable]
     public class PlayerSettings
     {
+        public bool onBoardingFinished;
         public int representation;
         public int visualization;
         private Color favorite1Color;
