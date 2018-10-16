@@ -3,57 +3,102 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AttemptBall : MonoBehaviour {
-   
-    public  GameObject[] gameObject;
-    public GameObject[] gameObject1; // For Duplicator j
-    /// </summary>
-    private int i=0, j=0;
-    public static GameObject lastGb, lastGb1;
+    
+    private int i = 0;
+    public static bool destroy;
+   public static GameObject ball1,ball2,ball3;
+    public static bool ballCheck2, ballCheck1, ballCheck3;
+
     // Use this for initialization
     void Start()
     {
-        lastGb = gameObject[i];
-        lastGb1 = gameObject1[j];
+
+        ballCheck1 = false;
+        ballCheck2 = false;
+        ballCheck3 = false;
+        destroy = false;
     }
+    
     // Update is called once per frame
     void Update()
     {
-        if(LockController.realAttemptBall == true)
+        if (Duplicator.realAttemptBall == true || LivesCount.nextLevelBool == true)
         {
-            i = gameObject.Length;
-            LockController.realAttemptBall = false;
-        }
-        if (Duplicator.realAttemptBall1 == true)
-        {
-            j = gameObject1.Length;
-            Duplicator.realAttemptBall1 = false;
+             ball1 = GameObject.FindWithTag("ball1");
+             ball2 = GameObject.FindWithTag("ball2");
+             ball3 = GameObject.FindWithTag("ball3");
+            //i = gameObject.Length;
+            Duplicator.realAttemptBall = false;
+            LivesCount.nextLevelBool = false;
         }
 
-        if (Triggertest.testPass2 == true || TestColliding.testPass1 == true)
+        if (TestColliding.testPass1 == true || Duplicator.testPass3 == true)
         {
-            Triggertest.testPass2 = false;
+
             TestColliding.testPass1 = false;
+            Duplicator.testPass3 = false;
             LivesCount.livesValue -= 1;
-            DestroyObject(lastGb);
-            DestroyObject(lastGb1);
-            i--;
-            j--;
-            lastGb = gameObject[i];
-            lastGb1 = gameObject1[j];
+            destroy = true;
+            if (destroy)
+            {
+                if (ball1!=null)
+                {
+                    Destroy(GameObject.FindWithTag("ball1"));
+                    ballCheck1 = true;
+                    destroy = false;
+                }
+                if (ball2 && destroy == true)
+                {
+                    Destroy(GameObject.FindWithTag("ball2"));
+                    ballCheck2 = true;
+                    destroy = false;
+                }
+                if (ball3 && destroy == true)
+                {
+                    Destroy(GameObject.FindWithTag("ball3"));
+                    ballCheck3 = true;
+                    destroy = false;
+                }
+
+                    //Destroy(Duplicator.attemptBall1);
+                }
+            destroy = false;
+        }
+        if (Triggertest.testPass2 == true)
+        {
             Triggertest.testPass2 = false;
-            //bg.isTrigger == false;
+            LivesCount.livesValue -= 1;
+            destroy = true;
+            if (destroy)
+            {
+                if (ball1 != null)
+                {
+                    Destroy(GameObject.FindWithTag("ball1"));
+                    ballCheck1 = true;
+                    destroy = false;
+                }
+                if (ball2 && destroy == true)
+                {
+                    Destroy(GameObject.FindWithTag("ball2"));
+                    ballCheck2 = true;
+                    destroy = false;
+                }
+                if (ball3 && destroy == true)
+                {
+                    Destroy(GameObject.FindWithTag("ball3"));
+                    ballCheck3 = true;
+                    destroy = false;
+                }
+            }
+
+            //Destroy(Duplicator.attemptBall1);
+            destroy = false;
         }
 
-        /*
-              if (DestroyPrefab.destroy > 0 )
-              { 
-                  i = DestroyPrefab.destroy;
-                  Debug.Log(i);
-                  DestroyObject(gameObject[i]);
-                  Debug.Log(gameObject[i]);
-                  //GameObject[DestroyPrefab.destroy];
-              }
-            */
+        //bg.isTrigger == false;
+    
+      
+ 
 
     }
   

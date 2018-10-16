@@ -8,7 +8,7 @@ public class DragHandle : MonoBehaviour
     public static int testPass1;
     public static int testPass2; //To Destroy attempt Ball
     private Vector3 _offset;
-   
+    public GameObject trajectile; //To set active TrajectileScript
     private Vector3 _defaulPos;
 
    private Vector3 _currentPosition;
@@ -31,6 +31,7 @@ public class DragHandle : MonoBehaviour
     }
     private void OnMouseDown()
     {
+        trajectile.SetActive(false);
         Debug.Log("???///////////////>>>>>>>>>>>>>><<<<<<<<<<<<<?????????");
         sphereCollider.radius = 5.0f;
             _offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint
@@ -44,7 +45,7 @@ public class DragHandle : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        
+        trajectile.SetActive(true);
         testPass2 = 1;
           sphereCollider.isTrigger = true;
           //pt = gameObject.AddComponent<ProjectileTrajectory>();
@@ -62,6 +63,7 @@ public class DragHandle : MonoBehaviour
 
     private void OnMouseUp()
     {
+        
         testPass1 = 1;
         Cursor.visible = true;
 

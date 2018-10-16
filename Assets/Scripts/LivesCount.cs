@@ -16,9 +16,13 @@ public class LivesCount : MonoBehaviour
     public GameObject playGainButton;
     public static bool neverDone;
     public Image errorImage1;
+    public static bool nextLevelBool;
     // Use this for initialization
+    //public AudioSource _audio;
     void Start()
     {
+        //_audio = gameObject.GetComponent<AudioSource>();
+        nextLevelBool = true;
         nextLevel = 1;
         gameStatus.enabled = false;
         goToNextLevel1.SetActive(false);
@@ -43,15 +47,28 @@ public class LivesCount : MonoBehaviour
             // if (GameController.box == Triggertest.cloneDesCount - 1)
             if (Triggertest.cloneDesCount ==  1)
             {
+               
+               // Duplicator.hitter.SetActive(false);
                 gameStatus.enabled = true;
                 gameStatus.text = "Success!";
+               /* string url = "http://api.voicerss.org/?key=<aee25513c7b64d3d862a6cb7c8262080>&hl=en-us&src=" + gameStatus.text;
+                WWW www = new WWW(url);
+                while (!www.isDone)
+                {
+                   
+                }
+                // yield return www;
+                _audio.clip = www.GetAudioClip(false, true, AudioType.OGGVORBIS);
+                _audio.Play(); */
+               
                 errorImage1.enabled = false;
                 panel.SetActive(true);
                 gameButton.SetActive(false);
                 playGainButton.SetActive(false);
                 goToNextLevel1.SetActive(true);
                 //Duplicator.goToNextLevel.SetActive(true);
-
+                GameObject.Find("SlingShot").GetComponent<SlingShot>().enabled = false;
+                GameObject.Find("DragHandle").GetComponent<DragHandle>().enabled = false;
                 levelIncre = levelIncre + 1;
                 neverDone = false;
                 if(gameStatus.text == "Success!")
@@ -77,12 +94,31 @@ public class LivesCount : MonoBehaviour
              */
             if (livesValue < 0)
             {
+                GameObject.Find("SlingShot").GetComponent<SlingShot>().enabled = false;
+                GameObject.Find("DragHandle").GetComponent<DragHandle>().enabled = false;
                 panel.SetActive(true);
+                goToNextLevel1.SetActive(false);
                 gameStatus.enabled = true;
                 gameButton.SetActive(false);
                 gameStatus.text = "GameOver!";
                 playGainButton.SetActive(true);
                 //backButton.SetActive(true);
+                var clones = GameObject.FindGameObjectsWithTag("Spheree");
+
+                foreach (var clone in clones)
+                {
+
+                    Debug.Log("Gam");
+
+                    Destroy(clone);
+
+                }
+                if (gameStatus.text == "GameOver!")
+                {
+                    
+                    Debug.Log("GameOverGameOverGameOverGameOverGameOverGameOverGameOverGameOverGameOverGameOverGameOverGameOverGameOverGameOver");
+                    nextLevel = nextLevel-1;
+                }
             }
         }
     }
