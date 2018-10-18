@@ -7,7 +7,12 @@ using UnityEngine;
 /**
  * loads json files based on platform; used for loading
  * emotion anchor points
- */
+*/
+
+    /// <summary>
+    /// Class that is used to load json files based on platform. Either the sample files are loaded or the parvec data based on
+    /// which class constructor is used.
+    /// </summary>
 public class JsonLoader
 {
     private string res_dir, path;
@@ -16,6 +21,11 @@ public class JsonLoader
     private string filename;
     private string[] filenames;
     
+
+    /// <summary>
+    /// Initializes the path and directory used to load the sample data
+    /// </summary>
+    /// <param name="file">Name of the file with the sample data</param>
     public JsonLoader(string file)
     {
         //define the data path and data files
@@ -39,7 +49,10 @@ public class JsonLoader
 
     }
 
-
+    /// <summary>
+    /// Function that loads the info from the json file into a SampleList class
+    /// </summary>
+    /// <returns>SampleList class that contains the sample information from the json file</returns>
     public SampleList Load_samples_info()
     {
         string jsonString = string.Empty;
@@ -58,12 +71,9 @@ public class JsonLoader
 
     }
 
-
-    /**
-     * loads json file names dependent on platform
-     * Windows: all json files contained in "Resources/data"
-     * Android: data1.json and data2.json from android internal data path
-     */
+    /// <summary>
+    /// Initializes the path and directory used to load the parvec data
+    /// </summary>   
     public JsonLoader()
     {
         //define the data path and data files
@@ -85,10 +95,10 @@ public class JsonLoader
 
     }
 
-    /**
-     * loads parameter vectors of emotional anchor points
-     * @returns array of parameter vectors
-     */
+/// <summary>
+/// FUnction that loads the pvec values from the json file
+/// </summary>
+/// <returns>Returns array with parvec values</returns>
     public double[][] Load_pvec()
     {
         //load json data into a value list
@@ -135,26 +145,31 @@ public class JsonLoader
         return pvec;
     }
 
-
+    /// <summary>
+    /// Helper Function to load the json values in the SampleList class
+    /// </summary>
+    /// <param name="jsonString">The parsed json string containing data of the samples</param>
+    /// <returns>Returns a SampleList class</returns>
     public static SampleList CreateFromJson_sample(string jsonString)
     {
         return JsonUtility.FromJson<SampleList>("{\"values\":" + jsonString + "}");
     }
 
 
-    /**
-     * parses json and grabs entries contained in "values"
-     * @returns list of AudioParameters equal to pvecs
-     */
+    /// <summary>
+    /// Helper Function to load the json values in the ValueList class
+    /// </summary>
+    /// <param name="jsonString">The parsed json string containing data of the parvec</param>
+    /// <returns>Returns a ValueLIst class</returns>
     public static ValueList CreateFromJson(string jsonString)
     {
         return JsonUtility.FromJson<ValueList>("{\"values\":" + jsonString + "}");
     }
 
-    //load the json Data
-    /**
-     * data loading function for pc running game from unity editor
-     */
+    /// <summary>
+    /// Function to parse the json file when the used platform is the Editor
+    /// </summary>
+    /// <returns>Returns the parsed json string</returns>
     public string LoadDataEditor()
     {
         string jsonString = string.Empty;
@@ -179,10 +194,10 @@ public class JsonLoader
         return jsonString;
     }
 
-    /**
-     * data loading function for android
-     */
-    //load the json Data on Android device
+    /// <summary>
+    /// Function to parse the json file when the used platform is Android
+    /// </summary>
+    /// <returns>Returns the parsed json string</returns>
     public string LoadDataAndroid()
     {
         
@@ -212,19 +227,18 @@ public class JsonLoader
 
 }
 
-/**
- * list of AudioParameters
- */
+/// <summary>
+/// Helper class for serializing the audio parameters
+/// </summary>
 [System.Serializable]
 public class ValueList
 {
     public AudioParameter[] values; /**< list of audio parameter values */
 }
 
-/**
- * audio parameters used in sound model to create
- * emotional sounds
- */
+/// <summary>
+/// Class for serializing the audio parameters
+/// </summary>
 [System.Serializable]
 public class AudioParameter {
 
@@ -240,12 +254,18 @@ public class AudioParameter {
     public string parvec; /**< parvec parameter for pd model */
 }
 
+/// <summary>
+///  Helper class for serializing the sample information
+/// </summary>
 [System.Serializable]
 public class SampleList
 {
     public SampleParameter[] values;
 }
 
+/// <summary>
+/// Class for serializing the sample informations
+/// </summary>
 [System.Serializable]
 public class SampleParameter
 {
