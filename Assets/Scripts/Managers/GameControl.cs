@@ -19,6 +19,7 @@ public class GameControl : MonoBehaviour
 
     public int visualization; /**< toggle variable for point label visualization*/
     public int representation; /**< toggle variable for russel or uniform representation */
+    public int soundSetting; /**< what sound producing method to pass to backernd */
 
     public Color favorite1Color; /**< color of favorite button 1*/ 
     public Color favorite2Color; /**< color of favorite button 2*/
@@ -73,7 +74,6 @@ public class GameControl : MonoBehaviour
     }
     public void restartTutorial()
     {
-        Debug.Log("HELLO");
         this.onBoardingFinished = false;
     }
 
@@ -102,6 +102,8 @@ public class GameControl : MonoBehaviour
         settings.onBoardingFinished = onBoardingFinished;
         settings.visualization = visualization;
         settings.representation = representation;
+
+        settings.soundSetting = soundSetting;
 
         settings.Favorite1Color = favorite1Color;
         settings.Favorite2Color = favorite2Color;
@@ -182,6 +184,7 @@ public class GameControl : MonoBehaviour
     [Serializable]
     public class PlayerSettings
     {
+        public int soundSetting; /**< toggle variable for switching between different sound modes */
         public bool onBoardingFinished;
         public int representation; /**< toggle variable for russel or uniform representation */
         public int visualization; /**< toggle variable for point label visualization*/
