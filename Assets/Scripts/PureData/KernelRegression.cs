@@ -3,22 +3,21 @@ using System.Linq;
 using UnityEngine;
 using System;
 
-/*
- * TODO: Find a way on how to deal with a sigma that would get too small
- * Debug by checking if param vector is exactly the emotion prototype when they are near to each other and small sigma
- * Store hardcoded pvecs in config file AND/OR load directly from .json?
- */
-
+/// <summary>
+/// Class for handling the kernel regression, including the regression itself, the helper functions
+/// as well as the mapping functions
+/// </summary>
 public class KernelRegression : MonoBehaviour
 {
-    private static String[] targets = { "happy", "surprised", "angry", "disgusted", "sad", "calm" };
+    private static String[] targets = { "happy", "surprised", "angry", "disgusted", "sad", "calm" }; 
+    private static int num_prototypes = 5;
     private double[] emotion_angles = { 11, 80, 172, 200, 236, 328 };
     private double[][] xvecs = new double[targets.Length][];
     private double[][] xvecs_unit = new double[targets.Length][];
     private double[][] xvecs_russell = new double[targets.Length][];
-    private double[][] pvec = new double[5][]; //magic number because pvec is hardcoded for now (but from a working kernel regression example)
+    private double[][] pvec = new double[num_prototypes][];
 
-    //struct object that contains all the parspect_abstract values
+    //struct object that contains all the parspect_abstract values that are used for the mapping
     struct parspect_abstract
     {
         string[] name;
@@ -67,9 +66,9 @@ public class KernelRegression : MonoBehaviour
                                                             new object[] {"voweldiff", -2.5, 2.5, "lin", 0, "delta" },
                                                             new object[] {"bright", 0.2, 1, "lin", 0.5, "arb.u." } }; */
 
-
-    // Use this for initialization
-    // On start: load csv data containing pattern into array
+    /// <summary>
+    /// Initialize input positions for kernel regression and load data from the .json files
+    /// </summary>
     void Awake()
     {
         //initialize struct
@@ -79,8 +78,7 @@ public class KernelRegression : MonoBehaviour
         string[] func = new string[] { "lin", "exp", "lin", "lin", "cube", "lin", "exp", "lin", "exp", "lin" };
         pa = new parspect_abstract(name, min, max, func);
 
-
-        //load the csv 
+        //load the data
         pvec = load_data();
 
         //create kernel regression input positions for unit distribution and russels angles
@@ -88,18 +86,23 @@ public class KernelRegression : MonoBehaviour
         int[] origin = new int[] { 0, 0 };
         for (int i = 0; i < targets.Length; i++)
         {
+            //Unit distribution with offset
             xvecs_unit[i] = new double[] { Math.Cos(2 * Math.PI * i / targets.Length + phase_offset),
                 Math.Sin(2 * Math.PI * i / targets.Length + phase_offset) };
 
+            //Russel distribution with angles
             xvecs_russell[i] = new double[] {origin[0]+Math.Cos((emotion_angles[i]*Math.PI)/180),
             origin[1]+Math.Sin((emotion_angles[i]*Math.PI)/180)};
         }
 
     }
 
-    //Load the data into the pvecs array
-    //use a hardcoded example or change the hardcoded value to false to lead it from the json example
-    //this order: "happy", "surprised", "angry", "disgusted", "sad", "calm"
+    /// <summary>
+    /// Load the data into the pvecs array by either using the hardcoded values or load them gfrom the json file. Target
+    /// emotions have the order: "happy", "surprised", "angry", "disgusted", "sad", "calm"
+    /// </summary>
+    /// <param name="hardcoded">If true, the hardcoded values are used for the pvec</param>
+    /// <returns>The pvec array</returns>
     private double[][] load_data(bool hardcoded = true)
     {
         if (hardcoded)
@@ -129,25 +132,33 @@ public class KernelRegression : MonoBehaviour
         }
     }
 
-    //Kernel function
-    //x = pvec. y = coordinate on circle
+    /// <summary>
+    /// Performs the kernel regression
+    /// </summary>
+    /// <param name="x">The pvec values</param>
+    /// <param name="y">The position on the circle</param>
+    /// <param name="sigma">Sigma value used in the regression</param>
+    /// <returns></returns>
     private double Kernel(double[] x, double[] y, double sigma = 1.0)
     {
-        //print(x[0].ToString() + " - " + x[1].ToString() + " this is the xvec");
-        //print(y[0].ToString() + " - " + y[1].ToString() + " this is the coordinate");
         double[] diff = x.Select((val, idx) => val - y[idx]).ToArray();
-        //print(diff[0].ToString() + " - " + diff[1].ToString() + " this is the diff");
         diff = diff.Select(val => val * val).ToArray(); //basically square element 
         double sum = diff[0] + diff[1];
 
         //sum *= 1000;
-
-        //print(Math.Exp(-0.5 * sum / Math.Pow(sigma, 2.0)).ToString()+" - " + sum.ToString());
         return Math.Exp(-0.5 * sum / Math.Pow(sigma, 2.0));
     }
 
     //Kernel routine function
-    public double[] Krm(double[] xvec, double sigma = 1.0, string xvecs_type = "unit", bool debug = false)
+    /// <summary>
+    /// The kernel regression method (krm) prepares and carries out the kernel regression
+    /// </summary>
+    /// <param name="xvec">The x,y-position on the wheel</param>
+    /// <param name="sigma">The sigmal value for the regression</param>
+    /// <param name="xvecs_type">"unit" for unit distributed input positions and "russell" for
+    /// the russel input positions</param>
+    /// <returns>Returns mapped values to be used in the pd patch</returns>
+    public double[] Krm(double[] xvec, double sigma = 1.0, string xvecs_type = "unit")
     {
         //set the ankerpoints
         if (xvecs_type == "unit") { xvecs = xvecs_unit; }
@@ -157,34 +168,27 @@ public class KernelRegression : MonoBehaviour
         int nr_emo_prototypes = xvecs.Length;
         double[] nom = new double[nr_synth_parameters];
         Array.Clear(nom, 0, nr_synth_parameters); //init array with zeroes
-        //print("sigma" + sigma.ToString());
+
         double den = 0.0;
-        //print("---");
         for (int i = 0; i < nr_emo_prototypes; i++)
         {
-            //print(i);
             double temp = Kernel(xvecs[i], xvec, sigma);
-            //print("temp: " + temp.ToString());
-            //nom = nom.Select((val, idx) => val + pvec[i].Select(p => p * temp).ToArray()[idx]).ToArray();
 
             double[] weighted_parameters_for_emotion_i = pvec[i].Select(p => p * temp).ToArray();
             nom = nom.Select((val, idx) => val + weighted_parameters_for_emotion_i[idx]).ToArray();
             den += temp;
         }
-        //print("nom end:" + nom[0].ToString());
         double[] krm_parvec = nom.Select(no => no / den).ToArray();
 
-        if (debug)
-        {
-            return krm_parvec;
-        }
-        else
-        {
-            return parmap(krm_parvec);
-        }
+        return parmap(krm_parvec);
 
     }
 
+    /// <summary>
+    /// Function to map the normed values from the regression to a range that is used by the pd synth 
+    /// </summary>
+    /// <param name="paramVec">The normed values from the KR</param>
+    /// <returns>Mapped values to be used in pd</returns>
     private double[] parmap(double[] paramVec)
     {
         double[] paramVec_mapped = new double[paramVec.Length];
@@ -223,6 +227,11 @@ public class KernelRegression : MonoBehaviour
         return paramVec_mapped;
     }
 
+    /// <summary>
+    /// Function to unmapp the paramVec values back to range [0,1]
+    /// </summary>
+    /// <param name="paramVec">The mapped paramVec values</param>
+    /// <returns>Returns unmapped paramVec values</returns>
     private double[] parunmap(double[] paramVec)
     {
         double[] paramVec_unmapped = new double[paramVec.Length];
@@ -263,40 +272,10 @@ public class KernelRegression : MonoBehaviour
         return paramVec_unmapped;
     }
 
-
-
-    public void debug(double[] paramVec, double[] xy)
-    {
-        double sigma = 0.03;
-        //compare distances
-        double[] dist_vec = new double[6];
-        int idx = 0;
-        foreach (double[] xv in xvecs)
-        {
-            //print(xv);
-            dist_vec[idx] = Math.Sqrt(Math.Pow(xy[0] - xv[0], 2)
-                + Math.Pow(xy[1] - xv[1], 2));
-            idx++;
-        }
-
-
-
-        int closest_idx = Array.IndexOf(dist_vec, dist_vec.Min());
-        double[] closes_emotion = xvecs[closest_idx];
-
-        double[] debug_vec = Krm(closes_emotion, sigma, get_xvecs_type(), true);
-
-        //print distances
-        idx = 0;
-        foreach (double val in debug_vec)
-        {
-            //print(Math.Abs(val - paramVec[idx]));
-            idx++;
-        }
-        //print("----");
-    }
-
-    //get the type of the ankerpoints, either unit distributed or from russell's angles
+    /// <summary>
+    /// Get the type of ankerpoints used. Either unit distributed or russell's angles
+    /// </summary>
+    /// <returns>Returns ankerpoint type</returns>
     public string get_xvecs_type()
     {
         if (xvecs == xvecs_unit)
@@ -309,7 +288,11 @@ public class KernelRegression : MonoBehaviour
         }
     }
 
-    //returns the emotion positions on the wheel
+    /// <summary>
+    /// Get the positions of the emotions acording to their ankerpoint type
+    /// </summary>
+    /// <param name="xvecs_type">The ankerpoint type</param>
+    /// <returns>Returns array of ankerpoint positions</returns>
     public double[][] get_emo_pos(string xvecs_type = "unit")
     {
         if (xvecs_type == "unit")
@@ -327,7 +310,10 @@ public class KernelRegression : MonoBehaviour
 
     }
 
-    //return vector of all emotional targets (for example sad, happy, disgusted, ...)
+    /// <summary>
+    /// Function to get the names of all emootional targets (sad, happy, disgusted, ...)
+    /// </summary>
+    /// <returns>Returns vector with emotional target names</returns>
     public string[] get_targets()
     {
         return targets;

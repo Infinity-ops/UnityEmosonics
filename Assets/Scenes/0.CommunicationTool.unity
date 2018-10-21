@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -347,6 +347,7 @@ GameObject:
   - component: {fileID: 194259101}
   - component: {fileID: 194259100}
   - component: {fileID: 194259098}
+  - component: {fileID: 194259099}
   m_Layer: 0
   m_Name: PureData
   m_TagString: Untagged
@@ -365,6 +366,86 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4367ed7caffa4584cbd042743113563e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &194259099
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 194259097}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &194259100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -378,10 +459,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settingsPath: Assets/PureDataSettings.asset
   listener:
-    transform: {fileID: 0}
-    position: {x: 0, y: 0, z: 0}
-    right: {x: 0, y: 0, z: 0}
-    pureData: {fileID: 0}
+    transform: {fileID: 1620855685}
+    position: {x: 0, y: 1, z: -10}
+    right: {x: 1, y: 0, z: 0}
+    pureData: {fileID: 194259100}
   filterRead: {fileID: 0}
   references:
     references: []
@@ -390,20 +471,20 @@ MonoBehaviour:
     pureData: {fileID: 194259100}
   generalSettings: {fileID: 11400000, guid: 3b1b19fa565880443aa882960dd5c503, type: 2}
   bridge:
-    sampleRate: 0
-    bufferSize: 0
-    bufferAmount: 0
-    initialized: 0
-    ticks: 0
-    pureData: {fileID: 0}
+    sampleRate: 48000
+    bufferSize: 1024
+    bufferAmount: 4
+    initialized: 1
+    ticks: 16
+    pureData: {fileID: 194259100}
   communicator:
-    pureData: {fileID: 0}
+    pureData: {fileID: 194259100}
   commandParser:
-    pureData: {fileID: 0}
+    pureData: {fileID: 194259100}
   patchManager:
-    pureData: {fileID: 0}
+    pureData: {fileID: 194259100}
   itemManager:
-    pureData: {fileID: 0}
+    pureData: {fileID: 194259100}
   infoManager:
     infos: []
     pureData: {fileID: 194259100}
@@ -428,7 +509,7 @@ MonoBehaviour:
     pureData: {fileID: 194259100}
   editorHelper:
     selection:
-    - {fileID: 882053648}
+    - {fileID: 1969833167}
     repaintDummy: 0
     repaint: 0
     pureDataIcon: {fileID: 0}
@@ -1397,6 +1478,7 @@ GameObject:
   - component: {fileID: 490990452}
   - component: {fileID: 490990451}
   - component: {fileID: 490990450}
+  - component: {fileID: 490990453}
   m_Layer: 5
   m_Name: GameButton
   m_TagString: Untagged
