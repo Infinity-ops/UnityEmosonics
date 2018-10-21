@@ -102,6 +102,7 @@ public class CommunicationWheel : MonoBehaviour, IPointerDownHandler, IPointerUp
         pd.change_xvecs_type(pointsSetting.EnumToString());
 
         soundSetting = (soundSetting)GameControl.control.soundSetting;
+        pd.switch_engines(soundSetting.EnumToString());
 
         var positions = pd.get_emo_pos(pointsSetting.EnumToString());
         var emotions = pd.get_targets();
@@ -126,6 +127,7 @@ public class CommunicationWheel : MonoBehaviour, IPointerDownHandler, IPointerUp
         if ((soundSetting) GameControl.control.soundSetting != soundSetting)
         {
             soundSetting = (soundSetting)GameControl.control.soundSetting;
+            pd.switch_engines(soundSetting.EnumToString());
         }
         if ((typeSetting)GameControl.control.visualization != pointsSetting)
         {
