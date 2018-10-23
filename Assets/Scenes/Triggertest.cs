@@ -26,14 +26,14 @@ public class Triggertest : MonoBehaviour {
        // wrongHit.clip = myAudioClip;
         rs = GameObject.Find("RandomSound").GetComponent<RandomSound>();
         errorImage.enabled = false;
-     //errorImage1.enabled = true;//Removetest//
-        crosshairRect = errorImage.GetComponent<RectTransform>();
-       // crosshairRect.sizeDelta = new Vector2(50, 50);
-      //crosshairRect1 = errorImage1.GetComponent<RectTransform>();//Removetest//
-    // crosshairRect1.sizeDelta = new Vector2(50, 50);//Removetest//
-       //crosshairRect.position = new Vector3(200,200, 0);//Removetest//
-       //crosshairRect1.position = new Vector3(0, 0, 0);//Removetest//
-        test = false;
+        //errorImage1.enabled = true;//Removetest//
+      crosshairRect = errorImage.GetComponent<RectTransform>(); 
+         // crosshairRect.sizeDelta = new Vector2(50, 50);
+         //crosshairRect1 = errorImage1.GetComponent<RectTransform>();//Removetest//
+         // crosshairRect1.sizeDelta = new Vector2(50, 50);//Removetest//
+         //crosshairRect.position = new Vector3(200,200, 0);//Removetest//
+         //crosshairRect1.position = new Vector3(0, 0, 0);//Removetest//
+         test = false;
         testPass2 = false;
     }
 
@@ -96,7 +96,7 @@ public class Triggertest : MonoBehaviour {
                 Debug.Log("MMMMAN" +ff);
                 Debug.Log("Screen Width : " + Screen.width);
                 Debug.Log("Screen Height : " + Screen.height);
-               crosshairRect.position = new Vector3((Screen.width/2) +(height* ff.x), (Screen.height /2)+ (height*ff.y), 3.2f);
+                crosshairRect.position = new Vector3((Screen.width/2) +(height* ff.x), (Screen.height /2)+ (height*ff.y), 3.2f);
                 wrongHit = GetComponent<AudioSource>();
                 wrongHit.volume = 1;
                 wrongHit.Play();

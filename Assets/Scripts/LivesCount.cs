@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class LivesCount : MonoBehaviour
 {
-    public GameObject ball;
-    public GameObject panel;
+    public GameObject panel;  
     public static int nextLevel; //for shifting automatically to next level
     public static int livesValue = 3;
     public static int levelIncre =1;
