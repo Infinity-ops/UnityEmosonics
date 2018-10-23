@@ -693,7 +693,7 @@ MonoBehaviour:
     pureData: {fileID: 194259100}
   editorHelper:
     selection:
-    - {fileID: 2064099244}
+    - {fileID: 369036433}
     repaintDummy: 0
     repaint: 0
     pureDataIcon: {fileID: 0}
@@ -1463,7 +1463,7 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Synthatic
+    - m_Text: Synthetic
       m_Image: {fileID: 0}
     - m_Text: Vocal
       m_Image: {fileID: 0}
@@ -3743,7 +3743,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Synthatic
+  m_Text: Synthetic
 --- !u!222 &1079580443
 CanvasRenderer:
   m_ObjectHideFlags: 0

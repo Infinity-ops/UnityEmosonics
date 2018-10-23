@@ -9,7 +9,7 @@ using UnityEngine.UI;
 /** different representation options */
 public enum typeSetting { russell = 0, unit = 1 }
 
-public enum soundSetting { synthatic = 0, vocal = 1, inference = 2}
+public enum soundSetting { synthetic = 0, vocal = 1, inference = 2}
 
 /**
  * colored wheel which allows exploration of an emotional
