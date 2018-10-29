@@ -3425,8 +3425,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3a8eb2191732934496713f370b1f4c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onBoardingFinished: 0
   visualization: 0
   representation: 0
+  soundSetting: 0
   favorite1Color: {r: 0, g: 0, b: 0, a: 0}
   favorite2Color: {r: 0, g: 0, b: 0, a: 0}
   favorite3Color: {r: 0, g: 0, b: 0, a: 0}

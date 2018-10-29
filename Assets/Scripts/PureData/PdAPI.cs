@@ -40,8 +40,8 @@ public class PdAPI : MonoBehaviour
         //dirty hack to make the audiosource work
         SceneManager.LoadScene(0);
 
-        audioSource = GetComponent<AudioSource>();
-        audioSource.volume = 1f;
+        // audioSource = GetComponent<AudioSource>();
+        // audioSource.volume = 1f;
 
         kr = gameObject.AddComponent<KernelRegression>();
         PureData.OpenPatch("abstractlatest");
@@ -150,8 +150,8 @@ public class PdAPI : MonoBehaviour
         {
             
             AudioClip clip = (AudioClip)Resources.Load("samples/"+filename.Remove(filename.Length-4));
-            audioSource.Stop();
-            audioSource.PlayOneShot(clip);
+            // audioSource.Stop();
+            // audioSource.PlayOneShot(clip);
         }
 
        
