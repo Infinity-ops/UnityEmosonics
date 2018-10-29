@@ -14,7 +14,7 @@ public class GameController : MonoBehaviour {
     public static bool check;
     // Use this for initialization
     void Start () {
-        check = false;
+        //check = false;
         //Parameter Initialization for Game
         //GameCount.scoreValue = 0;
         LivesCount.livesValue = 3;
@@ -27,7 +27,7 @@ public class GameController : MonoBehaviour {
             box = TestLevelSlide.n1;
             print("Hey inga paaru " + box);
             check = true;
-            Debug.Log(box);
+            Debug.Log(check);
             distance = 2.5f;
             size = 0.5f;
            

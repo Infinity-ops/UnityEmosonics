@@ -41,7 +41,7 @@ public class LivesCount : MonoBehaviour
     {
         if (neverDone)
         {
-            if (Duplicator.Game12Over == true) {
+            if (GameManagerTool.Game12Over == true) {
                 gameStatus.text = "Successfully Completed all Levels!";
             }
             if (livesValue >= 0)

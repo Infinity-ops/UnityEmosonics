@@ -5,9 +5,11 @@ using UnityEngine.UI;
 
 public class Triggertest : MonoBehaviour {
     public static int cloneDesCount;
-    [SerializeField] private RandomSound rs;
-    [SerializeField] private Image errorImage;
-   [SerializeField] private Image errorImage1;  //Removetest//
+    [SerializeField]
+    private RandomSound rs;
+   [SerializeField]
+    private Image errorImage;
+   //[SerializeField] private Image errorImage1;  //Removetest//
     public static bool testPass2;
     private RectTransform crosshairRect;
    private RectTransform crosshairRect1; //Removetest//
@@ -27,7 +29,7 @@ public class Triggertest : MonoBehaviour {
         rs = GameObject.Find("RandomSound").GetComponent<RandomSound>();
         errorImage.enabled = false;
         //errorImage1.enabled = true;//Removetest//
-      crosshairRect = errorImage.GetComponent<RectTransform>(); 
+         crosshairRect = errorImage.GetComponent<RectTransform>(); 
          // crosshairRect.sizeDelta = new Vector2(50, 50);
          //crosshairRect1 = errorImage1.GetComponent<RectTransform>();//Removetest//
          // crosshairRect1.sizeDelta = new Vector2(50, 50);//Removetest//
@@ -46,7 +48,7 @@ public class Triggertest : MonoBehaviour {
         {
            
             
-            if((this.gameObject.transform.position.x == Duplicator.xrand) && (this.gameObject.transform.position.y == Duplicator.yrand)) //correct hit
+            if((this.gameObject.transform.position.x == GameManagerTool.xrand) && (this.gameObject.transform.position.y == GameManagerTool.yrand)) //correct hit
             {
                 rs.play();
                 test = true;
@@ -86,11 +88,9 @@ public class Triggertest : MonoBehaviour {
                 Debug.Log("correcthit--cloneDestroy" + cloneDesCount);
 
             }
-            if ((this.gameObject.transform.position.x != Duplicator.xrand) || (this.gameObject.transform.position.y != Duplicator.yrand))
+            if ((this.gameObject.transform.position.x != GameManagerTool.xrand) || (this.gameObject.transform.position.y != GameManagerTool.yrand))
             {
-               
                 height = Screen.height /10;
-               
                 Vector3 ff;
                 ff = this.gameObject.transform.localPosition;
                 Debug.Log("MMMMAN" +ff);

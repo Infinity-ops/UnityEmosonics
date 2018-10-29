@@ -2,9 +2,9 @@
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+public class GameManager_Delete : MonoBehaviour
 {
-   public static GameManager Instance;
+   public static GameManager_Delete Instance;
 
    public Text ScoreValueText;
    public Button ResetButton;

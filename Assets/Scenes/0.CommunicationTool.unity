@@ -354,7 +354,7 @@ MonoBehaviour:
     pureData: {fileID: 194259100}
   editorHelper:
     selection:
-    - {fileID: 293803654}
+    - {fileID: 102900000, guid: c8a407571a8ec3047aea763426d7dda8, type: 3}
     repaintDummy: 0
     repaint: 0
     pureDataIcon: {fileID: 0}
@@ -985,7 +985,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &490990449
 RectTransform:
   m_ObjectHideFlags: 0

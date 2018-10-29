@@ -23,7 +23,7 @@ public class RandomSound : MonoBehaviour
     // Update is called once per frame
     public void play()
     {
-        double[] pos = { Duplicator.xrand, Duplicator.yrand };
+        double[] pos = { GameManagerTool.xrand, GameManagerTool.yrand };
         // double[] pos = new double[] { Random.Range(-1f, 1f), Random.Range(-1f, 1f) };
        
         pd.changeValue(pos);

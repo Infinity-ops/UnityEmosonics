@@ -21,21 +21,21 @@ public class AttemptBall : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (Duplicator.realAttemptBall == true || LivesCount.nextLevelBool == true)
+        if (GameManagerTool.realAttemptBall == true || LivesCount.nextLevelBool == true)
         {
              ball1 = GameObject.FindWithTag("ball1");
              ball2 = GameObject.FindWithTag("ball2");
              ball3 = GameObject.FindWithTag("ball3");
             //i = gameObject.Length;
-            Duplicator.realAttemptBall = false;
+            GameManagerTool.realAttemptBall = false;
             LivesCount.nextLevelBool = false;
         }
 
-        if (TestColliding.testPass1 == true || Duplicator.testPass3 == true)
+        if (GameCollider.testPass1 == true || GameManagerTool.testPass3 == true)
         {
 
-            TestColliding.testPass1 = false;
-            Duplicator.testPass3 = false;
+            GameCollider.testPass1 = false;
+            GameManagerTool.testPass3 = false;
             LivesCount.livesValue -= 1;
             destroy = true;
             if (destroy)
