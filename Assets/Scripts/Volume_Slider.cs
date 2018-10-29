@@ -18,6 +18,7 @@ public class Volume_Slider : MonoBehaviour
 
         // Assign Audio Source component to control it
         audioSrc = GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame

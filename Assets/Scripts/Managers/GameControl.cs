@@ -15,8 +15,11 @@ public class GameControl : MonoBehaviour
 {
     private bool startup = true; /**< toggle variable if app is just started up */
 
+    public bool onBoardingFinished = false; /**< Toggle variable if onboarding isn't finished */
+
     public int visualization; /**< toggle variable for point label visualization*/
     public int representation; /**< toggle variable for russel or uniform representation */
+    public int soundSetting; /**< what sound producing method to pass to backernd */
 
     public Color favorite1Color; /**< color of favorite button 1*/ 
     public Color favorite2Color; /**< color of favorite button 2*/
@@ -69,6 +72,10 @@ public class GameControl : MonoBehaviour
     {
         Save();
     }
+    public void restartTutorial()
+    {
+        this.onBoardingFinished = false;
+    }
 
     /**
      * saves settings to binary file
@@ -92,8 +99,11 @@ public class GameControl : MonoBehaviour
 
         PlayerSettings settings = new PlayerSettings();
 
+        settings.onBoardingFinished = onBoardingFinished;
         settings.visualization = visualization;
         settings.representation = representation;
+
+        settings.soundSetting = soundSetting;
 
         settings.Favorite1Color = favorite1Color;
         settings.Favorite2Color = favorite2Color;
@@ -141,6 +151,8 @@ public class GameControl : MonoBehaviour
             file.Close();
 
             visualization = settings.visualization;
+            representation = settings.representation;
+            onBoardingFinished = settings.onBoardingFinished;
 
             favorite1Color = settings.Favorite1Color;
             favorite2Color = settings.Favorite2Color;
@@ -159,10 +171,10 @@ public class GameControl : MonoBehaviour
         else
         {
             visualization = 0;
-            favorite1Color = new Color(1.0F, 1.0F, 1.0F, 1.0F);
-            favorite2Color = new Color(1.0F, 1.0F, 1.0F, 1.0F);
-            favorite3Color = new Color(1.0F, 1.0F, 1.0F, 1.0F);
-            favorite4Color = new Color(1.0F, 1.0F, 1.0F, 1.0F);
+            favorite1Color = new Color(1.0F,1.0F,1.0F);
+            favorite2Color = new Color(1.0F, 1.0F, 1.0F);
+            favorite3Color = new Color(1.0F, 1.0F, 1.0F);
+            favorite4Color = new Color(1.0F, 1.0F, 1.0F);
         }
     }
 
@@ -172,6 +184,8 @@ public class GameControl : MonoBehaviour
     [Serializable]
     public class PlayerSettings
     {
+        public int soundSetting; /**< toggle variable for switching between different sound modes */
+        public bool onBoardingFinished;
         public int representation; /**< toggle variable for russel or uniform representation */
         public int visualization; /**< toggle variable for point label visualization*/
         private Color favorite1Color;

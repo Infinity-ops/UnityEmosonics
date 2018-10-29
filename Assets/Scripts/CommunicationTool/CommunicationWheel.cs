@@ -9,6 +9,8 @@ using UnityEngine.UI;
 /** different representation options */
 public enum typeSetting { russell = 0, unit = 1 }
 
+public enum soundSetting { synthetic = 0, vocal = 1, inference = 2}
+
 /**
  * colored wheel which allows exploration of an emotional
  * sound space and production of sounds
@@ -24,6 +26,7 @@ public class CommunicationWheel : MonoBehaviour, IPointerDownHandler, IPointerUp
     private GameObject anchorRepresentation;
 
     private typeSetting pointsSetting;
+    private soundSetting soundSetting;
 
     Color[] Data;
     Image ImageRenderer;
@@ -89,13 +92,18 @@ public class CommunicationWheel : MonoBehaviour, IPointerDownHandler, IPointerUp
         text  = (GameObject)Instantiate(Resources.Load("Prefabs/Text"));
         if (GameControl.control.representation == 0) anchorRepresentation = anchor;
         else anchorRepresentation = text;
-
+        
         circle = GetComponent<RectTransform>();
         crosshairRect = crosshair.GetComponent<RectTransform>();
         ImageRenderer = circle.GetComponent<Image>();
         Data = ImageRenderer.sprite.texture.GetPixels();
         pointsSetting = (typeSetting) GameControl.control.visualization;
+
         pd.change_xvecs_type(pointsSetting.EnumToString());
+
+        soundSetting = (soundSetting)GameControl.control.soundSetting;
+        pd.switch_engines(soundSetting.EnumToString());
+
         var positions = pd.get_emo_pos(pointsSetting.EnumToString());
         var emotions = pd.get_targets();
         for (int i = 0; i < positions.Length; i++)
@@ -116,6 +124,11 @@ public class CommunicationWheel : MonoBehaviour, IPointerDownHandler, IPointerUp
      */
     public void checkSettingsChanges()
     {
+        if ((soundSetting) GameControl.control.soundSetting != soundSetting)
+        {
+            soundSetting = (soundSetting)GameControl.control.soundSetting;
+            pd.switch_engines(soundSetting.EnumToString());
+        }
         if ((typeSetting)GameControl.control.visualization != pointsSetting)
         {
             pd.change_xvecs_type(pointsSetting.EnumToString());
