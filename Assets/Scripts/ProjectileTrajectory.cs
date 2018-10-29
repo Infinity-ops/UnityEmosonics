@@ -5,8 +5,9 @@ public class ProjectileTrajectory : MonoBehaviour
 {
    public SlingShot Slingshot;
    public GameObject PointPrefab;
+    public GameObject PointPrefab1;
     //private string TestDestroy;
-   public int PointNumber;
+    public int PointNumber;
    public float InitialPointSize = 0.5f;
    public List<Transform> PointsList;
     public GameObject DragHandle;
@@ -14,27 +15,42 @@ public class ProjectileTrajectory : MonoBehaviour
     private Vector3 _updatedPosition = new Vector3(0, 0, 0);
     bool activeSelf;
 
-   public void CreatePoints()
+    private bool canFade;
+    private Color alphaColor;
+    private float timeToFade =1.0f;
+
+    public void CreatePoints()
    {
            PointsList = new List<Transform>();
-
-            for (var i = 0; i < PointNumber / 1.75f; i++)
+            float k=0;
+            for (k = 0;k < (PointNumber / 1.75f); k++)
             {
-                var _point = Instantiate(PointPrefab, transform.position, Quaternion.identity).transform;
+                //k += Time.deltaTime * timeToFade;
+                 var _point = Instantiate(PointPrefab, transform.position, Quaternion.identity).transform;
                 _point.localScale = new Vector3
                 (
-                   InitialPointSize / (i + 1) + (InitialPointSize / 2),
-                   InitialPointSize / (i + 1) + (InitialPointSize / 2),
-                   InitialPointSize / (i + 1) + (InitialPointSize / 2)
+                   InitialPointSize / (k + 1) + (InitialPointSize / 2),
+                   InitialPointSize / (k + 1) + (InitialPointSize / 2),
+                   InitialPointSize / (k + 1) + (InitialPointSize / 2)
                 );
-
-                _point.transform.parent = transform;
-
+            print(Time.deltaTime+k);
+             alphaColor = _point.GetComponent<MeshRenderer>().material.color;
+            _point.GetComponent<MeshRenderer>().material.color = Color.Lerp(_point.GetComponent<MeshRenderer>().material.color, Color.white,  0.1f+k/timeToFade);
+            _point.transform.parent = transform;
+            timeToFade=timeToFade + 1.7f;
                 //Debug.Log(transform.position);
                 PointsList.Add(_point);
             }
-        
-   }
+        var _point1 = Instantiate(PointPrefab1, transform.position, Quaternion.identity).transform;
+        _point1.localScale = new Vector3
+        (
+           InitialPointSize / (k + 1) + (InitialPointSize * 1.3f / 2),
+           InitialPointSize / (k + 1) + (InitialPointSize * 1.3f / 2),
+           InitialPointSize / (k + 1) + (InitialPointSize * 1.3f/ 2)
+        );
+        _point1.GetComponent<Renderer>().material.color = Color.red;
+        PointsList.Add(_point1);
+    }
 
     public void UpdatePoints()
     {
@@ -51,10 +67,12 @@ public class ProjectileTrajectory : MonoBehaviour
 
                     PointsList[i].transform.position = _updatedPosition;
                     PointsList[i].gameObject.SetActive(true);
+
                 }
             }
             else
             {
+                
                 for (var i = 0; i < PointsList.Count; i++)
                 {
                     PointsList[i].gameObject.SetActive(false);
@@ -69,7 +87,10 @@ public class ProjectileTrajectory : MonoBehaviour
    private void Start()
    {
       CreatePoints();
-   }
+      canFade = false;
+        
+        
+    }
 
    private void Update()
    {

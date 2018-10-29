@@ -5,7 +5,7 @@ using UnityEngine;
 //This script is for "GameObject:Collider".
 //Game Object 'Collider' includes a Box Collider which triggers if ball hits outside the Dart Board.
 
-public class TestColliding : MonoBehaviour {
+public class GameCollider : MonoBehaviour {
    
     public static bool testPass1; //AttemptBall Delete
     // Use this for initialization
