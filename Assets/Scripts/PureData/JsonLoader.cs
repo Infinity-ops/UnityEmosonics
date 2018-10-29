@@ -207,6 +207,13 @@ public class JsonLoader
         foreach(string file in filenames)
         {
             WWW www = new WWW(file);
+
+            while(!www.isDone)
+            {
+                continue;
+            }
+
+
             if (i == 0)
             {
                 jsonString = www.text;
