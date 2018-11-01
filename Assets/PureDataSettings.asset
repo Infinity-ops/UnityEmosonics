@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxVoices: 100
   masterVolume: 1
-  patchesPath: Patches
+  patchesPath: 
   resourcesPath: Patches/Unity/Internal/uresources.pd
   speedOfSound: 343
   pureData: {fileID: 0}
