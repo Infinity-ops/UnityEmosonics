@@ -113,6 +113,138 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &14382019
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 14382020}
+  - component: {fileID: 14382021}
+  m_Layer: 0
+  m_Name: Water2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &14382020
+Transform:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 14382019}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1068956898}
+  m_RootOrder: 32
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &14382021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 14382019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info:
+    name: Water2
+    path: samples/Water2
+    samples: 5644800
+    frequency: 44100
+    channels: 2
+    length: 128
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: 0.01
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: 0.75
+    pureData: {fileID: 1384050510}
+  pureData: {fileID: 1384050510}
+--- !u!1 &25436860
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 25436861}
+  - component: {fileID: 25436862}
+  m_Layer: 0
+  m_Name: angry_voc_206
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &25436861
+Transform:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 25436860}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1068956898}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &25436862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 25436860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info:
+    name: angry_voc_206
+    path: samples/angry_voc_206
+    samples: 64512
+    frequency: 48000
+    channels: 2
+    length: 1.344
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: 0.01
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: 0.75
+    pureData: {fileID: 1384050510}
+  pureData: {fileID: 1384050510}
 --- !u!1 &53879760
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,7 +444,7 @@ Transform:
   - {fileID: 183029315}
   - {fileID: 1608961661}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &146981581
 Prefab:
@@ -351,7 +483,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 07b0a6c493e473c4ea9a60f39e770449, type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 07b0a6c493e473c4ea9a60f39e770449, type: 3}
       propertyPath: m_LocalScale.y
@@ -399,7 +531,7 @@ RectTransform:
   m_LocalScale: {x: 1.0817008, y: 1.0505925, z: 0.61237246}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -417,6 +549,72 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb245dd6c837f1146be79a5258c0bf56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &151235011
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 151235012}
+  - component: {fileID: 151235013}
+  m_Layer: 0
+  m_Name: sad_inf_400
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &151235012
+Transform:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 151235011}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1068956898}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &151235013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 151235011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info:
+    name: sad_inf_400
+    path: samples/sad_inf_400
+    samples: 55295
+    frequency: 48000
+    channels: 2
+    length: 1.152
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: 0.01
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: 0.75
+    pureData: {fileID: 1384050510}
+  pureData: {fileID: 1384050510}
 --- !u!1 &151738317
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,6 +771,72 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 183029314}
   m_Mesh: {fileID: 0}
+--- !u!1 &186868484
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 186868485}
+  - component: {fileID: 186868486}
+  m_Layer: 0
+  m_Name: angry_voc_204
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &186868485
+Transform:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 186868484}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1068956898}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &186868486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 186868484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info:
+    name: angry_voc_204
+    path: samples/angry_voc_204
+    samples: 102527
+    frequency: 48000
+    channels: 2
+    length: 2.136
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: 0.01
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: 0.75
+    pureData: {fileID: 1384050510}
+  pureData: {fileID: 1384050510}
 --- !u!1 &195907181
 GameObject:
   m_ObjectHideFlags: 0
@@ -1139,6 +1403,72 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &291524377
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 291524378}
+  - component: {fileID: 291524379}
+  m_Layer: 0
+  m_Name: surprised_voc_108
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &291524378
+Transform:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 291524377}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1068956898}
+  m_RootOrder: 31
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &291524379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 291524377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info:
+    name: surprised_voc_108
+    path: samples/surprised_voc_108
+    samples: 82944
+    frequency: 48000
+    channels: 1
+    length: 1.728
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: 0.01
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: 0.75
+    pureData: {fileID: 1384050510}
+  pureData: {fileID: 1384050510}
 --- !u!1 &360504915
 GameObject:
   m_ObjectHideFlags: 0
@@ -1561,7 +1891,7 @@ Transform:
   m_LocalScale: {x: 0.4743754, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &463295097
 GameObject:
@@ -1676,6 +2006,204 @@ MonoBehaviour:
   playGainButton: {fileID: 427590887}
   errorImage1: {fileID: 1359525340}
   trajectile: {fileID: 1452502559}
+--- !u!1 &561847298
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 561847299}
+  - component: {fileID: 561847300}
+  m_Layer: 0
+  m_Name: calm_voc_501
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &561847299
+Transform:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 561847298}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1068956898}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &561847300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 561847298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info:
+    name: calm_voc_501
+    path: samples/calm_voc_501
+    samples: 93312
+    frequency: 48000
+    channels: 1
+    length: 1.944
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: 0.01
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: 0.75
+    pureData: {fileID: 1384050510}
+  pureData: {fileID: 1384050510}
+--- !u!1 &565289977
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 565289978}
+  - component: {fileID: 565289979}
+  m_Layer: 0
+  m_Name: wrongSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &565289978
+Transform:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 565289977}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1384050511}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &565289979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 565289977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info:
+    name: wrongSound
+    path: wrongSound
+    samples: 104738
+    frequency: 44100
+    channels: 2
+    length: 2.3750114
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: 0.01
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: 0.75
+    pureData: {fileID: 1384050510}
+  pureData: {fileID: 1384050510}
+--- !u!1 &572592830
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 572592831}
+  - component: {fileID: 572592832}
+  m_Layer: 0
+  m_Name: disgusted_inf_300
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &572592831
+Transform:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 572592830}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1068956898}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &572592832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 572592830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info:
+    name: disgusted_inf_300
+    path: samples/disgusted_inf_300
+    samples: 93312
+    frequency: 48000
+    channels: 2
+    length: 1.944
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: 0.01
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: 0.75
+    pureData: {fileID: 1384050510}
+  pureData: {fileID: 1384050510}
 --- !u!1 &623566945
 GameObject:
   m_ObjectHideFlags: 0
@@ -1867,6 +2395,72 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 628232874}
+--- !u!1 &641819706
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 641819707}
+  - component: {fileID: 641819708}
+  m_Layer: 0
+  m_Name: happy_voc_003
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &641819707
+Transform:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 641819706}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1068956898}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &641819708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 641819706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info:
+    name: happy_voc_003
+    path: samples/happy_voc_003
+    samples: 43776
+    frequency: 48000
+    channels: 2
+    length: 0.912
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: 0.01
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: 0.75
+    pureData: {fileID: 1384050510}
+  pureData: {fileID: 1384050510}
 --- !u!1 &669311946
 GameObject:
   m_ObjectHideFlags: 0
@@ -1907,7 +2501,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &669311949
 MonoBehaviour:
@@ -1920,6 +2514,66 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 382b081633adb0a4eaa94edb2c861bec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &697926565
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 697926567}
+  - component: {fileID: 697926566}
+  m_Layer: 0
+  m_Name: GameControl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &697926566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 697926565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3a8eb2191732934496713f370b1f4c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onBoardingFinished: 0
+  visualization: 0
+  representation: 0
+  soundSetting: 0
+  favorite1Color: {r: 0, g: 0, b: 0, a: 0}
+  favorite2Color: {r: 0, g: 0, b: 0, a: 0}
+  favorite3Color: {r: 0, g: 0, b: 0, a: 0}
+  favorite4Color: {r: 0, g: 0, b: 0, a: 0}
+  favorite1Pos: {x: 0, y: 0, z: 0}
+  favorite2Pos: {x: 0, y: 0, z: 0}
+  favorite3Pos: {x: 0, y: 0, z: 0}
+  favorite4Pos: {x: 0, y: 0, z: 0}
+  favorite1Sound: {x: 0, y: 0}
+  favorite2Sound: {x: 0, y: 0}
+  favorite3Sound: {x: 0, y: 0}
+  favorite4Sound: {x: 0, y: 0}
+  crosshairPosition: {x: 0, y: 0, z: 0}
+  soundPosition: {x: 0, y: 0}
+  lastCrosshairPos: {x: 0, y: 0, z: 0}
+  lastSoundPosition: {x: 0, y: 0}
+--- !u!4 &697926567
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 697926565}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &702308672
 GameObject:
   m_ObjectHideFlags: 0
@@ -2001,6 +2655,72 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &723153283
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 723153284}
+  - component: {fileID: 723153285}
+  m_Layer: 0
+  m_Name: calm_inf_500
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &723153284
+Transform:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 723153283}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1068956898}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &723153285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 723153283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info:
+    name: calm_inf_500
+    path: samples/calm_inf_500
+    samples: 84096
+    frequency: 48000
+    channels: 2
+    length: 1.752
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: 0.01
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: 0.75
+    pureData: {fileID: 1384050510}
+  pureData: {fileID: 1384050510}
 --- !u!1001 &726253155
 Prefab:
   m_ObjectHideFlags: 0
@@ -2047,6 +2767,72 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b4c07d8556d925f439ca0832f0571c77, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &774125052
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 774125053}
+  - component: {fileID: 774125054}
+  m_Layer: 0
+  m_Name: angry_inf_201
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &774125053
+Transform:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 774125052}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1068956898}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &774125054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 774125052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info:
+    name: angry_inf_201
+    path: samples/angry_inf_201
+    samples: 59904
+    frequency: 48000
+    channels: 1
+    length: 1.248
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: 0.01
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: 0.75
+    pureData: {fileID: 1384050510}
+  pureData: {fileID: 1384050510}
 --- !u!1001 &813326389
 Prefab:
   m_ObjectHideFlags: 0
@@ -2084,7 +2870,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4335824722747074, guid: d6ae00742b188a74b9b712da64d52491, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1086132943013560, guid: d6ae00742b188a74b9b712da64d52491, type: 2}
       propertyPath: m_IsActive
@@ -2149,6 +2935,204 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6ae00742b188a74b9b712da64d52491, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &822996518
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 822996519}
+  - component: {fileID: 822996520}
+  m_Layer: 0
+  m_Name: surprised_inf_102
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &822996519
+Transform:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 822996518}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1068956898}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &822996520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 822996518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info:
+    name: surprised_inf_102
+    path: samples/surprised_inf_102
+    samples: 40320
+    frequency: 48000
+    channels: 2
+    length: 0.84
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: 0.01
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: 0.75
+    pureData: {fileID: 1384050510}
+  pureData: {fileID: 1384050510}
+--- !u!1 &832259629
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 832259630}
+  - component: {fileID: 832259631}
+  m_Layer: 0
+  m_Name: Leaf2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &832259630
+Transform:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 832259629}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1068956898}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &832259631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 832259629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info:
+    name: Leaf2
+    path: samples/Leaf2
+    samples: 5644800
+    frequency: 44100
+    channels: 2
+    length: 128
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: 0.01
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: 0.75
+    pureData: {fileID: 1384050510}
+  pureData: {fileID: 1384050510}
+--- !u!1 &848858651
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 848858652}
+  - component: {fileID: 848858653}
+  m_Layer: 0
+  m_Name: happy_voc_004
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &848858652
+Transform:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 848858651}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1068956898}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &848858653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 848858651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info:
+    name: happy_voc_004
+    path: samples/happy_voc_004
+    samples: 97920
+    frequency: 48000
+    channels: 2
+    length: 2.04
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: 0.01
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: 0.75
+    pureData: {fileID: 1384050510}
+  pureData: {fileID: 1384050510}
 --- !u!1 &857481099
 GameObject:
   m_ObjectHideFlags: 0
@@ -2177,6 +3161,138 @@ Transform:
   m_Father: {fileID: 92095376}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &857677866
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 857677867}
+  - component: {fileID: 857677868}
+  m_Layer: 0
+  m_Name: happy_inf_001
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &857677867
+Transform:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 857677866}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1068956898}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &857677868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 857677866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info:
+    name: happy_inf_001
+    path: samples/happy_inf_001
+    samples: 81792
+    frequency: 48000
+    channels: 2
+    length: 1.704
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: 0.01
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: 0.75
+    pureData: {fileID: 1384050510}
+  pureData: {fileID: 1384050510}
+--- !u!1 &885128905
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 885128906}
+  - component: {fileID: 885128907}
+  m_Layer: 0
+  m_Name: surprised_voc_107
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &885128906
+Transform:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885128905}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1068956898}
+  m_RootOrder: 30
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &885128907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885128905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info:
+    name: surprised_voc_107
+    path: samples/surprised_voc_107
+    samples: 76032
+    frequency: 48000
+    channels: 2
+    length: 1.584
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: 0.01
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: 0.75
+    pureData: {fileID: 1384050510}
+  pureData: {fileID: 1384050510}
 --- !u!1 &887804761
 GameObject:
   m_ObjectHideFlags: 0
@@ -2474,7 +3590,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4860891706016060, guid: ff5d7016cbc89cb43beebd143e571c6c, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 114120479821866308, guid: ff5d7016cbc89cb43beebd143e571c6c,
         type: 2}
@@ -2506,6 +3622,265 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff5d7016cbc89cb43beebd143e571c6c, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &986734096
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 986734097}
+  - component: {fileID: 986734098}
+  m_Layer: 0
+  m_Name: sad_voc_403
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &986734097
+Transform:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 986734096}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1068956898}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &986734098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 986734096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info:
+    name: sad_voc_403
+    path: samples/sad_voc_403
+    samples: 92160
+    frequency: 48000
+    channels: 2
+    length: 1.92
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: 0.01
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: 0.75
+    pureData: {fileID: 1384050510}
+  pureData: {fileID: 1384050510}
+--- !u!1 &1016614212
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1016614213}
+  - component: {fileID: 1016614214}
+  m_Layer: 0
+  m_Name: surprised_voc_106
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1016614213
+Transform:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1016614212}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1068956898}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1016614214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1016614212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info:
+    name: surprised_voc_106
+    path: samples/surprised_voc_106
+    samples: 66816
+    frequency: 48000
+    channels: 2
+    length: 1.392
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: 0.01
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: 0.75
+    pureData: {fileID: 1384050510}
+  pureData: {fileID: 1384050510}
+--- !u!1 &1049577599
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1049577600}
+  - component: {fileID: 1049577601}
+  m_Layer: 0
+  m_Name: angry_inf_200
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1049577600
+Transform:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1049577599}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1068956898}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1049577601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1049577599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info:
+    name: angry_inf_200
+    path: samples/angry_inf_200
+    samples: 84096
+    frequency: 48000
+    channels: 1
+    length: 1.752
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: 0.01
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: 0.75
+    pureData: {fileID: 1384050510}
+  pureData: {fileID: 1384050510}
+--- !u!1 &1068956897
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1068956898}
+  m_Layer: 0
+  m_Name: samples
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1068956898
+Transform:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1068956897}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1049577600}
+  - {fileID: 774125053}
+  - {fileID: 1409077406}
+  - {fileID: 1934462347}
+  - {fileID: 186868485}
+  - {fileID: 1123543637}
+  - {fileID: 25436861}
+  - {fileID: 723153284}
+  - {fileID: 561847299}
+  - {fileID: 1752529057}
+  - {fileID: 572592831}
+  - {fileID: 1758217275}
+  - {fileID: 1166116869}
+  - {fileID: 857677867}
+  - {fileID: 1291904242}
+  - {fileID: 641819707}
+  - {fileID: 848858652}
+  - {fileID: 1111983304}
+  - {fileID: 832259630}
+  - {fileID: 151235012}
+  - {fileID: 1728243130}
+  - {fileID: 1685257139}
+  - {fileID: 986734097}
+  - {fileID: 2127697830}
+  - {fileID: 1711067637}
+  - {fileID: 822996519}
+  - {fileID: 1333881088}
+  - {fileID: 1947068162}
+  - {fileID: 1728476288}
+  - {fileID: 1016614213}
+  - {fileID: 885128906}
+  - {fileID: 291524378}
+  - {fileID: 14382020}
+  m_Father: {fileID: 1384050511}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1078743533
 GameObject:
   m_ObjectHideFlags: 0
@@ -2580,6 +3955,138 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1078743533}
+--- !u!1 &1111983303
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1111983304}
+  - component: {fileID: 1111983305}
+  m_Layer: 0
+  m_Name: happy_voc_005
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1111983304
+Transform:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1111983303}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1068956898}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1111983305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1111983303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info:
+    name: happy_voc_005
+    path: samples/happy_voc_005
+    samples: 36864
+    frequency: 48000
+    channels: 2
+    length: 0.768
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: 0.01
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: 0.75
+    pureData: {fileID: 1384050510}
+  pureData: {fileID: 1384050510}
+--- !u!1 &1123543636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1123543637}
+  - component: {fileID: 1123543638}
+  m_Layer: 0
+  m_Name: angry_voc_205
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1123543637
+Transform:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1123543636}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1068956898}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1123543638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1123543636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info:
+    name: angry_voc_205
+    path: samples/angry_voc_205
+    samples: 77184
+    frequency: 48000
+    channels: 2
+    length: 1.608
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: 0.01
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: 0.75
+    pureData: {fileID: 1384050510}
+  pureData: {fileID: 1384050510}
 --- !u!1 &1140259569
 GameObject:
   m_ObjectHideFlags: 0
@@ -2595,131 +4102,72 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1168031363
+--- !u!1 &1166116868
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 1168031365}
-  - component: {fileID: 1168031364}
-  - component: {fileID: 1168031367}
-  - component: {fileID: 1168031366}
+  - component: {fileID: 1166116869}
+  - component: {fileID: 1166116870}
   m_Layer: 0
-  m_Name: PureData
+  m_Name: happy_inf_000
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1168031364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1168031363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97e1b7762cb767e4ea711435162d305b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  settingsPath: Assets/PureDataSettings.asset
-  listener:
-    transform: {fileID: 0}
-    position: {x: 0, y: 0, z: 0}
-    right: {x: 0, y: 0, z: 0}
-    pureData: {fileID: 0}
-  filterRead: {fileID: 0}
-  references:
-    references: []
-    ids: 
-    idCounter: 0
-    pureData: {fileID: 1168031364}
-  generalSettings: {fileID: 11400000, guid: 3b1b19fa565880443aa882960dd5c503, type: 2}
-  bridge:
-    sampleRate: 0
-    bufferSize: 0
-    bufferAmount: 0
-    initialized: 0
-    ticks: 0
-    pureData: {fileID: 0}
-  communicator:
-    pureData: {fileID: 0}
-  commandParser:
-    pureData: {fileID: 0}
-  patchManager:
-    pureData: {fileID: 0}
-  itemManager:
-    pureData: {fileID: 0}
-  infoManager:
-    infos: []
-    pureData: {fileID: 1168031364}
-  clipManager:
-    containerPath: C:\Users\jnowa\Unity\UnityEmosonics\Assets\StreamingAssets\Patches\Unity\Internal\uaudioclipcontainer.pd
-    clips: []
-    pureData: {fileID: 1168031364}
-  sourceManager:
-    containerPath: C:\Users\jnowa\Unity\UnityEmosonics\Assets\StreamingAssets\Patches\Unity\Internal\uaudiosourcecontainer.pd
-    pureData: {fileID: 1168031364}
-  busManager: {fileID: 11481642, guid: 3b1b19fa565880443aa882960dd5c503, type: 2}
-  spatializerManager: {fileID: 11481644, guid: 3b1b19fa565880443aa882960dd5c503, type: 2}
-  containerManager: {fileID: 11481646, guid: 3b1b19fa565880443aa882960dd5c503, type: 2}
-  sequenceManager: {fileID: 11481648, guid: 3b1b19fa565880443aa882960dd5c503, type: 2}
-  hierarchyManager:
-    setups: []
-    currentClips: []
-    clips: []
-    children: []
-    folderStructure: []
-    paths: []
-    pureData: {fileID: 1168031364}
-  editorHelper:
-    selection:
-    - {fileID: 102900000, guid: c8a407571a8ec3047aea763426d7dda8, type: 3}
-    repaintDummy: 0
-    repaint: 0
-    pureDataIcon: {fileID: 0}
-    previewAudioSource: {fileID: 0}
-    previewStopTime: 0
-    editorPaused: 0
-    pureData: {fileID: 1168031364}
-    updateHierarchy: 0
---- !u!4 &1168031365
+--- !u!4 &1166116869
 Transform:
   m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1168031363}
+  m_GameObject: {fileID: 1166116868}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 1068956898}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1168031366
+--- !u!114 &1166116870
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1168031363}
+  m_GameObject: {fileID: 1166116868}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4367ed7caffa4584cbd042743113563e, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1168031367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1168031363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 996f972a34579d24f8a09f4685a239ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  info:
+    name: happy_inf_000
+    path: samples/happy_inf_000
+    samples: 104832
+    frequency: 48000
+    channels: 2
+    length: 2.184
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: 0.01
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: 0.75
+    pureData: {fileID: 1384050510}
+  pureData: {fileID: 1384050510}
 --- !u!1 &1205823395
 GameObject:
   m_ObjectHideFlags: 0
@@ -2865,6 +4313,138 @@ Transform:
   m_Father: {fileID: 1608961661}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1291904241
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1291904242}
+  - component: {fileID: 1291904243}
+  m_Layer: 0
+  m_Name: happy_inf_002
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1291904242
+Transform:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1291904241}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1068956898}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1291904243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1291904241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info:
+    name: happy_inf_002
+    path: samples/happy_inf_002
+    samples: 54144
+    frequency: 48000
+    channels: 2
+    length: 1.128
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: 0.01
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: 0.75
+    pureData: {fileID: 1384050510}
+  pureData: {fileID: 1384050510}
+--- !u!1 &1333881087
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1333881088}
+  - component: {fileID: 1333881089}
+  m_Layer: 0
+  m_Name: surprised_voc_103
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1333881088
+Transform:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1333881087}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1068956898}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1333881089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1333881087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info:
+    name: surprised_voc_103
+    path: samples/surprised_voc_103
+    samples: 66816
+    frequency: 48000
+    channels: 2
+    length: 1.392
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: 0.01
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: 0.75
+    pureData: {fileID: 1384050510}
+  pureData: {fileID: 1384050510}
 --- !u!1 &1344518696
 GameObject:
   m_ObjectHideFlags: 0
@@ -2936,7 +4516,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1359525339
 GameObject:
@@ -3006,6 +4586,1323 @@ RectTransform:
   m_AnchoredPosition: {x: -783.91833, y: -1302.768}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1384050507
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1384050511}
+  - component: {fileID: 1384050510}
+  - component: {fileID: 1384050509}
+  - component: {fileID: 1384050508}
+  m_Layer: 0
+  m_Name: PureData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1384050508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1384050507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 996f972a34579d24f8a09f4685a239ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1384050509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1384050507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4367ed7caffa4584cbd042743113563e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1384050510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1384050507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97e1b7762cb767e4ea711435162d305b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingsPath: Assets/PureDataSettings.asset
+  listener:
+    transform: {fileID: 0}
+    position: {x: 0, y: 0, z: 0}
+    right: {x: 0, y: 0, z: 0}
+    pureData: {fileID: 0}
+  filterRead: {fileID: 0}
+  references:
+    references: []
+    ids: 
+    idCounter: 0
+    pureData: {fileID: 1384050510}
+  generalSettings: {fileID: 11400000, guid: 3b1b19fa565880443aa882960dd5c503, type: 2}
+  bridge:
+    sampleRate: 0
+    bufferSize: 0
+    bufferAmount: 0
+    initialized: 0
+    ticks: 0
+    pureData: {fileID: 0}
+  communicator:
+    pureData: {fileID: 0}
+  commandParser:
+    pureData: {fileID: 0}
+  patchManager:
+    pureData: {fileID: 0}
+  itemManager:
+    pureData: {fileID: 0}
+  infoManager:
+    infos:
+    - name: angry_inf_200
+      path: samples/angry_inf_200
+      samples: 84096
+      frequency: 48000
+      channels: 1
+      length: 1.752
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: 0.01
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: 0.75
+      pureData: {fileID: 1384050510}
+    - name: angry_inf_201
+      path: samples/angry_inf_201
+      samples: 59904
+      frequency: 48000
+      channels: 1
+      length: 1.248
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: 0.01
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: 0.75
+      pureData: {fileID: 1384050510}
+    - name: angry_inf_202
+      path: samples/angry_inf_202
+      samples: 67968
+      frequency: 48000
+      channels: 2
+      length: 1.416
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: 0.01
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: 0.75
+      pureData: {fileID: 1384050510}
+    - name: angry_inf_203
+      path: samples/angry_inf_203
+      samples: 97920
+      frequency: 48000
+      channels: 2
+      length: 2.04
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: 0.01
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: 0.75
+      pureData: {fileID: 1384050510}
+    - name: angry_voc_204
+      path: samples/angry_voc_204
+      samples: 102527
+      frequency: 48000
+      channels: 2
+      length: 2.136
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: 0.01
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: 0.75
+      pureData: {fileID: 1384050510}
+    - name: angry_voc_205
+      path: samples/angry_voc_205
+      samples: 77184
+      frequency: 48000
+      channels: 2
+      length: 1.608
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: 0.01
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: 0.75
+      pureData: {fileID: 1384050510}
+    - name: angry_voc_206
+      path: samples/angry_voc_206
+      samples: 64512
+      frequency: 48000
+      channels: 2
+      length: 1.344
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: 0.01
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: 0.75
+      pureData: {fileID: 1384050510}
+    - name: calm_inf_500
+      path: samples/calm_inf_500
+      samples: 84096
+      frequency: 48000
+      channels: 2
+      length: 1.752
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: 0.01
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: 0.75
+      pureData: {fileID: 1384050510}
+    - name: calm_voc_501
+      path: samples/calm_voc_501
+      samples: 93312
+      frequency: 48000
+      channels: 1
+      length: 1.944
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: 0.01
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: 0.75
+      pureData: {fileID: 1384050510}
+    - name: calm_voc_502
+      path: samples/calm_voc_502
+      samples: 92160
+      frequency: 48000
+      channels: 2
+      length: 1.92
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: 0.01
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: 0.75
+      pureData: {fileID: 1384050510}
+    - name: disgusted_inf_300
+      path: samples/disgusted_inf_300
+      samples: 93312
+      frequency: 48000
+      channels: 2
+      length: 1.944
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: 0.01
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: 0.75
+      pureData: {fileID: 1384050510}
+    - name: disgusted_voc_301
+      path: samples/disgusted_voc_301
+      samples: 49535
+      frequency: 48000
+      channels: 2
+      length: 1.032
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: 0.01
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: 0.75
+      pureData: {fileID: 1384050510}
+    - name: happy_inf_000
+      path: samples/happy_inf_000
+      samples: 104832
+      frequency: 48000
+      channels: 2
+      length: 2.184
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: 0.01
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: 0.75
+      pureData: {fileID: 1384050510}
+    - name: happy_inf_001
+      path: samples/happy_inf_001
+      samples: 81792
+      frequency: 48000
+      channels: 2
+      length: 1.704
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: 0.01
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: 0.75
+      pureData: {fileID: 1384050510}
+    - name: happy_inf_002
+      path: samples/happy_inf_002
+      samples: 54144
+      frequency: 48000
+      channels: 2
+      length: 1.128
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: 0.01
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: 0.75
+      pureData: {fileID: 1384050510}
+    - name: happy_voc_003
+      path: samples/happy_voc_003
+      samples: 43776
+      frequency: 48000
+      channels: 2
+      length: 0.912
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: 0.01
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: 0.75
+      pureData: {fileID: 1384050510}
+    - name: happy_voc_004
+      path: samples/happy_voc_004
+      samples: 97920
+      frequency: 48000
+      channels: 2
+      length: 2.04
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: 0.01
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: 0.75
+      pureData: {fileID: 1384050510}
+    - name: happy_voc_005
+      path: samples/happy_voc_005
+      samples: 36864
+      frequency: 48000
+      channels: 2
+      length: 0.768
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: 0.01
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: 0.75
+      pureData: {fileID: 1384050510}
+    - name: Leaf2
+      path: samples/Leaf2
+      samples: 5644800
+      frequency: 44100
+      channels: 2
+      length: 128
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: 0.01
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: 0.75
+      pureData: {fileID: 1384050510}
+    - name: sad_inf_400
+      path: samples/sad_inf_400
+      samples: 55295
+      frequency: 48000
+      channels: 2
+      length: 1.152
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: 0.01
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: 0.75
+      pureData: {fileID: 1384050510}
+    - name: sad_inf_401
+      path: samples/sad_inf_401
+      samples: 97920
+      frequency: 48000
+      channels: 2
+      length: 2.04
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: 0.01
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: 0.75
+      pureData: {fileID: 1384050510}
+    - name: sad_voc_402
+      path: samples/sad_voc_402
+      samples: 54144
+      frequency: 48000
+      channels: 2
+      length: 1.128
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: 0.01
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: 0.75
+      pureData: {fileID: 1384050510}
+    - name: sad_voc_403
+      path: samples/sad_voc_403
+      samples: 92160
+      frequency: 48000
+      channels: 2
+      length: 1.92
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: 0.01
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: 0.75
+      pureData: {fileID: 1384050510}
+    - name: surprised_inf_100
+      path: samples/surprised_inf_100
+      samples: 26496
+      frequency: 48000
+      channels: 2
+      length: 0.552
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: 0.01
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: 0.75
+      pureData: {fileID: 1384050510}
+    - name: surprised_inf_101
+      path: samples/surprised_inf_101
+      samples: 64512
+      frequency: 48000
+      channels: 2
+      length: 1.344
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: 0.01
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: 0.75
+      pureData: {fileID: 1384050510}
+    - name: surprised_inf_102
+      path: samples/surprised_inf_102
+      samples: 40320
+      frequency: 48000
+      channels: 2
+      length: 0.84
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: 0.01
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: 0.75
+      pureData: {fileID: 1384050510}
+    - name: surprised_voc_103
+      path: samples/surprised_voc_103
+      samples: 66816
+      frequency: 48000
+      channels: 2
+      length: 1.392
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: 0.01
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: 0.75
+      pureData: {fileID: 1384050510}
+    - name: surprised_voc_104
+      path: samples/surprised_voc_104
+      samples: 65664
+      frequency: 48000
+      channels: 2
+      length: 1.368
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: 0.01
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: 0.75
+      pureData: {fileID: 1384050510}
+    - name: surprised_voc_105
+      path: samples/surprised_voc_105
+      samples: 70272
+      frequency: 48000
+      channels: 2
+      length: 1.464
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: 0.01
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: 0.75
+      pureData: {fileID: 1384050510}
+    - name: surprised_voc_106
+      path: samples/surprised_voc_106
+      samples: 66816
+      frequency: 48000
+      channels: 2
+      length: 1.392
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: 0.01
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: 0.75
+      pureData: {fileID: 1384050510}
+    - name: surprised_voc_107
+      path: samples/surprised_voc_107
+      samples: 76032
+      frequency: 48000
+      channels: 2
+      length: 1.584
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: 0.01
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: 0.75
+      pureData: {fileID: 1384050510}
+    - name: surprised_voc_108
+      path: samples/surprised_voc_108
+      samples: 82944
+      frequency: 48000
+      channels: 1
+      length: 1.728
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: 0.01
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: 0.75
+      pureData: {fileID: 1384050510}
+    - name: Water2
+      path: samples/Water2
+      samples: 5644800
+      frequency: 44100
+      channels: 2
+      length: 128
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: 0.01
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: 0.75
+      pureData: {fileID: 1384050510}
+    - name: wrongSound
+      path: wrongSound
+      samples: 104738
+      frequency: 44100
+      channels: 2
+      length: 2.3750114
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: 0.01
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: 0.75
+      pureData: {fileID: 1384050510}
+    pureData: {fileID: 1384050510}
+  clipManager:
+    containerPath: C:\Users\DELL\Documents\GitHub\UnityEmosonics\Assets\StreamingAssets\Patches\Unity\Internal\uaudioclipcontainer.pd
+    clips:
+    - name: angry_inf_200
+      id: 0
+      path: samples/angry_inf_200
+      samples: 84096
+      frequency: 48000
+      channels: 1
+      length: 1.752
+      pureData: {fileID: 1384050510}
+    - name: angry_inf_201
+      id: 0
+      path: samples/angry_inf_201
+      samples: 59904
+      frequency: 48000
+      channels: 1
+      length: 1.248
+      pureData: {fileID: 1384050510}
+    - name: angry_inf_202
+      id: 0
+      path: samples/angry_inf_202
+      samples: 67968
+      frequency: 48000
+      channels: 2
+      length: 1.416
+      pureData: {fileID: 1384050510}
+    - name: angry_inf_203
+      id: 0
+      path: samples/angry_inf_203
+      samples: 97920
+      frequency: 48000
+      channels: 2
+      length: 2.04
+      pureData: {fileID: 1384050510}
+    - name: angry_voc_204
+      id: 0
+      path: samples/angry_voc_204
+      samples: 102527
+      frequency: 48000
+      channels: 2
+      length: 2.136
+      pureData: {fileID: 1384050510}
+    - name: angry_voc_205
+      id: 0
+      path: samples/angry_voc_205
+      samples: 77184
+      frequency: 48000
+      channels: 2
+      length: 1.608
+      pureData: {fileID: 1384050510}
+    - name: angry_voc_206
+      id: 0
+      path: samples/angry_voc_206
+      samples: 64512
+      frequency: 48000
+      channels: 2
+      length: 1.344
+      pureData: {fileID: 1384050510}
+    - name: calm_inf_500
+      id: 0
+      path: samples/calm_inf_500
+      samples: 84096
+      frequency: 48000
+      channels: 2
+      length: 1.752
+      pureData: {fileID: 1384050510}
+    - name: calm_voc_501
+      id: 0
+      path: samples/calm_voc_501
+      samples: 93312
+      frequency: 48000
+      channels: 1
+      length: 1.944
+      pureData: {fileID: 1384050510}
+    - name: calm_voc_502
+      id: 0
+      path: samples/calm_voc_502
+      samples: 92160
+      frequency: 48000
+      channels: 2
+      length: 1.92
+      pureData: {fileID: 1384050510}
+    - name: disgusted_inf_300
+      id: 0
+      path: samples/disgusted_inf_300
+      samples: 93312
+      frequency: 48000
+      channels: 2
+      length: 1.944
+      pureData: {fileID: 1384050510}
+    - name: disgusted_voc_301
+      id: 0
+      path: samples/disgusted_voc_301
+      samples: 49535
+      frequency: 48000
+      channels: 2
+      length: 1.032
+      pureData: {fileID: 1384050510}
+    - name: happy_inf_000
+      id: 0
+      path: samples/happy_inf_000
+      samples: 104832
+      frequency: 48000
+      channels: 2
+      length: 2.184
+      pureData: {fileID: 1384050510}
+    - name: happy_inf_001
+      id: 0
+      path: samples/happy_inf_001
+      samples: 81792
+      frequency: 48000
+      channels: 2
+      length: 1.704
+      pureData: {fileID: 1384050510}
+    - name: happy_inf_002
+      id: 0
+      path: samples/happy_inf_002
+      samples: 54144
+      frequency: 48000
+      channels: 2
+      length: 1.128
+      pureData: {fileID: 1384050510}
+    - name: happy_voc_003
+      id: 0
+      path: samples/happy_voc_003
+      samples: 43776
+      frequency: 48000
+      channels: 2
+      length: 0.912
+      pureData: {fileID: 1384050510}
+    - name: happy_voc_004
+      id: 0
+      path: samples/happy_voc_004
+      samples: 97920
+      frequency: 48000
+      channels: 2
+      length: 2.04
+      pureData: {fileID: 1384050510}
+    - name: happy_voc_005
+      id: 0
+      path: samples/happy_voc_005
+      samples: 36864
+      frequency: 48000
+      channels: 2
+      length: 0.768
+      pureData: {fileID: 1384050510}
+    - name: Leaf2
+      id: 0
+      path: samples/Leaf2
+      samples: 5644800
+      frequency: 44100
+      channels: 2
+      length: 128
+      pureData: {fileID: 1384050510}
+    - name: sad_inf_400
+      id: 0
+      path: samples/sad_inf_400
+      samples: 55295
+      frequency: 48000
+      channels: 2
+      length: 1.152
+      pureData: {fileID: 1384050510}
+    - name: sad_inf_401
+      id: 0
+      path: samples/sad_inf_401
+      samples: 97920
+      frequency: 48000
+      channels: 2
+      length: 2.04
+      pureData: {fileID: 1384050510}
+    - name: sad_voc_402
+      id: 0
+      path: samples/sad_voc_402
+      samples: 54144
+      frequency: 48000
+      channels: 2
+      length: 1.128
+      pureData: {fileID: 1384050510}
+    - name: sad_voc_403
+      id: 0
+      path: samples/sad_voc_403
+      samples: 92160
+      frequency: 48000
+      channels: 2
+      length: 1.92
+      pureData: {fileID: 1384050510}
+    - name: surprised_inf_100
+      id: 0
+      path: samples/surprised_inf_100
+      samples: 26496
+      frequency: 48000
+      channels: 2
+      length: 0.552
+      pureData: {fileID: 1384050510}
+    - name: surprised_inf_101
+      id: 0
+      path: samples/surprised_inf_101
+      samples: 64512
+      frequency: 48000
+      channels: 2
+      length: 1.344
+      pureData: {fileID: 1384050510}
+    - name: surprised_inf_102
+      id: 0
+      path: samples/surprised_inf_102
+      samples: 40320
+      frequency: 48000
+      channels: 2
+      length: 0.84
+      pureData: {fileID: 1384050510}
+    - name: surprised_voc_103
+      id: 0
+      path: samples/surprised_voc_103
+      samples: 66816
+      frequency: 48000
+      channels: 2
+      length: 1.392
+      pureData: {fileID: 1384050510}
+    - name: surprised_voc_104
+      id: 0
+      path: samples/surprised_voc_104
+      samples: 65664
+      frequency: 48000
+      channels: 2
+      length: 1.368
+      pureData: {fileID: 1384050510}
+    - name: surprised_voc_105
+      id: 0
+      path: samples/surprised_voc_105
+      samples: 70272
+      frequency: 48000
+      channels: 2
+      length: 1.464
+      pureData: {fileID: 1384050510}
+    - name: surprised_voc_106
+      id: 0
+      path: samples/surprised_voc_106
+      samples: 66816
+      frequency: 48000
+      channels: 2
+      length: 1.392
+      pureData: {fileID: 1384050510}
+    - name: surprised_voc_107
+      id: 0
+      path: samples/surprised_voc_107
+      samples: 76032
+      frequency: 48000
+      channels: 2
+      length: 1.584
+      pureData: {fileID: 1384050510}
+    - name: surprised_voc_108
+      id: 0
+      path: samples/surprised_voc_108
+      samples: 82944
+      frequency: 48000
+      channels: 1
+      length: 1.728
+      pureData: {fileID: 1384050510}
+    - name: Water2
+      id: 0
+      path: samples/Water2
+      samples: 5644800
+      frequency: 44100
+      channels: 2
+      length: 128
+      pureData: {fileID: 1384050510}
+    - name: wrongSound
+      id: 0
+      path: wrongSound
+      samples: 104738
+      frequency: 44100
+      channels: 2
+      length: 2.3750114
+      pureData: {fileID: 1384050510}
+    pureData: {fileID: 1384050510}
+  sourceManager:
+    containerPath: C:\Users\DELL\Documents\GitHub\UnityEmosonics\Assets\StreamingAssets\Patches\Unity\Internal\uaudiosourcecontainer.pd
+    pureData: {fileID: 1384050510}
+  busManager: {fileID: 11481642, guid: 3b1b19fa565880443aa882960dd5c503, type: 2}
+  spatializerManager: {fileID: 11481644, guid: 3b1b19fa565880443aa882960dd5c503, type: 2}
+  containerManager: {fileID: 11481646, guid: 3b1b19fa565880443aa882960dd5c503, type: 2}
+  sequenceManager: {fileID: 11481648, guid: 3b1b19fa565880443aa882960dd5c503, type: 2}
+  hierarchyManager:
+    setups: []
+    currentClips: []
+    clips: []
+    children:
+    - {fileID: 1049577599}
+    - {fileID: 774125052}
+    - {fileID: 1409077405}
+    - {fileID: 1934462346}
+    - {fileID: 186868484}
+    - {fileID: 1123543636}
+    - {fileID: 25436860}
+    - {fileID: 723153283}
+    - {fileID: 561847298}
+    - {fileID: 1752529056}
+    - {fileID: 572592830}
+    - {fileID: 1758217274}
+    - {fileID: 1166116868}
+    - {fileID: 857677866}
+    - {fileID: 1291904241}
+    - {fileID: 641819706}
+    - {fileID: 848858651}
+    - {fileID: 1111983303}
+    - {fileID: 832259629}
+    - {fileID: 151235011}
+    - {fileID: 1728243129}
+    - {fileID: 1685257138}
+    - {fileID: 986734096}
+    - {fileID: 2127697829}
+    - {fileID: 1711067636}
+    - {fileID: 822996518}
+    - {fileID: 1333881087}
+    - {fileID: 1947068161}
+    - {fileID: 1728476287}
+    - {fileID: 1016614212}
+    - {fileID: 885128905}
+    - {fileID: 291524377}
+    - {fileID: 14382019}
+    - {fileID: 565289977}
+    - {fileID: 565289977}
+    folderStructure:
+    - {fileID: 1068956897}
+    paths: []
+    pureData: {fileID: 1384050510}
+  editorHelper:
+    selection:
+    - {fileID: 697926565}
+    repaintDummy: 0
+    repaint: 0
+    pureDataIcon: {fileID: 0}
+    previewAudioSource: {fileID: 0}
+    previewStopTime: 0
+    editorPaused: 0
+    pureData: {fileID: 1384050510}
+    updateHierarchy: 0
+--- !u!4 &1384050511
+Transform:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1384050507}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1068956898}
+  - {fileID: 565289978}
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1409077405
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1409077406}
+  - component: {fileID: 1409077407}
+  m_Layer: 0
+  m_Name: angry_inf_202
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1409077406
+Transform:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1409077405}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1068956898}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1409077407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1409077405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info:
+    name: angry_inf_202
+    path: samples/angry_inf_202
+    samples: 67968
+    frequency: 48000
+    channels: 2
+    length: 1.416
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: 0.01
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: 0.75
+    pureData: {fileID: 1384050510}
+  pureData: {fileID: 1384050510}
 --- !u!1 &1452502559
 GameObject:
   m_ObjectHideFlags: 0
@@ -3195,7 +6092,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1553091413
 GameObject:
@@ -3397,68 +6294,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!1 &1600221727
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1402829216959802, guid: 6a2d3e31a77357a45b261458a646d8eb,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1600221729}
-  - component: {fileID: 1600221728}
-  m_Layer: 0
-  m_Name: GameControl
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1600221728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1600221727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3a8eb2191732934496713f370b1f4c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onBoardingFinished: 0
-  visualization: 0
-  representation: 0
-  soundSetting: 0
-  favorite1Color: {r: 0, g: 0, b: 0, a: 0}
-  favorite2Color: {r: 0, g: 0, b: 0, a: 0}
-  favorite3Color: {r: 0, g: 0, b: 0, a: 0}
-  favorite4Color: {r: 0, g: 0, b: 0, a: 0}
-  favorite1Pos: {x: 0, y: 0, z: 0}
-  favorite2Pos: {x: 0, y: 0, z: 0}
-  favorite3Pos: {x: 0, y: 0, z: 0}
-  favorite4Pos: {x: 0, y: 0, z: 0}
-  favorite1Sound: {x: 0, y: 0}
-  favorite2Sound: {x: 0, y: 0}
-  favorite3Sound: {x: 0, y: 0}
-  favorite4Sound: {x: 0, y: 0}
-  crosshairPosition: {x: 0, y: 0, z: 0}
-  soundPosition: {x: 0, y: 0}
-  lastCrosshairPos: {x: 0, y: 0, z: 0}
-  lastSoundPosition: {x: 0, y: 0}
---- !u!4 &1600221729
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4356630933167002, guid: 6a2d3e31a77357a45b261458a646d8eb,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1600221727}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 242.63055, y: 704.6902, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1608961660
 GameObject:
   m_ObjectHideFlags: 0
@@ -3563,6 +6398,402 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1638681649}
+--- !u!1 &1685257138
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1685257139}
+  - component: {fileID: 1685257140}
+  m_Layer: 0
+  m_Name: sad_voc_402
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1685257139
+Transform:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1685257138}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1068956898}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1685257140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1685257138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info:
+    name: sad_voc_402
+    path: samples/sad_voc_402
+    samples: 54144
+    frequency: 48000
+    channels: 2
+    length: 1.128
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: 0.01
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: 0.75
+    pureData: {fileID: 1384050510}
+  pureData: {fileID: 1384050510}
+--- !u!1 &1711067636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1711067637}
+  - component: {fileID: 1711067638}
+  m_Layer: 0
+  m_Name: surprised_inf_101
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1711067637
+Transform:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1711067636}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1068956898}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1711067638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1711067636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info:
+    name: surprised_inf_101
+    path: samples/surprised_inf_101
+    samples: 64512
+    frequency: 48000
+    channels: 2
+    length: 1.344
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: 0.01
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: 0.75
+    pureData: {fileID: 1384050510}
+  pureData: {fileID: 1384050510}
+--- !u!1 &1728243129
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1728243130}
+  - component: {fileID: 1728243131}
+  m_Layer: 0
+  m_Name: sad_inf_401
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1728243130
+Transform:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1728243129}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1068956898}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1728243131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1728243129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info:
+    name: sad_inf_401
+    path: samples/sad_inf_401
+    samples: 97920
+    frequency: 48000
+    channels: 2
+    length: 2.04
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: 0.01
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: 0.75
+    pureData: {fileID: 1384050510}
+  pureData: {fileID: 1384050510}
+--- !u!1 &1728476287
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1728476288}
+  - component: {fileID: 1728476289}
+  m_Layer: 0
+  m_Name: surprised_voc_105
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1728476288
+Transform:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1728476287}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1068956898}
+  m_RootOrder: 28
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1728476289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1728476287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info:
+    name: surprised_voc_105
+    path: samples/surprised_voc_105
+    samples: 70272
+    frequency: 48000
+    channels: 2
+    length: 1.464
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: 0.01
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: 0.75
+    pureData: {fileID: 1384050510}
+  pureData: {fileID: 1384050510}
+--- !u!1 &1752529056
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1752529057}
+  - component: {fileID: 1752529058}
+  m_Layer: 0
+  m_Name: calm_voc_502
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1752529057
+Transform:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1752529056}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1068956898}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1752529058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1752529056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info:
+    name: calm_voc_502
+    path: samples/calm_voc_502
+    samples: 92160
+    frequency: 48000
+    channels: 2
+    length: 1.92
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: 0.01
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: 0.75
+    pureData: {fileID: 1384050510}
+  pureData: {fileID: 1384050510}
+--- !u!1 &1758217274
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1758217275}
+  - component: {fileID: 1758217276}
+  m_Layer: 0
+  m_Name: disgusted_voc_301
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1758217275
+Transform:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1758217274}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1068956898}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1758217276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1758217274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info:
+    name: disgusted_voc_301
+    path: samples/disgusted_voc_301
+    samples: 49535
+    frequency: 48000
+    channels: 2
+    length: 1.032
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: 0.01
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: 0.75
+    pureData: {fileID: 1384050510}
+  pureData: {fileID: 1384050510}
 --- !u!1 &1788254129
 GameObject:
   m_ObjectHideFlags: 0
@@ -3730,7 +6961,7 @@ RectTransform:
   - {fileID: 2143239655}
   - {fileID: 1359525342}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4050,6 +7281,138 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1892810724}
+--- !u!1 &1934462346
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1934462347}
+  - component: {fileID: 1934462348}
+  m_Layer: 0
+  m_Name: angry_inf_203
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1934462347
+Transform:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1934462346}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1068956898}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1934462348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1934462346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info:
+    name: angry_inf_203
+    path: samples/angry_inf_203
+    samples: 97920
+    frequency: 48000
+    channels: 2
+    length: 2.04
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: 0.01
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: 0.75
+    pureData: {fileID: 1384050510}
+  pureData: {fileID: 1384050510}
+--- !u!1 &1947068161
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1947068162}
+  - component: {fileID: 1947068163}
+  m_Layer: 0
+  m_Name: surprised_voc_104
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1947068162
+Transform:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1947068161}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1068956898}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1947068163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1947068161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info:
+    name: surprised_voc_104
+    path: samples/surprised_voc_104
+    samples: 65664
+    frequency: 48000
+    channels: 2
+    length: 1.368
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: 0.01
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: 0.75
+    pureData: {fileID: 1384050510}
+  pureData: {fileID: 1384050510}
 --- !u!1 &1994375839
 GameObject:
   m_ObjectHideFlags: 0
@@ -4211,7 +7574,7 @@ RectTransform:
   m_LocalScale: {x: 2, y: 2, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4245,6 +7608,72 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!1 &2127697829
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2127697830}
+  - component: {fileID: 2127697831}
+  m_Layer: 0
+  m_Name: surprised_inf_100
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2127697830
+Transform:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2127697829}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1068956898}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2127697831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2127697829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info:
+    name: surprised_inf_100
+    path: samples/surprised_inf_100
+    samples: 26496
+    frequency: 48000
+    channels: 2
+    length: 0.552
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: 0.01
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: 0.75
+    pureData: {fileID: 1384050510}
+  pureData: {fileID: 1384050510}
 --- !u!1 &2143239654
 GameObject:
   m_ObjectHideFlags: 0

@@ -29,8 +29,8 @@ public class PdAPI : MonoBehaviour
 
     private float pointer, duration, attack, desvol, pitch, chirp, lfndepth, lfnfreq,
     amdepth, amfreq, richness;
-    private string[] par_names = {"duration", "attack", "desvol", "pitch", "chirp", "lfndepth", "lfnfreq",
-    "amdepth", "amfreq", "richness"};
+    // private string[] par_names = {"duration", "attack", "desvol", "pitch", "chirp", "lfndepth", "lfnfreq",
+    // "amdepth", "amfreq", "richness"};
 
     /// <summary>
     /// Initialize audiosource, PD and KR classes. Load the data based on 
@@ -38,23 +38,19 @@ public class PdAPI : MonoBehaviour
     private void Start()
     {
         //dirty hack to make the audiosource work
-        SceneManager.LoadScene(0);
-
-        // audioSource = GetComponent<AudioSource>();
-        // audioSource.volume = 1f;
-
-        kr = gameObject.AddComponent<KernelRegression>();
-        PureData.OpenPatch("abstractlatest");
+        // SceneManager.LoadScene(0);
 
         //choose which JsonLoader to use
-        if (engine_type == "sample")
-        {
-            JL = new JsonLoader(file);
-        }
-        else if (engine_type == "synth")
-        {
-            JL = new JsonLoader();
-        }
+        // if (engine_type == "sample")
+        // {
+        //     JL = new JsonLoader(file);
+        // }
+        // else if (engine_type == "synth")
+        // {
+        //     JL = new JsonLoader();
+        // }
+
+        JL = new JsonLoader(file);
 
     }
 
@@ -98,12 +94,12 @@ public class PdAPI : MonoBehaviour
         richness = 1.0f; */
     }
 
-     /// <summary>
-     /// This function is an interface to update the parameters for the audio generation. For the sample type, it sets the according
-     /// filename to be played, for the synth type it updated the parameters for pd
-     /// </summary>
-     /// <param name="posxy">x,y-position on the wheel</param>
-     /// <param name="richness_scale">Scaling parameter for the richness</param>
+    /// <summary>
+    /// This function is an interface to update the parameters for the audio generation. For the sample type, it sets the according
+    /// filename to be played, for the synth type it updated the parameters for pd
+    /// </summary>
+    /// <param name="posxy">x,y-position on the wheel</param>
+    /// <param name="richness_scale">Scaling parameter for the richness</param>
     public void changeValue(double[] posxy, float richness_scale = 1.0f)
     {
         //check first whether type of sound to use
@@ -111,10 +107,10 @@ public class PdAPI : MonoBehaviour
         {
             //call sample function
             string emotion = get_nearest_emotion(posxy);
-            
+
             //load data if not done before
-            if(sl == null)
-            { 
+            if (sl == null)
+            {
                 sl = JL.Load_samples_info();
             }
 
@@ -132,7 +128,15 @@ public class PdAPI : MonoBehaviour
             richness = scale_richness(richness, richness_scale);
 
             updateParam(paramVec);
-            PureData.SendMessage(TOUCHSYMBOL, MESSAGE, pointer, duration, attack, desvol, pitch, chirp, lfndepth, lfnfreq, amdepth, amfreq, richness);
+
+            if (Application.platform == RuntimePlatform.WindowsEditor)
+            {
+                PureData.SendMessage(TOUCHSYMBOL, MESSAGE, pointer, duration, attack, desvol, pitch, chirp, lfndepth, lfnfreq, amdepth, amfreq, richness, 1f);
+            }
+            else if (Application.platform == RuntimePlatform.Android)
+            {
+                PureData.SendMessage(TOUCHSYMBOL, MESSAGE, pointer, duration, attack, desvol, pitch, chirp, lfndepth, lfnfreq, amdepth, amfreq, richness, 2f);
+            }
         }
     }
 
@@ -148,13 +152,13 @@ public class PdAPI : MonoBehaviour
         }
         else if (engine_type.Equals("sample"))
         {
-            
-            AudioClip clip = (AudioClip)Resources.Load("samples/"+filename.Remove(filename.Length-4));
-            // audioSource.Stop();
-            // audioSource.PlayOneShot(clip);
+
+            AudioClip clip = (AudioClip)Resources.Load("samples/" + filename.Remove(filename.Length - 4));
+            audioSource.Stop();
+            audioSource.PlayOneShot(clip);
         }
 
-       
+
     }
 
     /// <summary>
@@ -206,13 +210,19 @@ public class PdAPI : MonoBehaviour
     /// <param name="type">String with the enigne type to use. Either "synthetic" or "vocal" or "inference"</param>
     public void switch_engines(string type)
     {
+
         if (type.Equals("synthetic"))
         {
+            kr = gameObject.AddComponent<KernelRegression>();
+            PureData.OpenPatch("abstractlatest");
             engine_type = "synth";
         }
         else
         {
+            PureData.CloseAllPatches();
             engine_type = "sample";
+            audioSource = GetComponent<AudioSource>();
+            audioSource.volume = 1f;
             if (type.Equals("vocal"))
             {
                 sound_type = "voc";
@@ -223,7 +233,7 @@ public class PdAPI : MonoBehaviour
             }
         }
     }
-      
+
     /// <summary>
     /// Function to get the x,y-position of the ankerpoints according to the current type
     /// </summary>
@@ -281,7 +291,7 @@ public class PdAPI : MonoBehaviour
 
         int i = 0;
         double[] distvec = new double[emo_pos.Length];
-        foreach(double[] pos in emo_pos)
+        foreach (double[] pos in emo_pos)
         {
             distvec[i] = Math.Sqrt(Math.Pow(pos[0] - posxy[0], 2)
                 + Math.Pow(pos[1] - posxy[1], 2));

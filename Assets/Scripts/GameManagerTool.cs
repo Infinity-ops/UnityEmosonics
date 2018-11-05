@@ -69,8 +69,8 @@ public class GameManagerTool : MonoBehaviour
         n_angles = 5;
         Game12Over = false;
         overLapping = false;
-        GameObject.Find("SlingShot").GetComponent<SlingShot>().enabled = false;
-        GameObject.Find("DragHandle").GetComponent<DragHandle>().enabled = false;
+        /// GameObject.Find("SlingShot").GetComponent<SlingShot>().enabled = false;    //Latest_Changes
+        /// GameObject.Find("DragHandle").GetComponent<DragHandle>().enabled = false;  //Latest_Changes
         trailNextLevel = 1;
         realAttemptBall = true;
         // btn.GetComponent<Button>();
@@ -79,7 +79,7 @@ public class GameManagerTool : MonoBehaviour
         goToNextLevel.SetActive(false);
         playButton.SetActive(true);
         Vector2 center;
-        GameObject.Find("Collider").GetComponent<GameCollider>().enabled = false;
+        /// GameObject.Find("Collider").GetComponent<GameCollider>().enabled = false; //Latest_Changes
         center = cc.GetComponent<Renderer>().bounds.center;
         Debug.Log(center);
         g = 0.0f;
@@ -159,8 +159,8 @@ public class GameManagerTool : MonoBehaviour
         overLapping = false;
         exit = false;
         LivesCount.nextLevelBool = false;
-        GameObject.Find("SlingShot").GetComponent<SlingShot>().enabled = true;
-        GameObject.Find("DragHandle").GetComponent<DragHandle>().enabled = true;
+        /// GameObject.Find("SlingShot").GetComponent<SlingShot>().enabled = true; //Latest_Changes
+        ///  GameObject.Find("DragHandle").GetComponent<DragHandle>().enabled = true;//Latest_Changes
         //print(Screen.dpi);
         AttemptBall.destroy = false;
         realAttemptBall = true;

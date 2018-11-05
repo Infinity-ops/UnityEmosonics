@@ -27,7 +27,7 @@ namespace Magicolo {
 		static IEnumerator SetHasChanged(Transform transform, bool hasChanged) {
 			yield return new WaitForEndOfFrame();
 			
-			transform.hasChanged = hasChanged;
+			//transform.hasChanged = hasChanged;
 		}
 
 	}
