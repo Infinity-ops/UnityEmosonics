@@ -4203,7 +4203,6 @@ GameObject:
   m_Component:
   - component: {fileID: 749334185}
   - component: {fileID: 749334184}
-  - component: {fileID: 749334183}
   - component: {fileID: 749334182}
   - component: {fileID: 749334181}
   m_Layer: 5
@@ -4279,18 +4278,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &749334183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114568980606798202, guid: 24dfbeadc77576e4294282c41a946dab,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 749334180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!222 &749334184
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8906,8 +8893,7 @@ MonoBehaviour:
     paths: []
     pureData: {fileID: 1384050510}
   editorHelper:
-    selection:
-    - {fileID: 102900000, guid: c323bdc65d9a2e2469a797274f03c041, type: 3}
+    selection: []
     repaintDummy: 0
     repaint: 0
     pureDataIcon: {fileID: 0}

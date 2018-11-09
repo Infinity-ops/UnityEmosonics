@@ -24,13 +24,15 @@ public class RandomSound : MonoBehaviour
     public void play()
     {
         double[] pos = { GameManagerTool.xrand, GameManagerTool.yrand };
-        // double[] pos = new double[] { Random.Range(-1f, 1f), Random.Range(-1f, 1f) };
-       
         pd.changeValue(pos);
+        // double[] pos = new double[] { Random.Range(-1f, 1f), Random.Range(-1f, 1f) };
+        print("///////////////    POS     //////////////////");
         print("////////////////////////////////////////////////");
         print("x" + pos[0].ToString());
         print("y" + pos[1].ToString());
         print("////////////////////////////////////////////////");
+        
+       
         pd.playAudio();
     }
 }

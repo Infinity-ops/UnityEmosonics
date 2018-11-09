@@ -18,7 +18,7 @@ public class PdAPI : MonoBehaviour
     private float richness_min = 0.5f;
     private string file = "sample_data.json";
     private string filename = string.Empty;
-    private string engine_type = "sample"; //synth or sample
+    private string engine_type = "synth"; //synth or sample
     private string sound_type = "voc"; //voc or inf
     private string xvecs_type = "unit";
     private string TOUCHSYMBOL = "#touch";
@@ -39,7 +39,7 @@ public class PdAPI : MonoBehaviour
     {
         //dirty hack to make the audiosource work
         // SceneManager.LoadScene(0);
-
+        kr = gameObject.AddComponent<KernelRegression>();
         //choose which JsonLoader to use
         // if (engine_type == "sample")
         // {
@@ -49,7 +49,7 @@ public class PdAPI : MonoBehaviour
         // {
         //     JL = new JsonLoader();
         // }
-
+        PureData.OpenPatch("abstractlatest");
         JL = new JsonLoader(file);
 
     }
@@ -105,9 +105,10 @@ public class PdAPI : MonoBehaviour
         //check first whether type of sound to use
         if (engine_type == "sample")
         {
+
             //call sample function
             string emotion = get_nearest_emotion(posxy);
-
+          
             //load data if not done before
             if (sl == null)
             {
@@ -121,6 +122,7 @@ public class PdAPI : MonoBehaviour
 
         else
         {
+            Debug.Log("Change value!!!");
             //use engine to produce sound
             double[] paramVec = kr.Krm(posxy, sigma, xvecs_type);
 
@@ -148,14 +150,12 @@ public class PdAPI : MonoBehaviour
     {
         if (engine_type.Equals("synth"))
         {
+            Debug.Log("666666666666666666");
             PureData.SendMessage(TOUCHSYMBOL, TRIGGER, BANG);
         }
         else if (engine_type.Equals("sample"))
         {
 
-            AudioClip clip = (AudioClip)Resources.Load("samples/" + filename.Remove(filename.Length - 4));
-            audioSource.Stop();
-            audioSource.PlayOneShot(clip);
         }
 
 
@@ -214,7 +214,6 @@ public class PdAPI : MonoBehaviour
         if (type.Equals("synthetic"))
         {
             kr = gameObject.AddComponent<KernelRegression>();
-            PureData.OpenPatch("abstractlatest");
             engine_type = "synth";
         }
         else
