@@ -21,7 +21,7 @@ public class GameControl : MonoBehaviour
     public int representation; /**< toggle variable for russel or uniform representation */
     public int soundSetting; /**< what sound producing method to pass to backernd */
 
-    public Color favorite1Color; /**< color of favorite button 1*/ 
+    public Color favorite1Color; /**< color of favorite button 1*/
     public Color favorite2Color; /**< color of favorite button 2*/
     public Color favorite3Color; /**< color of favorite button 3*/
     public Color favorite4Color; /**< color of favorite button 4*/
@@ -171,7 +171,7 @@ public class GameControl : MonoBehaviour
         else
         {
             visualization = 0;
-            favorite1Color = new Color(1.0F,1.0F,1.0F);
+            favorite1Color = new Color(1.0F, 1.0F, 1.0F);
             favorite2Color = new Color(1.0F, 1.0F, 1.0F);
             favorite3Color = new Color(1.0F, 1.0F, 1.0F);
             favorite4Color = new Color(1.0F, 1.0F, 1.0F);

@@ -7,7 +7,7 @@ public class Triggertest : MonoBehaviour {
     public static int cloneDesCount;
     [SerializeField]
     private RandomSound rs;
-   [SerializeField]
+    [SerializeField]
     private Image errorImage;
    //[SerializeField] private Image errorImage1;  //Removetest//
     public static bool testPass2;

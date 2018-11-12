@@ -74,7 +74,6 @@ GameObject:
   - component: {fileID: 222217222717836340}
   - component: {fileID: 114230862578532372}
   - component: {fileID: 114356369371178440}
-  - component: {fileID: 114185586058320576}
   m_Layer: 5
   m_Name: SettingsCloseButton
   m_TagString: Untagged
@@ -99,17 +98,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114185586058320576
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1754512788800932}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114195653474356614
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -236,7 +224,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114185586058320576}
+      - m_Target: {fileID: 0}
         m_MethodName: closeMenu
         m_Mode: 1
         m_Arguments:

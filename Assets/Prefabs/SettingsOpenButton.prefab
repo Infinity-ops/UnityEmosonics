@@ -41,7 +41,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d58873e38a3d6794d860ed73f1b56960, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SlidePanel: {fileID: 0}
+  SlidePanel: {fileID: 1717309006302572, guid: c9fbd9b30812c4341be73fe90875f8a9, type: 2}
 --- !u!114 &114568980606798202
 MonoBehaviour:
   m_ObjectHideFlags: 1

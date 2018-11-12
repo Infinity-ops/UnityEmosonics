@@ -16,11 +16,11 @@ public class slideMenuScript : MonoBehaviour
     void Start()
     {
         //unpause the game on start
-        Time.timeScale = 1;
+        Time.timeScale = 2;
         //get the animator component
         anim = SlidePanel.GetComponent<Animator>();
         //disable it on start to stop it from playing the default animation
-        anim.enabled = false;
+        anim.enabled = true;
     }
 
     /**
