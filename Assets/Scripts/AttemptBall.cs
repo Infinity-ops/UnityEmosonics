@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/**
+ * This script is for referring the number of Attempt balls in the game
+ * For every wrong hit, one attempt ball  will destroy
+ */
 public class AttemptBall : MonoBehaviour {
-    public GameObject ball;
-    private int i = 0;
-    public static bool destroy;
-   public static GameObject ball1,ball2,ball3;
-    public static bool ballCheck2, ballCheck1, ballCheck3;
+    public GameObject ball;  /**< This ball refers to sphere in DragHandle GAmeobject */
+    public static bool destroy;  /**< To check whether all attempt ball is destroyed or not*/
+   public static GameObject ball1,ball2,ball3;  /**< This Gameobject refers to Attempt balls*/
+    public static bool ballCheck2, ballCheck1, ballCheck3; /**<To check whether attempt ball is destroyed or not*/
 
     // Use this for initialization
     void Start()
@@ -26,14 +28,12 @@ public class AttemptBall : MonoBehaviour {
              ball1 = GameObject.FindWithTag("ball1");
              ball2 = GameObject.FindWithTag("ball2");
              ball3 = GameObject.FindWithTag("ball3");
-            //i = gameObject.Length;
             GameManagerTool.realAttemptBall = false;
             LivesCount.nextLevelBool = false;
         }
 
         if (GameCollider.testPass1 == true || GameManagerTool.testPass3 == true)
         {
-
             GameCollider.testPass1 = false;
             GameManagerTool.testPass3 = false;
             LivesCount.livesValue -= 1;
@@ -58,9 +58,7 @@ public class AttemptBall : MonoBehaviour {
                     ballCheck3 = true;
                     destroy = false;
                 }
-
-                    //Destroy(Duplicator.attemptBall1);
-                }
+            }
             ball.SetActive(true);
             destroy = false;
         }
@@ -90,17 +88,8 @@ public class AttemptBall : MonoBehaviour {
                     destroy = false;
                 }
             }
-
-            //Destroy(Duplicator.attemptBall1);
             ball.SetActive(true);
             destroy = false;
         }
-
-        //bg.isTrigger == false;
-    
-      
- 
-
     }
-  
 }
