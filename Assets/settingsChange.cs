@@ -4,19 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class settingsChange : MonoBehaviour {
-    private Dropdown dropDownRepresentation;
-    private Dropdown dropDownVisualization;
-    private Dropdown dropDownSoundSetting;
+    public Dropdown dropDownRepresentation;
+    public Dropdown dropDownVisualization;
+    public Dropdown dropDownSoundSetting;
 
 	// Use this for initialization
 	void Start () {
-        dropDownRepresentation = GameObject.Find("Representation").GetComponent<Dropdown>();
         dropDownRepresentation.value = GameControl.control.visualization;
 
-        dropDownVisualization = GameObject.Find("Visualization").GetComponent<Dropdown>();
         dropDownVisualization.value = GameControl.control.representation;
 
-        dropDownSoundSetting = GameObject.Find("SoundSetting").GetComponent<Dropdown>();
         dropDownSoundSetting.value = GameControl.control.soundSetting;
     }
 

@@ -153,6 +153,7 @@ public class GameControl : MonoBehaviour
             visualization = settings.visualization;
             representation = settings.representation;
             onBoardingFinished = settings.onBoardingFinished;
+            soundSetting = settings.soundSetting;
 
             favorite1Color = settings.Favorite1Color;
             favorite2Color = settings.Favorite2Color;
@@ -171,10 +172,13 @@ public class GameControl : MonoBehaviour
         else
         {
             visualization = 0;
-            favorite1Color = new Color(1.0F,1.0F,1.0F);
-            favorite2Color = new Color(1.0F, 1.0F, 1.0F);
-            favorite3Color = new Color(1.0F, 1.0F, 1.0F);
-            favorite4Color = new Color(1.0F, 1.0F, 1.0F);
+            soundSetting = 0;
+            representation = 0;
+
+            favorite1Color = new Color(1.0F,1.0F,1.0F,1);
+            favorite2Color = new Color(1.0F, 1.0F, 1.0F,1);
+            favorite3Color = new Color(1.0F, 1.0F, 1.0F,1);
+            favorite4Color = new Color(1.0F, 1.0F, 1.0F,1);
         }
     }
 

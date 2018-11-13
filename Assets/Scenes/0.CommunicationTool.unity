@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1537,7 +1537,6 @@ GameObject:
   - component: {fileID: 369036437}
   - component: {fileID: 369036436}
   - component: {fileID: 369036435}
-  - component: {fileID: 369036434}
   m_Layer: 5
   m_Name: SoundSetting
   m_TagString: Untagged
@@ -1545,17 +1544,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &369036434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 369036433}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b7edb56987fd11488d182a2fbb0586b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &369036435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1609,7 +1597,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 369036434}
+      - m_Target: {fileID: 2065464341}
         m_MethodName: updateSoundSetting
         m_Mode: 1
         m_Arguments:
@@ -5514,7 +5502,6 @@ GameObject:
   - component: {fileID: 1627618402}
   - component: {fileID: 1627618401}
   - component: {fileID: 1627618400}
-  - component: {fileID: 1627618399}
   m_Layer: 5
   m_Name: Representation
   m_TagString: Untagged
@@ -5543,17 +5530,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 172}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1627618399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1627618397}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b7edb56987fd11488d182a2fbb0586b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1627618400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5605,7 +5581,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1627618399}
+      - m_Target: {fileID: 2065464341}
         m_MethodName: updateRepresentation
         m_Mode: 1
         m_Arguments:
@@ -6610,7 +6586,6 @@ GameObject:
   - component: {fileID: 2010182100}
   - component: {fileID: 2010182099}
   - component: {fileID: 2010182098}
-  - component: {fileID: 2010182096}
   m_Layer: 5
   m_Name: Visualization
   m_TagString: Untagged
@@ -6618,17 +6593,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2010182096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2010182095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b7edb56987fd11488d182a2fbb0586b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2010182098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6680,7 +6644,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2010182096}
+      - m_Target: {fileID: 2065464341}
         m_MethodName: updateVisualization
         m_Mode: 1
         m_Arguments:
@@ -6821,6 +6785,49 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2064099244}
+--- !u!1 &2065464340
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2065464342}
+  - component: {fileID: 2065464341}
+  m_Layer: 0
+  m_Name: SettingsChange
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2065464341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2065464340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b7edb56987fd11488d182a2fbb0586b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropDownRepresentation: {fileID: 1627618400}
+  dropDownVisualization: {fileID: 2010182098}
+  dropDownSoundSetting: {fileID: 369036435}
+--- !u!4 &2065464342
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2065464340}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 111.54485, y: 247.78142, z: -4.25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2117711142
 GameObject:
   m_ObjectHideFlags: 0
