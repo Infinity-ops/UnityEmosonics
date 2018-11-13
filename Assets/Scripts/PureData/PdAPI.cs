@@ -40,17 +40,23 @@ public class PdAPI : MonoBehaviour
         //dirty hack to make the audiosource work
         // SceneManager.LoadScene(0);
         
-        //choose which JsonLoader to use
-        // if (engine_type == "sample")
-        // {
-        //     JL = new JsonLoader(file);
-        // }
-        // else if (engine_type == "synth")
-        // {
-        //     JL = new JsonLoader();
-        // }
+        kr = gameObject.AddComponent<KernelRegression>();
+        PureData.OpenPatch("abstractlatest");
+        audioSource = GetComponent<AudioSource>();
+        audioSource.volume = 1f;
 
-        JL = new JsonLoader(file);
+        // choose which JsonLoader to use
+        if (engine_type == "sample")
+        {
+            JL = new JsonLoader(file);
+        }
+        else if (engine_type == "synth")
+        {
+            
+            JL = new JsonLoader();
+        }
+
+        // JL = new JsonLoader(file);
 
     }
 
@@ -150,7 +156,7 @@ public class PdAPI : MonoBehaviour
         }
         else if (engine_type.Equals("sample"))
         {
-            
+
             AudioClip clip = (AudioClip)Resources.Load("samples/"+filename.Remove(filename.Length-4));
             audioSource.Stop();
             audioSource.PlayOneShot(clip);
@@ -211,16 +217,12 @@ public class PdAPI : MonoBehaviour
 
         if (type.Equals("synthetic"))
         {
-            kr = gameObject.AddComponent<KernelRegression>();
-            PureData.OpenPatch("abstractlatest");
+
             engine_type = "synth";
         }
         else
         {
-            PureData.CloseAllPatches();
             engine_type = "sample";
-            audioSource = GetComponent<AudioSource>();
-            audioSource.volume = 1f;
             if (type.Equals("vocal"))
             {
                 sound_type = "voc";
@@ -299,7 +301,7 @@ public class PdAPI : MonoBehaviour
 
         int min_idx = Array.IndexOf(distvec, distvec.Min());
         string nearest_emotion = emotions[min_idx];
-
+        
         return nearest_emotion;
     }
 
