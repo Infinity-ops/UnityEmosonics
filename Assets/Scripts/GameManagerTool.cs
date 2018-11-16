@@ -81,7 +81,6 @@ public class GameManagerTool : MonoBehaviour
         Vector2 center;
         GameObject.Find("Collider").GetComponent<GameCollider>().enabled = false;
         center = cc.GetComponent<Renderer>().bounds.center;
-        Debug.Log(center);
         g = 0.0f;
         //circle = cc.GetComponent<RectTransform>();
         Data = ImageSprite.texture.GetPixels();
@@ -99,11 +98,7 @@ public class GameManagerTool : MonoBehaviour
 
         foreach (var clone in clones)
         {
-
-            Debug.Log("Gam");
-
             Destroy(clone);
-
         }
         LivesCount.nextLevelBool = false;
         GameObject.Find("SlingShot").GetComponent<SlingShot>().enabled = true;
@@ -122,8 +117,7 @@ public class GameManagerTool : MonoBehaviour
         playButton.SetActive(false);
         playGainButton.SetActive(false);
         //backButton.SetActive(false);
-
-        Debug.Log("0000000000000000000000000000");
+        
         if (AttemptBall.ballCheck1)
         {
             attemptBall1 = (GameObject)Instantiate(myPrefab1, new Vector3(-1.7f, -2.9f, 0), Quaternion.identity);
@@ -175,7 +169,7 @@ public class GameManagerTool : MonoBehaviour
         playButton.SetActive(false);
         playGainButton.SetActive(false);
         //backButton.SetActive(false);
-        Debug.Log("0000000000000000000000000000");
+        
 
         attemptBall1 = (GameObject)Instantiate(myPrefab1, new Vector3(-1.7f, -2.9f, 0), Quaternion.identity);
         attemptBall1.tag = "ball1";
@@ -200,7 +194,7 @@ public class GameManagerTool : MonoBehaviour
         foreach (var clone in clones)
         {
 
-            Debug.Log("Gam");
+           
 
             Destroy(clone);
 
@@ -222,7 +216,7 @@ public class GameManagerTool : MonoBehaviour
         playButton.SetActive(false);
         playGainButton.SetActive(false);
         //backButton.SetActive(false);
-        Debug.Log("222222222222222222222222222222222");
+        
         if (AttemptBall.ballCheck1)
         {
             attemptBall1 = (GameObject)Instantiate(myPrefab1, new Vector3(-1.7f, -2.9f, 0), Quaternion.identity);
@@ -259,7 +253,7 @@ public class GameManagerTool : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Triggered*********");
+        
 
     }
     // Update is called once per frame
@@ -269,12 +263,10 @@ public class GameManagerTool : MonoBehaviour
     }
     public Color getColorByNormalizedPosition(float X, float Y)
     {
-        Debug.Log(Width + "   HH   "+ Height);
+       
         int x = (int)(X * (Width / 6)) + (Width / 2);
         int y = (int)(Y * (Height / 5)) + (Height / 13);
-        Debug.Log("color");
-        Debug.Log("Height " + Height + ", Width: " + Width + ", X: " + x + ",Y : " + y);
-        Debug.Log(x + "   " + y);
+        
         if (x > 0 && x < Width && y > 0 && y < Height)
         {
             return Data[y * Width + x];
@@ -383,7 +375,7 @@ public class GameManagerTool : MonoBehaviour
                         z1 = 3.5f;
                         pos1.Add(posSPhere1[i]);
                         // myAL.Add();
-                        Debug.Log("GGGGGGGGGGGGGGGGGGGGGgggggggggg" + posSPhere1[i]);
+                        
 
 
                     }
@@ -441,7 +433,7 @@ public class GameManagerTool : MonoBehaviour
             x1 = testRan.x;
             y1 = testRan.y;
             z1 = 3.5f;
-            Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
+           
             myPrefab.transform.localScale = new Vector3(radius, radius, radius);
             sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
             sphere.gameObject.tag = "Spheree";
@@ -449,13 +441,10 @@ public class GameManagerTool : MonoBehaviour
             sc.radius = radius;
             sc.isTrigger = true;
             sphere.transform.position = new Vector3(x1, y1, z1);
-            print("**************************************");
-            Debug.Log(x1 + " * *" + y1);
-            print("**************************************");
+           
             xrand = x1; yrand = y1;
             sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
-            //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
-
+            
             pos2.Remove(pos2[ran]);
             for (int k = 1; k <= q; k++)
             {
@@ -465,7 +454,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos4[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
+                 
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
                     sphere.gameObject.tag = "Spheree";
@@ -473,9 +462,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                   
                     //xrand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -488,8 +475,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos3[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
-                
+                   
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
                     sphere.gameObject.tag = "Spheree";
@@ -497,9 +483,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                    
                     //xrand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -520,9 +504,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                   
                     //xrand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -535,7 +517,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos1[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
+                    
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
                     sphere.gameObject.tag = "Spheree";
@@ -543,9 +525,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                    
                     //xrand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -558,7 +538,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos4[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
+                    
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
                     sphere.gameObject.tag = "Spheree";
@@ -566,9 +546,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                    
                     //xrand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -581,7 +559,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos2[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
+                    
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
                     sphere.gameObject.tag = "Spheree";
@@ -589,9 +567,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                   
                     //xrand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -604,8 +580,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos3[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
-
+                 
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
                     sphere.gameObject.tag = "Spheree";
@@ -613,9 +588,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                    
                     //xrand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -628,7 +601,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos1[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
+                   
 
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
@@ -637,9 +610,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                   
                     //xrand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -652,7 +623,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos3[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
+                   
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
                     sphere.gameObject.tag = "Spheree";
@@ -660,9 +631,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                   
                     //xrand = x1; yrand = y1;
                     // sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -675,8 +644,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos4[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
-
+                    
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
                     sphere.gameObject.tag = "Spheree";
@@ -684,9 +652,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                    
                     //xrand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -700,8 +666,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos3[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
-
+                   
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
                     sphere.gameObject.tag = "Spheree";
@@ -709,9 +674,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                    
                     //xrand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -725,8 +688,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos2[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
-
+                    
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
                     sphere.gameObject.tag = "Spheree";
@@ -734,9 +696,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                    
                     //xrand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -750,8 +710,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos4[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
-
+                   
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
                     sphere.gameObject.tag = "Spheree";
@@ -759,9 +718,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                    
                     //xrand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -782,7 +739,8 @@ public class GameManagerTool : MonoBehaviour
         float b, c, distance;
         distance = 1.95f;
         a = trailNextLevel ;
-        Debug.Log(a);
+        
+
         if (GameController.check == true)
         {
             p = GameController.box;
@@ -883,7 +841,7 @@ public class GameManagerTool : MonoBehaviour
                         z1 = 3.5f;
                         pos1.Add(posSPhere1[i]);
                         // myAL.Add();
-                        Debug.Log("GGGGGGGGGGGGGGGGGGGGGgggggggggg" + posSPhere1[i]);
+                        
 
 
                     }
@@ -941,7 +899,7 @@ public class GameManagerTool : MonoBehaviour
             x1 = testRan.x;
             y1 = testRan.y;
             z1 = 3.5f;
-            Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
+           
             myPrefab.transform.localScale = new Vector3(radius, radius, radius);
             sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
             sphere.gameObject.tag = "Spheree";
@@ -949,9 +907,7 @@ public class GameManagerTool : MonoBehaviour
             sc.radius = radius;
             sc.isTrigger = true;
             sphere.transform.position = new Vector3(x1, y1, z1);
-            print("**************************************");
-            Debug.Log(x1 + " * *" + y1);
-            print("**************************************");
+            
             xrand = x1; yrand = y1;
             sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
             //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -965,7 +921,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos4[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
+                    
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
                     sphere.gameObject.tag = "Spheree";
@@ -973,9 +929,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                    
                     //xrand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -988,7 +942,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos3[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
+                    
                 
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
@@ -997,9 +951,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                    
                     //xrand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -1012,7 +964,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos4[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
+                    
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
                     sphere.gameObject.tag = "Spheree";
@@ -1020,9 +972,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                   
                     //xrand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -1035,7 +985,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos1[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
+                   
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
                     sphere.gameObject.tag = "Spheree";
@@ -1043,9 +993,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                   
                     //xrand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -1058,7 +1006,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos4[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
+                    
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
                     sphere.gameObject.tag = "Spheree";
@@ -1066,9 +1014,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                   
                     //xrand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -1081,7 +1027,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos2[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
+                    
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
                     sphere.gameObject.tag = "Spheree";
@@ -1089,9 +1035,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                    
                     //xrand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -1104,7 +1048,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos3[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
+                  
 
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
@@ -1113,9 +1057,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                   
                     //xrand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -1128,7 +1070,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos1[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
+                   
 
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
@@ -1137,9 +1079,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                    
                     //xrand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -1152,8 +1092,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos3[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
-
+                  
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
                     sphere.gameObject.tag = "Spheree";
@@ -1161,9 +1100,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                   
                     //xrand = x1; yrand = y1;
                     // sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -1176,8 +1113,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos4[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
-
+                   
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
                     sphere.gameObject.tag = "Spheree";
@@ -1185,9 +1121,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                    
                     //xrand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -1201,8 +1135,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos3[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
-
+                    
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
                     sphere.gameObject.tag = "Spheree";
@@ -1210,9 +1143,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                   
                     //xrand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -1226,7 +1157,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos2[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
+                   
 
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
@@ -1235,9 +1166,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                    
                     //xrand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -1251,8 +1180,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos4[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
-
+                  
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
                     sphere.gameObject.tag = "Spheree";
@@ -1260,9 +1188,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                
                     //xrand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -1278,9 +1204,6 @@ public class GameManagerTool : MonoBehaviour
             }
         }
 
-        
-
-
     }
 
 
@@ -1291,14 +1214,14 @@ public class GameManagerTool : MonoBehaviour
         a = trailNextLevel;
 
         SphereCollider sc;
-        Debug.Log(GameController.check);
+        
         //GameController.check = true;
         float b, c, radius, distance;
         radius = 0;
         distance = 1.0f;
         if (GameController.check == true)
         {
-            Debug.Log("JJJJJJJJJJJJJJ"  + GameController.box);
+            
             p = GameController.box;
             q = p ;
         }
@@ -1307,8 +1230,7 @@ public class GameManagerTool : MonoBehaviour
             q = a ;
 
         }
-        Debug.Log(a);
-        Debug.Log(p);
+       
         if (a == 1 || p == 1)
         {
             Game12Over = false;
@@ -1384,7 +1306,7 @@ public class GameManagerTool : MonoBehaviour
         }
         else
         {
-            Debug.Log("JJJJJJJDDDDDDDDDDDDDDDJJJJJJJ");
+            
             Game12Over = true;
             a = 0;
         }
@@ -1407,7 +1329,7 @@ public class GameManagerTool : MonoBehaviour
                         z1 = 3.5f;
                         pos1.Add(posSPhere1[i]);
                         // myAL.Add();
-                        Debug.Log("GGGGGGGGGGGGGGGGGGGGGgggggggggg" + posSPhere1[i]);
+                       
 
 
                     }
@@ -1465,7 +1387,7 @@ public class GameManagerTool : MonoBehaviour
             x1 = testRan.x;
             y1 = testRan.y;
             z1 = 3.5f;
-            Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
+            
             myPrefab.transform.localScale = new Vector3(radius, radius, radius);
             sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
             sphere.gameObject.tag = "Spheree";
@@ -1473,9 +1395,7 @@ public class GameManagerTool : MonoBehaviour
             sc.radius = radius;
             sc.isTrigger = true;
             sphere.transform.position = new Vector3(x1, y1, z1);
-            print("**************************************");
-            Debug.Log(x1 + " * *" + y1);
-            print("**************************************");
+           
             xrand = x1; yrand = y1;
             sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
             //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -1490,7 +1410,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos1[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
+                    
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
                     sphere.gameObject.tag = "Spheree";
@@ -1498,9 +1418,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                    
                     //xrand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -1513,7 +1431,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos2[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
+                   
               
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
@@ -1522,9 +1440,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                  
                     //xrand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -1537,7 +1453,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos3[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
+                   
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
                     sphere.gameObject.tag = "Spheree";
@@ -1545,9 +1461,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                    
                     //xrand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -1560,7 +1474,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos1[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
+                    
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
                     sphere.gameObject.tag = "Spheree";
@@ -1568,9 +1482,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                    
                     //xrand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -1583,7 +1495,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos4[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
+                    
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
                     sphere.gameObject.tag = "Spheree";
@@ -1591,9 +1503,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                    
                     //xrand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -1606,7 +1516,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos2[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
+                    
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
                     sphere.gameObject.tag = "Spheree";
@@ -1614,9 +1524,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                  
                     //xrand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -1629,8 +1537,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos3[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
-
+                   
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
                     sphere.gameObject.tag = "Spheree";
@@ -1638,9 +1545,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                   
                     //xrand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -1653,8 +1558,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos1[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
-
+                  
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
                     sphere.gameObject.tag = "Spheree";
@@ -1662,9 +1566,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                   
                     //xrand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -1677,8 +1579,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos3[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
-
+   
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
                     sphere.gameObject.tag = "Spheree";
@@ -1686,9 +1587,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                    
                     //xrand = x1; yrand = y1;
                     // sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -1701,7 +1600,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos4[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
+                    
 
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
@@ -1710,9 +1609,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                   
                     //xrand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -1726,7 +1623,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos3[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
+                   
 
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
@@ -1735,9 +1632,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                  
                     //xrand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -1751,7 +1646,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos2[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
+                   
 
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
@@ -1760,9 +1655,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                  
                     //xrand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 
@@ -1776,7 +1669,7 @@ public class GameManagerTool : MonoBehaviour
                     testRan = pos4[ran];
                     x1 = testRan.x;
                     y1 = testRan.y;
-                    Debug.Log("GGGGGGGGGGGGGGGGGGGG  " + x1 + "  " + y1 + "              " + ran);
+                 
 
                     myPrefab.transform.localScale = new Vector3(radius, radius, radius);
                     sphere = (GameObject)Instantiate(myPrefab, new Vector3(x1, y1, z1), Quaternion.identity);
@@ -1785,9 +1678,7 @@ public class GameManagerTool : MonoBehaviour
                     sc.radius = radius;
                     sc.isTrigger = true;
                     sphere.transform.position = new Vector3(x1, y1, z1);
-                    print("**************************************");
-                    Debug.Log(x1 + " * *" + y1);
-                    print("**************************************");
+                  
                     //xrand = x1; yrand = y1;
                     sphere.GetComponent<Renderer>().material.color = getColorByNormalizedPosition(x1, y1);
                     //Debug.Log(getColorByNormalizedPosition(x1, y1)); 

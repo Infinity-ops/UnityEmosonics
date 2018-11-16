@@ -25,9 +25,7 @@ public class GameController : MonoBehaviour {
         if(EventSystem.current.currentSelectedGameObject.name == "button1")
         {
             box = TestLevelSlide.n1;
-            print("Hey inga paaru " + box);
             check = true;
-            Debug.Log(check);
             distance = 2.5f;
             size = 0.5f;
            
@@ -36,7 +34,6 @@ public class GameController : MonoBehaviour {
         {
             box = TestLevelSlide.n2;
             check = true;
-            Debug.Log(box);
             distance = 2.475f;
             size = 0.475f;
         }
@@ -44,7 +41,6 @@ public class GameController : MonoBehaviour {
         {
             box = TestLevelSlide.n3;
             check = true;
-            Debug.Log(box);
             distance = 2.5f;
             size = 0.45f;
         }
@@ -52,7 +48,6 @@ public class GameController : MonoBehaviour {
         {
             box = TestLevelSlide.n4;
             check = true;
-            Debug.Log(box);
             distance = 2.415f;
             size = 0.415f;
         }
@@ -60,7 +55,6 @@ public class GameController : MonoBehaviour {
         {
             box = TestLevelSlide.n5;
             check = true;
-            Debug.Log(box);
             distance = 2.375f;
             size = 0.375f;
         }
@@ -68,7 +62,6 @@ public class GameController : MonoBehaviour {
         {
             box = TestLevelSlide.n6;
             check = true;
-            Debug.Log(box);
             distance = 2.35f;
             size = 0.35f;
         }
@@ -76,7 +69,6 @@ public class GameController : MonoBehaviour {
         {
             box = TestLevelSlide.n7;
             check = true;
-            Debug.Log(box);
             distance = 2.315f;
             size = 0.315f;
         }
@@ -84,7 +76,6 @@ public class GameController : MonoBehaviour {
         {
             box = TestLevelSlide.n8;
             check = true;
-            Debug.Log(box);
             distance = 2.3f;
             size = 0.3f;
         }
@@ -92,7 +83,6 @@ public class GameController : MonoBehaviour {
         {
             box = TestLevelSlide.n9;
             check = true;
-            Debug.Log(box);
             distance = 2.275f;
             size = 0.275f;
         }
@@ -100,7 +90,6 @@ public class GameController : MonoBehaviour {
         {
             box = TestLevelSlide.n10;
             check = true;
-            Debug.Log(box);
             distance = 2.25f;
             size = 0.25f;
         }
@@ -108,7 +97,6 @@ public class GameController : MonoBehaviour {
         {
             box = TestLevelSlide.n11;
             check = true;
-            Debug.Log(box);
             distance = 2.215f;
             size = 0.215f;
         }
@@ -116,7 +104,6 @@ public class GameController : MonoBehaviour {
         {
             box = TestLevelSlide.n12;
             check = true;
-            Debug.Log(box);
             size = 0.2f;
         }
     }

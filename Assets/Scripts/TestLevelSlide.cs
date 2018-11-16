@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class TestLevelSlide : MonoBehaviour
 {
-
+    /** text box for all buttons in grid layout */
     public Text box1;
     public Text box2;
     public Text box3;
@@ -19,7 +19,7 @@ public class TestLevelSlide : MonoBehaviour
     public Text box10;
     public Text box11;
     public Text box12;
-    public static int n1=1, n2=2, n3=3, n4=4, n5=5, n6=6, n7=7, n8=8, n9=9, n10=10, n11=11, n12=12;
+    public static int n1=1, n2=2, n3=3, n4=4, n5=5, n6=6, n7=7, n8=8, n9=9, n10=10, n11=11, n12=12; 
     bool check = false;
     bool check1 = false;
     bool check2 = false;
@@ -39,7 +39,9 @@ public class TestLevelSlide : MonoBehaviour
 
 
     }
-
+    /**
+     * Right click is for sliding to next level page
+     */
     public void Right_click()
     {
         count++;
@@ -124,6 +126,9 @@ public class TestLevelSlide : MonoBehaviour
             }
         }
     }
+    /**
+     * Left click is for sliding to previous level page
+     */
     public void Left_click()
     {
         count--;

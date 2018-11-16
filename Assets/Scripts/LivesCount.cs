@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class LivesCount : MonoBehaviour
 {
     public GameObject panel;  
-    public static int nextLevel; //for shifting automatically to next level
+    public static int nextLevel; /**for shifting automatically to next level*/
     public static int livesValue = 3;
     public static int levelIncre =1;
     public Text lives;
@@ -19,7 +19,11 @@ public class LivesCount : MonoBehaviour
     public static bool nextLevelBool;
     // Use this for initialization
     //public AudioSource _audio;
-    public GameObject trajectile;//To set active TrajectileScript
+    public GameObject trajectile; /**To set active TrajectileScript*/
+
+    /**
+	 * This initialise the level and game status
+	 */
     void Start()
     {
         //_audio = gameObject.GetComponent<AudioSource>();
@@ -29,7 +33,6 @@ public class LivesCount : MonoBehaviour
         goToNextLevel1.SetActive(false);
         playGainButton.SetActive(false);
         neverDone = true;
-        
         // livesValue = livesValue + 1;
     }
     public void CrossSceneInformation()
@@ -37,6 +40,10 @@ public class LivesCount : MonoBehaviour
        
     }
     // Update is called once per frame
+
+    /**
+     * This update function is to update the game level
+     */
     void Update()
     {
         if (neverDone)
@@ -120,8 +127,6 @@ public class LivesCount : MonoBehaviour
               
                 if (gameStatus.text == "GameOver!")
                 {
-                    
-                    Debug.Log("GameOverGameOverGameOverGameOverGameOverGameOverGameOverGameOverGameOverGameOverGameOverGameOverGameOverGameOver");
                     nextLevel = nextLevel-1;
                 }
             }

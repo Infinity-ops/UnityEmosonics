@@ -83,19 +83,13 @@ public class Triggertest : MonoBehaviour {
                         AttemptBall.ballCheck3 = false;
                     }
                 }
-
-
-                Debug.Log("correcthit--cloneDestroy" + cloneDesCount);
-
             }
             if ((this.gameObject.transform.position.x != GameManagerTool.xrand) || (this.gameObject.transform.position.y != GameManagerTool.yrand))
             {
                 height = Screen.height /10;
                 Vector3 ff;
                 ff = this.gameObject.transform.localPosition;
-                Debug.Log("MMMMAN" +ff);
-                Debug.Log("Screen Width : " + Screen.width);
-                Debug.Log("Screen Height : " + Screen.height);
+           
                 crosshairRect.position = new Vector3((Screen.width/2) +(height* ff.x), (Screen.height /2)+ (height*ff.y), 3.2f);
                 wrongHit = GetComponent<AudioSource>();
                 wrongHit.volume = 1;
@@ -103,19 +97,16 @@ public class Triggertest : MonoBehaviour {
                 errorImage.enabled = true;
                 testPass2 =true;
             }
-
-            
             if (test)
             {
                 cloneDesCount++;
                 GameCount.scoreValue += 5;
                 test = false;
             }
-       
         Destroy(this.gameObject, 0.3f);
-        Debug.Log("cloneDestroy" + cloneDesCount);
+     
         test = false;
-        Debug.Log("I was hit");
+        
         Destroy(other);
 
         }
@@ -123,8 +114,7 @@ public class Triggertest : MonoBehaviour {
     }
     void OnTriggerExit(Collider other)
     {
-        Debug.Log("clsdddddddddddddddddddd");
- 
+
           //  errorImage.enabled = false;
        
     }

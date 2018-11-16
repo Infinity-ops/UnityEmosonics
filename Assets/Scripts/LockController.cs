@@ -9,11 +9,11 @@ public class LockController : MonoBehaviour {
     public Button[] mybuttons;
     public Sprite lock_image;
     public int level;
-    public static bool realAttemptBall; //Refresh Real AttemptBall
+    public static bool realAttemptBall; /**Refresh Real AttemptBall*/
+    
     // Use this for initialization
     void Start () {
         realAttemptBall = true;
-        print("OOOOOOOOOOOkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk");
         level = PlayerPrefs.GetInt("level", LivesCount.levelIncre);
         for (int i = level; i < mybuttons.Length; i++)
         {
@@ -23,16 +23,25 @@ public class LockController : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
-       
+	void Update () {   
 
     }
+
+    /**
+	 * This manages to load scene
+	 */
+
     public void loadByIndex(int sceneIndex)
     {
         realAttemptBall = true;
         StaticClass.CrossSceneInformation = sceneIndex.ToString();
         SceneManager.LoadScene(sceneIndex);
     }
+
+    /**
+     * This manages to load scene information 
+     */
+
     public static class StaticClass
     {
         

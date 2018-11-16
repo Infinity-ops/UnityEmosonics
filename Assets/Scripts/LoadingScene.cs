@@ -18,8 +18,10 @@ public class LoadingScene : MonoBehaviour
     }
 
     // Update is called once per frame
-   
 
+    /**
+	 * This manages to load scene after the while
+	 */
     IEnumerator LoadNewScene(string sceneName)
     {
         sliderBar.gameObject.SetActive(true);

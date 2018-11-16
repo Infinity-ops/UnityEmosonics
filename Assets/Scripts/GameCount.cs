@@ -17,15 +17,6 @@ public class GameCount : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         score.text = "SCORE: " + scoreValue.ToString();
-        
-        if (GameObject.Find("Sphere(Clone)") == null)
-        {
-            //Debug.Log("Sphere Clonned");
-        }
-        else
-        {
-            //Debug.Log("Not clonned");
-        }
     }
 
 }

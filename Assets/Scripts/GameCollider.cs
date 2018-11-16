@@ -19,7 +19,7 @@ public class GameCollider : MonoBehaviour {
 	}
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Triggered*********");
+       
         testPass1 = true;
     }
    

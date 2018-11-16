@@ -7,12 +7,15 @@ public class RandomPosition : MonoBehaviour {
    
     public int randomNumber;
     // Use this for initialization
+
+
+    /**
+     * test code to check the random position
+     */
+
     void Start () {
         randomNumber = Random.Range(0, positions.Length);
-       
         transform.position = positions[randomNumber];
-
-      
     }
 	
 	

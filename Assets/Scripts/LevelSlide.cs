@@ -19,7 +19,6 @@ public class LevelSlide : MonoBehaviour
     public Text box10;
     public Text box11;
     public Text box12;
-
     bool check = false;
     bool check1 = false;
     bool check2 = false;
@@ -40,14 +39,17 @@ public class LevelSlide : MonoBehaviour
 
     }
 
+    /**
+     * Right click is for sliding to next level page
+     */
+
     public void Right_click()
     {
         count++;
-        Debug.Log("count " +count+ "endcount " +endcount);
         if (count > 1 || count < 0)
         {
             i = endcount - 12 + 1;
-            box1.text = "Level " + (12 + i); Debug.Log(i+12); i++;
+            box1.text = "Level " + (12 + i); 
             box2.text = "Level " + (12 + i); i++;
             box3.text = "Level " + (12 + i); i++;
             box4.text = "Level " + (12 + i); i++;
@@ -60,12 +62,12 @@ public class LevelSlide : MonoBehaviour
             box11.text = "Level " + (12 + i); i++;
             box12.text = "Level " + (12 + i); i++;
             endcount = i + 11;
-            Debug.Log(endcount);
+           
         }
         if (count == 0)
         {
             i = endcount - 11;
-            box1.text = "Level " + (12 + i); Debug.Log(i+12); i++;
+            box1.text = "Level " + (12 + i); 
             box2.text = "Level " + (12 + i); i++;
             box3.text = "Level " + (12 + i); i++;
             box4.text = "Level " + (12 + i); i++;
@@ -78,15 +80,15 @@ public class LevelSlide : MonoBehaviour
             box11.text = "Level " + (12 + i); i++;
             box12.text = "Level " + (12 + i); i++;
             endcount = i + 11;
-            Debug.Log(endcount);
+            
         }
         if (count == 1)
         {
-            Debug.Log("Right one");
+            
             if (endcount == 0)
             {
                 i = endcount + 1;
-                box1.text = "Level " + (12 + i); Debug.Log(i + 12); i++;
+                box1.text = "Level " + (12 + i); 
                 box2.text = "Level " + (12 + i); i++;
                 box3.text = "Level " + (12 + i); i++;
                 box4.text = "Level " + (12 + i); i++;
@@ -99,12 +101,12 @@ public class LevelSlide : MonoBehaviour
                 box11.text = "Level " + (12 + i); i++;
                 box12.text = "Level " + (12 + i); i++;
                 endcount = i + 11;
-                Debug.Log(endcount);
+               
             }
             else
             {
                 i = endcount - 12 + 1;
-                box1.text = "Level " + (12 + i); Debug.Log(i + 12); i++;
+                box1.text = "Level " + (12 + i); 
                 box2.text = "Level " + (12 + i); i++;
                 box3.text = "Level " + (12 + i); i++;
                 box4.text = "Level " + (12 + i); i++;
@@ -117,18 +119,23 @@ public class LevelSlide : MonoBehaviour
                 box11.text = "Level " + (12 + i); i++;
                 box12.text = "Level " + (12 + i); i++;
                 endcount = i + 11;
-                Debug.Log(endcount);
+                
             }
-            }  
+        }  
     }
+
+    /**
+     * left click is for sliding to next previous page
+     */
+
     public void Left_click()
     {
         count--;
-        Debug.Log(count+ " " +endcount);
+        
         if (count < -1 || count > 0)
         {
             i = endcount -12+1;
-            box1.text = "Level " + (i - 12); Debug.Log(i-12); i++;
+            box1.text = "Level " + (i - 12); 
             box2.text = "Level " + (i - 12); i++;
             box3.text = "Level " + (i - 12); i++;
             box4.text = "Level " + (i - 12); i++;
@@ -141,12 +148,12 @@ public class LevelSlide : MonoBehaviour
             box11.text = "Level " + (i - 12); i++;
             box12.text = "Level " + (i - 12); i++;
             endcount = (i - 13);
-            Debug.Log(endcount);
+          
         }
         if (count == 0)
         {
             i = endcount - 11;
-            box1.text = "Level " + (i - 12); Debug.Log(i-12); i++;
+            box1.text = "Level " + (i - 12); 
             box2.text = "Level " + (i - 12); i++;
             box3.text = "Level " + (i - 12); i++;
             box4.text = "Level " + (i - 12); i++;
@@ -159,14 +166,14 @@ public class LevelSlide : MonoBehaviour
             box11.text = "Level " + (i - 12); i++;
             box12.text = "Level " + (i - 12); i++;
             endcount = (i - 13);
-            Debug.Log(endcount);
+           
         }
         if (count == -1)
         {
             if (endcount == 0)
             {
                 i = endcount + 1;
-                box1.text = "Level " + (i - 12); Debug.Log(i - 12); i++;
+                box1.text = "Level " + (i - 12); 
                 box2.text = "Level " + (i - 12); i++;
                 box3.text = "Level " + (i - 12); i++;
                 box4.text = "Level " + (i - 12); i++;
@@ -179,12 +186,12 @@ public class LevelSlide : MonoBehaviour
                 box11.text = "Level " + (i - 12); i++;
                 box12.text = "Level " + (i - 12); i++;
                 endcount = (i - 13);
-                Debug.Log(endcount);
+                
             }
             else
             {
                 i = endcount - 12 + 1;
-                box1.text = "Level " + (i - 12); Debug.Log(i - 12); i++;
+                box1.text = "Level " + (i - 12); 
                 box2.text = "Level " + (i - 12); i++;
                 box3.text = "Level " + (i - 12); i++;
                 box4.text = "Level " + (i - 12); i++;
@@ -197,7 +204,7 @@ public class LevelSlide : MonoBehaviour
                 box11.text = "Level " + (i - 12); i++;
                 box12.text = "Level " + (i - 12); i++;
                 endcount = (i - 13);
-                Debug.Log(endcount);
+                
             }
             
         }               

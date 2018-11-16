@@ -4,8 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SwitchScene : MonoBehaviour {
-
-	public void loadByIndex(int sceneIndex) 
+    /**
+	 * This manages to load scene
+	 */
+    public void loadByIndex(int sceneIndex) 
 	{
 		SceneManager.LoadScene(sceneIndex);
 	}

@@ -2,23 +2,30 @@
                                                                                                                                                 //Original
 public class SlingShot : MonoBehaviour
 {
-    public LineRenderer HandlesLineRenderer1;
-    public LineRenderer HandlesLineRenderer2;
+    public LineRenderer HandlesLineRenderer1;  /**< Left catapult LineRenderer  */
+    public LineRenderer HandlesLineRenderer2;  /**< Right catapult LineRenderer  */
     public Transform HandleAnchorTrnsform1;
     public Transform HandleAnchorTrnsform2;
     public DragHandle DragHandle;
-    public Transform ReleasePointTransform;
-    public Transform ProjectileSpawnTransform;
-    public Transform AimerTransform;
+    public Transform ReleasePointTransform;     /**< to update release point transform position  */
+    public Transform ProjectileSpawnTransform;  /**< to update transform position that projectile starts to spawn  */
+    public Transform AimerTransform;            /**< to update release point transform position  */
     public GameObject ProjectilePrefab;
     public float StartPower = 0;
     private float LineLength1;
     private float LineLength2;
 
+    /**
+     * To get the velocity of the ball that dragged
+     */
     public float GetVelocity()
     {
         return Vector3.Distance(DragHandle.transform.position, ReleasePointTransform.transform.position) * 2.5f *4;
     }
+
+    /**
+     * To get the distance of the ball that dragged from target
+     */
 
     public float GetDistance(float Vinit)
     {
@@ -30,6 +37,10 @@ public class SlingShot : MonoBehaviour
         var distance = Vhor * Thor;
         return distance;
     }
+
+    /**
+     * To get the height of the target from the position of ball to calculate the projectile height
+     */
 
     public float GetHeight(float Vinit, int amountPoints, int pointIndex)
     {
@@ -45,6 +56,10 @@ public class SlingShot : MonoBehaviour
         return height;
     }
 
+    /**
+     * It instantiates the projectile prefab in order to make shot to target
+     */
+     
     public void MakeShot()
     {
         var _projectile = Instantiate(ProjectilePrefab, ProjectileSpawnTransform.position, Quaternion.identity) as GameObject;
@@ -52,6 +67,10 @@ public class SlingShot : MonoBehaviour
 
         Destroy(_projectile, 4.0f);
     }
+
+    /**
+     * To get the angle of the target from the position of ball to calculate the projectile angle
+     */
 
     public float GetAngle()
     {
@@ -80,15 +99,27 @@ public class SlingShot : MonoBehaviour
         HandlesLineRenderer2.endWidth = 0.008f;
     }
 
+    /**
+     * This enables the drag handle release event
+     */
+
     private void OnEnable()
     {
         DragHandle.OnDragHandleReleaseEvent += DragHandle_OnDragHandleReleaseEvent;
     }
 
+    /**
+     * This disables the drag handle release event
+     */
+
     private void OnDisable()
     {
         DragHandle.OnDragHandleReleaseEvent -= DragHandle_OnDragHandleReleaseEvent;
     }
+
+    /**
+     * This destroys the drag handle release event
+     */
 
     private void OnDestroy()
     {
@@ -102,12 +133,15 @@ public class SlingShot : MonoBehaviour
 
     private void Update()
     {
-
         UpdateLines();
         UpdateAim();
         GetHeight(GetVelocity(), 3, 1);
         StartPower = Vector3.Distance(DragHandle.transform.position, ReleasePointTransform.transform.position);
     }
+
+    /**
+     * This is to update the lines from the catapult to dragged position
+     */
 
     private void UpdateLines()
     {
@@ -136,11 +170,19 @@ public class SlingShot : MonoBehaviour
         
     }
 
+    /**
+     * This is to update the aimer position from the catapult to target position
+     */
+
     private void UpdateAim()
     {
         var pullDirection = ReleasePointTransform.position - (DragHandle.transform.position - ReleasePointTransform.position).normalized;
         AimerTransform.position = pullDirection;
     }
+
+    /**
+     * This is to get the shot direction from the ball position to target position
+     */
 
     private Vector3 GetShotDirection()
     {

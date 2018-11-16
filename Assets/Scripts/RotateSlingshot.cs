@@ -14,8 +14,10 @@ public class RotateSlingshot : MonoBehaviour
    {
       UpdateLockedRotation();
    }
-
-   private void UpdateLockedRotation()
+    /**
+     * To update the locked rotation of the mouse
+     */
+    private void UpdateLockedRotation()
    {
       _rotationZ += Input.GetAxis("Mouse ScrollWheel") * _sensitivityZ * 10;
       _rotationZ = Mathf.Clamp(_rotationZ, -30.0f, 30.0f);

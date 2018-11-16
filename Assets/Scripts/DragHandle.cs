@@ -31,7 +31,7 @@ public class DragHandle : MonoBehaviour
     private void OnMouseDown()
     {
         trajectile.SetActive(false);
-        Debug.Log("???///////////////>>>>>>>>>>>>>><<<<<<<<<<<<<?????????");
+       
         sphereCollider.radius = 5.0f;
             _offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint
           (
@@ -71,7 +71,7 @@ public class DragHandle : MonoBehaviour
                 OnDragHandleReleaseEvent.Invoke();
                 sphereCollider.radius = 0.5f;
             }
-            Debug.Log("???????????????????????????");
+            
             transform.position = _defaulPos;
             sphereCollider.radius = 0.5f;
         
