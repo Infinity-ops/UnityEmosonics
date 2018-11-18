@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class LockController : MonoBehaviour {
     public Button[] mybuttons;
     public Sprite lock_image;
+    public Sprite UI_sprite;
     public int level;
     public static bool realAttemptBall; //Refresh Real AttemptBall
     // Use this for initialization
@@ -24,14 +25,17 @@ public class LockController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-       
-
+        if(PlayerPrefs.GetInt("level", LivesCount.nextLevel) > level)
+        {
+            level = PlayerPrefs.GetInt("level", LivesCount.levelIncre);
+            mybuttons[level-1].GetComponent<Image>().sprite = UI_sprite;
+            mybuttons[level-1].GetComponent<Button>().interactable = true;
+        }
     }
-    public void loadByIndex(int sceneIndex)
+    public void loadByIndex()
     {
         realAttemptBall = true;
-        StaticClass.CrossSceneInformation = sceneIndex.ToString();
-        SceneManager.LoadScene(sceneIndex);
+
     }
     public static class StaticClass
     {
