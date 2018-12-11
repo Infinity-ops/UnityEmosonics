@@ -6,7 +6,7 @@ public class RandomSound : MonoBehaviour
 {
 
     // Use this for initialization
-    private PdAPI pd;
+    public static PdAPI pd;
 
     void Start()
     {

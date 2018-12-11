@@ -50,7 +50,7 @@ public class Triggertest : MonoBehaviour {
             
             if((this.gameObject.transform.position.x == GameManagerTool.xrand) && (this.gameObject.transform.position.y == GameManagerTool.yrand)) //correct hit
             {
-                rs.play();
+                RandomSound.pd.playAudio();
                 test = true;
                 //GameCount.scoreValue = 0;
                 cloneDesCount = 0;
